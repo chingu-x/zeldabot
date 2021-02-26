@@ -1,0 +1,27 @@
+{
+  "name": "zeldabot",
+  "version": "0.1.0",
+  "description": "Zeldabot creates Chingu Voyage repos in GitHub from a template repository",
+  "author": "Jim D. Medlock",
+  "license": "ISC",
+  "homepage": "https://github.com/chingu-x/zeldabot#readme",
+  "bugs": {
+    "url": "https://github.com/chingu-x/zeldabot/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chingu-x/zeldabot.git"
+  },
+  "keywords": [
+    "chingu",
+    "github"
+  ],
+  "main": "zelda.js",
+  "scripts": {
+    "zelda": "node ./zelda --"
+  },
+  "dependencies": {
+    "commander": "^7.1.0",
+    "dotenv": "^8.2.0"
+  }
+}
