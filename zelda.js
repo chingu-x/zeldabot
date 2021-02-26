@@ -1,5 +1,6 @@
 const program = require('commander');
 const Environment = require('./src/Environment')
+const GitHub = require('./src/GitHub')
 
 // Interpret command line directives and options
 program 
@@ -16,6 +17,9 @@ program
 
     Environment.initDotEnv('./')
     Environment.logEnvVars()
+
+    const github = new GitHub() 
+    github.createRepos()
     
   });
  
