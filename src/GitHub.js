@@ -40,7 +40,7 @@ class GitHub {
         console.log('GOT HERE. getTemplateRepo: ', getTemplateRepo)
         const templateData = await this.client.query({ 
           query: getTemplateRepo, 
-          variables: { login: process.env.GITHUB_ORG, reponame: process.env.GITHUB_TEMPLATE_REPO }
+          variables: { owner: process.env.GITHUB_ORG, reponame: process.env.GITHUB_TEMPLATE_REPO }
         })
         console.log('templateData.data: ', templateData )
         return resolve('done')
