@@ -1,14 +1,9 @@
-const { ApolloClient } = require('apollo-client');
-const { createHttpLink } = require('apollo-link-http');
-const { InMemoryCache } = require('apollo-cache-inmemory');
-const { ApolloLink } = require('apollo-link');
-const { SchemaLink }  = require('apollo-link-schema');
-const { 
-    introspectSchema,
-    makeRemoteExecutableSchema,
-    mergeSchemas
-  } = require('graphql-tools');
-const fetch = require('node-fetch');
+const gql = require("graphql-tag");
+const ApolloClient = require("apollo-client").ApolloClient;
+const fetch = require("node-fetch");
+const createHttpLink = require("apollo-link-http").createHttpLink;
+const setContext = require("apollo-link-context").setContext;
+const InMemoryCache = require("apollo-cache-inmemory").InMemoryCache;
 
 const { getTemplateRepo } = require('./graphql/queries')
 
@@ -16,58 +11,38 @@ const { getTemplateRepo } = require('./graphql/queries')
 class GitHub {
 
   constructor() {
+    this.client
   }
 
   async createGqlClient() {
-    return new Promise(async (resolve, reject) => {
-      console.log('token: ', process.env.GITHUB_TOKEN)
+    const githubLink = createHttpLink({
+      uri: 'https://api.github.com/graphql',
+      fetch: fetch,
+      headers: {
+        authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+      } 
+    })
 
-      const httpLink = () =>
-        createHttpLink({
-          uri: 'https://api.github.com/graphql',
-          fetch: fetch,
-          headers: {
-            authorization: process.env.GITHUB_TOKEN ? `Bearer ${process.env.GITHUB_TOKEN}` : "",
-          } 
-        })
-
-      // Use introspection to create the GitHub schema
-      const githubSchema = await introspectSchema(httpLink)
-      console.log(githubSchema)
-      const remoteSchema = makeRemoteExecutableSchema({
-        schema: githubSchema,
-        link: httpLink
-      });
-
-      const schema = mergeSchemas({
-        schemas: [
-          remoteSchema,
-        ],
-      });
-      const schemaLink = new SchemaLink({ schema });
-
-      // Create a GraphQL Client connection
-      const clientLinks = ApolloLink.from([
-        schemaLink,
-      ]);
-      this.client = new ApolloClient({
-        link: clientLinks,
-        cache: new InMemoryCache(),
-      });
-      return resolve(this.client)
+    const client = new ApolloClient({
+      link: githubLink,
+      cache: new InMemoryCache()
     });
+
+    this.client = client
   }
 
   createRepos() {
     console.log('Retrieve the template repo')
     return new Promise(async (resolve, reject) => {
+      console.log(`GITHUB_ORG: ${process.env.GITHUB_ORG} GITHUB_TEMPLATE_REPO: ${process.env.GITHUB_TEMPLATE_REPO}`)
       try {
         await this.createGqlClient()
+        console.log('GOT HERE. getTemplateRepo: ', getTemplateRepo)
         const templateData = await this.client.query({ 
           query: getTemplateRepo, 
           variables: { login: process.env.GITHUB_ORG, reponame: process.env.GITHUB_TEMPLATE_REPO }
         })
-        console.log('templateData: ', templateData)
+        console.log('templateData.data: ', templateData )
         return resolve('done')
       }
       catch(err) {

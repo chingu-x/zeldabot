@@ -1,7 +1,7 @@
 const gql = require('graphql-tag');
 
 const getTemplateRepo = gql`
-  query getTemplateRepo($login: String, $reponame: String) {
+  query getTemplateRepo($login: String!, $reponame: String!) {
     repositoryOwner (login: $login) {
       repositories {
         totalCount
