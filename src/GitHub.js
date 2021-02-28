@@ -42,7 +42,18 @@ class GitHub {
           query: getTemplateRepo, 
           variables: { owner: process.env.GITHUB_ORG, reponame: process.env.GITHUB_TEMPLATE_REPO }
         })
-        console.log('templateData.data: ', templateData )
+
+        console.log('repository: ', templateData.data.repository)
+        templateData.data.repository.issues.edges.forEach(issue => {
+          console.log(issue.node)
+        })
+        templateData.data.repository.labels.edges.forEach(label => {
+          console.log(label.node)
+        })
+        templateData.data.repository.milestones.edges.forEach(milestone => {
+          console.log(milestone.node)
+        })
+        
         return resolve('done')
       }
       catch(err) {
