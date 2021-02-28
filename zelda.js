@@ -7,8 +7,6 @@ const GitHub = require('./src/GitHub')
 Environment.initDotEnv('./')
 Environment.logEnvVars()
 
-console.log('isDebugOn: ', isDebugOn())
-
 // Interpret command line directives and options
 program 
   .command('clone <template>')
