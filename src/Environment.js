@@ -3,6 +3,10 @@ const FileOps = require('./FileOps')
 
 class Environment {
 
+  static isDebugOn() {
+    return process.env.DEBUG.toUpperCase() === 'YES' ? true : false
+  }
+
   static logEnvVars() {
     console.log('\nEnvironment Variables:')
     console.log('---------------------')
@@ -56,4 +60,5 @@ class Environment {
 
 }
 
+exports.isDebugOn = Environment.isDebugOn
 module.exports = Environment

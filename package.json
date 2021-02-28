@@ -18,7 +18,7 @@
   ],
   "main": "zelda.js",
   "scripts": {
-    "zelda": "node ./zelda --"
+    "zelda": "node ./zelda"
   },
   "dependencies": {
     "apollo-boost": "^0.4.9",
