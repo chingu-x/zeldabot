@@ -5,12 +5,13 @@ const createHttpLink = require("apollo-link-http").createHttpLink;
 const setContext = require("apollo-link-context").setContext;
 const InMemoryCache = require("apollo-cache-inmemory").InMemoryCache;
 
-const { isDebugOn } = require('./Environment')
 const { getTemplateRepo } = require('./graphql/queries')
 
 class GitHub {
 
-  constructor() {
+  constructor(environment) {
+    this.environment = environment
+    this.isDebug = this.environment.isDebug()
     this.client
   }
 
@@ -19,7 +20,7 @@ class GitHub {
       uri: 'https://api.github.com/graphql',
       fetch: fetch,
       headers: {
-        authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+        authorization: `Bearer ${this.environment.operationalVars.GITHUB_TOKEN}`,
       } 
     })
 
@@ -34,30 +35,30 @@ class GitHub {
   createRepos() {
     console.log('Retrieve the template repo')
     return new Promise(async (resolve, reject) => {
-      isDebugOn() && console.log(`GITHUB_ORG: ${process.env.GITHUB_ORG} GITHUB_TEMPLATE_REPO: ${process.env.GITHUB_TEMPLATE_REPO}`)
+      this.isDebug && console.log(`GITHUB_ORG: ${this.environment.operationalVars.GITHUB_ORG} GITHUB_TEMPLATE_REPO: ${this.environment.operationalVars.GITHUB_TEMPLATE_REPO}`)
       try {
         await this.createGqlClient()
-        isDebugOn() && console.log('GOT HERE. getTemplateRepo: ', getTemplateRepo)
+        this.isDebug && console.log('GOT HERE. getTemplateRepo: ', getTemplateRepo)
         const templateData = await this.client.query({ 
           query: getTemplateRepo, 
-          variables: { owner: process.env.GITHUB_ORG, reponame: process.env.GITHUB_TEMPLATE_REPO }
+          variables: { owner: this.environment.operationalVars.GITHUB_ORG, reponame: this.environment.operationalVars.GITHUB_TEMPLATE_REPO }
         })
 
-        isDebugOn() && console.log('repository: ', templateData.data.repository)
+        this.environment.isDebug && console.log('repository: ', templateData.data.repository)
         templateData.data.repository.issues.edges.forEach(issue => {
-          isDebugOn() && console.log(issue.node)
+          this.isDebug && console.log(issue.node)
         })
         templateData.data.repository.labels.edges.forEach(label => {
-          isDebugOn() && console.log(label.node)
+          this.isDebug && console.log(label.node)
         })
         templateData.data.repository.milestones.edges.forEach(milestone => {
-          isDebugOn() && console.log(milestone.node)
+          this.isDebug && console.log(milestone.node)
         })
         
         return resolve('done')
       }
       catch(err) {
-        isDebugOn() && console.error(err)
+        this.environment.isDebug && console.error(err)
         return reject(err)
       }
     })
