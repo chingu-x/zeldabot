@@ -33,7 +33,7 @@ class GitHub {
   }
 
   createRepos() {
-    console.log('Retrieve the template repo')
+    this.isDebug && console.log('Retrieve the template repo')
     return new Promise(async (resolve, reject) => {
       this.isDebug && console.log(`GITHUB_ORG: ${this.environment.operationalVars.GITHUB_ORG} GITHUB_TEMPLATE_REPO: ${this.environment.operationalVars.GITHUB_TEMPLATE_REPO}`)
       try {
@@ -44,7 +44,7 @@ class GitHub {
           variables: { owner: this.environment.operationalVars.GITHUB_ORG, reponame: this.environment.operationalVars.GITHUB_TEMPLATE_REPO }
         })
 
-        this.environment.isDebug && console.log('repository: ', templateData.data.repository)
+        this.isDebug && console.log('repository: ', templateData.data.repository)
         templateData.data.repository.issues.edges.forEach(issue => {
           this.isDebug && console.log(issue.node)
         })

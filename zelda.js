@@ -6,7 +6,24 @@ const GitHub = require('./src/GitHub')
 
 const environment = new Environment()
 environment.initDotEnv('./')
-environment.logEnvVars()
+
+const consoleLogOptions = (options) => {
+  if (environment.isDebug()) {
+    console.log('\nZelda clone command options:')
+    console.log('--------------------')
+    console.log('- debug: ',options.debug)
+    console.log('- voyage: ', options.voyage)
+    console.log('- github-token: ', options.githubToken)
+    console.log('- github-org: ', options.githubOrg)
+    console.log('- github-template: ', options.githubTemplate)
+    console.log('- t1-count: ', options.t1Count)
+    console.log('- t2-count: ', options.t2Count)
+    console.log('- t3-count: ', options.t3Count)
+    console.log('- t1-name: ', options.t1Name)
+    console.log('- t2-name: ', options.t2Name)
+    console.log('- t3-name: ', options.t3Name)
+  }
+}
 
 // Interpret command line directives and options
 program 
@@ -24,20 +41,6 @@ program
   .option('-n2, --t2-name <t2count>', 'Number of Tier 2 team repos to create')
   .option('-n3, --t3-name <t3count>', 'Number of Tier 3 team repos to create')
   .action( async (options) => {
-    console.log('clone command options:')
-    console.log('--------------------')
-    console.log('- debug: ',options.debug)
-    console.log('- voyage: ', options.voyage)
-    console.log('- github-token: ', options.githubToken)
-    console.log('- github-org: ', options.githubOrg)
-    console.log('- github-template: ', options.githubTemplate)
-    console.log('- t1-count: ', options.t1Count)
-    console.log('- t2-count: ', options.t2Count)
-    console.log('- t3-count: ', options.t3Count)
-    console.log('- t1-name: ', options.t1Name)
-    console.log('- t2-name: ', options.t2Name)
-    console.log('- t3-name: ', options.t3Name)
-
     environment.setOperationalVars({
       debug: options.debug,
       voyage: options.voyage,
@@ -51,7 +54,10 @@ program
       t2Name: options.t2Name,
       t3Name: options.t3Name,
     })
-    console.log('operationalVars: ', environment.getOperationalVars())
+
+    consoleLogOptions(options)
+    console.log('\noperationalVars: ', environment.getOperationalVars())
+    environment.isdebug && environment.logEnvVars()
     
     const github = new GitHub(environment) 
     github.createRepos()

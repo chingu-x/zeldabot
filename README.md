@@ -22,4 +22,4 @@ The steps it follows are to:
    - Copy labels, milestones, & issues from the template repo
 
 ## Test Command (temporary)
-node zelda clone -d yes -s ghtoken -o chingu-voyagetest -t voyage-template -t1 1 -t2 1 -t3 1 -n1 Toucans -n2 Geckos -n3 Bears
+node zelda clone -o chingu-voyagetest -t voyage-template -t1 1 -t2 1 -t3 1 -n1 Toucans -n2 Geckos -n3 Bears
