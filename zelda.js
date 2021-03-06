@@ -25,6 +25,15 @@ const consoleLogOptions = (options) => {
   }
 }
 
+const generateRepoList = (reposToCreate, voyageName, teamName, teamCount) => {
+  environment.isDebug() && console.log('\n...generateRepoList - ',
+    ' reposToCreate: ', reposToCreate,
+    ` teamName: ${teamName} teamCount: ${teamCount}`)
+  for (let currentTeamNo = 1; currentTeamNo <= teamCount; currentTeamNo++) {
+    reposToCreate.push({ team: `${ voyageName }-${ teamName.toLowerCase() }-team-${ teamCount }` })
+  }
+}
+
 // Interpret command line directives and options
 program 
   .command('clone')
@@ -57,7 +66,15 @@ program
 
     consoleLogOptions(options)
     console.log('\noperationalVars: ', environment.getOperationalVars())
-    environment.isdebug && environment.logEnvVars()
+    environment.isDebug() && environment.logEnvVars()
+
+    let reposToCreate = []
+    const { VOYAGE, NO_TIER1_TEAMS, NO_TIER2_TEAMS, NO_TIER3_TEAMS,
+      TIER1_NAME, TIER2_NAME, TIER3_NAME } = environment.getOperationalVars()
+    generateRepoList(reposToCreate, VOYAGE, TIER1_NAME, NO_TIER1_TEAMS)
+    generateRepoList(reposToCreate, VOYAGE, TIER2_NAME, NO_TIER2_TEAMS)
+    generateRepoList(reposToCreate, VOYAGE, TIER3_NAME, NO_TIER3_TEAMS)
+    environment.isDebug() && console.log('reposToCreate: ', reposToCreate)
     
     const github = new GitHub(environment) 
     github.createRepos()

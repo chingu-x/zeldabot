@@ -50,7 +50,7 @@ class Environment {
 
   setOperationalVars(options) {
     // Retrieve the current variable values from `.env` file
-    let { DEBUG, 
+    let { DEBUG,
       GITHUB_TOKEN, GITHUB_ORG, GITHUB_TEMPLATE_REPO,
       VOYAGE, NO_TIER1_TEAMS, NO_TIER2_TEAMS, NO_TIER3_TEAMS,
       TIER1_NAME, TIER2_NAME, TIER3_NAME} = process.env;
