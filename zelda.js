@@ -30,7 +30,9 @@ const generateRepoList = (reposToCreate, voyageName, teamName, teamCount) => {
     ' reposToCreate: ', reposToCreate,
     ` teamName: ${teamName} teamCount: ${teamCount}`)
   for (let currentTeamNo = 1; currentTeamNo <= teamCount; currentTeamNo++) {
-    reposToCreate.push({ team: `${ voyageName }-${ teamName.toLowerCase() }-team-${ teamCount }` })
+    reposToCreate.push({ 
+      team: `${ voyageName }-${ teamName.toLowerCase() }-team-${ currentTeamNo.toString().padStart(2, "0") }` 
+    })
   }
 }
 
