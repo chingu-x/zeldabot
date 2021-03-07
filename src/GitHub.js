@@ -6,9 +6,9 @@ const setContext = require("apollo-link-context").setContext;
 const InMemoryCache = require("apollo-cache-inmemory").InMemoryCache;
 
 const { getTemplateRepo } = require('./graphql/queries')
+const { createRepo } = require('./graphql/mutations')
 
 class GitHub {
-
   constructor(environment) {
     this.environment = environment
     this.isDebug = this.environment.isDebug()
@@ -32,8 +32,7 @@ class GitHub {
     this.client = client
   }
 
-  createRepos() {
-    this.isDebug && console.log('Retrieve the template repo')
+  createRepos(reposToCreate) {
     return new Promise(async (resolve, reject) => {
       this.isDebug && console.log(`GITHUB_ORG: ${this.environment.operationalVars.GITHUB_ORG} GITHUB_TEMPLATE_REPO: ${this.environment.operationalVars.GITHUB_TEMPLATE_REPO}`)
       try {
@@ -44,7 +43,7 @@ class GitHub {
           variables: { owner: this.environment.operationalVars.GITHUB_ORG, reponame: this.environment.operationalVars.GITHUB_TEMPLATE_REPO }
         })
 
-        this.isDebug && console.log('repository: ', templateData.data.repository)
+        this.isDebug && console.log('\nrepository: ', templateData.data.repository)
         templateData.data.repository.issues.edges.forEach(issue => {
           this.isDebug && console.log(issue.node)
         })
@@ -54,6 +53,14 @@ class GitHub {
         templateData.data.repository.milestones.edges.forEach(milestone => {
           this.isDebug && console.log(milestone.node)
         })
+
+        console.log('No. teams to create: ', reposToCreate.length)
+        for (let currentTeamNo = 0; currentTeamNo < reposToCreate.length; currentTeamNo++) {
+          const mutationData = await this.client.mutate({ 
+            mutation: createRepo, 
+            variables: { reponame: reposToCreate[currentTeamNo].team, owner: templateData.data.repository.owner.id}
+          })  
+        }
         
         return resolve('done')
       }

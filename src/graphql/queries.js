@@ -5,6 +5,15 @@ const getTemplateRepo = gql`
     repository(owner: $owner, name: $reponame) {
       name
       description
+      owner {
+        id
+      }
+      issueTemplates {
+        name
+        title
+        about
+        body  
+      }
       issues (first: 15) {
         totalCount
         edges {

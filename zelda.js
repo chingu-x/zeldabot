@@ -79,7 +79,7 @@ program
     environment.isDebug() && console.log('reposToCreate: ', reposToCreate)
     
     const github = new GitHub(environment) 
-    github.createRepos()
+    github.createRepos(reposToCreate)
   })
 
   program.parse(process.argv)
