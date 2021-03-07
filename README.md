@@ -21,5 +21,5 @@ The steps it follows are to:
    - Add the team with Admin rights on the repository
    - Copy labels, milestones, & issues from the template repo
 
-## Test Command (temporary)
-node zelda clone -o chingu-voyagetest -t voyage-template -t1 1 -t2 1 -t3 1 -n1 Toucans -n2 Geckos -n3 Bears
+## Test Commandw (temporary)
+node zelda clone -o chingu-voyagetest -t voyage-template -t1 1 -t2 0 -t3 0 -n1 Toucans -n2 Geckos -n3 Bears

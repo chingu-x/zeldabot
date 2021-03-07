@@ -26,9 +26,10 @@ const consoleLogOptions = (options) => {
 }
 
 const generateRepoList = (reposToCreate, voyageName, teamName, teamCount) => {
-  environment.isDebug() && console.log('\n...generateRepoList - ',
+  this.isDebug && console.log('\n...generateRepoList - ',
     ' reposToCreate: ', reposToCreate,
     ` teamName: ${teamName} teamCount: ${teamCount}`)
+  if (teamCount <= 0) return
   for (let currentTeamNo = 1; currentTeamNo <= teamCount; currentTeamNo++) {
     reposToCreate.push({ 
       team: `${ voyageName }-${ teamName.toLowerCase() }-team-${ currentTeamNo.toString().padStart(2, "0") }` 
@@ -79,7 +80,7 @@ program
     environment.isDebug() && console.log('reposToCreate: ', reposToCreate)
     
     const github = new GitHub(environment) 
-    github.createRepos(reposToCreate)
+    github.cloneTemplate(reposToCreate)
   })
 
   program.parse(process.argv)
