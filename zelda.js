@@ -6,9 +6,10 @@ const GitHub = require('./src/GitHub')
 
 const environment = new Environment()
 environment.initDotEnv('./')
+let isDebug = false
 
 const consoleLogOptions = (options) => {
-  if (environment.isDebug()) {
+  if (isDebug) {
     console.log('\nZelda clone command options:')
     console.log('--------------------')
     console.log('- debug: ',options.debug)
@@ -25,15 +26,20 @@ const consoleLogOptions = (options) => {
   }
 }
 
-const generateRepoList = (reposToCreate, voyageName, teamName, teamCount) => {
-  this.isDebug && console.log('\n...generateRepoList - ',
-    ' reposToCreate: ', reposToCreate,
-    ` teamName: ${teamName} teamCount: ${teamCount}`)
-  if (teamCount <= 0) return
-  for (let currentTeamNo = 1; currentTeamNo <= teamCount; currentTeamNo++) {
-    reposToCreate.push({ 
-      team: `${ voyageName }-${ teamName.toLowerCase() }-team-${ currentTeamNo.toString().padStart(2, "0") }` 
-    })
+let reposToCreate = []
+const generateRepoList = (voyageName, teams) => {
+  isDebug && console.log('...generateRepoList -  voyageName: ', voyageName, 
+    ' [teams]: ', teams)
+  for (let teamCount = 0; teamCount < teams.length; teamCount++) {
+    isDebug && console.log('\n...generateRepoList - ',
+      ` teamName: ${ teams[teamCount].name } teamCount: ${ teams[teamCount].count }`)
+    if (teams[teamCount].count > 0) {
+      for (let currentTeamNo = 1; currentTeamNo <= teams[teamCount].count; currentTeamNo++) {
+        reposToCreate.push({ 
+          team: `${ voyageName }-${ teams[teamCount].name.toLowerCase() }-team-${ teams[teamCount].count.toString().padStart(2, "0") }` 
+        })
+      }
+    }
   }
 }
 
@@ -67,16 +73,19 @@ program
       t3Name: options.t3Name,
     })
 
-    consoleLogOptions(options)
-    console.log('\noperationalVars: ', environment.getOperationalVars())
+    isDebug = environment.isDebug()
+
+    isDebug && consoleLogOptions(options)
+    isDebug && console.log('\noperationalVars: ', environment.getOperationalVars())
     environment.isDebug() && environment.logEnvVars()
 
-    let reposToCreate = []
     const { VOYAGE, NO_TIER1_TEAMS, NO_TIER2_TEAMS, NO_TIER3_TEAMS,
       TIER1_NAME, TIER2_NAME, TIER3_NAME } = environment.getOperationalVars()
-    generateRepoList(reposToCreate, VOYAGE, TIER1_NAME, NO_TIER1_TEAMS)
-    generateRepoList(reposToCreate, VOYAGE, TIER2_NAME, NO_TIER2_TEAMS)
-    generateRepoList(reposToCreate, VOYAGE, TIER3_NAME, NO_TIER3_TEAMS)
+    generateRepoList(VOYAGE, [
+      { name: TIER1_NAME, count: NO_TIER1_TEAMS },
+      { name: TIER2_NAME, count: NO_TIER2_TEAMS },
+      { name: TIER3_NAME, count: NO_TIER3_TEAMS }
+    ])
     environment.isDebug() && console.log('reposToCreate: ', reposToCreate)
     
     const github = new GitHub(environment) 

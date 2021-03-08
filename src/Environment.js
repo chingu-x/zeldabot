@@ -20,7 +20,6 @@ class Environment {
     console.log('- GITHUB_TOKEN:', process.env.GITHUB_TOKEN)
     console.log('- GITHUB_ORG:', process.env.GITHUB_ORG)
     console.log('- GITHUB_TEMPLATE_REPO:', process.env.GITHUB_TEMPLATE_REPO)
-    console.log('- GITHUB_TEMPLATE_REPO:', process.env.GITHUB_TEMPLATE_REPO)
     return true
   }
 

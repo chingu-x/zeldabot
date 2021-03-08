@@ -32,7 +32,14 @@ class GitHub {
     this.client = client
   }
 
-  createRepos(reposToCreate) {
+  async createRepo(repoName, repoOwner) {
+    const mutationData = await this.client.mutate({ 
+      mutation: createRepo, 
+      variables: { reponame: repoName, owner: repoOwner}
+    })  
+  }
+
+  cloneTemplate(reposToCreate) {
     return new Promise(async (resolve, reject) => {
       this.isDebug && console.log(`GITHUB_ORG: ${this.environment.operationalVars.GITHUB_ORG} GITHUB_TEMPLATE_REPO: ${this.environment.operationalVars.GITHUB_TEMPLATE_REPO}`)
       try {
@@ -56,10 +63,7 @@ class GitHub {
 
         console.log('No. teams to create: ', reposToCreate.length)
         for (let currentTeamNo = 0; currentTeamNo < reposToCreate.length; currentTeamNo++) {
-          const mutationData = await this.client.mutate({ 
-            mutation: createRepo, 
-            variables: { reponame: reposToCreate[currentTeamNo].team, owner: templateData.data.repository.owner.id}
-          })  
+          await this.createRepo(reposToCreate[currentTeamNo].team, templateData.data.repository.owner.id) 
         }
         
         return resolve('done')
