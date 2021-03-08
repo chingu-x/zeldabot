@@ -4,6 +4,7 @@ const fetch = require("node-fetch");
 const createHttpLink = require("apollo-link-http").createHttpLink;
 const setContext = require("apollo-link-context").setContext;
 const InMemoryCache = require("apollo-cache-inmemory").InMemoryCache;
+const { Octokit } = require("@octokit/rest");
 
 const { getTemplateRepo } = require('./graphql/queries')
 const { createRepo } = require('./graphql/mutations')
@@ -13,6 +14,11 @@ class GitHub {
     this.environment = environment
     this.isDebug = this.environment.isDebug()
     this.client
+    this.GITHUB_TOKEN = this.environment.getOperationalVars().GITHUB_TOKEN
+    this.octokit = new Octokit({
+      auth: this.GITHUB_TOKEN,
+      baseUrl: 'https://api.github.com'
+    });
   }
 
   async createGqlClient() {
@@ -20,7 +26,7 @@ class GitHub {
       uri: 'https://api.github.com/graphql',
       fetch: fetch,
       headers: {
-        authorization: `Bearer ${this.environment.operationalVars.GITHUB_TOKEN}`,
+        authorization: `Bearer ${this.GITHUB_TOKEN}`,
       } 
     })
 
@@ -32,11 +38,19 @@ class GitHub {
     this.client = client
   }
 
+  async createTeam(orgName,repoName) {
+    await this.octokit.teams.create({
+      org: orgName,
+      name: repoName,
+    });
+  }
+
   async createRepo(repoName, repoOwner) {
     const mutationData = await this.client.mutate({ 
       mutation: createRepo, 
       variables: { reponame: repoName, owner: repoOwner}
-    })  
+    })
+    this.isDebug && console.log('...createRepo - mutationData: ', mutationData)
   }
 
   cloneTemplate(reposToCreate) {
@@ -44,6 +58,7 @@ class GitHub {
       this.isDebug && console.log(`GITHUB_ORG: ${this.environment.operationalVars.GITHUB_ORG} GITHUB_TEMPLATE_REPO: ${this.environment.operationalVars.GITHUB_TEMPLATE_REPO}`)
       try {
         await this.createGqlClient()
+        
         this.isDebug && console.log('GOT HERE. getTemplateRepo: ', getTemplateRepo)
         const templateData = await this.client.query({ 
           query: getTemplateRepo, 
@@ -63,6 +78,7 @@ class GitHub {
 
         console.log('No. teams to create: ', reposToCreate.length)
         for (let currentTeamNo = 0; currentTeamNo < reposToCreate.length; currentTeamNo++) {
+          await this.createTeam(this.environment.getOperationalVars().GITHUB_ORG, reposToCreate[currentTeamNo].team)
           await this.createRepo(reposToCreate[currentTeamNo].team, templateData.data.repository.owner.id) 
         }
         

@@ -28,11 +28,7 @@ const consoleLogOptions = (options) => {
 
 let reposToCreate = []
 const generateRepoList = (voyageName, teams) => {
-  isDebug && console.log('...generateRepoList -  voyageName: ', voyageName, 
-    ' [teams]: ', teams)
   for (let teamCount = 0; teamCount < teams.length; teamCount++) {
-    isDebug && console.log('\n...generateRepoList - ',
-      ` teamName: ${ teams[teamCount].name } teamCount: ${ teams[teamCount].count }`)
     if (teams[teamCount].count > 0) {
       for (let currentTeamNo = 1; currentTeamNo <= teams[teamCount].count; currentTeamNo++) {
         reposToCreate.push({ 

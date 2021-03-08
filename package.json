@@ -21,6 +21,7 @@
     "zelda": "node ./zelda"
   },
   "dependencies": {
+    "@octokit/rest": "^18.3.4",
     "apollo-boost": "^0.4.9",
     "apollo-link-context": "^1.0.20",
     "apollo-link-schema": "^1.2.5",
