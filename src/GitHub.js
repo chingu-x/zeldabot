@@ -19,6 +19,9 @@ class GitHub {
       auth: this.GITHUB_TOKEN,
       baseUrl: 'https://api.github.com'
     });
+    this.repoName
+    this.repoDescription
+    this.teamDescription
   }
 
   async createGqlClient() {
@@ -38,7 +41,7 @@ class GitHub {
     this.client = client
   }
 
-  async createTeam(orgName, repoName, repoDescription) {
+  async createTeam(orgName, repoName, teamDescription) {
     try {
       await this.octokit.teams.create({
         org: orgName,
@@ -59,6 +62,17 @@ class GitHub {
       variables: { reponame: repoName, owner: repoOwner, description: repoDescription }
     })
     this.isDebug && console.log('...createRepo - mutationData: ', mutationData)
+  }
+
+  generateNames(repoToCreate) {
+    this.repoName = `${ repoToCreate.voyageName }-`
+      + `${ repoToCreate.tierName }-team-`
+      + `${ repoToCreate.teamNo }`
+    this.repoDescription = `Add-project-description-here | Voyage-${ repoToCreate.voyageName.slice(-2) } | https://chingu.io/ | Twitter: https://twitter.com/ChinguCollabs`
+    this.teamDescription = `Chingu Voyage `
+      + `${ repoToCreate.voyageName.slice(-2) } - `
+      + `${ repoToCreate.tierName.charAt(0).toUpperCase() + repoToCreate.tierName.slice(1) } `
+      +`Team ${ repoToCreate.teamNo }`
   }
 
   cloneTemplate(reposToCreate) {
@@ -86,16 +100,10 @@ class GitHub {
 
         console.log('No. teams to create: ', reposToCreate.length)
         for (let currentTeamNo = 0; currentTeamNo < reposToCreate.length; currentTeamNo++) {
-          const repoName = `${ reposToCreate[currentTeamNo].voyageName }-`
-            + `${ reposToCreate[currentTeamNo].tierName }-team-`
-            + `${ reposToCreate[currentTeamNo].teamNo }`
-          const repoDescription = `Chingu Voyage `
-            + `${ reposToCreate[currentTeamNo].voyageName.slice(-2) } - `
-            + `${ reposToCreate[currentTeamNo].tierName.charAt(0).toUpperCase() + reposToCreate[currentTeamNo].tierName.slice(1) } `
-            +`Team ${ reposToCreate[currentTeamNo].teamNo }`
-          console.log(repoName,'\n',repoDescription)
-          await this.createRepo(templateData.data.repository.owner.id, repoName, repoDescription) 
-          await this.createTeam(this.environment.getOperationalVars().GITHUB_ORG, repoName, repoDescription)
+          this.generateNames(reposToCreate[currentTeamNo])
+          console.log(this.repoName, '\n', this.repoDescription)
+          await this.createRepo(templateData.data.repository.owner.id, this.repoName, this.repoDescription) 
+          await this.createTeam(this.environment.getOperationalVars().GITHUB_ORG, this.repoName, this.repoDescription)
         }
         
         return resolve('done')
