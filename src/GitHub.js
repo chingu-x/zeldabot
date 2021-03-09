@@ -1,10 +1,10 @@
-const gql = require("graphql-tag");
-const ApolloClient = require("apollo-client").ApolloClient;
-const fetch = require("node-fetch");
-const createHttpLink = require("apollo-link-http").createHttpLink;
-const setContext = require("apollo-link-context").setContext;
-const InMemoryCache = require("apollo-cache-inmemory").InMemoryCache;
-const { Octokit } = require("@octokit/rest");
+const gql = require("graphql-tag")
+const ApolloClient = require("apollo-client").ApolloClient
+const fetch = require("node-fetch")
+const createHttpLink = require("apollo-link-http").createHttpLink
+const setContext = require("apollo-link-context").setContext
+const InMemoryCache = require("apollo-cache-inmemory").InMemoryCache
+const { Octokit } = require("@octokit/rest")
 
 const { getTemplateRepo } = require('./graphql/queries')
 const { createRepo } = require('./graphql/mutations')
@@ -38,17 +38,25 @@ class GitHub {
     this.client = client
   }
 
-  async createTeam(orgName,repoName) {
-    await this.octokit.teams.create({
-      org: orgName,
-      name: repoName,
-    });
+  async createTeam(orgName, repoName, repoDescription) {
+    try {
+      await this.octokit.teams.create({
+        org: orgName,
+        name: repoName,
+        description: repoDescription,
+        privacy: 'closed',
+        permission: 'admin',
+        repo_names: [`${ orgName }/${ repoName }`],
+      })
+    } catch(err) {
+      console.log(`Error creating team ${ repoName }: `, err)
+    }
   }
 
-  async createRepo(repoName, repoOwner) {
+  async createRepo(repoOwner, repoName, repoDescription) {
     const mutationData = await this.client.mutate({ 
       mutation: createRepo, 
-      variables: { reponame: repoName, owner: repoOwner}
+      variables: { reponame: repoName, owner: repoOwner, description: repoDescription }
     })
     this.isDebug && console.log('...createRepo - mutationData: ', mutationData)
   }
@@ -78,8 +86,16 @@ class GitHub {
 
         console.log('No. teams to create: ', reposToCreate.length)
         for (let currentTeamNo = 0; currentTeamNo < reposToCreate.length; currentTeamNo++) {
-          await this.createTeam(this.environment.getOperationalVars().GITHUB_ORG, reposToCreate[currentTeamNo].team)
-          await this.createRepo(reposToCreate[currentTeamNo].team, templateData.data.repository.owner.id) 
+          const repoName = `${ reposToCreate[currentTeamNo].voyageName }-`
+            + `${ reposToCreate[currentTeamNo].tierName }-team-`
+            + `${ reposToCreate[currentTeamNo].teamNo }`
+          const repoDescription = `Chingu Voyage `
+            + `${ reposToCreate[currentTeamNo].voyageName.slice(-2) } - `
+            + `${ reposToCreate[currentTeamNo].tierName.charAt(0).toUpperCase() + reposToCreate[currentTeamNo].tierName.slice(1) } `
+            +`Team ${ reposToCreate[currentTeamNo].teamNo }`
+          console.log(repoName,'\n',repoDescription)
+          await this.createRepo(templateData.data.repository.owner.id, repoName, repoDescription) 
+          await this.createTeam(this.environment.getOperationalVars().GITHUB_ORG, repoName, repoDescription)
         }
         
         return resolve('done')

@@ -1,10 +1,11 @@
 const gql = require('graphql-tag');
 
 const createRepo = gql`
-  mutation createRepository($reponame: String, $owner: String) {
+  mutation createRepository($reponame: String, $owner: String, $description: String) {
     createRepository(input: {
       name: $reponame,
       ownerId: $owner,
+      description: $description
       visibility: PUBLIC
     }) {
       repository {

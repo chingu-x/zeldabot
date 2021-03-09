@@ -18,8 +18,12 @@ The steps it follows are to:
    - Set the repo name to be the same as the team name
    - Set the repo description to be `Add-project-description-here | Voyage-27 | https://chingu.io/ | Twitter: https://twitter.com/ChinguCollabs` 
    - Copy the `readme.md` in the template repo
+   - Copy issue templates from the template repo
    - Add the team with Admin rights on the repository
    - Copy labels, milestones, & issues from the template repo
+
+5. Create a new AV channel for each team
+   - Add the team 
 
 ## Test Commandw (temporary)
 node zelda clone -o chingu-voyagetest -t voyage-template -t1 1 -t2 0 -t3 0 -n1 Toucans -n2 Geckos -n3 Bears

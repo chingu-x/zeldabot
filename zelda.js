@@ -32,7 +32,9 @@ const generateRepoList = (voyageName, teams) => {
     if (teams[teamCount].count > 0) {
       for (let currentTeamNo = 1; currentTeamNo <= teams[teamCount].count; currentTeamNo++) {
         reposToCreate.push({ 
-          team: `${ voyageName }-${ teams[teamCount].name.toLowerCase() }-team-${ teams[teamCount].count.toString().padStart(2, "0") }` 
+          voyageName: `${ voyageName }`,
+          tierName: `${ teams[teamCount].name.toLowerCase() }`,
+          teamNo: `${ teams[teamCount].count.toString().padStart(2, "0") }` 
         })
       }
     }
