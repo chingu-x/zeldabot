@@ -6,8 +6,8 @@ const setContext = require("apollo-link-context").setContext
 const InMemoryCache = require("apollo-cache-inmemory").InMemoryCache
 const { Octokit } = require("@octokit/rest")
 
-const { getTemplateRepo } = require('./graphql/queries')
-const { createRepo } = require('./graphql/mutations')
+const { getRepoLabels, getTemplateRepo } = require('./graphql/queries')
+const { addLabelToRepo, createRepo, deleteLabel } = require('./graphql/mutations')
 
 class GitHub {
   constructor(environment) {
@@ -15,6 +15,8 @@ class GitHub {
     this.isDebug = this.environment.isDebug()
     this.client
     this.GITHUB_TOKEN = this.environment.getOperationalVars().GITHUB_TOKEN
+    this.GITHUB_ORG = this.environment.getOperationalVars().GITHUB_ORG
+    this.GITHUB_TEMPLATE_REPO = this.environment.getOperationalVars().GITHUB_TEMPLATE_REPO
     this.octokit = new Octokit({
       auth: this.GITHUB_TOKEN,
       baseUrl: 'https://api.github.com'
@@ -30,6 +32,7 @@ class GitHub {
       fetch: fetch,
       headers: {
         authorization: `Bearer ${this.GITHUB_TOKEN}`,
+        Accept: 'application/vnd.github.bane-preview+json'
       } 
     })
 
@@ -41,27 +44,78 @@ class GitHub {
     this.client = client
   }
 
+  async getRepoLabels(orgName, repoName) {
+    let labels
+    try {
+      return await this.client.query({ 
+        query: getRepoLabels, 
+        variables: { owner: orgName, reponame: repoName }
+      })
+    } catch(err) {
+      console.log('getRepoLabels  - Error fetching labels. err: ', err)
+    }
+  }
+
+  async deleteRepoLabels(orgName, repoName) {
+    const repoData = await this.getRepoLabels(orgName, repoName)
+    console.log('...deleteRepoLabels labels: ', repoData.data.repository.labels.edges)
+    return Promise.all(repoData.data.repository.labels.edges.map(async (label)  => {
+      try {
+        return await this.client.mutate({ 
+          mutation: deleteLabel, 
+          variables: { id: label.node.id }
+        })
+      } catch(err) {
+        console.log('deleteRepoLabels  - Error deleting labels. err: ', err)
+      }
+    }))
+  }
+
+  async addLabelsToRepo(repoId, labels) {
+    return Promise.all(labels.map(async (label)  => {
+      console.log(label.node)
+      try {
+        const mutationData = await this.client.mutate({ 
+          mutation: addLabelToRepo, 
+          variables: { 
+            repoId: repoId,  
+            name: label.node.name, 
+            description: label.node.description,
+            color: label.node.color,
+          }
+        })
+        this.isDebug && console.log('...createRepo - mutationData: ', mutationData)
+      } catch(err) {
+        console.log('addLabelsToRepo - err: ', err)
+      }
+    }))
+  }
+
   async createTeam(orgName, repoName, teamDescription) {
     try {
       await this.octokit.teams.create({
         org: orgName,
         name: repoName,
-        description: repoDescription,
+        description: teamDescription,
         privacy: 'closed',
         permission: 'admin',
         repo_names: [`${ orgName }/${ repoName }`],
       })
     } catch(err) {
-      console.log(`Error creating team ${ repoName }: `, err)
+      console.log(`createTeam - Error creating team ${ repoName }: `, err)
     }
   }
 
   async createRepo(repoOwner, repoName, repoDescription) {
-    const mutationData = await this.client.mutate({ 
-      mutation: createRepo, 
-      variables: { reponame: repoName, owner: repoOwner, description: repoDescription }
-    })
-    this.isDebug && console.log('...createRepo - mutationData: ', mutationData)
+    try {
+      const mutationData = await this.client.mutate({ 
+        mutation: createRepo, 
+        variables: { reponame: repoName, owner: repoOwner, description: repoDescription }
+      })
+      this.isDebug && console.log('...createRepo - mutationData: ', mutationData)
+    } catch(err) {
+      console.log('createRepo - Error in createRepo - err: ', err)
+    }
   }
 
   generateNames(repoToCreate) {
@@ -77,14 +131,14 @@ class GitHub {
 
   cloneTemplate(reposToCreate) {
     return new Promise(async (resolve, reject) => {
-      this.isDebug && console.log(`GITHUB_ORG: ${this.environment.operationalVars.GITHUB_ORG} GITHUB_TEMPLATE_REPO: ${this.environment.operationalVars.GITHUB_TEMPLATE_REPO}`)
+      this.isDebug && console.log(`GITHUB_ORG: ${ this.GITHUB_ORG } GITHUB_TEMPLATE_REPO: ${this.GITHUB_TEMPLATE_REPO}`)
       try {
         await this.createGqlClient()
         
         this.isDebug && console.log('GOT HERE. getTemplateRepo: ', getTemplateRepo)
         const templateData = await this.client.query({ 
           query: getTemplateRepo, 
-          variables: { owner: this.environment.operationalVars.GITHUB_ORG, reponame: this.environment.operationalVars.GITHUB_TEMPLATE_REPO }
+          variables: { owner: this.GITHUB_ORG, reponame: this.GITHUB_TEMPLATE_REPO }
         })
 
         this.isDebug && console.log('\nrepository: ', templateData.data.repository)
@@ -102,8 +156,12 @@ class GitHub {
         for (let currentTeamNo = 0; currentTeamNo < reposToCreate.length; currentTeamNo++) {
           this.generateNames(reposToCreate[currentTeamNo])
           console.log(this.repoName, '\n', this.repoDescription)
-          await this.createRepo(templateData.data.repository.owner.id, this.repoName, this.repoDescription) 
-          await this.createTeam(this.environment.getOperationalVars().GITHUB_ORG, this.repoName, this.repoDescription)
+          await this.createRepo(templateData.data.repository.owner.id, 
+            this.repoName, this.repoDescription) 
+          await this.createTeam(this.GITHUB_ORG, this.repoName, this.teamDescription)
+          await this.deleteRepoLabels(this.GITHUB_ORG, this.repoName)
+          await this.addLabelsToRepo(templateData.data.repository.id, 
+            templateData.data.repository.labels.edges)
         }
         
         return resolve('done')
