@@ -29,6 +29,7 @@ const createRepo = gql`
       visibility: PUBLIC
     }) {
       repository {
+        id
         name
         createdAt
       }
@@ -36,14 +37,4 @@ const createRepo = gql`
   }
 `
 
-const deleteLabel = gql`
-  mutation deleteLabel($id: ID!) {
-    deleteLabel(input: {
-      id: $id
-    }) {
-      clientMutationId
-    }
-  }
-`
-
-module.exports = { addLabelToRepo, createRepo, deleteLabel }
+module.exports = { addLabelToRepo, createRepo }

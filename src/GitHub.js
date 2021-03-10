@@ -7,7 +7,7 @@ const InMemoryCache = require("apollo-cache-inmemory").InMemoryCache
 const { Octokit } = require("@octokit/rest")
 
 const { getRepoLabels, getTemplateRepo } = require('./graphql/queries')
-const { addLabelToRepo, createRepo, deleteLabel } = require('./graphql/mutations')
+const { addLabelToRepo, createRepo } = require('./graphql/mutations')
 
 class GitHub {
   constructor(environment) {
@@ -47,48 +47,29 @@ class GitHub {
   async getRepoLabels(orgName, repoName) {
     let labels
     try {
-      return await this.client.query({ 
+      labels = await this.client.query({ 
         query: getRepoLabels, 
         variables: { owner: orgName, reponame: repoName }
       })
+      return labels
     } catch(err) {
       console.log('getRepoLabels  - Error fetching labels. err: ', err)
     }
   }
 
-  async deleteRepoLabels(orgName, repoName) {
-    const repoData = await this.getRepoLabels(orgName, repoName)
-    console.log('...deleteRepoLabels labels: ', repoData.data.repository.labels.edges)
-    return Promise.all(repoData.data.repository.labels.edges.map(async (label)  => {
-      try {
-        return await this.client.mutate({ 
-          mutation: deleteLabel, 
-          variables: { id: label.node.id }
-        })
-      } catch(err) {
-        console.log('deleteRepoLabels  - Error deleting labels. err: ', err)
-      }
-    }))
-  }
-
   async addLabelsToRepo(repoId, labels) {
-    return Promise.all(labels.map(async (label)  => {
-      console.log(label.node)
-      try {
-        const mutationData = await this.client.mutate({ 
-          mutation: addLabelToRepo, 
-          variables: { 
-            repoId: repoId,  
-            name: label.node.name, 
-            description: label.node.description,
-            color: label.node.color,
-          }
-        })
-        this.isDebug && console.log('...createRepo - mutationData: ', mutationData)
-      } catch(err) {
-        console.log('addLabelsToRepo - err: ', err)
-      }
-    }))
+    labels.map(async (label)  => {
+      const mutationData = await this.client.mutate({ 
+        mutation: addLabelToRepo, 
+        variables: { 
+          repoId: repoId,  
+          name: label.node.name, 
+          description: label.node.description,
+          color: label.node.color,
+        }
+      })
+      this.isDebug && console.log('...addLabelsToRepo - mutationData: ', mutationData)
+    })
   }
 
   async createTeam(orgName, repoName, teamDescription) {
@@ -113,6 +94,7 @@ class GitHub {
         variables: { reponame: repoName, owner: repoOwner, description: repoDescription }
       })
       this.isDebug && console.log('...createRepo - mutationData: ', mutationData)
+      return mutationData
     } catch(err) {
       console.log('createRepo - Error in createRepo - err: ', err)
     }
@@ -135,7 +117,6 @@ class GitHub {
       try {
         await this.createGqlClient()
         
-        this.isDebug && console.log('GOT HERE. getTemplateRepo: ', getTemplateRepo)
         const templateData = await this.client.query({ 
           query: getTemplateRepo, 
           variables: { owner: this.GITHUB_ORG, reponame: this.GITHUB_TEMPLATE_REPO }
@@ -155,12 +136,11 @@ class GitHub {
         console.log('No. teams to create: ', reposToCreate.length)
         for (let currentTeamNo = 0; currentTeamNo < reposToCreate.length; currentTeamNo++) {
           this.generateNames(reposToCreate[currentTeamNo])
-          console.log(this.repoName, '\n', this.repoDescription)
-          await this.createRepo(templateData.data.repository.owner.id, 
+          this.isDebug && console.log(this.repoName, '\n', this.repoDescription)
+          const newRepoData = await this.createRepo(templateData.data.repository.owner.id, 
             this.repoName, this.repoDescription) 
           await this.createTeam(this.GITHUB_ORG, this.repoName, this.teamDescription)
-          await this.deleteRepoLabels(this.GITHUB_ORG, this.repoName)
-          await this.addLabelsToRepo(templateData.data.repository.id, 
+          await this.addLabelsToRepo(newRepoData.data.createRepository.repository.id, 
             templateData.data.repository.labels.edges)
         }
         
