@@ -20,7 +20,9 @@ The steps it follows are to:
    - [ ] Copy the `readme.md` in the template repo
    - [ ] Copy issue templates from the template repo
    - [X] Add the team with Admin rights on the repository
-   - [ ] Copy labels, milestones, & issues from the template repo
+   - [X] Copy labels from the template repo
+   - [X] Copy milestones from the template repo
+   - [ ] Copy issues from the template repo
 
 ## Test Commandw (temporary)
 node zelda clone -o chingu-voyagetest -t voyage-template -t1 1 -t2 0 -t3 0 -n1 Toucans -n2 Geckos -n3 Bears

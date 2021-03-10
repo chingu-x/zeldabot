@@ -1,24 +1,5 @@
 const gql = require('graphql-tag');
 
-const getRepoLabels = gql`
-  query getRepoLabels($owner: String!, $reponame: String!) {
-    repository(owner: $owner, name: $reponame) {
-      id
-      name
-      labels(first:15) {
-        edges {
-          node {
-            id
-            name
-            description
-            color
-          }
-        }
-      }
-    }
-  }
-`
-
 const getTemplateRepo = gql`
   query getTemplateRepo($owner: String!, $reponame: String!) {
     repository(owner: $owner, name: $reponame) {
@@ -41,11 +22,13 @@ const getTemplateRepo = gql`
             title
             body
             milestone {
+              id
               title
             }
             labels (first: 10) {
               edges {
                 node {
+                  id
                   name
                   color
                 }
@@ -67,6 +50,7 @@ const getTemplateRepo = gql`
         edges {
           node {
             title
+            description
           }
         }
       }
@@ -74,4 +58,4 @@ const getTemplateRepo = gql`
   }
 `
 
-module.exports = { getRepoLabels, getTemplateRepo }
+module.exports = { getTemplateRepo }
