@@ -7,7 +7,7 @@ const InMemoryCache = require("apollo-cache-inmemory").InMemoryCache
 const { Octokit } = require("@octokit/rest")
 
 const { getTemplateRepo } = require('./graphql/queries')
-const { addLabelToRepo, createRepo } = require('./graphql/mutations')
+const { addLabelToRepo, createIssue, createRepo } = require('./graphql/mutations')
 
 class GitHub {
   constructor(environment) {
@@ -49,15 +49,15 @@ class GitHub {
       this.isDebug && console.log('...addIssuesToRepo - issue: ', issue.node.labels)
       const labelIds = issue.node.labels.edges === [] 
         ? [] : issue.node.labels.edges.map(label => label.node.id)
-      this.isDebug && console.log('...addIssuesToRepo - labelIds: ', labelIds)
+      this.isDebug && console.log('...addIssuesToRepo - milestoneId: ', issue.node.milestone.id)
       const mutationResult = await this.client.mutate({ 
         mutation: createIssue, 
         variables: { 
           repoId: repoId,  
           title: issue.node.title, 
           body: issue.node.body,
+          milestoneId: issue.node.milestone.id,
           labelIds: labelIds,
-          milestoneId: issue.node.milestone
         }
       })
       this.isDebug && console.log('...addIssuesToRepo - mutationData: ', mutationResult)

@@ -20,6 +20,25 @@ const addLabelToRepo = gql`
   }
 `
 
+const createIssue = gql`
+  mutation createIssue($repoId: ID!, $title: String!, $body: String!, 
+      $milestoneId: ID, $labelIds: [ID!]) {
+    createIssue(input: {
+      repositoryId: $repoId,
+      title: $title,
+      body: $body,
+      milestoneId: $milestoneId,
+      labelIds: $labelIds
+    }) {
+      issue {
+        id
+        title
+        createdAt
+      }
+    }
+  }
+`
+
 const createRepo = gql`
   mutation createRepository($reponame: String, $owner: String, $description: String) {
     createRepository(input: {
@@ -37,4 +56,4 @@ const createRepo = gql`
   }
 `
 
-module.exports = { addLabelToRepo, createRepo }
+module.exports = { addLabelToRepo, createIssue, createRepo }
