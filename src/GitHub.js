@@ -27,6 +27,7 @@ class GitHub {
     this.repoName
     this.repoDescription
     this.teamDescription
+    this.milestones = []
   }
 
   async createGqlClient() {
@@ -48,33 +49,11 @@ class GitHub {
   }
 
   async listMilestonesInRepo(orgName, repoName) {
-    console.log(`...listMilestonesInRepo - orgName: ${ orgName } repoName: ${ repoName }`)
     const queryResult = await this.octokit.issues.listMilestones({
       owner: orgName,
       repo: repoName,
     })
-    console.log(`...listMilestonesInRepo - status: ${ queryResult.status } queryResult: `, queryResult.data)
     return queryResult.data
-  }
-
-  async addIssuesToRepo(repoId, templateIssues) {
-    for (let issue of templateIssues) {
-      const labelIds = issue.node.labels.edges === [] 
-        ? [] : issue.node.labels.edges.map(label => label.node.id)     
-      try {
-          const mutationResult = await this.client.mutate({ 
-            mutation: createIssue, 
-            variables: { 
-              repoId: repoId,  
-              title: issue.node.title, 
-              body: issue.node.body,
-              labelIds: labelIds,
-            }
-          })
-      } catch(err) {
-        console.log(`addIssuesToRepo - Error creating issue: `, err)
-      }
-    }
   }
 
   async addMilestonesToRepo(orgName, repoName, milestones) {
@@ -86,9 +65,34 @@ class GitHub {
           title: milestone.node.title,
           description: milestone.node.description,
         })
-        console.log('...addMilestonesToRepo - mutationResult: ', mutationResult)
+        this.milestones.push({
+          id: mutationResult.data.node_id,
+          title: mutationResult.data.title,
+        })
       } catch(err) {
         console.log('Error adding milestone to repo: ', err)
+      }
+    }
+  }
+
+  async addIssuesToRepo(repoId, templateIssues) {
+    for (let issue of templateIssues) {
+      const labelIds = issue.node.labels.edges === [] 
+        ? [] : issue.node.labels.edges.map(label => label.node.id) 
+      const milestoneForIssue = this.milestones.find(milestone => milestone.title === issue.node.milestone.title) 
+      try {
+          const mutationResult = await this.client.mutate({ 
+            mutation: createIssue, 
+            variables: { 
+              repoId: repoId,  
+              title: issue.node.title, 
+              body: issue.node.body,
+              labelIds: labelIds,
+              milestoneId: milestoneForIssue.id
+            }
+          })
+      } catch(err) {
+        console.log(`addIssuesToRepo - Error creating issue: `, err)
       }
     }
   }
@@ -168,11 +172,8 @@ class GitHub {
         await this.createTeam(this.GITHUB_ORG, this.repoName, this.teamDescription)
         await this.addLabelsToRepo(newRepoData.data.createRepository.repository.id, 
           templateData.data.repository.labels.edges)
-        console.log('template milestones: ', templateData.data.repository.milestones.edges)
         await this.addMilestonesToRepo(this.GITHUB_ORG, this.repoName, 
           templateData.data.repository.milestones.edges)
-        const milestones = await this.listMilestonesInRepo(this.GITHUB_ORG, this.repoName)
-        console.log('milestones: ', milestones)
         await this.addIssuesToRepo(newRepoData.data.createRepository.repository.id,
           templateData.data.repository.issues.edges)
       }
