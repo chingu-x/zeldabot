@@ -24,6 +24,7 @@ const getTemplateRepo = gql`
             milestone {
               id
               title
+              description
             }
             labels (first: 10) {
               edges {

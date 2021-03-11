@@ -26,3 +26,5 @@ The steps it follows are to:
 
 ## Test Commandw (temporary)
 node zelda clone -o chingu-voyagetest -t voyage-template -t1 1 -t2 0 -t3 0 -n1 Toucans -n2 Geckos -n3 Bears
+node zelda clone -t1 1 -t2 0 -t3 0 
+

@@ -87,7 +87,7 @@ program
     environment.isDebug() && console.log('reposToCreate: ', reposToCreate)
     
     const github = new GitHub(environment) 
-    github.cloneTemplate(reposToCreate)
+    await github.cloneTemplate(reposToCreate)
   })
 
   program.parse(process.argv)

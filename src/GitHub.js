@@ -19,7 +19,10 @@ class GitHub {
     this.GITHUB_TEMPLATE_REPO = this.environment.getOperationalVars().GITHUB_TEMPLATE_REPO
     this.octokit = new Octokit({
       auth: this.GITHUB_TOKEN,
-      baseUrl: 'https://api.github.com'
+      baseUrl: 'https://api.github.com',
+      headers: {
+        Accept: 'application/vnd.github.v3+json',
+      }
     });
     this.repoName
     this.repoDescription
@@ -44,28 +47,38 @@ class GitHub {
     this.client = client
   }
 
-  async addIssuesToRepo(repoId, issues) {
-    issues.map(async (issue)  => {
-      this.isDebug && console.log('...addIssuesToRepo - issue: ', issue.node.labels)
-      const labelIds = issue.node.labels.edges === [] 
-        ? [] : issue.node.labels.edges.map(label => label.node.id)
-      this.isDebug && console.log('...addIssuesToRepo - milestoneId: ', issue.node.milestone.id)
-      const mutationResult = await this.client.mutate({ 
-        mutation: createIssue, 
-        variables: { 
-          repoId: repoId,  
-          title: issue.node.title, 
-          body: issue.node.body,
-          milestoneId: issue.node.milestone.id,
-          labelIds: labelIds,
-        }
-      })
-      this.isDebug && console.log('...addIssuesToRepo - mutationData: ', mutationResult)
+  async listMilestonesInRepo(orgName, repoName) {
+    console.log(`...listMilestonesInRepo - orgName: ${ orgName } repoName: ${ repoName }`)
+    const queryResult = await this.octokit.issues.listMilestones({
+      owner: orgName,
+      repo: repoName,
     })
+    console.log(`...listMilestonesInRepo - status: ${ queryResult.status } queryResult: `, queryResult.data)
+    return queryResult.data
+  }
+
+  async addIssuesToRepo(repoId, templateIssues) {
+    for (let issue of templateIssues) {
+      const labelIds = issue.node.labels.edges === [] 
+        ? [] : issue.node.labels.edges.map(label => label.node.id)     
+      try {
+          const mutationResult = await this.client.mutate({ 
+            mutation: createIssue, 
+            variables: { 
+              repoId: repoId,  
+              title: issue.node.title, 
+              body: issue.node.body,
+              labelIds: labelIds,
+            }
+          })
+      } catch(err) {
+        console.log(`addIssuesToRepo - Error creating issue: `, err)
+      }
+    }
   }
 
   async addMilestonesToRepo(orgName, repoName, milestones) {
-    milestones.map(async (milestone)  => {
+    for (let milestone of milestones) {
       try {
         const mutationResult = await this.octokit.issues.createMilestone({
           owner: orgName,
@@ -73,24 +86,29 @@ class GitHub {
           title: milestone.node.title,
           description: milestone.node.description,
         })
+        console.log('...addMilestonesToRepo - mutationResult: ', mutationResult)
       } catch(err) {
-        console.log(`addMilestonesToRepo - Error creating milestone ${ milestone }: `, err)
+        console.log('Error adding milestone to repo: ', err)
       }
-    }) 
+    }
   }
 
   async addLabelsToRepo(repoId, labels) {
-    labels.map(async (label)  => {
-      const mutationResult = await this.client.mutate({ 
-        mutation: addLabelToRepo, 
-        variables: { 
-          repoId: repoId,  
-          name: label.node.name, 
-          description: label.node.description,
-          color: label.node.color,
-        }
-      })
-    })
+    for (let label of labels) {
+      try {
+        const mutationResult = await this.client.mutate({ 
+          mutation: addLabelToRepo, 
+          variables: { 
+            repoId: repoId,  
+            name: label.node.name, 
+            description: label.node.description,
+            color: label.node.color,
+          }
+        })
+      } catch(err) {
+        console.log('Error adding label to repo: ', err)
+      }
+    }
   }
 
   async createTeam(orgName, repoName, teamDescription) {
@@ -131,45 +149,37 @@ class GitHub {
       +`Team ${ repoToCreate.teamNo }`
   }
 
-  cloneTemplate(reposToCreate) {
-    return new Promise(async (resolve, reject) => {
-      this.isDebug && console.log(`GITHUB_ORG: ${ this.GITHUB_ORG } GITHUB_TEMPLATE_REPO: ${this.GITHUB_TEMPLATE_REPO}`)
-      try {
-        await this.createGqlClient()
-        
-        const templateData = await this.client.query({ 
-          query: getTemplateRepo, 
-          variables: { owner: this.GITHUB_ORG, reponame: this.GITHUB_TEMPLATE_REPO }
-        })
+  async cloneTemplate(reposToCreate) {
+    this.isDebug && console.log(`GITHUB_ORG: ${ this.GITHUB_ORG } GITHUB_TEMPLATE_REPO: ${this.GITHUB_TEMPLATE_REPO}`)
+    try {
+      await this.createGqlClient()
+      
+      const templateData = await this.client.query({ 
+        query: getTemplateRepo, 
+        variables: { owner: this.GITHUB_ORG, reponame: this.GITHUB_TEMPLATE_REPO }
+      })
 
-        this.isDebug && console.log('\nrepository: ', templateData.data.repository)
-        templateData.data.repository.issues.edges.forEach(issue => {
-          this.isDebug && console.log('...cloneTemplate - issue: ', issue.node)
-          this.isDebug && console.log('...cloneTemplate - issue.labels:', issue.node.labels.edges)
-        })
-
-        console.log('No. teams to create: ', reposToCreate.length)
-        for (let currentTeamNo = 0; currentTeamNo < reposToCreate.length; currentTeamNo++) {
-          this.generateNames(reposToCreate[currentTeamNo])
-          this.isDebug && console.log(this.repoName, '\n', this.repoDescription)
-          const newRepoData = await this.createRepo(templateData.data.repository.owner.id, 
-            this.repoName, this.repoDescription) 
-          await this.createTeam(this.GITHUB_ORG, this.repoName, this.teamDescription)
-          await this.addLabelsToRepo(newRepoData.data.createRepository.repository.id, 
-            templateData.data.repository.labels.edges)
-          await this.addMilestonesToRepo(this.GITHUB_ORG, this.repoName, 
-            templateData.data.repository.milestones.edges)
-          await this.addIssuesToRepo(newRepoData.data.createRepository.repository.id,
-            templateData.data.repository.issues.edges)
-        }
-        
-        return resolve('done')
+      console.log('No. teams to create: ', reposToCreate.length)
+      for (let currentTeamNo = 0; currentTeamNo < reposToCreate.length; currentTeamNo++) {
+        this.generateNames(reposToCreate[currentTeamNo])
+        this.isDebug && console.log(this.repoName, '\n', this.repoDescription)
+        const newRepoData = await this.createRepo(templateData.data.repository.owner.id, 
+          this.repoName, this.repoDescription) 
+        await this.createTeam(this.GITHUB_ORG, this.repoName, this.teamDescription)
+        await this.addLabelsToRepo(newRepoData.data.createRepository.repository.id, 
+          templateData.data.repository.labels.edges)
+        console.log('template milestones: ', templateData.data.repository.milestones.edges)
+        await this.addMilestonesToRepo(this.GITHUB_ORG, this.repoName, 
+          templateData.data.repository.milestones.edges)
+        const milestones = await this.listMilestonesInRepo(this.GITHUB_ORG, this.repoName)
+        console.log('milestones: ', milestones)
+        await this.addIssuesToRepo(newRepoData.data.createRepository.repository.id,
+          templateData.data.repository.issues.edges)
       }
-      catch(err) {
-        this.environment.isDebug && console.error(err)
-        return reject(err)
-      }
-    })
+    }
+    catch(err) {
+      this.environment.isDebug && console.error(err)
+    }
   }
 
 }
