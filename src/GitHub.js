@@ -1,8 +1,6 @@
-const gql = require("graphql-tag")
 const ApolloClient = require("apollo-client").ApolloClient
 const fetch = require("node-fetch")
 const createHttpLink = require("apollo-link-http").createHttpLink
-const setContext = require("apollo-link-context").setContext
 const InMemoryCache = require("apollo-cache-inmemory").InMemoryCache
 const { Octokit } = require("@octokit/rest")
 
@@ -13,10 +11,17 @@ class GitHub {
   constructor(environment) {
     this.environment = environment
     this.isDebug = this.environment.isDebug()
-    this.client
+
     this.GITHUB_TOKEN = this.environment.getOperationalVars().GITHUB_TOKEN
     this.GITHUB_ORG = this.environment.getOperationalVars().GITHUB_ORG
     this.GITHUB_TEMPLATE_REPO = this.environment.getOperationalVars().GITHUB_TEMPLATE_REPO
+    
+    this.client
+    this.repoName
+    this.repoDescription
+    this.teamDescription
+    this.milestones = []
+
     this.octokit = new Octokit({
       auth: this.GITHUB_TOKEN,
       baseUrl: 'https://api.github.com',
@@ -24,10 +29,6 @@ class GitHub {
         Accept: 'application/vnd.github.v3+json',
       }
     });
-    this.repoName
-    this.repoDescription
-    this.teamDescription
-    this.milestones = []
   }
 
   async createGqlClient() {
