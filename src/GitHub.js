@@ -15,7 +15,7 @@ class GitHub {
     this.GITHUB_TOKEN = this.environment.getOperationalVars().GITHUB_TOKEN
     this.GITHUB_ORG = this.environment.getOperationalVars().GITHUB_ORG
     this.GITHUB_TEMPLATE_REPO = this.environment.getOperationalVars().GITHUB_TEMPLATE_REPO
-    
+
     this.client
     this.repoName
     this.repoDescription
@@ -47,14 +47,6 @@ class GitHub {
     });
 
     this.client = client
-  }
-
-  async listMilestonesInRepo(orgName, repoName) {
-    const queryResult = await this.octokit.issues.listMilestones({
-      owner: orgName,
-      repo: repoName,
-    })
-    return queryResult.data
   }
 
   async addMilestonesToRepo(orgName, repoName, milestones) {
