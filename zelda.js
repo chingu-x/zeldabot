@@ -53,9 +53,9 @@ program
   .option('-t1, --t1-count <t1count>', 'Number of Tier 1 team repos to create')
   .option('-t2, --t2-count <t2count>', 'Number of Tier 2 team repos to create')
   .option('-t3, --t3-count <t3count>', 'Number of Tier 3 team repos to create')
-  .option('-n1, --t1-name <t1count>', 'Number of Tier 1 team repos to create')
-  .option('-n2, --t2-name <t2count>', 'Number of Tier 2 team repos to create')
-  .option('-n3, --t3-name <t3count>', 'Number of Tier 3 team repos to create')
+  .option('-n1, --t1-name <t1count>', 'Name of Tier 1 team used to create repo/team name')
+  .option('-n2, --t2-name <t2count>', 'Name of Tier 2 team used to create repo/team name')
+  .option('-n3, --t3-name <t3count>', 'Name of Tier 3 team used to create repo/team name')
   .action( async (options) => {
     environment.setOperationalVars({
       debug: options.debug,
