@@ -169,7 +169,7 @@ class GitHub {
 
       for (let currentTeamNo = 0; currentTeamNo < reposToCreate.length; currentTeamNo++) {
         this.generateNames(reposToCreate[currentTeamNo])
-        console.log(`\nCreating ${ this.repoName }`)
+        console.log(`\nCreating ${ this.repoName }...`)
         const newRepoData = await this.createRepo(templateData.data.repository.owner.id, 
           this.repoName, this.repoDescription) 
         await this.createTeam(this.GITHUB_ORG, this.repoName, this.teamDescription)
