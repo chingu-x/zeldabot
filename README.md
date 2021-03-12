@@ -31,6 +31,13 @@ npm i
 ```
 
 To run the app check out the information in the *_'Usage'_* section below.
+
+Zeldabot requires the use of a GitHub personal access token. ou can follow 
+this [procedure](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) to set one up.
+
+You will also need to grant admin access on the organization new repos will be
+created in to the GitHub id that owns the personal access token. 
+
 ## Usage
 
 Zeldabot is a command line application (CLI). The basic command to run it is:
@@ -63,13 +70,47 @@ ALWAYS override the same option you specify in the `.env` file.
 
 ### CLI Examples
 
-Assuming that you've set up a `.env` file with the `VOYAGE`, `TIER1_NAME`, 
-`TIER2_NAME`, `TIER3_NAME`, `GITHUB_ORG`, & `GITHUB_TEMPLATE_REPO` variables the 
+#### Example #1
+
+Assuming that you've set up a `.env` file with the variables:
+```
+VOYAGE=v99
+TIER1_NAME=toucans
+TIER2_NAME=geckos
+TIER3_NAME=bears
+GITHUB_ORG=chingu-voyagetest
+GITHUB_TEMPLATE_REPO=voyage-template 
+GITHUB_TOKEN=the-token-value
+```
+the 
 command to run Zeldabot can be as simple as the following to set up repositories
 for 3 tier 1, 2 tier 2, and 4 tier 3 teams.
 ```
 node zelda clone -t1 3 -t2 2 -t3 4
 ```
+
+Running this command would create the following repo:
+- chingu-voyagetest/v99-toucans-team-01
+- chingu-voyagetest/v99-toucans-team-02
+- chingu-voyagetest/v99-toucans-team-03
+- chingu-voyagetest/v99-geckos-team-04
+- chingu-voyagetest/v99-geckos-team-05
+- chingu-voyagetest/v99-bears-team-06
+- chingu-voyagetest/v99-bears-team-07
+- chingu-voyagetest/v99-bears-team-08
+- chingu-voyagetest/v99-bears-team-09
+
+#### Example #2
+
+A slightly more complicated example assumes that even with the same `.env` file
+you would like to create a set of repos with different team names.
+```
+node zelda clone -t1 1 -t2 1 -t3 1 -n1 possums -n2 cobras -n3 kangaroos
+```
+Running this command would create the following repo:
+- chingu-voyagetest/v99-possums-team-01
+- chingu-voyagetest/v99-cobras-team-02
+- chingu-voyagetest/v99-kangaroos-team-03
 
 ## Release History
 
