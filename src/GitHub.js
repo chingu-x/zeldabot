@@ -3,6 +3,8 @@ const fetch = require("node-fetch")
 const createHttpLink = require("apollo-link-http").createHttpLink
 const InMemoryCache = require("apollo-cache-inmemory").InMemoryCache
 const { Octokit } = require("@octokit/rest")
+const cliProgress = require('cli-progress')
+const _colors = require('colors')
 
 const { getTemplateRepo } = require('./graphql/queries')
 const { addLabelToRepo, createIssue, createRepo } = require('./graphql/mutations')
@@ -28,7 +30,15 @@ class GitHub {
       headers: {
         Accept: 'application/vnd.github.v3+json',
       }
-    });
+    })
+
+    this.overallProgress = new cliProgress.SingleBar({
+      format: 'Overall Progress |' + _colors.brightGreen('{bar}') + '| {percentage}% || {value}/{total} All Repos ',
+      barCompleteChar: '\u2588',
+      barIncompleteChar: '\u2591',
+      clearOnComplete: false,
+      hideCursor: true
+    }, cliProgress.Presets.shades_classic)
   }
 
   async createGqlClient() {
@@ -147,8 +157,9 @@ class GitHub {
   }
 
   async cloneTemplate(reposToCreate) {
-    this.isDebug && console.log(`GITHUB_ORG: ${ this.GITHUB_ORG } GITHUB_TEMPLATE_REPO: ${this.GITHUB_TEMPLATE_REPO}`)
     try {
+      this.overallProgress.start(reposToCreate.length, 0)
+
       await this.createGqlClient()
       
       const templateData = await this.client.query({ 
@@ -156,10 +167,8 @@ class GitHub {
         variables: { owner: this.GITHUB_ORG, reponame: this.GITHUB_TEMPLATE_REPO }
       })
 
-      console.log('No. teams to create: ', reposToCreate.length)
       for (let currentTeamNo = 0; currentTeamNo < reposToCreate.length; currentTeamNo++) {
         this.generateNames(reposToCreate[currentTeamNo])
-        this.isDebug && console.log(this.repoName, '\n', this.repoDescription)
         const newRepoData = await this.createRepo(templateData.data.repository.owner.id, 
           this.repoName, this.repoDescription) 
         await this.createTeam(this.GITHUB_ORG, this.repoName, this.teamDescription)
@@ -169,7 +178,10 @@ class GitHub {
           templateData.data.repository.milestones.edges)
         await this.addIssuesToRepo(newRepoData.data.createRepository.repository.id,
           templateData.data.repository.issues.edges)
+        this.milestones = []
+        this.overallProgress.increment(1)
       }
+      this.overallProgress.stop()
     }
     catch(err) {
       this.environment.isDebug && console.error(err)
