@@ -103,7 +103,9 @@ Running this command would create the following repo:
 #### Example #2
 
 A slightly more complicated example assumes that even with the same `.env` file
-you would like to create a set of repos with different team names.
+you would like to create a set of repos with different team names. Since 
+command line options always override the same settings in the `.env` file it is
+is not necessary to update the `.env` file.
 ```
 node zelda clone -t1 1 -t2 1 -t3 1 -n1 possums -n2 cobras -n3 kangaroos
 ```
