@@ -28,13 +28,15 @@ const consoleLogOptions = (options) => {
 
 let reposToCreate = []
 const generateRepoList = (voyageName, teams) => {
+  let teamNo = 0
   for (let teamCount = 0; teamCount < teams.length; teamCount++) {
     if (teams[teamCount].count > 0) {
       for (let currentTeamNo = 1; currentTeamNo <= teams[teamCount].count; currentTeamNo++) {
+        teamNo += 1
         reposToCreate.push({ 
           voyageName: `${ voyageName }`,
           tierName: `${ teams[teamCount].name.toLowerCase() }`,
-          teamNo: `${ teams[teamCount].count.toString().padStart(2, "0") }` 
+          teamNo: `${ teamNo.toString().padStart(2, "0") }` 
         })
       }
     }
@@ -84,7 +86,6 @@ program
       { name: TIER2_NAME, count: NO_TIER2_TEAMS },
       { name: TIER3_NAME, count: NO_TIER3_TEAMS }
     ])
-    environment.isDebug() && console.log('reposToCreate: ', reposToCreate)
     
     const github = new GitHub(environment) 
     await github.cloneTemplate(reposToCreate)
