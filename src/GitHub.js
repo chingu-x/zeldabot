@@ -145,6 +145,13 @@ class GitHub {
     }
   }
 
+  async getTemplateRepo(orgName, repoName) {
+    return await this.client.query({ 
+      query: getTemplateRepo, 
+      variables: { owner: orgName, reponame: repoName }
+    })
+  }
+
   generateNames(repoToCreate) {
     this.repoName = `${ repoToCreate.voyageName }-`
       + `${ repoToCreate.tierName }-team-`
@@ -162,11 +169,7 @@ class GitHub {
 
       await this.createGqlClient()
       
-      const templateData = await this.client.query({ 
-        query: getTemplateRepo, 
-        variables: { owner: this.GITHUB_ORG, reponame: this.GITHUB_TEMPLATE_REPO }
-      })
-
+      const templateData = await this.getTemplateRepo(this.GITHUB_ORG, this.GITHUB_TEMPLATE_REPO)
       for (let currentTeamNo = 0; currentTeamNo < reposToCreate.length; currentTeamNo++) {
         this.generateNames(reposToCreate[currentTeamNo])
         const newRepoData = await this.createRepo(templateData.data.repository.owner.id, 
