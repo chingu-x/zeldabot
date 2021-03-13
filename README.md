@@ -32,7 +32,7 @@ npm i
 
 To run the app check out the information in the *_'Usage'_* section below.
 
-Zeldabot requires the use of a GitHub personal access token. ou can follow 
+Zeldabot requires the use of a GitHub personal access token. You can follow 
 this [procedure](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) to set one up.
 
 You will also need to grant admin access on the organization new repos will be
