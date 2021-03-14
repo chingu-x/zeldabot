@@ -1,13 +1,26 @@
+
+
+
+[contributors-shield]: https://img.shields.io/github/contributors/chingu-x/zeldabot.svg?style=for-the-badge
+[contributors-url]: https://github.com/chingu-x/zeldabot/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/chingu-x/zeldabot.svg?style=for-the-badge
+[forks-url]: https://github.com/chingu-x/zeldabot/network/members
+[stars-shield]: https://img.shields.io/github/stars/chingu-x/zeldabot.svg?style=for-the-badge
+[stars-url]: https://github.com/chingu-x/zeldabot/stargazers
+[issues-shield]: https://img.shields.io/github/issues/chingu-x/zeldabot.svg?style=for-the-badge
+[issues-url]: https://github.com/chingu-x/zeldabot/issues
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+
 # zeldabot
 Zelda creates Chingu Voyage repos in GitHub from a template repository. It's purpose is
 to automate the process to reduce the amount of manual time spent preparing for Voyages,
 while improving quality and reducing the chance of errors.
 
-* [Process Overview](#process-overview)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Release History](#release-history)
-* [License](#license)
+[Process Overview](#process-overview) - [Installation](#installation) - [Usage](#usage) - [Release History](#release-history) - [License](#license)
 
 ## Process Overview
 
