@@ -20,11 +20,7 @@ Zelda creates Chingu Voyage repos in GitHub from a template repository. It's pur
 to automate the process to reduce the amount of manual time spent preparing for Voyages,
 while improving quality and reducing the chance of errors.
 
-* [Process Overview](#process-overview)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Release History](#release-history)
-* [License](#license)
+[Process Overview](#process-overview) - [Installation](#installation) - [Usage](#usage) - [Release History](#release-history) - [License](#license)
 
 ## Process Overview
 
