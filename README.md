@@ -1,19 +1,19 @@
-[contributors-shield]: https://img.shields.io/github/contributors/chingu-voyages/v27-bears-team-06.svg?style=for-the-badge
-[contributors-url]: https://github.com/chingu-voyages/v27-bears-team-06/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/chingu-voyages/v27-bears-team-06.svg?style=for-the-badge
-[forks-url]: https://github.com/chingu-voyages/v27-bears-team-06/network/members
-[stars-shield]: https://img.shields.io/github/stars/chingu-voyages/v27-bears-team-06.svg?style=for-the-badge
-[stars-url]: https://github.com/chingu-voyages/v27-bears-team-06/stargazers
-[issues-shield]: https://img.shields.io/github/issues/chingu-voyages/v27-bears-team-06.svg?style=for-the-badge
-[issues-url]: https://github.com/chingu-voyages/v27-bears-team-06/issues
-[license-shield]: https://img.shields.io/github/license/chingu-voyages/v27-bears-team-06.svg?style=for-the-badge
-[license-url]: https://github.com/chingu-voyages/v27-bears-team-06/blob/master/LICENSE.txt
+
+
+
+[contributors-shield]: https://img.shields.io/github/contributors/chingu-x/zeldabot.svg?style=for-the-badge
+[contributors-url]: https://github.com/chingu-x/zeldabot/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/chingu-x/zeldabot.svg?style=for-the-badge
+[forks-url]: https://github.com/chingu-x/zeldabot/network/members
+[stars-shield]: https://img.shields.io/github/stars/chingu-x/zeldabot.svg?style=for-the-badge
+[stars-url]: https://github.com/chingu-x/zeldabot/stargazers
+[issues-shield]: https://img.shields.io/github/issues/chingu-x/zeldabot.svg?style=for-the-badge
+[issues-url]: https://github.com/chingu-x/zeldabot/issues
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 
 # zeldabot
 Zelda creates Chingu Voyage repos in GitHub from a template repository. It's purpose is
