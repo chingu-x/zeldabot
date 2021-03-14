@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 **Describe the problem**
-A clear and concise description of what the bug is.
+A clear and concise description of the bug.
 
 **Actual behavior**
 A clear and concise description of what you experienced.
