@@ -16,11 +16,14 @@
 [![Issues][issues-shield]][issues-url]
 
 # zeldabot
+
 Zelda creates Chingu Voyage repos in GitHub from a template repository. It's purpose is
 to automate the process to reduce the amount of manual time spent preparing for Voyages,
 while improving quality and reducing the chance of errors.
 
 [Process Overview](#process-overview) - [Installation](#installation) - [Usage](#usage) - [Release History](#release-history) - [License](#license)
+
+![Zeldabot Progress Bar](./docs/zeldabot_progress_bar.png)
 
 ## Process Overview
 
