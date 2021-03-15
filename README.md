@@ -33,7 +33,7 @@ it creates:
 3. Create an empty team in the designated gitHub organization and add it to the repo with *_'Admin'_* privileges
 4. Clone issue labels from the template repo to the new repository
 5. Clone milestones from the template repo to the new repository
-6. Clone issue from the template repo to the new repository, adding labels and milestones as well
+6. Clone issue from the template repo to the new repository, adding labels and milestones
 
 ## Installation
 
