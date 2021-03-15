@@ -32,8 +32,8 @@ class GitHub {
       }
     })
 
-    this.overallProgress = new cliProgress.SingleBar({
-      format: 'Overall Progress |' + _colors.brightGreen('{bar}') + '| {percentage}% || {value}/{total} All Repos ',
+    this.overallProgress = new cliProgress.MultiBar({
+      format: '|' + _colors.brightGreen('{bar}') + '| {repoName} {percentage}% | {value}/{total}',
       barCompleteChar: '\u2588',
       barIncompleteChar: '\u2591',
       clearOnComplete: false,
@@ -146,10 +146,15 @@ class GitHub {
   }
 
   async getTemplateRepo(orgName, repoName) {
-    return await this.client.query({ 
-      query: getTemplateRepo, 
-      variables: { owner: orgName, reponame: repoName }
-    })
+    console.log(`...getTemplateRepo - orgName: ${ orgName } repoName: ${ repoName }`)
+    try {
+      return await this.client.query({ 
+        query: getTemplateRepo, 
+        variables: { owner: orgName, reponame: repoName }
+      })
+    } catch(err) {
+      console.log('getTemplateRepo - Error in getTemplateRepo - err: ', err)
+    }
   }
 
   generateNames(repoToCreate) {
@@ -165,13 +170,19 @@ class GitHub {
 
   async cloneTemplate(reposToCreate) {
     try {
-      this.overallProgress.start(reposToCreate.length, 0)
+      //this.overallProgress.start(reposToCreate.length, 0)
+
+      let progressBars = []
+      for (let repoBarNo = 0; repoBarNo < reposToCreate.length; ++repoBarNo) {
+        progressBars[repoBarNo] = this.overallProgress.create(1, 0)
+      }
 
       await this.createGqlClient()
-      
+      console.log("Got here")
       const templateData = await this.getTemplateRepo(this.GITHUB_ORG, this.GITHUB_TEMPLATE_REPO)
       for (let currentTeamNo = 0; currentTeamNo < reposToCreate.length; currentTeamNo++) {
         this.generateNames(reposToCreate[currentTeamNo])
+        progressBars[currentTeamNo].update(0, { repoName: this.repoName })
         const newRepoData = await this.createRepo(templateData.data.repository.owner.id, 
           this.repoName, this.repoDescription) 
         await this.createTeam(this.GITHUB_ORG, this.repoName, this.teamDescription)
@@ -182,7 +193,7 @@ class GitHub {
         await this.addIssuesToRepo(newRepoData.data.createRepository.repository.id,
           templateData.data.repository.issues.edges)
         this.milestones = []
-        this.overallProgress.increment(1)
+        progressBars[currentTeamNo].increment(1)
       }
       this.overallProgress.stop()
     }
