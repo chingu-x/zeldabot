@@ -19,6 +19,7 @@ class GitHub {
     this.GITHUB_TOKEN = this.environment.getOperationalVars().GITHUB_TOKEN
     this.GITHUB_ORG = this.environment.getOperationalVars().GITHUB_ORG
     this.GITHUB_TEMPLATE_REPO = this.environment.getOperationalVars().GITHUB_TEMPLATE_REPO
+    this.RESTART = this.environment.getOperationalVars().RESTART
 
     this.client
     this.repoName
@@ -123,7 +124,7 @@ class GitHub {
           }
         })
       } catch(err) {
-        console.log('Error adding label to repo: ', err)
+        console.log('addLabelsToRepo - Error adding label: ', err)
         return
       }
     }
@@ -202,18 +203,20 @@ class GitHub {
       const templateData = await this.getTemplateRepo(this.GITHUB_ORG, this.GITHUB_TEMPLATE_REPO)
       
       for (let teamNo = 0; teamNo < reposToCreate.length; teamNo++) {
-        this.generateNames(reposToCreate[teamNo])
-        const newRepoData = await this.createRepo(templateData.data.repository.owner.id, 
-          templateData.data.repository.id,
-          this.repoName, this.repoDescription)
-        await this.createTeam(this.GITHUB_ORG, this.repoName, this.teamDescription)
-        await this.addLabelsToRepo(newRepoData.data.cloneTemplateRepository.repository.id, 
-          templateData.data.repository.labels.edges)
-        await this.addMilestonesToRepo(this.GITHUB_ORG, this.repoName, 
-          templateData.data.repository.milestones.edges)
-        await this.addIssuesToRepo(newRepoData.data.cloneTemplateRepository.repository.id,
-          templateData.data.repository.issues.edges)
-        this.milestones = []
+        if (this.RESTART > 0 && teamNo+1 >= this.RESTART) {
+          this.generateNames(reposToCreate[teamNo])
+          const newRepoData = await this.createRepo(templateData.data.repository.owner.id, 
+            templateData.data.repository.id,
+            this.repoName, this.repoDescription)
+          await this.createTeam(this.GITHUB_ORG, this.repoName, this.teamDescription)
+          await this.addLabelsToRepo(newRepoData.data.cloneTemplateRepository.repository.id, 
+            templateData.data.repository.labels.edges)
+          await this.addMilestonesToRepo(this.GITHUB_ORG, this.repoName, 
+            templateData.data.repository.milestones.edges)
+          await this.addIssuesToRepo(newRepoData.data.cloneTemplateRepository.repository.id,
+            templateData.data.repository.issues.edges)
+          this.milestones = []
+        }
         this.progressBars[teamNo+1].increment(1)
         this.progressBars[ALL_TEAMS].increment(1)
       }
