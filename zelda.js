@@ -13,6 +13,7 @@ const consoleLogOptions = (options) => {
     console.log('\nZelda clone command options:')
     console.log('--------------------')
     console.log('- debug: ',options.debug)
+    console.log('- restart: ', options.restart)
     console.log('- voyage: ', options.voyage)
     console.log('- github-token: ', options.githubToken)
     console.log('- github-org: ', options.githubOrg)
@@ -48,6 +49,7 @@ program
   .command('clone')
   .description('Clone a template GitHub repo to create Chingu Voyage Repos')
   .option('-d, --debug <debug>', 'Debug switch to add runtime info to console (YES/NO)')
+  .option('-r, --restart <team-number>', 'Restart processing at the specified team number')
   .option('-v, --voyage <voyagename>', 'Voyage name (e.g. v99)')
   .option('-s, --github-token <ghtoken>', 'GitHub token used for authentication')
   .option('-o, --github-org <ghorg>', 'GitHub organization name')
@@ -61,6 +63,7 @@ program
   .action( async (options) => {
     environment.setOperationalVars({
       debug: options.debug,
+      restart: options.restart,
       voyage: options.voyage,
       githubToken: options.githubToken,
       githubOrg: options.githubOrg,
