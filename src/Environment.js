@@ -10,6 +10,7 @@ class Environment {
     console.log('\nEnvironment Variables:')
     console.log('---------------------')
     console.log('- DEBUG:', process.env.DEBUG)
+    console.log('- RESTART:', process.env.RESTART)
     console.log('- VOYAGE:', process.env.VOYAGE)
     console.log('- NO_TIER1_TEAMS:', process.env.NO_TIER1_TEAMS)
     console.log('- NO_TIER2_TEAMS:', process.env.NO_TIER2_TEAMS)
@@ -49,7 +50,7 @@ class Environment {
 
   setOperationalVars(options) {
     // Retrieve the current variable values from `.env` file
-    let { DEBUG,
+    let { DEBUG, RESTART, 
       GITHUB_TOKEN, GITHUB_ORG, GITHUB_TEMPLATE_REPO,
       VOYAGE, NO_TIER1_TEAMS, NO_TIER2_TEAMS, NO_TIER3_TEAMS,
       TIER1_NAME, TIER2_NAME, TIER3_NAME} = process.env;
@@ -58,6 +59,7 @@ class Environment {
     // to override `.env` parameters
     const debugValue = options.debug ? options.debug : DEBUG;
     this.operationalVars.DEBUG = debugValue.toUpperCase() === 'YES' ? true : false
+    this.operationalVars.RESTART = options.restart > 0 ? options.restart : RESTART
     this.operationalVars.VOYAGE = options.voyage ? options.voyage : VOYAGE;
     this.operationalVars.NO_TIER1_TEAMS = options.t1Count ? options.t1Count : NO_TIER1_TEAMS;
     this.operationalVars.NO_TIER2_TEAMS = options.t2Count ? options.t2Count : NO_TIER2_TEAMS;

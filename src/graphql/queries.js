@@ -15,7 +15,7 @@ const getTemplateRepo = gql`
         about
         body  
       }
-      issues (first: 15) {
+      issues (first: 10) {
         totalCount
         edges {
           node {
@@ -26,7 +26,7 @@ const getTemplateRepo = gql`
               title
               description
             }
-            labels (first: 10) {
+            labels (first: 9) {
               edges {
                 node {
                   id
@@ -38,7 +38,7 @@ const getTemplateRepo = gql`
           }
         }
       }
-      labels(first:15) {
+      labels(first:9) {
         edges {
           node {
             name
@@ -47,7 +47,7 @@ const getTemplateRepo = gql`
           }
         }
       }
-      milestones(first:10) {
+      milestones(first:7) {
         edges {
           node {
             title
