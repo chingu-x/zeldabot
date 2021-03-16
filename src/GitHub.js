@@ -7,7 +7,7 @@ const cliProgress = require('cli-progress')
 const _colors = require('colors')
 
 const { getTemplateRepo } = require('./graphql/queries')
-const { addLabelToRepo, createIssue, createRepo } = require('./graphql/mutations')
+const { addLabelToRepo, cloneTemplateRepository, createIssue, createRepo } = require('./graphql/mutations')
 
 const ALL_TEAMS = 0
 const DESC_MAX_LTH = 22
@@ -82,6 +82,10 @@ class GitHub {
     }
   }
 
+  sleep(secondsToSleep) {
+    return new Promise(resolve => setTimeout(resolve, secondsToSleep*1000));
+  }
+
   async addIssuesToRepo(repoId, templateIssues) {
     for (let issue of templateIssues) {
       const labelIds = issue.node.labels.edges === [] 
@@ -98,6 +102,7 @@ class GitHub {
               milestoneId: milestoneForIssue.id
             }
           })
+        await this.sleep(1)
       } catch(err) {
         console.log(`addIssuesToRepo - Error creating issue: `, err)
         return
@@ -140,11 +145,12 @@ class GitHub {
     }
   }
 
-  async createRepo(repoOwner, repoName, repoDescription) {
+  async createRepo(repoOwner, templateRepoId, repoName, repoDescription) {
     try {
       const mutationResult = await this.client.mutate({ 
-        mutation: createRepo, 
-        variables: { reponame: repoName, owner: repoOwner, description: repoDescription }
+        mutation: cloneTemplateRepository, 
+        variables: { templateRepoId: templateRepoId, reponame: repoName, 
+          owner: repoOwner, description: repoDescription }
       })
       return mutationResult
     } catch(err) {
@@ -179,13 +185,13 @@ class GitHub {
   initializeProgressBars(reposToCreate) {
     this.progressBars[ALL_TEAMS] = this.overallProgress.create(reposToCreate.length, 0)
     this.progressBars[ALL_TEAMS].update(0, { description: 'Overall progress'.padEnd(DESC_MAX_LTH, ' ') })
-    for (let teamNo = 1; teamNo <= reposToCreate.length; ++teamNo) {
-      const repoToCreate = reposToCreate[teamNo-1]
-      this.progressBars[teamNo] = this.overallProgress.create(1, 0)
+    for (let teamNo = 0; teamNo < reposToCreate.length; ++teamNo) {
+      const repoToCreate = reposToCreate[teamNo]
+      this.progressBars[teamNo+1] = this.overallProgress.create(1, 0)
       this.repoName = `${ repoToCreate.voyageName }-`
         + `${ repoToCreate.tierName }-team-`
         + `${ repoToCreate.teamNo }`
-      this.progressBars[teamNo].update(0, {description: this.repoName.padEnd(DESC_MAX_LTH, ' ')})
+      this.progressBars[teamNo+1].update(0, {description: this.repoName.padEnd(DESC_MAX_LTH, ' ')})
     }
   }
 
@@ -194,19 +200,21 @@ class GitHub {
       this.initializeProgressBars(reposToCreate)
       await this.createGqlClient()
       const templateData = await this.getTemplateRepo(this.GITHUB_ORG, this.GITHUB_TEMPLATE_REPO)
-      for (let teamNo = 1; teamNo <= reposToCreate.length; teamNo++) {
-        this.generateNames(reposToCreate[teamNo-1])
+      
+      for (let teamNo = 0; teamNo < reposToCreate.length; teamNo++) {
+        this.generateNames(reposToCreate[teamNo])
         const newRepoData = await this.createRepo(templateData.data.repository.owner.id, 
+          templateData.data.repository.id,
           this.repoName, this.repoDescription)
         await this.createTeam(this.GITHUB_ORG, this.repoName, this.teamDescription)
-        await this.addLabelsToRepo(newRepoData.data.createRepository.repository.id, 
+        await this.addLabelsToRepo(newRepoData.data.cloneTemplateRepository.repository.id, 
           templateData.data.repository.labels.edges)
         await this.addMilestonesToRepo(this.GITHUB_ORG, this.repoName, 
           templateData.data.repository.milestones.edges)
-        await this.addIssuesToRepo(newRepoData.data.createRepository.repository.id,
+        await this.addIssuesToRepo(newRepoData.data.cloneTemplateRepository.repository.id,
           templateData.data.repository.issues.edges)
         this.milestones = []
-        this.progressBars[teamNo].increment(1)
+        this.progressBars[teamNo+1].increment(1)
         this.progressBars[ALL_TEAMS].increment(1)
       }
       this.overallProgress.stop()

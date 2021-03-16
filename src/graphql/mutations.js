@@ -39,6 +39,25 @@ const createIssue = gql`
   }
 `
 
+const cloneTemplateRepository = gql`
+  mutation cloneTemplateRepository($reponame: String, $owner: String, 
+    $templateRepoId: ID!, $description: String) {
+    cloneTemplateRepository(input: {
+      name: $reponame,
+      ownerId: $owner,
+      repositoryId: $templateRepoId,
+      description: $description
+      visibility: PUBLIC
+    }) {
+      repository {
+        id
+        name
+        createdAt
+      }
+    }
+  }
+`
+
 const createRepo = gql`
   mutation createRepository($reponame: String, $owner: String, $description: String) {
     createRepository(input: {
@@ -56,4 +75,4 @@ const createRepo = gql`
   }
 `
 
-module.exports = { addLabelToRepo, createIssue, createRepo }
+module.exports = { addLabelToRepo, cloneTemplateRepository, createIssue, createRepo }
