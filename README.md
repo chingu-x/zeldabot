@@ -68,6 +68,7 @@ in both the command line and the CLI `.env` file.
 | CLI Option | `.env` Parm | Description |
 |------------|-------------|-------------|
 | -d, --debug | DEBUG       | Debug switch to add runtime info to console (YES/NO) |
+| -r, --restart | RESTART   | Restart processing at a specific team number |
 | -v, --voyage | VOYAGE      | Voyage name (e.g. v99) |
 | -t1, --t1-count | NO_TIER1_TEAMS | Number of Tier 1 team repos to create |
 | -t2, --t2-count | NO_TIER2_TEAMS | Number of Tier 2 team repos to create |
@@ -129,6 +130,20 @@ Running this command would create the following repo:
 - chingu-voyagetest/v99-possums-team-01
 - chingu-voyagetest/v99-cobras-team-02
 - chingu-voyagetest/v99-kangaroos-team-03
+
+#### Example #3
+
+Assume that a previous run was started with this command:
+```
+node zelda clone -t1 1 -t2 2 -t3 3 
+```
+but prematurely terminated when an error occurred adding Bears team #5.
+
+After fixing the issue this run can be resumed at Bears team #5 using the
+command parameter `-r 5`:
+```
+node zelda clone -t1 1 -t2 2 -t3 3 -r 5
+```
 
 ## Release History
 
