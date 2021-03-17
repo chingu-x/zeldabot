@@ -22,10 +22,12 @@ class GitHub {
     this.RESTART = this.environment.getOperationalVars().RESTART
 
     this.client
+    this.milestones = []
+    this.overallProgress
+    this.progressBars = []
     this.repoName
     this.repoDescription
     this.teamDescription
-    this.milestones = []
 
     this.octokit = new Octokit({
       auth: this.GITHUB_TOKEN,
@@ -34,15 +36,6 @@ class GitHub {
         Accept: 'application/vnd.github.v3+json',
       }
     })
-
-    this.progressBars = []
-    this.overallProgress = new cliProgress.MultiBar({
-      format: '{description} |' + _colors.brightGreen('{bar}') + '| repo {value}/{total} | {percentage}% | {duration} secs.',
-      barCompleteChar: '\u2588',
-      barIncompleteChar: '\u2591',
-      clearOnComplete: false,
-      hideCursor: true
-    }, cliProgress.Presets.shades_classic)
   }
 
   async createGqlClient() {
@@ -66,6 +59,8 @@ class GitHub {
   async addMilestonesToRepo(orgName, repoName, milestones) {
     for (let milestone of milestones) {
       try {
+        // Octokit REST is used because creating 
+        // milestones is not yet part of GitHub's GraphQL API
         const mutationResult = await this.octokit.issues.createMilestone({
           owner: orgName,
           repo: repoName,
@@ -130,7 +125,9 @@ class GitHub {
 
   async createTeam(orgName, repoName, teamDescription) {
     try {
-      await this.octokit.teams.create({
+        // Octokit REST is used because creating 
+        // teams is not yet part of GitHub's GraphQL API
+        await this.octokit.teams.create({
         org: orgName,
         name: repoName,
         description: teamDescription,
@@ -185,8 +182,17 @@ class GitHub {
   }
 
   initializeProgressBars(reposToCreate) {
+    this.overallProgress = new cliProgress.MultiBar({
+      format: '{description} |' + _colors.brightGreen('{bar}') + '| repo {value}/{total} | {percentage}% | {duration} secs.',
+      barCompleteChar: '\u2588',
+      barIncompleteChar: '\u2591',
+      clearOnComplete: false,
+      hideCursor: true
+    }, cliProgress.Presets.shades_classic)
+
     this.progressBars[ALL_TEAMS] = this.overallProgress.create(reposToCreate.length, 0)
     this.progressBars[ALL_TEAMS].update(0, { description: 'Overall progress'.padEnd(DESC_MAX_LTH, ' ') })
+    
     for (let teamNo = 0; teamNo < reposToCreate.length; ++teamNo) {
       const repoToCreate = reposToCreate[teamNo]
       this.progressBars[teamNo+1] = this.overallProgress.create(1, 0)
@@ -224,7 +230,7 @@ class GitHub {
               templateData.data.repository.issues.edges)
             this.milestones = []
           } catch (err) {
-            console.error('Error detected processing teams: ', err)
+            console.error('Error detected creating team repo: ', err)
             process.exit(1)
           }
         }
@@ -234,7 +240,7 @@ class GitHub {
       this.overallProgress.stop()
     }
     catch(err) {
-      console.error('Error detected processing teams: ', err)
+      console.error('Error detected setting up teams: ', err)
     }
   }
 
