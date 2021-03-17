@@ -37,7 +37,7 @@ class GitHub {
 
     this.progressBars = []
     this.overallProgress = new cliProgress.MultiBar({
-      format: '{description} |' + _colors.brightGreen('{bar}') + '| {percentage}% | {value}/{total}',
+      format: '{description} |' + _colors.brightGreen('{bar}') + '| repo {value}/{total} | {percentage}% | {duration} secs.',
       barCompleteChar: '\u2588',
       barIncompleteChar: '\u2591',
       clearOnComplete: false,
@@ -78,13 +78,10 @@ class GitHub {
         })
       } catch(err) {
         console.log('Error adding milestone to repo: ', err)
+        process.exitCode = 1
         return
       }
     }
-  }
-
-  sleep(secondsToSleep) {
-    return new Promise(resolve => setTimeout(resolve, secondsToSleep*1000));
   }
 
   async addIssuesToRepo(repoId, templateIssues) {
@@ -103,9 +100,9 @@ class GitHub {
               milestoneId: milestoneForIssue.id
             }
           })
-        await this.sleep(1)
       } catch(err) {
         console.log(`addIssuesToRepo - Error creating issue: `, err)
+        process.exitCode = 1
         return
       }
     }
@@ -125,6 +122,7 @@ class GitHub {
         })
       } catch(err) {
         console.log('addLabelsToRepo - Error adding label: ', err)
+        process.exitCode = 1
         return
       }
     }
@@ -142,6 +140,7 @@ class GitHub {
       })
     } catch(err) {
       console.log(`createTeam - Error creating team ${ repoName }: `, err)
+      process.exitCode = 1
       return
     }
   }
@@ -156,6 +155,7 @@ class GitHub {
       return mutationResult
     } catch(err) {
       console.log('createRepo - Error in createRepo - err: ', err)
+      process.exitCode = 1
       return
     }
   }
@@ -168,6 +168,7 @@ class GitHub {
       })
     } catch(err) {
       console.log('getTemplateRepo - Error in getTemplateRepo - err: ', err)
+      process.exitCode = 1
       return
     }
   }
@@ -196,6 +197,10 @@ class GitHub {
     }
   }
 
+  sleep(secondsToSleep) {
+    return new Promise(resolve => setTimeout(resolve, secondsToSleep*1000));
+  }
+
   async cloneTemplate(reposToCreate) {
     try {
       this.initializeProgressBars(reposToCreate)
@@ -203,19 +208,25 @@ class GitHub {
       const templateData = await this.getTemplateRepo(this.GITHUB_ORG, this.GITHUB_TEMPLATE_REPO)
       
       for (let teamNo = 0; teamNo < reposToCreate.length; teamNo++) {
-        if (this.RESTART > 0 && teamNo+1 >= this.RESTART) {
-          this.generateNames(reposToCreate[teamNo])
-          const newRepoData = await this.createRepo(templateData.data.repository.owner.id, 
-            templateData.data.repository.id,
-            this.repoName, this.repoDescription)
-          await this.createTeam(this.GITHUB_ORG, this.repoName, this.teamDescription)
-          await this.addLabelsToRepo(newRepoData.data.cloneTemplateRepository.repository.id, 
-            templateData.data.repository.labels.edges)
-          await this.addMilestonesToRepo(this.GITHUB_ORG, this.repoName, 
-            templateData.data.repository.milestones.edges)
-          await this.addIssuesToRepo(newRepoData.data.cloneTemplateRepository.repository.id,
-            templateData.data.repository.issues.edges)
-          this.milestones = []
+        if (teamNo+1 >= this.RESTART) {
+          try {
+            await this.sleep(15) // Sleep to avoid creating issues too fast for GraphQL
+            this.generateNames(reposToCreate[teamNo])
+            const newRepoData = await this.createRepo(templateData.data.repository.owner.id, 
+              templateData.data.repository.id,
+              this.repoName, this.repoDescription)
+            await this.createTeam(this.GITHUB_ORG, this.repoName, this.teamDescription)
+            await this.addLabelsToRepo(newRepoData.data.cloneTemplateRepository.repository.id, 
+              templateData.data.repository.labels.edges)
+            await this.addMilestonesToRepo(this.GITHUB_ORG, this.repoName, 
+              templateData.data.repository.milestones.edges)
+            await this.addIssuesToRepo(newRepoData.data.cloneTemplateRepository.repository.id,
+              templateData.data.repository.issues.edges)
+            this.milestones = []
+          } catch (err) {
+            console.error('Error detected processing teams: ', err)
+            process.exit(1)
+          }
         }
         this.progressBars[teamNo+1].increment(1)
         this.progressBars[ALL_TEAMS].increment(1)
@@ -224,7 +235,6 @@ class GitHub {
     }
     catch(err) {
       console.error('Error detected processing teams: ', err)
-      return
     }
   }
 
