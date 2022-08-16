@@ -21,7 +21,7 @@ const addLabelToRepo = gql`
 `
 
 const createIssue = gql`
-  mutation createIssue($repoId: ID!, $title: String!, $body: String!, 
+  mutation createIssue($repoId: ID!, $title: String!, $body: String, 
       $milestoneId: ID, $labelIds: [ID!]) {
     createIssue(input: {
       repositoryId: $repoId,
