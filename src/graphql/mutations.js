@@ -40,7 +40,7 @@ const createIssue = gql`
 `
 
 const cloneTemplateRepository = gql`
-  mutation cloneTemplateRepository($reponame: String, $owner: String, 
+  mutation cloneTemplateRepository($reponame: String!, $owner: ID!, 
     $templateRepoId: ID!, $description: String) {
     cloneTemplateRepository(input: {
       name: $reponame,

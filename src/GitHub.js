@@ -136,7 +136,7 @@ class GitHub {
         repo_names: [`${ orgName }/${ repoName }`],
       })
     } catch(err) {
-      console.log(`createTeam - Error creating team ${ repoName }: `, err)
+      console.log(`createTeam - Error creating org:${ orgName } team: ${ repoName }: `, err)
       process.exitCode = 1
       return
     }
