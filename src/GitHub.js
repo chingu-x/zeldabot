@@ -80,7 +80,9 @@ class GitHub {
   }
 
   async addIssuesToRepo(repoId, templateIssues) {
+    console.log('\nGitHub.js addIssuesToRepo - repoId: ', repoId)
     for (let issue of templateIssues) {
+      console.log('\nGitHub.js addIssuesToRepo - issue:', issue)
       const labelIds = issue.node.labels.edges === [] 
         ? [] : issue.node.labels.edges.map(label => label.node.id) 
       const milestoneForIssue = this.milestones.find(milestone => milestone.title === issue.node.milestone.title) 
@@ -88,15 +90,16 @@ class GitHub {
           const mutationResult = await this.client.mutate({ 
             mutation: createIssue, 
             variables: { 
-              repoId: repoId,  
-              title: issue.node.title, 
               body: issue.node.body,
               labelIds: labelIds,
-              milestoneId: milestoneForIssue.id
+              milestoneId: milestoneForIssue.id,
+              repositoryId: repoId.toString(),  
+              title: issue.node.title
             }
           })
+          console.log('GitHub.js addIssuesToRepo - mutationResult:', mutationResult)
       } catch(err) {
-        console.log(`addIssuesToRepo - Error creating issue: `, err)
+        console.log(`\naddIssuesToRepo - Error creating issue in repoID (${repoId}): `, err)
         process.exitCode = 1
         return
       }
@@ -149,6 +152,8 @@ class GitHub {
         variables: { templateRepoId: templateRepoId, reponame: repoName, 
           owner: repoOwner, description: repoDescription }
       })
+      console.log('\nGitHub.js createRepo - templateRepoId: ', templateRepoId)
+      console.log('\nGitHub.js createRepo - mutationResult: ', mutationResult.data.cloneTemplateRepository.repository)
       return mutationResult
     } catch(err) {
       console.log('createRepo - Error in createRepo - err: ', err)
@@ -221,6 +226,8 @@ class GitHub {
             const newRepoData = await this.createRepo(templateData.data.repository.owner.id, 
               templateData.data.repository.id,
               this.repoName, this.repoDescription)
+            console.log('GitHub.js cloneTemplate - newRepoData: ', newRepoData)
+            console.log('GitHub.js cloneTemplate - newRepoData.data.cloneTemplateRepository.repository: ', newRepoData.data.cloneTemplateRepository.repository)
             await this.createTeam(this.GITHUB_ORG, this.repoName, this.teamDescription)
             await this.addLabelsToRepo(newRepoData.data.cloneTemplateRepository.repository.id, 
               templateData.data.repository.labels.edges)
@@ -230,7 +237,7 @@ class GitHub {
               templateData.data.repository.issues.edges)
             this.milestones = []
           } catch (err) {
-            console.error('Error detected creating team repo: ', err)
+            console.error('\nError detected creating team repo: ', err)
             process.exit(1)
           }
         }
