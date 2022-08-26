@@ -83,15 +83,18 @@ class GitHub {
     for (let issue of templateIssues) {
       const labelIds = issue.node.labels.edges === [] 
         ? [] : issue.node.labels.edges.map(label => label.node.id) 
+      console.log('GitHub.js addIssuesToRepo - labelIds: ', labelIds)
       const milestoneForIssue = this.milestones.find(milestone => {
         return issue.node.milestone === null ? false : milestone.title === issue.node.milestone.title
       })
       try {
+          console.log('GitHub.js addIssuesToRepo - labelIds: ', labelIds)
           const mutationResult = await this.client.mutate({ 
             mutation: createIssue, 
             variables: { 
               body: issue.node.body,
               milestoneId: milestoneForIssue === undefined ? null : milestoneForIssue.id,
+              labelIds: labelIds,
               repositoryId: repoId,  
               title: issue.node.title
             }
@@ -104,20 +107,27 @@ class GitHub {
     }
   }
 
-  async addLabelsToRepo(repoId, labels) {
-    for (let label of labels) {
+  async addLabelsToRepo(repoId, labelsToAdd) {
+    let labelsInRepo = []
+    for (let label of labelsToAdd) {
       try {
-        const mutationResult = await this.client.mutate({ 
-          mutation: addLabelToRepo, 
-          variables: { 
-            repoId: repoId,  
-            name: label.node.name, 
-            description: label.node.description,
-            color: label.node.color,
-          }
-        })
+        const isLabelInRepo = labelsInRepo.find(labelToFind => labelToFind === label.node.name)
+        let mutationResult
+        if (isLabelInRepo !== undefined) {
+          mutationResult = await this.client.mutate({ 
+            mutation: addLabelToRepo, 
+            variables: { 
+              repoId: repoId,  
+              name: label.node.name, 
+              description: label.node.description,
+              color: label.node.color,
+            }
+          })
+        }
       } catch(err) {
-        console.log('addLabelsToRepo - Error adding label: ', err)
+        console.log('addLabelsToRepo - Error adding mutationResult: ', mutationResult)
+        console.log('addLabelsToRepo - Error adding label: ', label)
+        console.log('addLabelsToRepo - Error adding err: ', err)
         process.exitCode = 1
         return
       }
