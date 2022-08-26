@@ -84,23 +84,14 @@ class GitHub {
       const labelIds = issue.node.labels.edges === [] 
         ? [] : issue.node.labels.edges.map(label => label.node.id) 
       const milestoneForIssue = this.milestones.find(milestone => {
-        console.log('GitHub.js addIssuesToRepo - milestone: ', milestone)
-        return milestone.title === issue.node.milestone.title
+        return issue.node.milestone === null ? false : milestone.title === issue.node.milestone.title
       })
-      /*
-      console.log(`\nGitHub.js addIssuesToRepo - body:`, issue.node.body)
-      //console.log(`\n...labelIds:`, labelIds)
-      console.log(`...milestoneId: `, milestoneForIssue.id)
-      console.log(`...repositoryId: `, repoId)
-      console.log(`...title: `, issue.node.title)
-      console.log(`...`)
-      */
       try {
           const mutationResult = await this.client.mutate({ 
             mutation: createIssue, 
             variables: { 
               body: issue.node.body,
-              milestoneId: milestoneForIssue.id,
+              milestoneId: milestoneForIssue === undefined ? null : milestoneForIssue.id,
               repositoryId: repoId,  
               title: issue.node.title
             }
