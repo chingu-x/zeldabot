@@ -79,16 +79,29 @@ class GitHub {
     }
   }
 
-  async addIssuesToRepo(repoId, templateIssues) {
+  async addIssuesToRepo(labelsInRepo, repoId, templateIssues) {
     for (let issue of templateIssues) {
+      // Translate the label id's in the issue from the template repo to the
+      // labels in this repo that match them.
+      let labelIds = []
+      if (issue.node !== undefined) {
+        for (let labelFromTemplate in issue.node.labels.edges) {
+          for (let labelInRepo in labelsInRepo) {
+            if (labelInRepo.name === labelFromTemplate.name) {
+              labelIds.push(labelInRepo.id)
+            }
+          }
+        }
+      }
+      /*
       const labelIds = issue.node.labels.edges === [] 
-        ? [] : issue.node.labels.edges.map(label => label.node.id) 
+        ? [] : issue.node.labels.edges.map(label => label.node.id)
+      */
       console.log('GitHub.js addIssuesToRepo - labelIds: ', labelIds)
       const milestoneForIssue = this.milestones.find(milestone => {
         return issue.node.milestone === null ? false : milestone.title === issue.node.milestone.title
       })
       try {
-          console.log('GitHub.js addIssuesToRepo - labelIds: ', labelIds)
           const mutationResult = await this.client.mutate({ 
             mutation: createIssue, 
             variables: { 
@@ -100,7 +113,7 @@ class GitHub {
             }
           })
       } catch(err) {
-        console.log(`\naddIssuesToRepo - Error creating issue in issue (${issue.node.title}): `, err)
+        console.log(`\naddIssuesToRepo - Error creating issue (${issue.node.title}): `, err)
         process.exitCode = 1
         return
       }
@@ -108,12 +121,12 @@ class GitHub {
   }
 
   async addLabelsToRepo(repoId, labelsToAdd) {
-    let labelsInRepo = []
+    let labelsInRepo = [] 
     for (let label of labelsToAdd) {
+      let mutationResult
       try {
-        const isLabelInRepo = labelsInRepo.find(labelToFind => labelToFind === label.node.name)
-        let mutationResult
-        if (isLabelInRepo !== undefined) {
+        const isLabelInRepo = labelsInRepo.find(labelToFind => labelToFind.name === label.node.name)
+        if (isLabelInRepo === undefined) {
           mutationResult = await this.client.mutate({ 
             mutation: addLabelToRepo, 
             variables: { 
@@ -122,6 +135,10 @@ class GitHub {
               description: label.node.description,
               color: label.node.color,
             }
+          })
+          labelsInRepo.push({
+            id: mutationResult.data.createLabel.label.id, 
+            name: mutationResult.data.createLabel.label.name
           })
         }
       } catch(err) {
@@ -132,6 +149,7 @@ class GitHub {
         return
       }
     }
+    return labelsInRepo
   }
 
   async createTeam(orgName, repoName, teamDescription) {
@@ -235,15 +253,17 @@ class GitHub {
               templateData.data.repository.id,
               this.repoName, this.repoDescription)
             await this.createTeam(this.GITHUB_ORG, this.repoName, this.teamDescription)
+            let labelsInRepo
             if (areLabelsAndMilestonesCreated === false) {
-              await this.addLabelsToRepo(newRepoData.data.cloneTemplateRepository.repository.id, 
+              labelsInRepo = await this.addLabelsToRepo(newRepoData.data.cloneTemplateRepository.repository.id, 
                 templateData.data.repository.labels.edges)
               await this.addMilestonesToRepo(this.GITHUB_ORG, this.repoName, 
                 templateData.data.repository.milestones.edges)
               areLabelsAndMilestonesCreated = true
             }
+            console.log('GitHub.js cloneTemplate - labelsInRepo: ', labelsInRepo)
             await this.addIssuesToRepo(newRepoData.data.cloneTemplateRepository.repository.id,
-              templateData.data.repository.issues.edges)
+              templateData.data.repository.issues.edges, labelsInRepo)
             this.milestones = []
           } catch (err) {
             console.error('\nError detected creating team repo: ', err)

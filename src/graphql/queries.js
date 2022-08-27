@@ -1,4 +1,4 @@
-const gql = require('graphql-tag');
+const gql = require('graphql-tag')
 
 const getTemplateRepo = gql`
   query getTemplateRepo($owner: String!, $reponame: String!) {
