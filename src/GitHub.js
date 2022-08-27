@@ -59,8 +59,9 @@ class GitHub {
   async addMilestonesToRepo(orgName, repoName, milestones) {
     for (let milestone of milestones) {
       try {
-        // Octokit REST is used because creating 
-        // milestones is not yet part of GitHub's GraphQL API
+        // Octokit REST is used because creating milestones is not yet part 
+        // of GitHub's GraphQL API
+        //
         const mutationResult = await this.octokit.issues.createMilestone({
           owner: orgName,
           repo: repoName,
@@ -79,7 +80,8 @@ class GitHub {
     }
   }
 
-  async addIssuesToRepo(labelsInRepo, repoId, templateIssues) {
+  async addIssuesToRepo(repoId, templateIssues, labelsInRepo) {
+    console.log('GitHub.js addIssuesToRepo - labelsInRepo: ', labelsInRepo)
     for (let issue of templateIssues) {
       // Translate the label id's in the issue from the template repo to the
       // labels in this repo that match them.
@@ -93,14 +95,14 @@ class GitHub {
           }
         }
       }
-      /*
-      const labelIds = issue.node.labels.edges === [] 
-        ? [] : issue.node.labels.edges.map(label => label.node.id)
-      */
       console.log('GitHub.js addIssuesToRepo - labelIds: ', labelIds)
+
+      // Translate the milestone in the issue from the template repo to a 
+      // matching milestone in this repo.
       const milestoneForIssue = this.milestones.find(milestone => {
         return issue.node.milestone === null ? false : milestone.title === issue.node.milestone.title
       })
+
       try {
           const mutationResult = await this.client.mutate({ 
             mutation: createIssue, 
@@ -113,7 +115,7 @@ class GitHub {
             }
           })
       } catch(err) {
-        console.log(`\naddIssuesToRepo - Error creating issue (${issue.node.title}): `, err)
+        console.log(`\naddIssuesToRepo - Error creating issue: `, err)
         process.exitCode = 1
         return
       }
@@ -243,7 +245,8 @@ class GitHub {
       await this.createGqlClient()
       const templateData = await this.getTemplateRepo(this.GITHUB_ORG, this.GITHUB_TEMPLATE_REPO)
       let areLabelsAndMilestonesCreated = false
-      
+      let labelsInRepo = []
+
       for (let teamNo = 0; teamNo < reposToCreate.length; teamNo++) {
         if (teamNo+1 >= this.RESTART) {
           try {
@@ -253,7 +256,6 @@ class GitHub {
               templateData.data.repository.id,
               this.repoName, this.repoDescription)
             await this.createTeam(this.GITHUB_ORG, this.repoName, this.teamDescription)
-            let labelsInRepo
             if (areLabelsAndMilestonesCreated === false) {
               labelsInRepo = await this.addLabelsToRepo(newRepoData.data.cloneTemplateRepository.repository.id, 
                 templateData.data.repository.labels.edges)
@@ -261,7 +263,6 @@ class GitHub {
                 templateData.data.repository.milestones.edges)
               areLabelsAndMilestonesCreated = true
             }
-            console.log('GitHub.js cloneTemplate - labelsInRepo: ', labelsInRepo)
             await this.addIssuesToRepo(newRepoData.data.cloneTemplateRepository.repository.id,
               templateData.data.repository.issues.edges, labelsInRepo)
             this.milestones = []
