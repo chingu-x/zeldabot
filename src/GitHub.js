@@ -111,10 +111,12 @@ class GitHub {
             }
           })
       } catch(err) {
-        console.log(`\naddIssuesToRepo - Error creating issue: `, err)
+        console.log(`\naddIssuesToRepo - Error creating issue: `, issue.node.title)
+        console.log(`addIssuesToRepo - Error creating issue: `, err)
         process.exitCode = 1
         return
       }
+      await this.sleep(2) // Sleep to avoid creating issues too fast for GraphQL
     }
   }
 
@@ -244,9 +246,15 @@ class GitHub {
       let labelsInRepo = []
 
       for (let teamNo = 0; teamNo < reposToCreate.length; teamNo++) {
+        // Reset variables for new team 
+        areLabelsAndMilestonesCreated = false
+        labelsInRepo = []
+        this.milestones = []
+
+        // Clone the template repo for a new team
         if (teamNo+1 >= this.RESTART) {
           try {
-            await this.sleep(15) // Sleep to avoid creating issues too fast for GraphQL
+            await this.sleep(5) // Sleep to avoid creating repos too fast for GraphQL
             this.generateNames(reposToCreate[teamNo])
             const newRepoData = await this.createRepo(templateData.data.repository.owner.id, 
               templateData.data.repository.id,
@@ -261,7 +269,6 @@ class GitHub {
             }
             await this.addIssuesToRepo(newRepoData.data.cloneTemplateRepository.repository.id,
               templateData.data.repository.issues.edges, labelsInRepo)
-            this.milestones = []
           } catch (err) {
             console.error('\nError detected creating team repo: ', err)
             process.exit(1)
