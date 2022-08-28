@@ -85,7 +85,7 @@ class GitHub {
       // Translate the label id's in the issue from the template repo to the
       // labels in this repo that match them.
       let labelIds = []
-     for (let templateIndex = 0; templateIndex < issue.node.labels.edges.length; ++templateIndex) {
+      for (let templateIndex = 0; templateIndex < issue.node.labels.edges.length; ++templateIndex) {
         for (let labelInRepoIndex = 0; labelInRepoIndex < labelsInRepo.length; ++labelInRepoIndex) {
           if (labelsInRepo[labelInRepoIndex].name === issue.node.labels.edges[templateIndex].node.name) {
             labelIds.push(labelsInRepo[labelInRepoIndex].id)
@@ -96,8 +96,6 @@ class GitHub {
       // Translate the milestone in the issue from the template repo to a 
       // matching milestone in this repo.
       const milestoneForIssue = this.milestones.find(milestone => {
-        console.log('GitHub.js addIssuesToRepo - milestone: ', milestone)
-        console.log('GitHub.js addIssuesToRepo - issue.node.milestone: ', issue.node.milestone)
         return issue.node.milestone === null ? false : milestone.title === issue.node.milestone.title
       })
 
