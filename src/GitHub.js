@@ -81,21 +81,17 @@ class GitHub {
   }
 
   async addIssuesToRepo(repoId, templateIssues, labelsInRepo) {
-    console.log('GitHub.js addIssuesToRepo - labelsInRepo: ', labelsInRepo)
     for (let issue of templateIssues) {
       // Translate the label id's in the issue from the template repo to the
       // labels in this repo that match them.
       let labelIds = []
-      if (issue.node !== undefined) {
-        for (let labelFromTemplate in issue.node.labels.edges) {
-          for (let labelInRepo in labelsInRepo) {
-            if (labelInRepo.name === labelFromTemplate.name) {
-              labelIds.push(labelInRepo.id)
-            }
+     for (let templateIndex = 0; templateIndex < issue.node.labels.edges.length; ++templateIndex) {
+        for (let labelInRepoIndex = 0; labelInRepoIndex < labelsInRepo.length; ++labelInRepoIndex) {
+          if (labelsInRepo[labelInRepoIndex].name === issue.node.labels.edges[templateIndex].node.name) {
+            labelIds.push(labelsInRepo[labelInRepoIndex].id)
           }
         }
       }
-      console.log('GitHub.js addIssuesToRepo - labelIds: ', labelIds)
 
       // Translate the milestone in the issue from the template repo to a 
       // matching milestone in this repo.
