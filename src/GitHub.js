@@ -96,6 +96,8 @@ class GitHub {
       // Translate the milestone in the issue from the template repo to a 
       // matching milestone in this repo.
       const milestoneForIssue = this.milestones.find(milestone => {
+        console.log('GitHub.js addIssuesToRepo - milestone: ', milestone)
+        console.log('GitHub.js addIssuesToRepo - issue.node.milestone: ', issue.node.milestone)
         return issue.node.milestone === null ? false : milestone.title === issue.node.milestone.title
       })
 
