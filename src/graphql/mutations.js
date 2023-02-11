@@ -21,15 +21,16 @@ const addLabelToRepo = gql`
 `
 
 const createIssue = gql`
-  mutation createIssue($repoId: ID!, $title: String!, $body: String!, 
-      $milestoneId: ID, $labelIds: [ID!]) {
+  mutation createIssue($body: String, $labelIds: [ID!], $milestoneId: ID,
+    $repositoryId: ID!, $title: String!) {
     createIssue(input: {
-      repositoryId: $repoId,
-      title: $title,
       body: $body,
+      labelIds: $labelIds,
       milestoneId: $milestoneId,
-      labelIds: $labelIds
+      repositoryId: $repositoryId,
+      title: $title
     }) {
+      clientMutationId
       issue {
         id
         title
@@ -40,7 +41,7 @@ const createIssue = gql`
 `
 
 const cloneTemplateRepository = gql`
-  mutation cloneTemplateRepository($reponame: String, $owner: String, 
+  mutation cloneTemplateRepository($reponame: String!, $owner: ID!, 
     $templateRepoId: ID!, $description: String) {
     cloneTemplateRepository(input: {
       name: $reponame,
@@ -66,6 +67,7 @@ const createRepo = gql`
       description: $description
       visibility: PUBLIC
     }) {
+      clientMutationId
       repository {
         id
         name
