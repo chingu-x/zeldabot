@@ -116,7 +116,7 @@ class GitHub {
         process.exitCode = 1
         return
       }
-      await this.sleep(2) // Sleep to avoid creating issues too fast for GraphQL
+      await this.sleep(3) // Sleep to avoid creating issues too fast for GraphQL
     }
   }
 
@@ -254,7 +254,7 @@ class GitHub {
         // Clone the template repo for a new team
         if (teamNo+1 >= this.RESTART) {
           try {
-            await this.sleep(5) // Sleep to avoid creating repos too fast for GraphQL
+            await this.sleep(10) // Sleep to avoid creating repos too fast for GraphQL
             this.generateNames(reposToCreate[teamNo])
             const newRepoData = await this.createRepo(templateData.data.repository.owner.id, 
               templateData.data.repository.id,
