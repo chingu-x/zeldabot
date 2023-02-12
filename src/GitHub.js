@@ -168,9 +168,9 @@ class GitHub {
         // Remember the repo name and team name are the same for a Voyage
         await this.octokit.teams.addOrUpdateRepoPermissionsInOrg({
           org: orgName,
-          teamSlug: repoName,
+          team_slug: repoName,
           owner: orgName,
-          repo: `${ orgName }/${ repoName }`,
+          repo: `${ repoName }`,
           permission: "admin"
         })
     } catch(err) {
