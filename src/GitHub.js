@@ -157,12 +157,22 @@ class GitHub {
         // Octokit REST is used because creating 
         // teams is not yet part of GitHub's GraphQL API
         await this.octokit.teams.create({
-        org: orgName,
-        name: repoName,
-        description: teamDescription,
-        privacy: 'closed',
-        repo_names: [`${ orgName }/${ repoName }`],
-      })
+          org: orgName,
+          name: repoName,
+          description: teamDescription,
+          privacy: 'closed',
+          repo_names: [`${ orgName }/${ repoName }`],
+        })
+
+        // Add the 'admin' permission for the team on its repository. 
+        // Remember the repo name and team name are the same for a Voyage
+        await this.octokit.teams.addOrUpdateRepoPermissionsInOrg({
+          org: orgName,
+          teamSlug: repoName,
+          owner: orgName,
+          repo: `${ orgName }/${ repoName }`,
+          permission: "admin"
+        })
     } catch(err) {
       console.log(`createTeam - Error creating org:${ orgName } team: ${ repoName }`)
       console.log(`...err:`, err)
