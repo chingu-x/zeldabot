@@ -1,4 +1,4 @@
-const gql = require('graphql-tag');
+const gql = require('graphql-tag')
 
 const getTemplateRepo = gql`
   query getTemplateRepo($owner: String!, $reponame: String!) {
@@ -15,7 +15,7 @@ const getTemplateRepo = gql`
         about
         body  
       }
-      issues (first: 10) {
+      issues (first: 15) {
         totalCount
         edges {
           node {
@@ -26,7 +26,7 @@ const getTemplateRepo = gql`
               title
               description
             }
-            labels (first: 9) {
+            labels (first: 11) {
               edges {
                 node {
                   id
@@ -38,7 +38,7 @@ const getTemplateRepo = gql`
           }
         }
       }
-      labels(first:9) {
+      labels(first:11) {
         edges {
           node {
             name
@@ -47,7 +47,7 @@ const getTemplateRepo = gql`
           }
         }
       }
-      milestones(first:7) {
+      milestones(first:8) {
         edges {
           node {
             title
