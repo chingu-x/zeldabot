@@ -152,29 +152,50 @@ class GitHub {
     return labelsInRepo
   }
 
+  // Create the team, grant the admin privilege on the team repo, and
+  // add individual team members to it
   async createTeam(orgName, repoName, teamDescription) {
     try {
-        // Octokit REST is used because creating 
-        // teams is not yet part of GitHub's GraphQL API
-        await this.octokit.teams.create({
-          org: orgName,
-          name: repoName,
-          description: teamDescription,
-          privacy: 'closed',
-          repo_names: [`${ orgName }/${ repoName }`],
-        })
-
-        // Add the 'admin' permission for the team on its repository. 
-        // Remember the repo name and team name are the same for a Voyage
-        await this.octokit.teams.addOrUpdateRepoPermissionsInOrg({
-          org: orgName,
-          team_slug: repoName,
-          owner: orgName,
-          repo: `${ repoName }`,
-          permission: "admin"
-        })
+      // Octokit REST is used because creating 
+      // teams is not yet part of GitHub's GraphQL API
+      await this.octokit.teams.create({
+        org: orgName,
+        name: repoName,
+        description: teamDescription,
+        privacy: 'closed',
+        repo_names: [`${ orgName }/${ repoName }`],
+      })
     } catch(err) {
       console.log(`createTeam - Error creating org:${ orgName } team: ${ repoName }`)
+      console.log(`...err:`, err)
+      process.exitCode = 1
+      return
+    }
+
+    try{
+      // Add the 'admin' permission for the team on its repository. 
+      // Remember the repo name and team name are the same for a Voyage
+      await this.octokit.teams.addOrUpdateRepoPermissionsInOrg({
+        org: orgName,
+        team_slug: repoName,
+        owner: orgName,
+        repo: `${ repoName }`,
+        permission: "admin"
+      })
+    } catch(err) {
+      console.log(`createTeam - Error granting team permission to repo org:${ orgName } team: ${ repoName }`)
+      console.log(`...err:`, err)
+      process.exitCode = 1
+      return
+    }
+
+    try{
+      // Add individual teammates to the team using the GitHub names provided
+      // in the configuration file. If an error occurs when adding a teammate
+      // log it and continue adding remaining teammates
+      // TODO: add code here
+    } catch(err) {
+      console.log(`createTeam - Error adding member to the team org:${ orgName } team: ${ repoName }`)
       console.log(`...err:`, err)
       process.exitCode = 1
       return
