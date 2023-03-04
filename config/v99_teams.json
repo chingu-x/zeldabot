@@ -1,0 +1,30 @@
+{
+  "voyage_number": "42",
+  "categories": [
+    "V42-tier1-01-🔥",
+    "V42-tier2-02-🔥",
+    "V42-tier3-03-🔥"
+  ],
+  "teams": [
+    {
+      "team": {
+        "category": "V99-tier1-01-🔥",
+        "name": "tier1-team-01",
+        "tier": "tier1",
+        "discord_names": [
+          "jdmedlock#4582",
+          "syntax#7986",
+          "Alecia#9269",
+          "Hypno#9777"
+        ],
+        "github_team": "v99-tier1-team-01",
+        "github_names": [
+          "jdmedlock",
+          "ericadev",
+          "ale-cia",
+          "ellrub"
+        ]
+      }
+    }
+  ]
+}

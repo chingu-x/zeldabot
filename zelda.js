@@ -3,6 +3,7 @@ const program = new Command();
 const { isDebugOn } = require('./src/Environment')
 const Environment = require('./src/Environment')
 const GitHub = require('./src/GitHub')
+const teamslist = require('./config/v99_teams.json')
 
 const environment = new Environment()
 environment.initDotEnv('./')
@@ -90,8 +91,12 @@ program
       { name: TIER3_NAME, count: NO_TIER3_TEAMS }
     ])
     
+    console.log('teamlist: ', teamslist)
+    console.log('...teams: ', teamslist.teams)
+    console.log('...github_names: ', teamslist.teams[0].team.github_names)
+
     const github = new GitHub(environment) 
-    await github.cloneTemplate(reposToCreate)
+    await github.cloneTemplate(reposToCreate,teamslist)
   })
 
   program.parse(process.argv)

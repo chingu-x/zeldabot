@@ -154,7 +154,7 @@ class GitHub {
 
   // Create the team, grant the admin privilege on the team repo, and
   // add individual team members to it
-  async createTeam(orgName, repoName, teamDescription) {
+  async createTeam(orgName, repoName, teamDescription, teamslist) {
     try {
       // Octokit REST is used because creating 
       // teams is not yet part of GitHub's GraphQL API
@@ -194,6 +194,18 @@ class GitHub {
       // in the configuration file. If an error occurs when adding a teammate
       // log it and continue adding remaining teammates
       // TODO: add code here
+      const team = teamslist.teams.find((team) => {
+        console.log('t: ', team)
+        return team.github_team === repoName
+      })
+      console.log('team: ', team)
+      /*
+      await this.octokit.teams.addOrUpdateMembershipForUserInOrg({
+        org: orgName,
+        team_slug: repoName,
+        username: orgName
+      })
+      */
     } catch(err) {
       console.log(`createTeam - Error adding member to the team org:${ orgName } team: ${ repoName }`)
       console.log(`...err:`, err)
@@ -268,9 +280,9 @@ class GitHub {
     return new Promise(resolve => setTimeout(resolve, secondsToSleep*1000));
   }
 
-  async cloneTemplate(reposToCreate) {
+  async cloneTemplate(reposToCreate, teamslist) {
     try {
-      this.initializeProgressBars(reposToCreate)
+      //this.initializeProgressBars(reposToCreate)
       await this.createGqlClient()
       const templateData = await this.getTemplateRepo(this.GITHUB_ORG, this.GITHUB_TEMPLATE_REPO)
       let areLabelsAndMilestonesCreated = false
@@ -290,7 +302,7 @@ class GitHub {
             const newRepoData = await this.createRepo(templateData.data.repository.owner.id, 
               templateData.data.repository.id,
               this.repoName, this.repoDescription)
-            await this.createTeam(this.GITHUB_ORG, this.repoName, this.teamDescription)
+            await this.createTeam(this.GITHUB_ORG, this.repoName, this.teamDescription, teamslist)
             if (areLabelsAndMilestonesCreated === false) {
               labelsInRepo = await this.addLabelsToRepo(newRepoData.data.cloneTemplateRepository.repository.id, 
                 templateData.data.repository.labels.edges)
@@ -305,10 +317,10 @@ class GitHub {
             process.exit(1)
           }
         }
-        this.progressBars[teamNo+1].increment(1)
-        this.progressBars[ALL_TEAMS].increment(1)
+        //this.progressBars[teamNo+1].increment(1)
+        //this.progressBars[ALL_TEAMS].increment(1)
       }
-      this.overallProgress.stop()
+      //this.overallProgress.stop()
     }
     catch(err) {
       console.error('Error detected setting up teams: ', err)
