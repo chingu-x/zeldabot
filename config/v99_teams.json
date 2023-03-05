@@ -13,14 +13,26 @@
         "tier": "tier1",
         "discord_names": [
           "jdmedlock#4582",
-          "syntax#7986",
-          "Alecia#9269",
-          "Hypno#9777"
+          "syntax#7986"
         ],
         "github_team": "v99-tier1-team-01",
         "github_names": [
           "jdmedlock",
-          "ericadev",
+          "ericadev"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V99-tier1-01-🔥",
+        "name": "tier1-team-02",
+        "tier": "tier1",
+        "discord_names": [
+          "Alecia#9269",
+          "Hypno#9777"
+        ],
+        "github_team": "v99-tier1-team-02",
+        "github_names": [
           "ale-cia",
           "ellrub"
         ]

@@ -193,19 +193,18 @@ class GitHub {
       // Add individual teammates to the team using the GitHub names provided
       // in the configuration file. If an error occurs when adding a teammate
       // log it and continue adding remaining teammates
-      // TODO: add code here
       const team = teamslist.teams.find((team) => {
-        console.log('t: ', team)
-        return team.github_team === repoName
+        return team.team.github_team === repoName
       })
-      console.log('team: ', team)
-      /*
-      await this.octokit.teams.addOrUpdateMembershipForUserInOrg({
-        org: orgName,
-        team_slug: repoName,
-        username: orgName
-      })
-      */
+      if (team) {
+        for (let i=0; i < team.team.github_names.length; i++) {
+          await this.octokit.teams.addOrUpdateMembershipForUserInOrg({
+            org: orgName,
+            team_slug: repoName,
+            username: team.team.github_names[i]
+          })
+        }
+      }
     } catch(err) {
       console.log(`createTeam - Error adding member to the team org:${ orgName } team: ${ repoName }`)
       console.log(`...err:`, err)
@@ -282,7 +281,7 @@ class GitHub {
 
   async cloneTemplate(reposToCreate, teamslist) {
     try {
-      //this.initializeProgressBars(reposToCreate)
+      this.initializeProgressBars(reposToCreate)
       await this.createGqlClient()
       const templateData = await this.getTemplateRepo(this.GITHUB_ORG, this.GITHUB_TEMPLATE_REPO)
       let areLabelsAndMilestonesCreated = false
@@ -317,10 +316,10 @@ class GitHub {
             process.exit(1)
           }
         }
-        //this.progressBars[teamNo+1].increment(1)
-        //this.progressBars[ALL_TEAMS].increment(1)
+        this.progressBars[teamNo+1].increment(1)
+        this.progressBars[ALL_TEAMS].increment(1)
       }
-      //this.overallProgress.stop()
+      this.overallProgress.stop()
     }
     catch(err) {
       console.error('Error detected setting up teams: ', err)

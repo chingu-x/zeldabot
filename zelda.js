@@ -91,10 +91,6 @@ program
       { name: TIER3_NAME, count: NO_TIER3_TEAMS }
     ])
     
-    console.log('teamlist: ', teamslist)
-    console.log('...teams: ', teamslist.teams)
-    console.log('...github_names: ', teamslist.teams[0].team.github_names)
-
     const github = new GitHub(environment) 
     await github.cloneTemplate(reposToCreate,teamslist)
   })
