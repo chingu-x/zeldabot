@@ -222,7 +222,7 @@ class GitHub {
         variables: { templateRepoId: templateRepoId, reponame: repoName, 
           owner: repoOwner, description: repoDescription }
       })
-     return mutationResult
+      return mutationResult
     } catch(err) {
       console.log('createRepo - Error in createRepo - err: ', err)
       process.exitCode = 1
