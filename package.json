@@ -16,9 +16,9 @@
     "chingu",
     "github"
   ],
-  "main": "zelda.js",
+  "main": "zeldabot.js",
   "scripts": {
-    "zelda": "node ./zelda"
+    "zelda": "node ./zeldabot"
   },
   "dependencies": {
     "@octokit/rest": "^19.0.7",

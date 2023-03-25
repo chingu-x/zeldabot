@@ -17,7 +17,7 @@
 
 # zeldabot
 
-Zelda creates Chingu Voyage repos in GitHub from a template repository. It's purpose is
+Zeldabot creates Chingu Voyage repos in GitHub from a template repository. It's purpose is
 to automate the process to reduce the amount of manual time spent preparing for Voyages,
 while improving quality and reducing the chance of errors.
 
@@ -58,7 +58,7 @@ created in to the GitHub id that owns the personal access token.
 
 Zeldabot is a command line application (CLI). The basic command to run it is:
 ```
-node zelda clone <option flags>
+node zeldabot clone <option flags>
 ```
 ### Options
 
@@ -103,7 +103,7 @@ the
 command to run Zeldabot can be as simple as the following to set up repositories
 for 3 tier 1, 2 tier 2, and 4 tier 3 teams.
 ```
-node zelda clone -t1 3 -t2 2 -t3 4
+node zeldabot clone -t1 3 -t2 2 -t3 4
 ```
 
 Running this command would create the following repo:
@@ -124,7 +124,7 @@ you would like to create a set of repos with different team names. Since
 command line options always override the same settings in the `.env` file it is
 is not necessary to update the `.env` file.
 ```
-node zelda clone -t1 1 -t2 1 -t3 1 -n1 possums -n2 cobras -n3 kangaroos
+node zeldabot clone -t1 1 -t2 1 -t3 1 -n1 possums -n2 cobras -n3 kangaroos
 ```
 Running this command would create the following repo:
 - chingu-voyagetest/v99-possums-team-01
@@ -135,14 +135,14 @@ Running this command would create the following repo:
 
 Assume that a previous run was started with this command:
 ```
-node zelda clone -t1 1 -t2 2 -t3 3 
+node zeldabot clone -t1 1 -t2 2 -t3 3 
 ```
 but prematurely terminated when an error occurred adding Bears team #5.
 
 After fixing the issue this run can be resumed at Bears team #5 using the
 command parameter `-r 5`:
 ```
-node zelda clone -t1 1 -t2 2 -t3 3 -r 5
+node zeldabot clone -t1 1 -t2 2 -t3 3 -r 5
 ```
 
 ## Release History
