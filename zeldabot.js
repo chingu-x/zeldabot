@@ -3,7 +3,7 @@ const program = new Command();
 const { isDebugOn } = require('./src/Environment')
 const Environment = require('./src/Environment')
 const GitHub = require('./src/GitHub')
-const teamslist = require('./config/v43_teams_users_tier3.json')
+const teamslist = require('./config/v99_teams_users.json')
 
 const environment = new Environment()
 environment.initDotEnv('./')
@@ -90,6 +90,8 @@ program
       { name: TIER2_NAME, count: NO_TIER2_TEAMS },
       { name: TIER3_NAME, count: NO_TIER3_TEAMS }
     ])
+
+    console.log('reposToCreate: ', reposToCreate)
     
     const github = new GitHub(environment) 
     await github.cloneTemplate(reposToCreate,teamslist)
