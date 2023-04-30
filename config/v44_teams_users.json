@@ -140,16 +140,12 @@
         "discord_names": [
           "Kapitan Heneral#7726",
           "sceiiya#7486",
-          "Emerson47#9555",
-          "shanhj259#4717",
           "Vinh Qua#6818",
           "Notcori#0144"
         ],
         "github_names": [
           "Finestwork",
           "sceiiya",
-          "emerson-bualat",
-          "ppPacific",
           "VinhQua",
           ""
         ]
@@ -159,6 +155,23 @@
       "team": {
         "category": "V44-tier2-02-🔥",
         "name": "tier2-team-12",
+        "tier": "tier2",
+        "discord_names": [
+          "Gene Lorenz#8959",
+          "Emerson47#9555",
+          "shanhj259#4717"
+        ],
+        "github_names": [
+          "genelorenzSarmiento0408",
+          "emerson-bualat",
+          "ppPacific"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V44-tier2-02-🔥",
+        "name": "tier2-team-13",
         "tier": "tier2",
         "discord_names": [
           "MAD#1741",
@@ -414,12 +427,14 @@
         "discord_names": [
           "Keith Petryshyn#9560",
           "rselva #6611",
-          "jellybeanCoder#7213"
+          "jellybeanCoder#7213",
+          "friendlyDevBro#0330"
         ],
         "github_names": [
           "KeithPetr",
           "rselvasoyak",
-          "GillianTrethewey"
+          "GillianTrethewey",
+          "egoullaud"
         ]
       }
     },
@@ -643,14 +658,14 @@
           "wobbles#4327",
           "idris#0430",
           "trroev#3843",
-          "Alex_h#2355"
+          "bestlaidplans#5927"
         ],
         "github_names": [
           "CatherineJOnia",
           "Mfried95",
           "idriss30",
           "trroev",
-          "alexh205"
+          "gmirzayev"
         ]
       }
     },
@@ -681,18 +696,24 @@
         "name": "tier3-team-40",
         "tier": "tier3",
         "discord_names": [
+          "alimora#7364",
+          "Fiona A#6431",
           "ImAGummyBear#4535",
           "Khemmie_Ray #0689",
           "Brad B.#1109",
           "Kathleen#4992",
-          "SeanRed#3630"
+          "SeanRed#3630",
+          "Alex_h#2355"
         ],
         "github_names": [
+          "alimora83",
+          "fionss",
           "Nam3loc",
           "Khemmie-Ray",
           "bbabines",
           "kathleenmerc",
-          "seanred360"
+          "seanred360",
+          "alexh205"
         ]
       }
     },
@@ -704,14 +725,12 @@
         "discord_names": [
           "TazDeCoder#2417",
           "Tammi#2978",
-          "remidee#7787",
-          "alimora#7364"
+          "remidee#7787"
         ],
         "github_names": [
           "TazDeCoder",
           "thusbandUK",
-          "Remi-dee",
-          "alimora83"
+          "Remi-dee"
         ]
       }
     },
