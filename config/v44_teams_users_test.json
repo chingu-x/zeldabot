@@ -101,6 +101,7 @@
           "Moriah#6628",
           "Goodman2814",
           "Gabriela de Paula#4224",
+          "nduisenbay",
           "IICheesemanII#7104",
           "angelaL#3444"
         ],
@@ -108,6 +109,7 @@
           "MoriahSWalker",
           "goodman2814",
           "PaulaR-05",
+          "nazgul7d",
           "Foughty",
           ""
         ]
@@ -122,13 +124,15 @@
           "ElizabethRG#8183",
           "carolburgerbarn#7116",
           "Navarra#5107",
-          "ZumDeWald#0001"
+          "ZumDeWald#0001",
+          "binarygoose#2086"
         ],
         "github_names": [
           "er1927",
           "carolb92",
           "Amanda-Libby",
-          ""
+          "",
+          "oakknight84"
         ]
       }
     },
@@ -280,12 +284,14 @@
           "emiri_i🇫🇷#6336",
           "Giang Pham#2568",
           "Kelevra_V#4591",
+          "sheriff#4920",
           "ejeh daniel #6168"
         ],
         "github_names": [
           "Emiri-i",
           "giangpham-cfg",
           "DannyVogel",
+          "Sheriff-Oladimeji",
           "danishaft"
         ]
       }
@@ -505,14 +511,12 @@
         "name": "tier3-team-31",
         "tier": "tier3",
         "discord_names": [
-          "eze chidera#4415",
           "saz#0388",
           "GMGY#8044",
           "broom_lord_2000#4079",
           "ChaitanyaG#4173"
         ],
         "github_names": [
-          "ecopsdee",
           "saraAAZ",
           "Galalmgy",
           "nyommm",
@@ -696,24 +700,37 @@
         "name": "tier3-team-40",
         "tier": "tier3",
         "discord_names": [
-          "alimora#7364",
-          "Fiona A#6431",
           "ImAGummyBear#4535",
           "Khemmie_Ray #0689",
           "Brad B.#1109",
           "Kathleen#4992",
-          "SeanRed#3630",
-          "Alex_h#2355"
+          "SeanRed#3630"
         ],
         "github_names": [
-          "alimora83",
-          "fionss",
           "Nam3loc",
           "Khemmie-Ray",
           "bbabines",
           "kathleenmerc",
-          "seanred360",
-          "alexh205"
+          "seanred360"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V44-tier3-03-🔥",
+        "name": "tier3-team-41",
+        "tier": "tier3",
+        "discord_names": [
+          "alimora#7364",
+          "Fiona A#6431",
+          "Alex_h#2355",
+          "chebesswer2323 "
+        ],
+        "github_names": [
+          "alimora83",
+          "fionss",
+          "alexh205",
+          "yi-lin-1234"
         ]
       }
     },
