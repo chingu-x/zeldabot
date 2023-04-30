@@ -152,32 +152,65 @@ class GitHub {
     return labelsInRepo
   }
 
-  async createTeam(orgName, repoName, teamDescription) {
+  // Create the team, grant the admin privilege on the team repo, and
+  // add individual team members to it
+  async createTeam(orgName, repoName, teamDescription, teamslist) {
     try {
-        // Octokit REST is used because creating 
-        // teams is not yet part of GitHub's GraphQL API
-        await this.octokit.teams.create({
-          org: orgName,
-          name: repoName,
-          description: teamDescription,
-          privacy: 'closed',
-          repo_names: [`${ orgName }/${ repoName }`],
-        })
-
-        // Add the 'admin' permission for the team on its repository. 
-        // Remember the repo name and team name are the same for a Voyage
-        await this.octokit.teams.addOrUpdateRepoPermissionsInOrg({
-          org: orgName,
-          team_slug: repoName,
-          owner: orgName,
-          repo: `${ repoName }`,
-          permission: "admin"
-        })
+      // Octokit REST is used because creating 
+      // teams is not yet part of GitHub's GraphQL API
+      await this.octokit.teams.create({
+        org: orgName,
+        name: repoName,
+        description: teamDescription,
+        privacy: 'closed',
+        repo_names: [`${ orgName }/${ repoName }`],
+      })
     } catch(err) {
       console.log(`createTeam - Error creating org:${ orgName } team: ${ repoName }`)
       console.log(`...err:`, err)
       process.exitCode = 1
       return
+    }
+
+    try{
+      // Add the 'admin' permission for the team on its repository. 
+      // Remember the repo name and team name are the same for a Voyage
+      await this.octokit.teams.addOrUpdateRepoPermissionsInOrg({
+        org: orgName,
+        team_slug: repoName,
+        owner: orgName,
+        repo: `${ repoName }`,
+        permission: "admin"
+      })
+    } catch(err) {
+      console.log(`createTeam - Error granting team permission to repo org:${ orgName } team: ${ repoName }`)
+      console.log(`...err:`, err)
+      process.exitCode = 1
+      return
+    }
+
+    // Add individual teammates to the team using the GitHub names provided
+    // in the configuration file. If an error occurs when adding a teammate
+    // log it and continue adding remaining teammates
+    const team = teamslist.teams.find((team) => {
+      return team.team.name === repoName.slice(4)
+    })
+
+    if (!team) {
+      console.log(`...team: ${ repoName } not found`)
+    } else {
+      for (let i=0; i < team.team.github_names.length; i++) {
+        try {
+          const addResult = await this.octokit.teams.addOrUpdateMembershipForUserInOrg({
+            org: orgName,
+            team_slug: repoName,
+            username: team.team.github_names[i]
+          })
+        } catch(err) {
+          console.log(`...Error adding user: ${ team.team.github_names[i] } to team: ${ repoName } - ${ err.status } / ${ err.response.data.message }`)
+          continue
+        }
+      }
     }
   }
 
@@ -188,7 +221,7 @@ class GitHub {
         variables: { templateRepoId: templateRepoId, reponame: repoName, 
           owner: repoOwner, description: repoDescription }
       })
-     return mutationResult
+      return mutationResult
     } catch(err) {
       console.log('createRepo - Error in createRepo - err: ', err)
       process.exitCode = 1
@@ -230,12 +263,12 @@ class GitHub {
       hideCursor: true
     }, cliProgress.Presets.shades_classic)
 
-    this.progressBars[ALL_TEAMS] = this.overallProgress.create(reposToCreate.length, 0)
-    this.progressBars[ALL_TEAMS].update(0, { description: 'Overall progress'.padEnd(DESC_MAX_LTH, ' ') })
+    //this.progressBars[ALL_TEAMS] = this.overallProgress.create(reposToCreate.length, 0)
+    //this.progressBars[ALL_TEAMS].update(0, { description: 'Overall progress'.padEnd(DESC_MAX_LTH, ' ') })
     
     for (let teamNo = 0; teamNo < reposToCreate.length; ++teamNo) {
       const repoToCreate = reposToCreate[teamNo]
-      this.progressBars[teamNo+1] = this.overallProgress.create(1, 0)
+      //this.progressBars[teamNo+1] = this.overallProgress.create(1, 0)
       this.repoName = `${ repoToCreate.voyageName }-`
         + `${ repoToCreate.tierName }-team-`
         + `${ repoToCreate.teamNo }`
@@ -247,15 +280,16 @@ class GitHub {
     return new Promise(resolve => setTimeout(resolve, secondsToSleep*1000));
   }
 
-  async cloneTemplate(reposToCreate) {
+  async cloneTemplate(reposToCreate, teamslist) {
     try {
-      this.initializeProgressBars(reposToCreate)
+      //this.initializeProgressBars(reposToCreate)
       await this.createGqlClient()
       const templateData = await this.getTemplateRepo(this.GITHUB_ORG, this.GITHUB_TEMPLATE_REPO)
       let areLabelsAndMilestonesCreated = false
       let labelsInRepo = []
 
       for (let teamNo = 0; teamNo < reposToCreate.length; teamNo++) {
+        console.log(`Creating team #${ teamNo+1 }...`)
         // Reset variables for new team 
         areLabelsAndMilestonesCreated = false
         labelsInRepo = []
@@ -269,7 +303,7 @@ class GitHub {
             const newRepoData = await this.createRepo(templateData.data.repository.owner.id, 
               templateData.data.repository.id,
               this.repoName, this.repoDescription)
-            await this.createTeam(this.GITHUB_ORG, this.repoName, this.teamDescription)
+            await this.createTeam(this.GITHUB_ORG, this.repoName, this.teamDescription, teamslist)
             if (areLabelsAndMilestonesCreated === false) {
               labelsInRepo = await this.addLabelsToRepo(newRepoData.data.cloneTemplateRepository.repository.id, 
                 templateData.data.repository.labels.edges)
@@ -281,13 +315,13 @@ class GitHub {
               templateData.data.repository.issues.edges, labelsInRepo)
           } catch (err) {
             console.error('\nError detected creating team repo: ', err)
-            process.exit(1)
+            continue
           }
         }
-        this.progressBars[teamNo+1].increment(1)
-        this.progressBars[ALL_TEAMS].increment(1)
+        //this.progressBars[teamNo+1].increment(1)
+        //this.progressBars[ALL_TEAMS].increment(1)
       }
-      this.overallProgress.stop()
+      //this.overallProgress.stop()
     }
     catch(err) {
       console.error('Error detected setting up teams: ', err)
