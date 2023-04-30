@@ -223,7 +223,7 @@ class GitHub {
       })
       return mutationResult
     } catch(err) {
-      console.log('createRepo - Error in createRepo - err: ', err)
+      console.log('createRepo - Error in createRepo - repo: ', repoName, ' err: ', err)
       process.exitCode = 1
       return
     }
