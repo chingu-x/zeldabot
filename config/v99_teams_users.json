@@ -1,0 +1,58 @@
+{
+  "voyage_number": "99",
+  "categories": [
+    "V99-tier1-01-🔥",
+    "V99-tier2-02-🔥",
+    "V99-tier3-03-🔥"
+  ],
+  "teams": [
+    {
+      "team": {
+        "category": "V99-tier1-01-🔥",
+        "name": "tier1-team-01",
+        "tier": "tier1",
+        "discord_names": [
+          "jdmedlock#4582",
+          "syntax#7986"
+        ],
+        "github_names": [
+          "jdmedlock",
+          "ericadev",
+          ""
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V99-tier2-02-🔥",
+        "name": "tier2-team-02",
+        "tier": "tier2",
+        "discord_names": [
+          "Alecia#9269",
+          "Hypno#9777"
+        ],
+        "github_names": [
+          "ale-cia",
+          "ellrub",
+          "asdgqetqfadfouhfqe"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V99-tier3-03-🔥",
+        "name": "tier3-team-03",
+        "tier": "tier3",
+        "discord_names": [
+          "Alecia#9269",
+          "Hypno#9777"
+        ],
+        "github_names": [
+          "ale-cia",
+          "ellrub",
+          "asdgqetqfadfouhfqe"
+        ]
+      }
+    }
+  ]
+}
