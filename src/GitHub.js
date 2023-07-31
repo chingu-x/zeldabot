@@ -193,7 +193,9 @@ class GitHub {
     // in the configuration file. If an error occurs when adding a teammate
     // log it and continue adding remaining teammates
     const team = teamslist.teams.find((team) => {
-      return team.team.name === repoName.slice(4)
+      const voyageNameLength = repoName.split('-')[0].length
+      const teamName = voyageNameLength === 3 ? repoName.slice(4) : repoName.slice(5)
+      return team.team.name === teamName
     })
 
     if (!team) {
