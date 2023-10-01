@@ -244,31 +244,6 @@
     },
     {
       "team": {
-        "category": "V46-tier1-01-🔥",
-        "name": "tier1-team-Non-JS",
-        "tier": "tier1",
-        "discord_names": [
-          "931057560193237032",
-          "302744420376379393"
-        ],
-        "github_names": [
-          "warlita",
-          "cipalisoc"
-        ],
-        "resource_msg": [
-          ".\n**__V46-tier1-team-Non-JS team:__**",
-          "- Product Owners: None",
-          "- UI/UX Designer: None",
-          "- Web Developers: None",
-          "- Data Scientists: None",
-          "- Voyage Guide: None\n",
-          "**__Resources__**:\n",
-          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier1-team-JS"
-        ]
-      }
-    },
-    {
-      "team": {
         "category": "V46-tier2-02-🔥",
         "name": "tier2-team-12",
         "tier": "tier2",
@@ -613,29 +588,6 @@
           "- Voyage Guide: <@290246926341898242>\n",
           "**__Resources__**:\n",
           "* GitHub Repo: https://github.com/chingu-voyages/v46-tier2-team-22"
-        ]
-      }
-    },
-    {
-      "team": {
-        "category": "V46-tier2-02-🔥",
-        "name": "tier2-team-Non-JS",
-        "tier": "tier2",
-        "discord_names": [
-          "964834814983307285"
-        ],
-        "github_names": [
-          "0bunny0"
-        ],
-        "resource_msg": [
-          ".\n**__V46-tier2-team-Non-JS team:__**",
-          "- Product Owners: None",
-          "- UI/UX Designer: None",
-          "- Web Developers: None",
-          "- Data Scientists: None",
-          "- Voyage Guide: None\n",
-          "**__Resources__**:\n",
-          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier2-team-JS"
         ]
       }
     },
@@ -1136,29 +1088,6 @@
           "- Voyage Guide: None\n",
           "**__Resources__**:\n",
           "* GitHub Repo: https://github.com/chingu-voyages/v46-tier3-team-42"
-        ]
-      }
-    },
-    {
-      "team": {
-        "category": "V46-tier3-03-🔥",
-        "name": "tier3-team-Non-JS",
-        "tier": "tier3",
-        "discord_names": [
-          "1077891080072208384"
-        ],
-        "github_names": [
-          "philipObiri"
-        ],
-        "resource_msg": [
-          ".\n**__V46-tier3-team-Non-JS team:__**",
-          "- Product Owners: None",
-          "- UI/UX Designer: None",
-          "- Web Developers: None",
-          "- Data Scientists: None",
-          "- Voyage Guide: None\n",
-          "**__Resources__**:\n",
-          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier3-team-JS"
         ]
       }
     }
