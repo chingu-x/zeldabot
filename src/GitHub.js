@@ -175,6 +175,8 @@ class GitHub {
     try{
       // Add the 'admin' permission for the team on its repository. 
       // Remember the repo name and team name are the same for a Voyage
+      console.log('createTeam - orgName: ', orgName)
+      console.log('createTeam - repoName: ', repoName)
       await this.octokit.teams.addOrUpdateRepoPermissionsInOrg({
         org: orgName,
         team_slug: repoName,

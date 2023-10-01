@@ -18,6 +18,7 @@
   ],
   "main": "zeldabot.js",
   "scripts": {
+    "clone": "node zeldabot clone",
     "start": "node ./zeldabot"
   },
   "dependencies": {
