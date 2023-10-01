@@ -1,0 +1,1167 @@
+{
+  "voyage_number": "46",
+  "categories": [
+    "V46-tier1-01-🔥",
+    "V46-tier2-02-🔥",
+    "V46-tier3-03-🔥"
+  ],
+  "teams": [
+    {
+      "team": {
+        "category": "V46-tier1-01-🔥",
+        "name": "tier1-team-01",
+        "tier": "tier1",
+        "discord_names": [
+          "1064442287121244199",
+          "770503239686815768",
+          "1059440241536147556",
+          "139615488295698432",
+          "851013325449199626"
+        ],
+        "github_names": [
+          "Shree-77",
+          "helenclx",
+          "andreimaier",
+          "cherylli",
+          "allenmathews"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier1-team-01 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@1064442287121244199> <@770503239686815768> <@1059440241536147556> <@851013325449199626>",
+          "- Data Scientists: None",
+          "- Voyage Guide: <@139615488295698432>\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier1-team-01"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier1-01-🔥",
+        "name": "tier1-team-02",
+        "tier": "tier1",
+        "discord_names": [
+          "1013792037478338581",
+          "757668097455947878",
+          "677267032713986052",
+          "484625186239283211",
+          "350666806983393292"
+        ],
+        "github_names": [
+          "aspiringsoftwareprogrammer",
+          "amavicpos",
+          "lawlawson",
+          "enochval",
+          "KseniiaRiabova"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier1-team-02 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@677267032713986052> <@350666806983393292>",
+          "- Data Scientists: <@757668097455947878>",
+          "- Voyage Guide: <@1013792037478338581> <@484625186239283211>\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier1-team-02"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier1-01-🔥",
+        "name": "tier1-team-03",
+        "tier": "tier1",
+        "discord_names": [
+          "311593317693653003",
+          "1062553924013396029",
+          "319133650308431872",
+          "640529640565243936"
+        ],
+        "github_names": [
+          "Ooxz",
+          "Sarita1517",
+          "Axeldru",
+          "ardalum"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier1-team-03 team:__**",
+          "- Product Owners: <@1062553924013396029>",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@311593317693653003> <@319133650308431872> <@640529640565243936>",
+          "- Data Scientists: None",
+          "- Voyage Guide: None\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier1-team-03"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier1-01-🔥",
+        "name": "tier1-team-04",
+        "tier": "tier1",
+        "discord_names": [
+          "1125904068750094398",
+          "805175086768324608",
+          "1032531316543066174",
+          "489100411639300107",
+          "1122989192771801229"
+        ],
+        "github_names": [
+          "Bodilon5",
+          "vrutishah",
+          "fedemurru",
+          "J4sum",
+          "Abu-AbdiLlah-AlBukhaaree"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier1-team-04 team:__**",
+          "- Product Owners: <@1125904068750094398>",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@805175086768324608> <@1032531316543066174> <@489100411639300107> <@1122989192771801229>",
+          "- Data Scientists: None",
+          "- Voyage Guide: None\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier1-team-04"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier1-01-🔥",
+        "name": "tier1-team-05",
+        "tier": "tier1",
+        "discord_names": [
+          "414264214732013589",
+          "981313278703722547",
+          "309766147484418048",
+          "818987819426512906"
+        ],
+        "github_names": [
+          "chuelgi",
+          "NereidaRondon",
+          "kingzlofitness",
+          "jenny-alexander"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier1-team-05 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: <@309766147484418048>",
+          "- Web Developers: <@414264214732013589> <@981313278703722547>",
+          "- Data Scientists: None",
+          "- Voyage Guide: <@818987819426512906>\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier1-team-05"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier1-01-🔥",
+        "name": "tier1-team-06",
+        "tier": "tier1",
+        "discord_names": [
+          "563727003610775576",
+          "1144000353075990611",
+          "826463437906903053",
+          "729451068655927339"
+        ],
+        "github_names": [
+          "tauri-st",
+          "Beg92",
+          "terrifricker",
+          "chonger878"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier1-team-06 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@563727003610775576> <@1144000353075990611> <@826463437906903053> <@729451068655927339>",
+          "- Data Scientists: None",
+          "- Voyage Guide: None\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier1-team-06"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier1-01-🔥",
+        "name": "tier1-team-07",
+        "tier": "tier1",
+        "discord_names": [
+          "467322619662827530",
+          "735988326896500836",
+          "721934333870342206",
+          "927316502355529758",
+          "1143294531001921599"
+        ],
+        "github_names": [
+          "Amanda-Libby",
+          "gtimalsena",
+          "XITSDUCKYx ",
+          "lauracastrotech",
+          "Sarah-Thomas-992"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier1-team-07 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@467322619662827530> <@735988326896500836> <@721934333870342206> <@927316502355529758> <@1143294531001921599>",
+          "- Data Scientists: None",
+          "- Voyage Guide: None\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier1-team-07"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier1-01-🔥",
+        "name": "tier1-team-08",
+        "tier": "tier1",
+        "discord_names": [
+          "802677029937479722",
+          "1131975103031287840",
+          "261683600989093890"
+        ],
+        "github_names": [
+          "kilted2000",
+          "chef-louis",
+          "frosty8104"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier1-team-08 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@802677029937479722> <@1131975103031287840> <@261683600989093890>",
+          "- Data Scientists: None",
+          "- Voyage Guide: None\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier1-team-08"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier2-02-🔥",
+        "name": "tier2-team-12",
+        "tier": "tier2",
+        "discord_names": [
+          "376929785865175047",
+          "764109673129050122",
+          "1005411909786423407",
+          "974273283992219688",
+          "733210918036439112"
+        ],
+        "github_names": [
+          "ErickaConcepcion",
+          "Kelotbalut",
+          "johncarlolipa",
+          "Paulette-Zaldivar-Flores",
+          "jessabc"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier2-team-12 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@376929785865175047> <@764109673129050122> <@1005411909786423407> <@733210918036439112>",
+          "- Data Scientists: None",
+          "- Voyage Guide: <@974273283992219688>\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier2-team-12"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier2-02-🔥",
+        "name": "tier2-team-13",
+        "tier": "tier2",
+        "discord_names": [
+          "1013021802399809557",
+          "1084729753212309624",
+          "937260646976876585",
+          "230686334426021888",
+          "516604616410923008"
+        ],
+        "github_names": [
+          "Chennareddy44",
+          "itzmidinesh",
+          "Ch-Amulya",
+          "farisadam97",
+          "rakharan"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier2-team-13 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@1013021802399809557> <@1084729753212309624> <@937260646976876585> <@230686334426021888> <@516604616410923008>",
+          "- Data Scientists: None",
+          "- Voyage Guide: None\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier2-team-13"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier2-02-🔥",
+        "name": "tier2-team-14",
+        "tier": "tier2",
+        "discord_names": [
+          "1117780618479149118",
+          "193011182225850368",
+          "1062997786183860307",
+          "946035366467629076"
+        ],
+        "github_names": [
+          "adhamElhabashy",
+          "DikshantAgarwal",
+          "diaasaur",
+          "Sumitgangwar58"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier2-team-14 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@193011182225850368> <@1062997786183860307> <@946035366467629076>",
+          "- Data Scientists: None",
+          "- Voyage Guide: <@1117780618479149118>\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier2-team-14"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier2-02-🔥",
+        "name": "tier2-team-15",
+        "tier": "tier2",
+        "discord_names": [
+          "759500746617782312",
+          "1042780463019851806",
+          "469468462373404682",
+          "834041476337500199",
+          "980111412548472873",
+          "1000036798145232926"
+        ],
+        "github_names": [
+          "Drazen-TheGRC",
+          "teodora-kocic",
+          "Petre4488",
+          "abdullahsadik00",
+          "Darshan-Pandya10",
+          "fayiz770"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier2-team-15 team:__**",
+          "- Product Owners: <@469468462373404682>",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@759500746617782312> <@1042780463019851806> <@834041476337500199> <@980111412548472873> <@1000036798145232926>",
+          "- Data Scientists: None",
+          "- Voyage Guide: None\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier2-team-15"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier2-02-🔥",
+        "name": "tier2-team-16",
+        "tier": "tier2",
+        "discord_names": [
+          "421653402963935233",
+          "951943974204112936",
+          "657872597081522186",
+          "535771578294599690",
+          "841296335457878046",
+          "1117780618479149118"
+        ],
+        "github_names": [
+          "revforev",
+          "ocsiddisco",
+          "mladen-krstin",
+          "NishaVijai",
+          "Alexandra2888",
+          "adhamElhabashy"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier2-team-16 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: <@421653402963935233>",
+          "- Web Developers: <@951943974204112936> <@657872597081522186> <@535771578294599690> <@841296335457878046>",
+          "- Data Scientists: None",
+          "- Voyage Guide: <@1117780618479149118>\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier2-team-16"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier2-02-🔥",
+        "name": "tier2-team-17",
+        "tier": "tier2",
+        "discord_names": [
+          "548063845072109589",
+          "142088400227401728",
+          "373496144753328128",
+          "536637255788396562",
+          "975496528124837958",
+          "258270304944652288"
+        ],
+        "github_names": [
+          "oluwatobiss",
+          "william-man",
+          "karaguarraci",
+          "Oviep",
+          "arch1510",
+          "WarrenHawker"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier2-team-17 team:__**",
+          "- Product Owners: <@975496528124837958>",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@548063845072109589> <@142088400227401728> <@373496144753328128> <@536637255788396562>",
+          "- Data Scientists: None",
+          "- Voyage Guide: <@258270304944652288>\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier2-team-17"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier2-02-🔥",
+        "name": "tier2-team-18",
+        "tier": "tier2",
+        "discord_names": [
+          "447054406647676958",
+          "561490143324667905",
+          "941628955956482068",
+          "796490566258786335",
+          "683136371145310212"
+        ],
+        "github_names": [
+          "fmtabbara",
+          "futurefounder",
+          "rosscondie",
+          "Danthesage01",
+          "kelvinSeamount"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier2-team-18 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@561490143324667905> <@941628955956482068> <@796490566258786335> <@683136371145310212>",
+          "- Data Scientists: None",
+          "- Voyage Guide: <@447054406647676958>\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier2-team-18"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier2-02-🔥",
+        "name": "tier2-team-19",
+        "tier": "tier2",
+        "discord_names": [
+          "210430672660070402",
+          "592367129349849097",
+          "1015011354953916580",
+          "388322462305222657",
+          "483259884125552640",
+          "1127694148863017000",
+          "885399676919095307",
+          "709933378329378886"
+        ],
+        "github_names": [
+          "henrike32",
+          "Greimil",
+          "joekotvas",
+          "timDeHof",
+          "robester0403",
+          "Nervana-Amin",
+          "Ammar-nasif",
+          "simpliweb"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier2-team-19 team:__**",
+          "- Product Owners: <@1127694148863017000> <@885399676919095307>",
+          "- UI/UX Designer: <@210430672660070402>",
+          "- Web Developers: <@592367129349849097> <@1015011354953916580> <@388322462305222657> <@709933378329378886>",
+          "- Data Scientists: None",
+          "- Voyage Guide: <@483259884125552640>\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier2-team-19"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier2-02-🔥",
+        "name": "tier2-team-20",
+        "tier": "tier2",
+        "discord_names": [
+          "1029843927953576047",
+          "419373054712348692",
+          "1023679986151985252",
+          "724775131464859669",
+          "943277138696622112",
+          "483259884125552640"
+        ],
+        "github_names": [
+          "Emimint",
+          "nghia-nguyen-dev",
+          "allison-truhlar",
+          "AOA19",
+          "komalgill0310",
+          "robester0403"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier2-team-20 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: <@419373054712348692>",
+          "- Web Developers: <@1029843927953576047> <@1023679986151985252> <@724775131464859669> <@943277138696622112>",
+          "- Data Scientists: None",
+          "- Voyage Guide: <@483259884125552640>\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier2-team-20"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier2-02-🔥",
+        "name": "tier2-team-21",
+        "tier": "tier2",
+        "discord_names": [
+          "1097496144118034473",
+          "914972528563343420",
+          "204528966806142976",
+          "915016878685052978",
+          "243949039530409985"
+        ],
+        "github_names": [
+          "MoriahSWalker",
+          "Akashay-Anand",
+          "MykhailoStratan",
+          "GregNicholas",
+          "ConwayCJ"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier2-team-21 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@1097496144118034473> <@914972528563343420> <@204528966806142976> <@915016878685052978>",
+          "- Data Scientists: None",
+          "- Voyage Guide: <@243949039530409985>\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier2-team-21"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier2-02-🔥",
+        "name": "tier2-team-22",
+        "tier": "tier2",
+        "discord_names": [
+          "665904696103534629",
+          "1075505725511565342",
+          "290246926341898242",
+          "211233566246305792"
+        ],
+        "github_names": [
+          "HectorAgudelo",
+          "pm-moyanor",
+          "jezraelhope",
+          "Valeriusdev"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier2-team-22 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@665904696103534629> <@1075505725511565342> <@211233566246305792>",
+          "- Data Scientists: None",
+          "- Voyage Guide: <@290246926341898242>\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier2-team-22"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier3-03-🔥",
+        "name": "tier3-team-27",
+        "tier": "tier3",
+        "discord_names": [
+          "1059854887938183178",
+          "205962931341361152",
+          "764109673129050122",
+          "1025226397481971812",
+          "707146667777851482",
+          "792961205256847380"
+        ],
+        "github_names": [
+          "Cor4zon",
+          "sumirart",
+          "Kelotbalut",
+          "jasonavecilla",
+          "Kintoyyy",
+          "r-okavv"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier3-team-27 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@1059854887938183178> <@205962931341361152> <@764109673129050122> <@1025226397481971812> <@707146667777851482> <@792961205256847380>",
+          "- Data Scientists: None",
+          "- Voyage Guide: None\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier3-team-27"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier3-03-🔥",
+        "name": "tier3-team-28",
+        "tier": "tier3",
+        "discord_names": [
+          "704388804236148757",
+          "484235608169119764",
+          "1128242644590526464",
+          "428552895789531147",
+          "1147345781267910767"
+        ],
+        "github_names": [
+          "albe68",
+          "Saga-sanga",
+          "SakshiDangi",
+          "christianmacasinagrodriguez",
+          "julichow"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier3-team-28 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@704388804236148757> <@484235608169119764> <@1128242644590526464> <@428552895789531147> <@1147345781267910767>",
+          "- Data Scientists: None",
+          "- Voyage Guide: None\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier3-team-28"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier3-03-🔥",
+        "name": "tier3-team-29",
+        "tier": "tier3",
+        "discord_names": [
+          "447054406647676958",
+          "918478226546888704",
+          "955033311808466954",
+          "340267605745205249"
+        ],
+        "github_names": [
+          "fmtabbara",
+          "frugalcodes",
+          "varchodi",
+          "sohodoll"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier3-team-29 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@447054406647676958> <@918478226546888704> <@955033311808466954> <@340267605745205249>",
+          "- Data Scientists: None",
+          "- Voyage Guide: None\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier3-team-29"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier3-03-🔥",
+        "name": "tier3-team-30",
+        "tier": "tier3",
+        "discord_names": [
+          "968608864780046436",
+          "924439739313041488",
+          "477485146178715648",
+          "249940434208555008"
+        ],
+        "github_names": [
+          "NatiG25",
+          "Ree-m",
+          "Nich0las2004",
+          "DjTer3a"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier3-team-30 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@968608864780046436> <@924439739313041488> <@477485146178715648> <@249940434208555008>",
+          "- Data Scientists: None",
+          "- Voyage Guide: None\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier3-team-30"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier3-03-🔥",
+        "name": "tier3-team-31",
+        "tier": "tier3",
+        "discord_names": [
+          "952883860167876698",
+          "671341205438857217",
+          "1082167033266970664",
+          "959080183544033351"
+        ],
+        "github_names": [
+          "alamparte",
+          "CodeKage25",
+          "Olalekan-Adeyeye",
+          "Mutai-Gilbert"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier3-team-31 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@952883860167876698> <@671341205438857217> <@1082167033266970664> <@959080183544033351>",
+          "- Data Scientists: None",
+          "- Voyage Guide: None\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier3-team-31"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier3-03-🔥",
+        "name": "tier3-team-32",
+        "tier": "tier3",
+        "discord_names": [
+          "316920815264464897",
+          "1072539288354443264",
+          "1088095574630350880",
+          "761725310009737226"
+        ],
+        "github_names": [
+          "maurobusso",
+          "Swastik-Chakravorty ",
+          "actuallyyun",
+          "payn33"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier3-team-32 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@316920815264464897> <@1072539288354443264> <@1088095574630350880> <@761725310009737226>",
+          "- Data Scientists: None",
+          "- Voyage Guide: None\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier3-team-32"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier3-03-🔥",
+        "name": "tier3-team-33",
+        "tier": "tier3",
+        "discord_names": [
+          "554234306101379082",
+          "940993256764870756",
+          "896345682187792424",
+          "805069499791441950",
+          "757668097455947878",
+          "484625186239283211",
+          "998903460315545630",
+          "1033285611144101941"
+        ],
+        "github_names": [
+          "debbiect246",
+          "ValeSer",
+          "bjentwistle",
+          "justinchensd",
+          "amavicpos",
+          "enochval",
+          "site1024",
+          "kvi-ki"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier3-team-33 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@554234306101379082> <@940993256764870756> <@896345682187792424> <@805069499791441950> <@998903460315545630> <@1033285611144101941>",
+          "- Data Scientists: <@757668097455947878>",
+          "- Voyage Guide: <@484625186239283211>\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier3-team-33"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier3-03-🔥",
+        "name": "tier3-team-34",
+        "tier": "tier3",
+        "discord_names": [
+          "1043932341246115900",
+          "738890979204923503",
+          "774570135474143243",
+          "1072539288354443264",
+          "926776016813297684"
+        ],
+        "github_names": [
+          "muyixone",
+          "lumidee007",
+          "Ellon-M",
+          "Swastik-Chakravorty",
+          "samad13"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier3-team-34 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@1043932341246115900> <@738890979204923503> <@774570135474143243> <@1072539288354443264> <@926776016813297684>",
+          "- Data Scientists: None",
+          "- Voyage Guide: None\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier3-team-34"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier3-03-🔥",
+        "name": "tier3-team-35",
+        "tier": "tier3",
+        "discord_names": [
+          "897005833882312714",
+          "341075983216148480",
+          "1014658810872352798",
+          "1123840851760652319",
+          "1067478902819278848",
+          "505907289270779904",
+          "508760522523541514"
+        ],
+        "github_names": [
+          "siasktv",
+          "AlanCLN",
+          "yi-lin-1234",
+          "keldim",
+          "amberhunt955",
+          "Yuroq",
+          "ngodi"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier3-team-35 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@897005833882312714> <@341075983216148480> <@1014658810872352798> <@1123840851760652319> <@1067478902819278848> <@505907289270779904>",
+          "- Data Scientists: None",
+          "- Voyage Guide: <@508760522523541514>\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier3-team-35"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier3-03-🔥",
+        "name": "tier3-team-36",
+        "tier": "tier3",
+        "discord_names": [
+          "639387123975454720",
+          "259193350375079936",
+          "954909517508923513",
+          "1130490757560676392",
+          "818987819426512906",
+          "1088217248847642626",
+          "842797381510234193"
+        ],
+        "github_names": [
+          "n3ndor",
+          "mpark4656",
+          "alcb1310",
+          "RodCato",
+          "jenny-alexander",
+          "curtwl",
+          "MattRueter"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier3-team-36 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@639387123975454720> <@259193350375079936> <@1130490757560676392> <@818987819426512906> <@1088217248847642626> <@842797381510234193>",
+          "- Data Scientists: None",
+          "- Voyage Guide: <@954909517508923513>\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier3-team-36"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier3-03-🔥",
+        "name": "tier3-team-37",
+        "tier": "tier3",
+        "discord_names": [
+          "508760522523541514",
+          "864949233671733318",
+          "1006237900314259467",
+          "569672688965255200",
+          "531535494186795011",
+          "943212532334735360",
+          "527718744232034315"
+        ],
+        "github_names": [
+          "ngodi",
+          "yongcho-tx",
+          "harrekki",
+          "SeanPaulson",
+          "deftonechris ",
+          "jameswonlee",
+          "LynchHarrison"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier3-team-37 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@864949233671733318> <@1006237900314259467> <@569672688965255200> <@531535494186795011> <@943212532334735360> <@527718744232034315>",
+          "- Data Scientists: None",
+          "- Voyage Guide: <@508760522523541514>\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier3-team-37"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier3-03-🔥",
+        "name": "tier3-team-38",
+        "tier": "tier3",
+        "discord_names": [
+          "816502670097383445",
+          "538137522849710101",
+          "354790320153690125",
+          "481899344421847042",
+          "693801319974305812",
+          "993976738541486100"
+        ],
+        "github_names": [
+          "Tomomi-K1",
+          "collectivenectar",
+          "limyod",
+          "JohnJBarrett22",
+          "MS07062000"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier3-team-38 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: <@993976738541486100>",
+          "- Web Developers: <@816502670097383445> <@538137522849710101> <@354790320153690125> <@481899344421847042> <@693801319974305812>",
+          "- Data Scientists: None",
+          "- Voyage Guide: None\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier3-team-38"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier3-03-🔥",
+        "name": "tier3-team-39",
+        "tier": "tier3",
+        "discord_names": [
+          "undefined"
+        ],
+        "github_names": [
+          "bobbygrdn"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier3-team-39 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@undefined>",
+          "- Data Scientists: None",
+          "- Voyage Guide: None\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier3-team-39"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier3-03-🔥",
+        "name": "tier3-team-40",
+        "tier": "tier3",
+        "discord_names": [
+          "247504047194505220",
+          "502328916950777877",
+          "626060783045967892",
+          "1156324804392140922"
+        ],
+        "github_names": [
+          "IrhaAli",
+          "TiffanyChan614",
+          "aufung1999",
+          "aasmal97"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier3-team-40 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@247504047194505220> <@502328916950777877> <@626060783045967892> <@1156324804392140922>",
+          "- Data Scientists: None",
+          "- Voyage Guide: None\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier3-team-40"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier3-03-🔥",
+        "name": "tier3-team-41",
+        "tier": "tier3",
+        "discord_names": [
+          "168118536701476864",
+          "871224267293991002",
+          "177872799640059904",
+          "221823400849440769"
+        ],
+        "github_names": [
+          "GalacticKnight",
+          "mikesz88",
+          "ccrump1280",
+          "kennytram"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier3-team-41 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@168118536701476864> <@871224267293991002> <@177872799640059904> <@221823400849440769>",
+          "- Data Scientists: None",
+          "- Voyage Guide: None\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier3-team-41"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier3-03-🔥",
+        "name": "tier3-team-42",
+        "tier": "tier3",
+        "discord_names": [
+          "1036359997275258982",
+          "1066388604462571560",
+          "702652776001306624",
+          "224339836373434368"
+        ],
+        "github_names": [
+          "sangyeonpak",
+          "EgorUshakovOfficial",
+          "Shamwao",
+          "xheer"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier3-team-42 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@1036359997275258982> <@1066388604462571560> <@702652776001306624> <@224339836373434368>",
+          "- Data Scientists: None",
+          "- Voyage Guide: None\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier3-team-42"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V46-tier3-03-🔥",
+        "name": "tier3-team-43",
+        "tier": "tier3",
+        "discord_names": [
+          "96978951632596992",
+          "542960974051934218",
+          "890276123743752213",
+          "542960974051934218"
+        ],
+        "github_names": [
+          "rmarquet21",
+          "Misnad",
+          "vindhya1103",
+          "Misnad"
+        ],
+        "resource_msg": [
+          ".\n**__V46-tier3-team-43 team:__**",
+          "- Product Owners: None",
+          "- UI/UX Designer: None",
+          "- Web Developers: <@96978951632596992> <@542960974051934218>",
+          "- Data Scientists: <@542960974051934218> <@890276123743752213>",
+          "- Voyage Guide: None\n",
+          "**__Resources__**:\n",
+          "* GitHub Repo: https://github.com/chingu-voyages/v46-tier3-team-43"
+        ]
+      }
+    }
+  ],
+  "team_greeting": [
+    ":rocket: **_Congratulations Voyagers!_** You found your team chat! Read carefully below so you don't miss out on getting a good start.\n",
+    "**__Your First Steps__** \n",
+    "1. Say \"hi\" to your team-mates! Come in excited and help welcome your teammates! I will list everyone on the team after this message so you can know exactly who is on your team. Note: @jim_medlock, Chingu-X bot, & the other Admins are not your teammates. :slight_smile:",
+    "2. Go to <#553103063649353738> and copy/paste your intro into this team channel. This lets your teammates get to know you so get the party can get started!",
+    "3. Follow the steps in the Voyage Guide we provided last week to set a solid foundation for your project. The most important step to concentrate on is scheduling your Team Kickoff meeting as soon as possible.",
+    "**__In your first Sprint you should concentrate on completing these tasks:__**\n",
+    "1. Meet your team & schedule kickoff meeting",
+    "2. Conduct kickoff meeting",
+    "3. Choose a project & create a Vision Statement",
+    "4. Define & prioritize MVP features",
+    "**__How can we communicate & collaborate with one another?__**\n",
+    "- We've created a simple and easy way to create a voice/video channel for team meetings, one-on-one discussions, & troubleshooting sessions whenever you need them! Check out the `How do I make a voice channel for my team?` section in the Voyage Guide.\n",
+    "- You can find out more about each of these in the [Voyage Guide](https://github.com/chingu-voyages/Handbook/blob/main/docs/guides/voyage/voyage.md#voyage-guide).\n",
+    "**__How can I get the attention of my teammates?__**\n",
+    "Remember that you can always use the following in a message rather than each teammates Discord account name:\n",
+    "- `@everyone`: Notify all members in this channel.\n",
+    "- `@here`: Notify only teammates who are online.\n",
+    "**__Finally__**\n",
+    "Stay committed to your Voyage goal and active with your team! Remember that the #1 factor to success isn't technology - it's **_daily_** communication & collaboration with your teammates.\n\n https://giphy.com/gifs/F9hQLAVhWnL56"
+  ],
+  "tier_greeting": [
+    {
+      "tier": "tier1",
+      "greeting": [
+        ".\n**__Tier 1 Team Project__**\n",
+        "All Tier 1 teams will be building the **_Recipes_** app to help your users manage and organize their culinary collections. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier1-recipes)."
+      ]
+    },
+    {
+      "tier": "tier2",
+      "greeting": [
+        ".\n**__Tier 2 Team Project__**\n",
+        "All Tier 2 teams will be building the **_Recipes_** app to help your users manage and organize their culinary collections. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-recipes)."
+      ]
+    },
+    {
+      "tier": "tier3",
+      "greeting": [
+        ".\n**__Tier 3 Team Project__**\n",
+        "As a Tier 3 team your team has the choice of building the **_Recipes_** app from the [specifications we provide](https://github.com/chingu-voyages/voyage-project-tier3-recipes) or another app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it."
+      ]
+    }
+  ]
+}
