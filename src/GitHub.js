@@ -3,7 +3,6 @@ const fetch = require("node-fetch")
 const createHttpLink = require("apollo-link-http").createHttpLink
 const InMemoryCache = require("apollo-cache-inmemory").InMemoryCache
 const { Octokit } = require("@octokit/rest")
-const cliProgress = require('cli-progress')
 const _colors = require('colors')
 
 const { getTemplateRepo } = require('./graphql/queries')
@@ -259,24 +258,11 @@ class GitHub {
   }
 
   initializeProgressBars(reposToCreate) {
-    this.overallProgress = new cliProgress.MultiBar({
-      format: '{description} |' + _colors.brightGreen('{bar}') + '| repo {value}/{total} | {percentage}% | {duration} secs.',
-      barCompleteChar: '\u2588',
-      barIncompleteChar: '\u2591',
-      clearOnComplete: false,
-      hideCursor: true
-    }, cliProgress.Presets.shades_classic)
-
-    //this.progressBars[ALL_TEAMS] = this.overallProgress.create(reposToCreate.length, 0)
-    //this.progressBars[ALL_TEAMS].update(0, { description: 'Overall progress'.padEnd(DESC_MAX_LTH, ' ') })
-    
     for (let teamNo = 0; teamNo < reposToCreate.length; ++teamNo) {
       const repoToCreate = reposToCreate[teamNo]
-      //this.progressBars[teamNo+1] = this.overallProgress.create(1, 0)
       this.repoName = `${ repoToCreate.voyageName }-`
         + `${ repoToCreate.tierName }-team-`
         + `${ repoToCreate.teamNo }`
-      this.progressBars[teamNo+1].update(0, {description: this.repoName.padEnd(DESC_MAX_LTH, ' ')})
     }
   }
 
@@ -286,11 +272,8 @@ class GitHub {
 
   async cloneTemplate(reposToCreate, teamslist) {
     try {
-      //this.initializeProgressBars(reposToCreate)
       await this.createGqlClient()
       const templateData = await this.getTemplateRepo(this.GITHUB_ORG, this.GITHUB_TEMPLATE_REPO)
-      let areLabelsAndMilestonesCreated = false
-      let labelsInRepo = []
 
       for (let teamNo = 0; teamNo < reposToCreate.length; teamNo++) {
         console.log(`Creating team #${ teamNo+1 }...`)
@@ -308,6 +291,37 @@ class GitHub {
               templateData.data.repository.id,
               this.repoName, this.repoDescription)
             await this.createTeam(this.GITHUB_ORG, this.repoName, this.teamDescription, teamslist)
+          } catch (err) {
+            console.error('\nError detected creating team repo: ', err)
+            continue
+          }
+        }
+      }
+    }
+    catch(err) {
+      console.error('Error detected setting up teams: ', err)
+    }
+  }
+
+  async addIssuesToTeamRepos(reposToCreate, teamslist) {
+    try {
+      await this.createGqlClient()
+      const templateData = await this.getTemplateRepo(this.GITHUB_ORG, this.GITHUB_TEMPLATE_REPO)
+      let areLabelsAndMilestonesCreated = false
+      let labelsInRepo = []
+
+      for (let teamNo = 0; teamNo < reposToCreate.length; teamNo++) {
+        console.log(`Creating team #${ teamNo+1 }...`)
+        // Reset variables for new team 
+        areLabelsAndMilestonesCreated = false
+        labelsInRepo = []
+        this.milestones = []
+
+        // Clone the template repo for a new team
+        if (teamNo+1 >= this.RESTART) {
+          try {
+            await this.sleep(10) // Sleep to avoid creating repos too fast for GraphQL
+            this.generateNames(reposToCreate[teamNo])
             if (areLabelsAndMilestonesCreated === false) {
               labelsInRepo = await this.addLabelsToRepo(newRepoData.data.cloneTemplateRepository.repository.id, 
                 templateData.data.repository.labels.edges)
@@ -318,20 +332,16 @@ class GitHub {
             await this.addIssuesToRepo(newRepoData.data.cloneTemplateRepository.repository.id,
               templateData.data.repository.issues.edges, labelsInRepo)
           } catch (err) {
-            console.error('\nError detected creating team repo: ', err)
+            console.error('\nError detected adding issues to a team repo: ', err)
             continue
           }
         }
-        //this.progressBars[teamNo+1].increment(1)
-        //this.progressBars[ALL_TEAMS].increment(1)
       }
-      //this.overallProgress.stop()
     }
     catch(err) {
       console.error('Error detected setting up teams: ', err)
     }
   }
-
 }
 
 module.exports = GitHub
