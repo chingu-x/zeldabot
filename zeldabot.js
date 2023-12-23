@@ -94,7 +94,7 @@ program
     console.log('reposToCreate: ', reposToCreate)
     
     const github = new GitHub(environment) 
-    await github.cloneTemplate(reposToCreate,teamslist)
+    await github.cloneTemplate(reposToCreate, teamslist)
   })
 
   // Process a request to clone the Voyage Template repo for each Voyage team
