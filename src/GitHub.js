@@ -199,7 +199,7 @@ class GitHub {
       return team.team.name === teamName
     })
 
-    if (!team) {
+    if (team === undefined) {
       console.log(`...team: ${ repoName } not found`)
     } else {
       for (let i=0; i < team.team.github_names.length; i++) {
@@ -272,6 +272,9 @@ class GitHub {
 
   async cloneTemplate(reposToCreate, teamslist) {
     try {
+      let areLabelsAndMilestonesCreated = false
+      let labelsInRepo = []
+
       await this.createGqlClient()
       const templateData = await this.getTemplateRepo(this.GITHUB_ORG, this.GITHUB_TEMPLATE_REPO)
 
@@ -285,7 +288,7 @@ class GitHub {
         // Clone the template repo for a new team
         if (teamNo+1 >= this.RESTART) {
           try {
-            await this.sleep(10) // Sleep to avoid creating repos too fast for GraphQL
+            //await this.sleep(10) // Sleep to avoid creating repos too fast for GraphQL
             this.generateNames(reposToCreate[teamNo])
             const newRepoData = await this.createRepo(templateData.data.repository.owner.id, 
               templateData.data.repository.id,
@@ -320,7 +323,7 @@ class GitHub {
         // Clone the template repo for a new team
         if (teamNo+1 >= this.RESTART) {
           try {
-            await this.sleep(10) // Sleep to avoid creating repos too fast for GraphQL
+            //await this.sleep(10) // Sleep to avoid creating repos too fast for GraphQL
             this.generateNames(reposToCreate[teamNo])
             if (areLabelsAndMilestonesCreated === false) {
               labelsInRepo = await this.addLabelsToRepo(newRepoData.data.cloneTemplateRepository.repository.id, 
