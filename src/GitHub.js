@@ -357,6 +357,49 @@ class GitHub {
       console.error('Error detected setting up teams: ', err)
     }
   }
+
+  async createAuthorizeTeams(reposToCreate, teamslist) {
+    try {
+      const authorizeBarOptions = {
+        label: 'Creating & authorizing teams'.padEnd(20),
+        total: teamslist.teams.length,
+        show: {
+          overwrite: true,
+          'only_at_completed_rows': false,
+          bar: {
+              completed: '\x1b[47m \x1b[0;37m',
+              incompleted: ' ',
+          }
+        }
+      }
+      const authorizeBar = Bar(authorizeBarOptions)
+
+      await this.createGqlClient()
+      const templateData = await this.getTemplateRepo(this.GITHUB_ORG, this.GITHUB_TEMPLATE_REPO)
+
+      for (let teamNo = 0; teamNo < reposToCreate.length; teamNo++) {
+        console.log(`Creating team #${ teamNo+1 }...`)
+        // Reset variables for new team 
+        this.milestones = []
+
+        // Clone the template repo for a new team
+        if (teamNo+1 >= this.RESTART) {
+          try {
+            //await this.sleep(10) // Sleep to avoid creating repos too fast for GraphQL
+            this.generateNames(reposToCreate[teamNo])
+            await this.createTeam(this.GITHUB_ORG, this.repoName, this.teamDescription, teamslist)
+          } catch (err) {
+            console.error('\nError detected creating team repo: ', err)
+            continue
+          }
+        }
+        authorizeBar.tick(1)
+      }
+    }
+    catch(err) {
+      console.error('Error detected setting up teams: ', err)
+    }
+  }
 }
 
 module.exports = GitHub
