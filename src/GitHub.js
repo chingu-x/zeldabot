@@ -345,17 +345,15 @@ class GitHub {
           try {
             //await this.sleep(10) // Sleep to avoid creating repos too fast for GraphQL
             this.generateNames(reposToCreate[teamNo])
+            const teamRepo = await this.getRepo(this.GITHUB_ORG, this.repoName)
             if (areLabelsAndMilestonesCreated === false) {
-              // TODO: Add code to replace newRepoData with a repository id
-              const teamRepo = await this.getRepo(this.GITHUB_ORG, this.repoName)
-              console.log('addIssuesToTeamRepo - teamRepo: ', teamRepo)
-              labelsInRepo = await this.addLabelsToRepo(teamRepo.data.cloneTemplateRepository.repository.id, 
+                labelsInRepo = await this.addLabelsToRepo(teamRepo.data.repository.id, 
                 templateData.data.repository.labels.edges)
               await this.addMilestonesToRepo(this.GITHUB_ORG, this.repoName, 
                 templateData.data.repository.milestones.edges)
               areLabelsAndMilestonesCreated = true
             }
-            await this.addIssuesToRepo(teamRepo.data.cloneTemplateRepository.repository.id,
+            await this.addIssuesToRepo(teamRepo.data.repository.id,
               templateData.data.repository.issues.edges, labelsInRepo)
             addIssuesBar.tick(1)
           } catch (err) {
