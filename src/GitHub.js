@@ -171,8 +171,6 @@ class GitHub {
     try{
       // Add the 'admin' permission for the team on its repository. 
       // Remember the repo name and team name are the same for a Voyage
-      console.log('createTeam - orgName: ', orgName)
-      console.log('createTeam - repoName: ', repoName)
       await this.octokit.teams.addOrUpdateRepoPermissionsInOrg({
         org: orgName,
         team_slug: repoName,
@@ -278,7 +276,6 @@ class GitHub {
       const templateData = await this.getTemplateRepo(this.GITHUB_ORG, this.GITHUB_TEMPLATE_REPO)
 
       for (let teamNo = 0; teamNo < reposToCreate.length; teamNo++) {
-        console.log(`Creating team #${ teamNo+1 }...`)
         // Reset variables for new team 
         this.milestones = []
 
@@ -290,7 +287,6 @@ class GitHub {
             const newRepoData = await this.createRepo(templateData.data.repository.owner.id, 
               templateData.data.repository.id,
               this.repoName, this.repoDescription)
-            await this.createTeam(this.GITHUB_ORG, this.repoName, this.teamDescription, teamslist)
           } catch (err) {
             console.error('\nError detected creating team repo: ', err)
             continue
@@ -325,7 +321,6 @@ class GitHub {
       let labelsInRepo = []
 
       for (let teamNo = 0; teamNo < reposToCreate.length; teamNo++) {
-        console.log(`Creating team #${ teamNo+1 }...`)
         // Reset variables for new team 
         areLabelsAndMilestonesCreated = false
         labelsInRepo = []
@@ -378,7 +373,6 @@ class GitHub {
       const templateData = await this.getTemplateRepo(this.GITHUB_ORG, this.GITHUB_TEMPLATE_REPO)
 
       for (let teamNo = 0; teamNo < reposToCreate.length; teamNo++) {
-        console.log(`Creating team #${ teamNo+1 }...`)
         // Reset variables for new team 
         this.milestones = []
 

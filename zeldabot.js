@@ -90,8 +90,6 @@ program
       { name: TIER2_NAME, count: NO_TIER2_TEAMS },
       { name: TIER3_NAME, count: NO_TIER3_TEAMS }
     ])
-
-    console.log('reposToCreate: ', reposToCreate)
     
     const github = new GitHub(environment) 
     await github.cloneTemplate(reposToCreate, teamslist)
@@ -136,8 +134,6 @@ program
     { name: TIER2_NAME, count: NO_TIER2_TEAMS },
     { name: TIER3_NAME, count: NO_TIER3_TEAMS }
   ])
-
-  console.log('reposToCreate: ', reposToCreate)
   
   const github = new GitHub(environment) 
   await github.addIssuesToTeamRepos(reposToCreate,teamslist)
@@ -182,8 +178,6 @@ program
     { name: TIER2_NAME, count: NO_TIER2_TEAMS },
     { name: TIER3_NAME, count: NO_TIER3_TEAMS }
   ])
-
-  console.log('reposToCreate: ', reposToCreate)
   
   const github = new GitHub(environment) 
   await github.createAuthorizeTeams(reposToCreate,teamslist)
