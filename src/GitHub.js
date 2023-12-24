@@ -5,7 +5,7 @@ const createHttpLink = require("apollo-link-http").createHttpLink
 const InMemoryCache = require("apollo-cache-inmemory").InMemoryCache
 const { Octokit } = require("@octokit/rest")
 
-const { getTemplateRepo } = require('./graphql/queries')
+const { getRepo, getTemplateRepo } = require('./graphql/queries')
 const { addLabelToRepo, cloneTemplateRepository, createIssue, createRepo } = require('./graphql/mutations')
 class GitHub {
   constructor(environment) {
@@ -227,6 +227,20 @@ class GitHub {
     }
   }
 
+  async getRepo(orgName, repoName) {
+    try {
+      const teamRepo = await this.client.query({ 
+        query: getRepo, 
+        variables: { owner: orgName, reponame: repoName }
+      })
+      return teamRepo
+    } catch(err) {
+      console.log('getRepo - Error in getRepo - err: ', err)
+      process.exitCode = 1
+      return
+    }
+  }
+
   async getTemplateRepo(orgName, repoName) {
     try {
       const templateRepo = await this.client.query({ 
@@ -332,13 +346,16 @@ class GitHub {
             //await this.sleep(10) // Sleep to avoid creating repos too fast for GraphQL
             this.generateNames(reposToCreate[teamNo])
             if (areLabelsAndMilestonesCreated === false) {
-              labelsInRepo = await this.addLabelsToRepo(newRepoData.data.cloneTemplateRepository.repository.id, 
+              // TODO: Add code to replace newRepoData with a repository id
+              const teamRepo = await this.getRepo(this.GITHUB_ORG, this.repoName)
+              console.log('addIssuesToTeamRepo - teamRepo: ', teamRepo)
+              labelsInRepo = await this.addLabelsToRepo(teamRepo.data.cloneTemplateRepository.repository.id, 
                 templateData.data.repository.labels.edges)
               await this.addMilestonesToRepo(this.GITHUB_ORG, this.repoName, 
                 templateData.data.repository.milestones.edges)
               areLabelsAndMilestonesCreated = true
             }
-            await this.addIssuesToRepo(newRepoData.data.cloneTemplateRepository.repository.id,
+            await this.addIssuesToRepo(teamRepo.data.cloneTemplateRepository.repository.id,
               templateData.data.repository.issues.edges, labelsInRepo)
             addIssuesBar.tick(1)
           } catch (err) {

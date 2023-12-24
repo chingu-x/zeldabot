@@ -1,5 +1,18 @@
 const gql = require('graphql-tag')
 
+const getRepo = gql`
+  query getRepo($owner: String!, $reponame: String!) {
+    repository(owner: $owner, name: $reponame) {
+      id
+      name
+      description
+      owner {
+        id
+      }
+    }
+  }
+`
+
 const getTemplateRepo = gql`
   query getTemplateRepo($owner: String!, $reponame: String!) {
     repository(owner: $owner, name: $reponame) {
@@ -59,4 +72,4 @@ const getTemplateRepo = gql`
   }
 `
 
-module.exports = { getTemplateRepo }
+module.exports = { getRepo, getTemplateRepo }
