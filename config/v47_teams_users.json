@@ -1,0 +1,1421 @@
+{
+  "voyage_number": "47",
+  "categories": [
+    "V47-tier1-01-🔥",
+    "V47-tier2-02-🔥",
+    "V47-tier3-03-🔥"
+  ],
+  "teams": [
+    {
+      "team": {
+        "category": "V47-tier1-01-🔥",
+        "name": "tier1-team-01",
+        "tier": "tier1",
+        "channel_type": "forum",
+        "discord_names": [
+          "727828441663012896",
+          "732952070352535616",
+          "1059440241536147556",
+          "615158387927285777",
+          "807958485961932852",
+          "1158508172546416650",
+          "886535247456509953",
+          "139615488295698432"
+        ],
+        "github_names": [
+          " brianhuynh2021 ",
+          "jeru7",
+          "andreimaier",
+          "emerson-bualat",
+          "TheaWin",
+          "N/A",
+          "JimTK16",
+          "cherylli"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier1",
+          "\n**Your Team Name:** tier1-team-01",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: <@1158508172546416650>",
+          "\n* UI/UX Designer: <@615158387927285777>",
+          "\n* Web Developers: <@727828441663012896> <@732952070352535616> <@1059440241536147556> <@807958485961932852> <@886535247456509953>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@139615488295698432>\n",
+          "\n**Your Team Project:**\n All Tier 1 teams will be building the **_Daily Tasks_** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier1-dailytasks).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier1-team-01",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier1-01-🔥",
+        "name": "tier1-team-02",
+        "tier": "tier1",
+        "channel_type": "text",
+        "discord_names": [
+          "469468462373404682",
+          "1080356083329142905",
+          "1029060757385662625",
+          "759500746617782312",
+          "700269022939185195",
+          "1159044643758018580",
+          "1125393662940020817",
+          "800975358102208522"
+        ],
+        "github_names": [
+          "Petre4488",
+          "gunstarpro ",
+          "Bianca371",
+          "Drazen-TheGRC",
+          "andreiolteanu555",
+          " DKarimi90",
+          "Hudamab95",
+          "TerminalC3"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier1",
+          "\n**Your Team Name:** tier1-team-02",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: <@469468462373404682>",
+          "\n* UI/UX Designer: <@1029060757385662625>",
+          "\n* Web Developers: <@1080356083329142905> <@700269022939185195> <@1159044643758018580> <@1125393662940020817> <@800975358102208522>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@759500746617782312>\n",
+          "\n**Your Team Project:**\n All Tier 1 teams will be building the **_Daily Tasks_** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier1-dailytasks).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier1-team-02",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier1-01-🔥",
+        "name": "tier1-team-03",
+        "tier": "tier1",
+        "channel_type": "forum",
+        "discord_names": [
+          "806718295679434772",
+          "852206497223147581",
+          "844628585297739867",
+          "979492921176891472",
+          "709940978894635128",
+          "1177198979956604960",
+          "508642611377209344",
+          "918233895474978877",
+          "469468462373404682"
+        ],
+        "github_names": [
+          "Diaaana03",
+          "Morais-C",
+          "mickeymic25",
+          "Chukuli12",
+          "karlthetall",
+          "cris-valente",
+          "dawooddilawar",
+          "florinrosoga",
+          "Petre4488"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier1",
+          "\n**Your Team Name:** tier1-team-03",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: <@979492921176891472>",
+          "\n* UI/UX Designer: <@709940978894635128>",
+          "\n* Web Developers: <@806718295679434772> <@852206497223147581> <@844628585297739867> <@1177198979956604960> <@508642611377209344> <@918233895474978877>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@469468462373404682>\n",
+          "\n**Your Team Project:**\n All Tier 1 teams will be building the **_Daily Tasks_** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier1-dailytasks).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier1-team-03",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier1-01-🔥",
+        "name": "tier1-team-04",
+        "tier": "tier1",
+        "channel_type": "text",
+        "discord_names": [
+          "887290201196621904",
+          "1104595132801618001",
+          "467322619662827530",
+          "1047251579255918653",
+          "838784996659560448",
+          "902360365344641084",
+          "1184953608425459864",
+          "1115451478488928266"
+        ],
+        "github_names": [
+          "jayanti-neu",
+          "egpennington (애멧)",
+          "Amanda-Libby",
+          "Stacy-Riley",
+          "mnichols08",
+          "klezi10",
+          "WillCBurroughs",
+          "taswakil"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier1",
+          "\n**Your Team Name:** tier1-team-04",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: <@838784996659560448>",
+          "\n* UI/UX Designer: <@1115451478488928266>",
+          "\n* Web Developers: <@887290201196621904> <@1104595132801618001> <@467322619662827530> <@1047251579255918653> <@1184953608425459864>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@902360365344641084>\n",
+          "\n**Your Team Project:**\n All Tier 1 teams will be building the **_Daily Tasks_** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier1-dailytasks).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier1-team-04",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier1-01-🔥",
+        "name": "tier1-team-05",
+        "tier": "tier1",
+        "channel_type": "forum",
+        "discord_names": [
+          "1126970847295455353",
+          "111552639094824960",
+          "1071605826239860736",
+          "1000104386430779522",
+          "1075084314208907395",
+          "818987819426512906",
+          "451206431778013194"
+        ],
+        "github_names": [
+          "N/A",
+          "eval-u8 ",
+          "Dgibson89",
+          "tylerthietje",
+          "Nandhini0123",
+          "jenny-alexander",
+          "abutler911"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier1",
+          "\n**Your Team Name:** tier1-team-05",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: <@1126970847295455353>",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@111552639094824960> <@1071605826239860736> <@1000104386430779522> <@1075084314208907395> <@451206431778013194>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@818987819426512906>\n",
+          "\n**Your Team Project:**\n All Tier 1 teams will be building the **_Daily Tasks_** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier1-dailytasks).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier1-team-05",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier1-01-🔥",
+        "name": "tier1-team-06",
+        "tier": "tier1",
+        "channel_type": "text",
+        "discord_names": [
+          "1187799314920124468",
+          "969005395240681472",
+          "1013854128843264020",
+          "1144000353075990611",
+          "763992642869657603",
+          "1007417725469085847"
+        ],
+        "github_names": [
+          "Karolina-prog",
+          "Peaches1224",
+          "guillermoguevara887",
+          "Beg92",
+          "kikang20",
+          "AmyVier"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier1",
+          "\n**Your Team Name:** tier1-team-06",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: <@1187799314920124468>",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@969005395240681472> <@1013854128843264020> <@1144000353075990611> <@763992642869657603> <@1007417725469085847>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n All Tier 1 teams will be building the **_Daily Tasks_** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier1-dailytasks).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier1-team-06",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier2-02-🔥",
+        "name": "tier2-team-10",
+        "tier": "tier2",
+        "channel_type": "forum",
+        "discord_names": [
+          "964469429217947680",
+          "983992908019564554",
+          "1005411909786423407",
+          "1187695748981198878",
+          "733210918036439112",
+          "482740224749993999",
+          "999805145317638216"
+        ],
+        "github_names": [
+          " LilaLiang",
+          "devavaz",
+          "johncarlolipa",
+          "MinjuSkylarPark",
+          "jessabc",
+          "cakinn1",
+          "Choiz0"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-10",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@964469429217947680> <@983992908019564554> <@1187695748981198878> <@733210918036439112> <@482740224749993999> <@999805145317638216>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@1005411909786423407>\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **Daily Tasks** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-dailytasks).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier2-team-10",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier2-02-🔥",
+        "name": "tier2-team-11",
+        "tier": "tier2",
+        "channel_type": "text",
+        "discord_names": [
+          "1043108768457691197",
+          "1117780618479149118",
+          "1159044643758018580",
+          "969468073700646912",
+          "309766166815965185",
+          "1084729753212309624",
+          "1095407861229686965"
+        ],
+        "github_names": [
+          "1-ken",
+          "adhamElhabashy",
+          "DKarimi90",
+          "shantdashjian",
+          "ashiyaman",
+          "itzmidinesh",
+          "bitscurrent"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-11",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@1043108768457691197> <@1159044643758018580> <@969468073700646912> <@309766166815965185> <@1084729753212309624> <@1095407861229686965>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@1117780618479149118>\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **Daily Tasks** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-dailytasks).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier2-team-11",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier2-02-🔥",
+        "name": "tier2-team-12",
+        "tier": "tier2",
+        "channel_type": "forum",
+        "discord_names": [
+          "825312119611195394",
+          "934732125226299392",
+          "1064442287121244199",
+          "1170418059522080879",
+          "1066377218785296384",
+          "1084729753212309624"
+        ],
+        "github_names": [
+          "BlueDragn",
+          "shivam24161",
+          "shree-77",
+          "Zarrarabid",
+          "anynomous001",
+          "itzmidinesh"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-12",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@825312119611195394> <@934732125226299392> <@1064442287121244199> <@1170418059522080879> <@1066377218785296384>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@1084729753212309624>\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **Daily Tasks** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-dailytasks).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier2-team-12",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier2-02-🔥",
+        "name": "tier2-team-13",
+        "tier": "tier2",
+        "channel_type": "text",
+        "discord_names": [
+          "1016261984146182226",
+          "1114088389910740992",
+          "1138508301584310312",
+          "1093249154215583774",
+          "754331983282307123",
+          "795064889147523072",
+          "1072172763479027742",
+          "679160034541961229"
+        ],
+        "github_names": [
+          "boggsyweb",
+          "ilanza24",
+          "breeMudi",
+          "k-kenney",
+          "andrea-maiolo",
+          "Surefire10",
+          "AlexShefer",
+          "Zien-Alhawshi"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-13",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: <@1114088389910740992>",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@1138508301584310312> <@1093249154215583774> <@754331983282307123> <@795064889147523072> <@1072172763479027742> <@679160034541961229>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@1016261984146182226>\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **Daily Tasks** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-dailytasks).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier2-team-13",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier2-02-🔥",
+        "name": "tier2-team-14",
+        "tier": "tier2",
+        "channel_type": "text",
+        "discord_names": [
+          "787712318845747201",
+          "152534720834568193",
+          "258270304944652288",
+          "657872597081522186",
+          "969990731332726794",
+          "1018168624705454080",
+          "1178671310293970966",
+          "1182695549414154411",
+          "535771578294599690"
+        ],
+        "github_names": [
+          "JustinJoe",
+          "simonC137",
+          "WarrenHawker",
+          "mladen.krstin",
+          "murytarlah",
+          "amp-bay",
+          "emperorA ",
+          "Sanaz-RH",
+          "NishaVijai"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-14",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: <@657872597081522186>",
+          "\n* UI/UX Designer: <@1182695549414154411>",
+          "\n* Web Developers: <@787712318845747201> <@152534720834568193> <@969990731332726794> <@1018168624705454080> <@1178671310293970966> <@535771578294599690>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@258270304944652288>\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **Daily Tasks** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-dailytasks).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier2-team-14",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier2-02-🔥",
+        "name": "tier2-team-15",
+        "tier": "tier2",
+        "channel_type": "text",
+        "discord_names": [
+          "805175086768324608",
+          "677267032713986052",
+          "1075879908263329832",
+          "350666806983393292",
+          "969490034774384670",
+          "984795552942272552",
+          "762484282215366656",
+          "1125845514991194132"
+        ],
+        "github_names": [
+          "vrutishah",
+          "lawlawson",
+          "christopher-maxwell",
+          "KseniiaRiabova",
+          "traez",
+          "franeCode",
+          "117Isabell",
+          "zizi1404"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-15",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: <@1075879908263329832> <@1125845514991194132>",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@805175086768324608> <@677267032713986052> <@350666806983393292> <@969490034774384670> <@984795552942272552> <@762484282215366656>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **Daily Tasks** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-dailytasks).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier2-team-15",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier2-02-🔥",
+        "name": "tier2-team-16",
+        "tier": "tier2",
+        "channel_type": "text",
+        "discord_names": [
+          "859566535751892992",
+          "969296476142469121",
+          "592367129349849097",
+          "1029843927953576047",
+          "1074674194903744552"
+        ],
+        "github_names": [
+          "thiagosaraiva-git",
+          "Joable",
+          "Greimil",
+          "Emimint",
+          "sapnab821"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-16",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@859566535751892992> <@969296476142469121> <@592367129349849097> <@1029843927953576047> <@1074674194903744552>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **Daily Tasks** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-dailytasks).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier2-team-16",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier2-02-🔥",
+        "name": "tier2-team-17",
+        "tier": "tier2",
+        "channel_type": "forum",
+        "discord_names": [
+          "1171965488700608622",
+          "1115627731514818573",
+          "1015011354953916580",
+          "328345724859187200",
+          "521472293872992260",
+          "161952909662224386"
+        ],
+        "github_names": [
+          "olegklyufinskyy",
+          "imadrig",
+          "joekotvas",
+          "parradaniela",
+          "wmurphy-collabstar",
+          "amansinghgill"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-17",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* UI/UX Designer: <@1015011354953916580>",
+          "\n* Web Developers: <@1171965488700608622> <@1115627731514818573> <@521472293872992260> <@161952909662224386>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@328345724859187200>\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **Daily Tasks** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-dailytasks).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier2-team-17",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier2-02-🔥",
+        "name": "tier2-team-18",
+        "tier": "tier2",
+        "channel_type": "text",
+        "discord_names": [
+          "1164313526773489715",
+          "802677029937479722",
+          "244657929196666891",
+          "990383019632230440",
+          "187643303888420864"
+        ],
+        "github_names": [
+          "mankai-amine",
+          "kilted2000",
+          "hectorgarcia07",
+          "krisking23",
+          "singhalex"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-18",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@1164313526773489715> <@802677029937479722> <@244657929196666891> <@990383019632230440> <@187643303888420864>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **Daily Tasks** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-dailytasks).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier2-team-18",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier2-02-🔥",
+        "name": "tier2-team-19",
+        "tier": "tier2",
+        "channel_type": "text",
+        "discord_names": [
+          "943277138696622112",
+          "1025226397481971812",
+          "776951231679430686",
+          "871850469981585438",
+          "1101295412561858700"
+        ],
+        "github_names": [
+          "komalgill0310",
+          "Jasonavecilla1",
+          "bscaer",
+          "jcidp",
+          "PedroEnciso"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-19",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@943277138696622112> <@1025226397481971812> <@776951231679430686> <@871850469981585438> <@1101295412561858700>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **Daily Tasks** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-dailytasks).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier2-team-19",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier2-02-🔥",
+        "name": "tier2-team-20",
+        "tier": "tier2",
+        "channel_type": "text",
+        "discord_names": [
+          "261683600989093890",
+          "698025467911077939",
+          "688209834650370111",
+          "157638192261103616",
+          "1180013571422289950",
+          "414236996060446720",
+          "729451068655927339",
+          "530686497808973836"
+        ],
+        "github_names": [
+          "frosty8104",
+          "codergirl01",
+          "mhatrekanchan01",
+          "thetramp22",
+          "maya17power",
+          "",
+          "chonger878",
+          "Kaz-Smino"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-20",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* UI/UX Designer: <@261683600989093890>",
+          "\n* Web Developers: <@698025467911077939> <@688209834650370111> <@157638192261103616> <@1180013571422289950> <@729451068655927339> <@530686497808973836>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@414236996060446720>\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **Daily Tasks** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-dailytasks).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier2-team-20",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier3-03-🔥",
+        "name": "tier3-team-24",
+        "tier": "tier3",
+        "channel_type": "text",
+        "discord_names": [
+          "1120253058287423578",
+          "1054230789849620511",
+          "302412801446510603",
+          "1147345781267910767",
+          "1091545864234860644",
+          "895398727030812732",
+          "1066757989211574333"
+        ],
+        "github_names": [
+          "awyyyn",
+          "WoodWalker",
+          "kevin-jake",
+          "julichow",
+          "WanderB0y",
+          "devimalka",
+          "averanges"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-24",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@1120253058287423578> <@1054230789849620511> <@302412801446510603> <@1147345781267910767> <@1091545864234860644> <@895398727030812732> <@1066757989211574333>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_Daily Tasks** app from the [specifications we provide](https://github.com/chingu-voyages/voyage-project-tier3-dailytasks) or another app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier3-team-24",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier3-03-🔥",
+        "name": "tier3-team-25",
+        "tier": "tier3",
+        "channel_type": "forum",
+        "discord_names": [
+          "823595992494243862",
+          "455657670511296524",
+          "477485146178715648",
+          "821039637497118740",
+          "451657644587876373",
+          "1176751956337901580",
+          "825312119611195394",
+          "831571194955169822"
+        ],
+        "github_names": [
+          "StellaWanja",
+          "adhamElhabashy",
+          "Nich0las2004",
+          "jdx-code",
+          "zZedxD",
+          "yoganant",
+          "BlueDragn",
+          "Omeshcoding"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-25",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* UI/UX Designer: <@1176751956337901580>",
+          "\n* Web Developers: <@823595992494243862> <@477485146178715648> <@821039637497118740> <@451657644587876373> <@825312119611195394> <@831571194955169822>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@455657670511296524>\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_Daily Tasks** app from the [specifications we provide](https://github.com/chingu-voyages/voyage-project-tier3-dailytasks) or another app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier3-team-25",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier3-03-🔥",
+        "name": "tier3-team-26",
+        "tier": "tier3",
+        "channel_type": "text",
+        "discord_names": [
+          "686326475875418128",
+          "249940434208555008",
+          "1117780618479149118",
+          "955033311808466954",
+          "870221590183411712",
+          "602560803782000660",
+          "522499054769405952"
+        ],
+        "github_names": [
+          "muratcansarkalkan",
+          "DjTer3a",
+          "adhamElhabashy",
+          "varchodi",
+          "nyommm",
+          "ArunJose",
+          "tanbiranjum"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-26",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@686326475875418128> <@249940434208555008> <@955033311808466954> <@870221590183411712> <@602560803782000660> <@522499054769405952>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@1117780618479149118>\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_Daily Tasks** app from the [specifications we provide](https://github.com/chingu-voyages/voyage-project-tier3-dailytasks) or another app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier3-team-26",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier3-03-🔥",
+        "name": "tier3-team-27",
+        "tier": "tier3",
+        "channel_type": "text",
+        "discord_names": [
+          "1139558216930439289",
+          "916931595032735795",
+          "1084936765888024638",
+          "975496528124837958",
+          "1002568728816386178",
+          "536997725900767233",
+          "951943974204112936",
+          "1135980763704205434"
+        ],
+        "github_names": [
+          "0x00whitejsx",
+          "josuembuyu",
+          "majaspar",
+          "arch1510",
+          "TazDeCoder",
+          "royr5",
+          "ocsiddisco",
+          "ghju0105"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-27",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: <@975496528124837958>",
+          "\n* UI/UX Designer: <@1135980763704205434>",
+          "\n* Web Developers: <@1139558216930439289> <@916931595032735795> <@1084936765888024638> <@536997725900767233> <@951943974204112936>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@1002568728816386178>\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_Daily Tasks** app from the [specifications we provide](https://github.com/chingu-voyages/voyage-project-tier3-dailytasks) or another app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier3-team-27",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier3-03-🔥",
+        "name": "tier3-team-28",
+        "tier": "tier3",
+        "channel_type": "text",
+        "discord_names": [
+          "926776016813297684",
+          "768467355667267604",
+          "1125691449275580488",
+          "918478226546888704",
+          "1042780463019851806",
+          "1062553924013396029",
+          "934032910489620492",
+          "492075483681390603"
+        ],
+        "github_names": [
+          "samad13",
+          "oti-adjei",
+          "SirDominique",
+          "Frugalcodes",
+          "teodora-kocic",
+          "Sarita1517",
+          "yildiztugba",
+          "Ezz1997"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-28",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: <@1125691449275580488> <@1062553924013396029>",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@926776016813297684> <@768467355667267604> <@918478226546888704> <@1042780463019851806> <@492075483681390603>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@934032910489620492>\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_Daily Tasks** app from the [specifications we provide](https://github.com/chingu-voyages/voyage-project-tier3-dailytasks) or another app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier3-team-28",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier3-03-🔥",
+        "name": "tier3-team-29",
+        "tier": "tier3",
+        "channel_type": "forum",
+        "discord_names": [
+          "500341276835840037",
+          "447054406647676958",
+          "1002568728816386178",
+          "914972528563343420",
+          "626865912955273218",
+          "783057186934358096",
+          "1121127670680399883",
+          "109313680117641216",
+          "1062553924013396029"
+        ],
+        "github_names": [
+          "afeezdev",
+          "fmtabbara",
+          "TazDeCoder",
+          "Akashay-Anand",
+          "Armadillidiid",
+          "MaikoCode",
+          "shineaubergine",
+          "theborgh",
+          "Sarita1517"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-29",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: <@1062553924013396029>",
+          "\n* UI/UX Designer: <@1121127670680399883>",
+          "\n* Web Developers: <@500341276835840037> <@447054406647676958> <@914972528563343420> <@626865912955273218> <@783057186934358096> <@109313680117641216>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@1002568728816386178>\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_Daily Tasks** app from the [specifications we provide](https://github.com/chingu-voyages/voyage-project-tier3-dailytasks) or another app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier3-team-29",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier3-03-🔥",
+        "name": "tier3-team-30",
+        "tier": "tier3",
+        "channel_type": "text",
+        "discord_names": [
+          "904221592224149556",
+          "1176658231221833758",
+          "1183778301899194510",
+          "542960974051934218",
+          "746487301692981339"
+        ],
+        "github_names": [
+          "Zie",
+          "albertjimrod",
+          "stef7m",
+          "Misnad",
+          "Ahmed-Sohail2000"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-30",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@542960974051934218>",
+          "\n* Data Scientists: <@904221592224149556> <@1176658231221833758> <@1183778301899194510> <@746487301692981339>",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_Daily Tasks** app from the [specifications we provide](https://github.com/chingu-voyages/voyage-project-tier3-dailytasks) or another app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier3-team-30",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier3-03-🔥",
+        "name": "tier3-team-31",
+        "tier": "tier3",
+        "channel_type": "forum",
+        "discord_names": [
+          "971084251409825913",
+          "1159432118120755271",
+          "703035221729083433",
+          "283745825685897216",
+          "635481276815507459",
+          "954909517508923513"
+        ],
+        "github_names": [
+          "tiagopazhs",
+          "andrianiainafn",
+          "MichMatrix",
+          "LifeAsDev",
+          "davideastmond",
+          "alcb1310"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-31",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@971084251409825913> <@1159432118120755271> <@703035221729083433> <@283745825685897216> <@635481276815507459>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@954909517508923513>\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_Daily Tasks** app from the [specifications we provide](https://github.com/chingu-voyages/voyage-project-tier3-dailytasks) or another app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier3-team-31",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier3-03-🔥",
+        "name": "tier3-team-32",
+        "tier": "tier3",
+        "channel_type": "text",
+        "discord_names": [
+          "483259884125552640",
+          "757240771090055229",
+          "832455553556938752",
+          "1014658810872352798",
+          "419373054712348692",
+          "838539856875356170",
+          "620290019868934154",
+          "700529334284320778"
+        ],
+        "github_names": [
+          "robester0403",
+          "1P1E10",
+          "Alex-1980",
+          "yi-lin-1234",
+          "nghia-nguyen-dev",
+          "dev-rome",
+          "DeveloperDadd",
+          "Bradpk4"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-32",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* UI/UX Designer: <@419373054712348692>",
+          "\n* Web Developers: <@757240771090055229> <@832455553556938752> <@1014658810872352798> <@838539856875356170> <@620290019868934154> <@700529334284320778>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@483259884125552640>\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_Daily Tasks** app from the [specifications we provide](https://github.com/chingu-voyages/voyage-project-tier3-dailytasks) or another app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier3-team-32",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier3-03-🔥",
+        "name": "tier3-team-33",
+        "tier": "tier3",
+        "channel_type": "text",
+        "discord_names": [
+          "969064673183944734",
+          "508113677325434892",
+          "168118536701476864",
+          "724414445035585547",
+          "213099466742300674",
+          "1026392685633867816",
+          "900375438034079796",
+          "1187146788503830710"
+        ],
+        "github_names": [
+          "Tandid",
+          "mdbj12",
+          "GalacticKnight",
+          "Dorene St.Marthe",
+          "ericadev",
+          "Wilson-Chu",
+          "TishShaw",
+          "Jtaylo98"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-33",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: <@1187146788503830710>",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@969064673183944734> <@508113677325434892> <@168118536701476864> <@724414445035585547> <@1026392685633867816> <@900375438034079796>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@213099466742300674>\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_Daily Tasks** app from the [specifications we provide](https://github.com/chingu-voyages/voyage-project-tier3-dailytasks) or another app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier3-team-33",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier3-03-🔥",
+        "name": "tier3-team-34",
+        "tier": "tier3",
+        "channel_type": "text",
+        "discord_names": [
+          "184740022312763394",
+          "864949233671733318",
+          "628071435839209477",
+          "611007097894731816",
+          "1004460764918206574",
+          "333512572764553217"
+        ],
+        "github_names": [
+          "Reked37",
+          "yongcho-tx",
+          "Pavubrar",
+          "emad998",
+          "gerardoh13",
+          "shawnkoong"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-34",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@184740022312763394> <@864949233671733318> <@628071435839209477> <@611007097894731816> <@1004460764918206574>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@333512572764553217>\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_Daily Tasks** app from the [specifications we provide](https://github.com/chingu-voyages/voyage-project-tier3-dailytasks) or another app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier3-team-34",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier3-03-🔥",
+        "name": "tier3-team-35",
+        "tier": "tier3",
+        "channel_type": "text",
+        "discord_names": [
+          "1156324804392140922",
+          "1128027917230809159",
+          "943212532334735360",
+          "263220832317341697",
+          "177872799640059904"
+        ],
+        "github_names": [
+          "aasmal97",
+          "njhaus",
+          "jameswonlee",
+          " vanyanv ",
+          "ccrump1280"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-35",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@1156324804392140922> <@1128027917230809159> <@943212532334735360> <@263220832317341697> <@177872799640059904>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_Daily Tasks** app from the [specifications we provide](https://github.com/chingu-voyages/voyage-project-tier3-dailytasks) or another app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier3-team-35",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier3-03-🔥",
+        "name": "tier3-team-36",
+        "tier": "tier3",
+        "channel_type": "text",
+        "discord_names": [
+          "617400536722833410",
+          "852241500708405288",
+          "1082286614581096538",
+          "255073161073262592",
+          "877359881445847070"
+        ],
+        "github_names": [
+          "ElleWhiteDev",
+          "MorganEJLA",
+          "rassul3003",
+          "leevcampbell",
+          "jonahberlyne"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-36",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@617400536722833410> <@852241500708405288> <@255073161073262592>",
+          "\n* Data Scientists: <@1082286614581096538> <@877359881445847070>",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_Daily Tasks** app from the [specifications we provide](https://github.com/chingu-voyages/voyage-project-tier3-dailytasks) or another app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier3-team-36",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier3-03-🔥",
+        "name": "tier3-team-37",
+        "tier": "tier3",
+        "channel_type": "text",
+        "discord_names": [
+          "372465108355383306",
+          "728078691082436699",
+          "271853005526138881",
+          "323577246478761985"
+        ],
+        "github_names": [
+          "krishanleong",
+          "Jaberisamjaber",
+          "Piero7210",
+          "Toxicity1314"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-37",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@372465108355383306> <@728078691082436699> <@271853005526138881> <@323577246478761985>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_Daily Tasks** app from the [specifications we provide](https://github.com/chingu-voyages/voyage-project-tier3-dailytasks) or another app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier3-team-37",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V47-tier3-03-🔥",
+        "name": "tier3-team-46",
+        "tier": "tier3",
+        "channel_type": "text",
+        "discord_names": [
+          "1131975103031287840"
+        ],
+        "github_names": [
+          "chef-louis"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-46",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@1131975103031287840>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_Daily Tasks** app from the [specifications we provide](https://github.com/chingu-voyages/voyage-project-tier3-dailytasks) or another app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier3-team-46",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    }
+  ],
+  "team_greeting": [
+    ":rocket: **_Congratulations Voyagers!_** You found your team chat! Read carefully below so you don't miss out on getting a good start.\n\n",
+    "**__Your First Steps__** \n",
+    "1. Say \"hi\" to your team-mates! Come in excited and help welcome your teammates! I will list everyone on the team after this message so you can know exactly who is on your team. Note: @jim_medlock, Chingu-X bot, & the other Admins are not your teammates. :slight_smile:\n",
+    "2. Copy/paste the intro you added in https://discord.com/channels/330284646283608064/553103063649353738 into this team channel to let your teammates get to know you!\n",
+    "3. Follow the steps in the [Voyage Guide](https://github.com/chingu-voyages/Handbook/blob/main/docs/guides/voyage/voyage.md#voyage-guide) we emailed last week to set a solid foundation for your project. The most important step to concentrate on is scheduling your Team Kickoff meeting as soon as possible.\n\n",
+    "**__In your first Sprint you should concentrate on completing these tasks:__**\n",
+    "1. Meet your team & schedule kickoff meeting\n",
+    "2. Conduct kickoff meeting\n",
+    "3. Choose a project & create a Vision Statement\n",
+    "4. Define & prioritize MVP features\n\n",
+    "**__How can we communicate & collaborate with one another?__**\n",
+    "- We've created a simple and easy way to create a voice/video channel for team meetings, one-on-one discussions, & troubleshooting sessions whenever you need them! Check out the `How do I make a voice channel for my team?` section in the Voyage Guide.\n",
+    "- You can find out more about each of these in the [Voyage Guide](https://github.com/chingu-voyages/Handbook/blob/main/docs/guides/voyage/voyage.md#voyage-guide).\n\n",
+    "**__How can I get the attention of my teammates?__**\n",
+    "You can use <#1104544072347160578> to send a message to all teammates. It's best to avoid using `@everyone`.\n\n",
+    "**__Finally__**\n",
+    "Stay committed to your Voyage goal and active with your team! Remember that the #1 factor to success isn't technology - it's **_daily_** communication & collaboration with your teammates.\n\n"
+  ],
+  "tier_project": [
+    {
+      "tier": "tier1",
+      "greeting": [
+        "\n**Your Team Project:**\n",
+        "All Tier 1 teams will be building the **_Daily Tasks_** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier1-dailytasks)."
+      ]
+    },
+    {
+      "tier": "tier2",
+      "greeting": [
+        "\n**Your Team Project:**\n",
+        "All Tier 2 teams will be building the **Daily Tasks** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-dailytasks)."
+      ]
+    },
+    {
+      "tier": "tier3",
+      "greeting": [
+        "\n**Your Team Project:**\n",
+        "As a Tier 3 team your team has the choice of building the **_Daily Tasks** app from the [specifications we provide](https://github.com/chingu-voyages/voyage-project-tier3-dailytasks) or another app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it."
+      ]
+    }
+  ],
+  "forum_tags": [
+    "General Info",
+    "Meetings",
+    "Daily Standups",
+    "Sprint Planning",
+    "Discussion",
+    "Help & Advice",
+    "Celebrate",
+    "Issues",
+    "Blockers"
+  ]
+}
