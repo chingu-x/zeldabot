@@ -65,7 +65,8 @@
           "700269022939185195",
           "1159044643758018580",
           "1125393662940020817",
-          "800975358102208522"
+          "800975358102208522",
+          "734429035580620845"
         ],
         "github_names": [
           "Petre4488",
@@ -75,7 +76,8 @@
           "andreiolteanu555",
           " DKarimi90",
           "Hudamab95",
-          "TerminalC3"
+          "TerminalC3",
+          "Yadav97"
         ],
         "resource_msg": [
           "\n**__About your Team__**",
@@ -84,7 +86,7 @@
           "\n**Your Teammates:**",
           "\n* Product Owners: <@469468462373404682>",
           "\n* UI/UX Designer: <@1029060757385662625>",
-          "\n* Web Developers: <@1080356083329142905> <@700269022939185195> <@1159044643758018580> <@1125393662940020817> <@800975358102208522>",
+          "\n* Web Developers: <@1080356083329142905> <@700269022939185195> <@1159044643758018580> <@1125393662940020817> <@800975358102208522> <@734429035580620845>",
           "\n* Data Scientists: None",
           "\n* Voyage Guide: <@759500746617782312>\n",
           "\n**Your Team Project:**\n All Tier 1 teams will be building the **_Daily Tasks_** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier1-dailytasks).\n",
@@ -547,21 +549,23 @@
           "969296476142469121",
           "592367129349849097",
           "1029843927953576047",
-          "1074674194903744552"
+          "1074674194903744552",
+          "473761201994727426"
         ],
         "github_names": [
           "thiagosaraiva-git",
           "Joable",
           "Greimil",
           "Emimint",
-          "sapnab821"
+          "sapnab821",
+          "IDeepthi"
         ],
         "resource_msg": [
           "\n**__About your Team__**",
           "\n**Your Tier:** Tier2",
           "\n**Your Team Name:** tier2-team-16",
           "\n**Your Teammates:**",
-          "\n* Product Owners: None",
+          "\n* Product Owners: <@473761201994727426>",
           "\n* UI/UX Designer: None",
           "\n* Web Developers: <@859566535751892992> <@969296476142469121> <@592367129349849097> <@1029843927953576047> <@1074674194903744552>",
           "\n* Data Scientists: None",
@@ -587,7 +591,8 @@
           "1015011354953916580",
           "328345724859187200",
           "521472293872992260",
-          "161952909662224386"
+          "161952909662224386",
+          "771452474790903849"
         ],
         "github_names": [
           "olegklyufinskyy",
@@ -595,14 +600,15 @@
           "joekotvas",
           "parradaniela",
           "wmurphy-collabstar",
-          "amansinghgill"
+          "amansinghgill",
+          "david-nyc-pm"
         ],
         "resource_msg": [
           "\n**__About your Team__**",
           "\n**Your Tier:** Tier2",
           "\n**Your Team Name:** tier2-team-17",
           "\n**Your Teammates:**",
-          "\n* Product Owners: None",
+          "\n* Product Owners: <@771452474790903849>",
           "\n* UI/UX Designer: <@1015011354953916580>",
           "\n* Web Developers: <@1171965488700608622> <@1115627731514818573> <@521472293872992260> <@161952909662224386>",
           "\n* Data Scientists: None",
@@ -626,14 +632,12 @@
           "1164313526773489715",
           "802677029937479722",
           "244657929196666891",
-          "990383019632230440",
           "187643303888420864"
         ],
         "github_names": [
           "mankai-amine",
           "kilted2000",
           "hectorgarcia07",
-          "krisking23",
           "singhalex"
         ],
         "resource_msg": [
@@ -1051,7 +1055,7 @@
         "category": "V47-tier3-03-🔥",
         "name": "tier3-team-31",
         "tier": "tier3",
-        "channel_type": "forum",
+        "channel_type": "text",
         "discord_names": [
           "971084251409825913",
           "1159432118120755271",
@@ -1092,7 +1096,7 @@
         "category": "V47-tier3-03-🔥",
         "name": "tier3-team-32",
         "tier": "tier3",
-        "channel_type": "text",
+        "channel_type": "forum",
         "discord_names": [
           "483259884125552640",
           "757240771090055229",
@@ -1327,37 +1331,6 @@
           "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_Daily Tasks** app from the [specifications we provide](https://github.com/chingu-voyages/voyage-project-tier3-dailytasks) or another app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
           "\n**Resources**:",
           "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier3-team-37",
-          "\n**Tools**:",
-          "\n* [Hammertime](https://hammertime.cyou/)",
-          "\n* [When2Meet](https://www.when2meet.com/)"
-        ]
-      }
-    },
-    {
-      "team": {
-        "category": "V47-tier3-03-🔥",
-        "name": "tier3-team-46",
-        "tier": "tier3",
-        "channel_type": "text",
-        "discord_names": [
-          "1131975103031287840"
-        ],
-        "github_names": [
-          "chef-louis"
-        ],
-        "resource_msg": [
-          "\n**__About your Team__**",
-          "\n**Your Tier:** Tier3",
-          "\n**Your Team Name:** tier3-team-46",
-          "\n**Your Teammates:**",
-          "\n* Product Owners: None",
-          "\n* UI/UX Designer: None",
-          "\n* Web Developers: <@1131975103031287840>",
-          "\n* Data Scientists: None",
-          "\n* Voyage Guide: None\n",
-          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_Daily Tasks** app from the [specifications we provide](https://github.com/chingu-voyages/voyage-project-tier3-dailytasks) or another app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
-          "\n**Resources**:",
-          "\n* GitHub Repo: https://github.com/chingu-voyages/v47-tier3-team-46",
           "\n**Tools**:",
           "\n* [Hammertime](https://hammertime.cyou/)",
           "\n* [When2Meet](https://www.when2meet.com/)"
