@@ -27,16 +27,38 @@ while improving quality and reducing the chance of errors.
 
 ## Process Overview
 
+### Clone
+
 Zeldabot uses a template repository as a model to create one repo for each 
 Voyage team. To achieve this it does the following for each of the repos
 it creates:
 
 1. Generates a unique name for the Github repo and team
-2. Create an empty repo in the designated GitHub organization and
-3. Create an empty team in the designated gitHub organization and add it to the repo with *_'Admin'_* privileges
-4. Clone issue labels from the template repo to the new repository
-5. Clone milestones from the template repo to the new repository
-6. Clone issue from the template repo to the new repository, adding labels and milestones
+2. Create an empty repo in the designated GitHub organization
+
+### Add Issues
+
+One issue for each of the steps in the first two sprints, as documented in the
+[Voyage Guide](https://github.com/chingu-voyages/Handbook/blob/main/docs/guides/voyage/voyage.md#the-voyage-process), are copied from the template repo to each of the
+team repos.
+
+This is a separate step from cloning since it's very GitHub API intensive and
+subject to rate limit overruns.
+
+1. Clone issue labels from the template repo to the new repository
+2. Clone milestones from the template repo to the new repository
+3. Clone issue from the template repo to the new repository, adding labels and milestones
+
+### Authorize
+
+Once the team repos have been created the `authorize` command is used to grant
+administrative access to the team repos.
+
+1. Github account names are mapped to teams in the `config/vnn_teams_users.json`
+file.
+2. Create an empty team in the designated gitHub organization and add it to the 
+repo with *_'Admin'_* privileges
+3. For each user add them to the appropriate team.
 
 ## Installation
 
@@ -58,8 +80,14 @@ created in to the GitHub id that owns the personal access token.
 
 Zeldabot is a command line application (CLI). The basic command to run it is:
 ```
-node zeldabot clone <option flags>
+node zeldabot <command> <option flags>
 ```
+Where `<command>` is one of:
+
+- `clone`
+- `add_issues`
+- `authorize`
+
 ### Options
 
 Before running it you'll first need to identify option values you'll using 
@@ -87,7 +115,7 @@ ALWAYS override the same option you specify in the `.env` file.
 
 ### CLI Examples
 
-#### Example #1
+#### Example #1 - Clone
 
 Assuming that you've set up a `.env` file with the variables:
 ```
@@ -117,7 +145,7 @@ Running this command would create the following repo:
 - chingu-voyagetest/v99-bears-team-08
 - chingu-voyagetest/v99-bears-team-09
 
-#### Example #2
+#### Example #2 - Clone
 
 A slightly more complicated example assumes that even with the same `.env` file
 you would like to create a set of repos with different team names. Since 
@@ -131,7 +159,7 @@ Running this command would create the following repo:
 - chingu-voyagetest/v99-cobras-team-02
 - chingu-voyagetest/v99-kangaroos-team-03
 
-#### Example #3
+#### Example #3 - Clone
 
 Assume that a previous run was started with this command:
 ```
@@ -145,13 +173,49 @@ command parameter `-r 5`:
 node zeldabot clone -t1 1 -t2 2 -t3 3 -r 5
 ```
 
+#### Example #4 - Add Issues
+
+Assuming that you've set up a `.env` file with the variables:
+```
+VOYAGE=v99
+TIER1_NAME=toucans
+TIER2_NAME=geckos
+TIER3_NAME=bears
+GITHUB_ORG=chingu-voyagetest
+GITHUB_TEMPLATE_REPO=voyage-template 
+GITHUB_TOKEN=the-token-value
+```
+the command to run Zeldabot can be as simple as the following to add issues in
+the template repo to each of this Voyages team repositories.
+```
+node zeldabot add_issues -t1 3 -t2 2 -t3 4
+```
+
+#### Example #5 - Authorize
+
+Assuming that you've set up a `.env` file with the variables:
+```
+VOYAGE=v99
+TIER1_NAME=toucans
+TIER2_NAME=geckos
+TIER3_NAME=bears
+GITHUB_ORG=chingu-voyagetest
+GITHUB_TEMPLATE_REPO=voyage-template 
+GITHUB_TOKEN=the-token-value
+```
+the command to run Zeldabot can be as simple as the following to add Chingus in
+the teams to to each of this Voyages organizational teams in GitHub.
+```
+node zeldabot authorize -t1 3 -t2 2 -t3 4
+```
+
 ## Release History
 
 You can find what changed, when in the [release history](./docs/RELEASE_HISTORY.md)
 
 ## License
 
-Copyright 2020 <COPYRIGHT Jim D. Medlock>
+Copyright 2023 <COPYRIGHT Chingu, Inc.>
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 
