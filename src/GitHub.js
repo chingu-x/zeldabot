@@ -1,16 +1,12 @@
 const ApolloClient = require("apollo-client").ApolloClient
+const Bar = require('progress-barjs')
 const fetch = require("node-fetch")
 const createHttpLink = require("apollo-link-http").createHttpLink
 const InMemoryCache = require("apollo-cache-inmemory").InMemoryCache
 const { Octokit } = require("@octokit/rest")
-const cliProgress = require('cli-progress')
-const _colors = require('colors')
 
-const { getTemplateRepo } = require('./graphql/queries')
+const { getRepo, getTemplateRepo } = require('./graphql/queries')
 const { addLabelToRepo, cloneTemplateRepository, createIssue, createRepo } = require('./graphql/mutations')
-
-const ALL_TEAMS = 0
-const DESC_MAX_LTH = 22
 class GitHub {
   constructor(environment) {
     this.environment = environment
@@ -198,7 +194,7 @@ class GitHub {
       return team.team.name === teamName
     })
 
-    if (!team) {
+    if (team === undefined) {
       console.log(`...team: ${ repoName } not found`)
     } else {
       for (let i=0; i < team.team.github_names.length; i++) {
@@ -231,6 +227,20 @@ class GitHub {
     }
   }
 
+  async getRepo(orgName, repoName) {
+    try {
+      const teamRepo = await this.client.query({ 
+        query: getRepo, 
+        variables: { owner: orgName, reponame: repoName }
+      })
+      return teamRepo
+    } catch(err) {
+      console.log('getRepo - Error in getRepo - err: ', err)
+      process.exitCode = 1
+      return
+    }
+  }
+
   async getTemplateRepo(orgName, repoName) {
     try {
       const templateRepo = await this.client.query({ 
@@ -256,80 +266,149 @@ class GitHub {
       +`Team ${ repoToCreate.teamNo }`
   }
 
-  initializeProgressBars(reposToCreate) {
-    this.overallProgress = new cliProgress.MultiBar({
-      format: '{description} |' + _colors.brightGreen('{bar}') + '| repo {value}/{total} | {percentage}% | {duration} secs.',
-      barCompleteChar: '\u2588',
-      barIncompleteChar: '\u2591',
-      clearOnComplete: false,
-      hideCursor: true
-    }, cliProgress.Presets.shades_classic)
-
-    //this.progressBars[ALL_TEAMS] = this.overallProgress.create(reposToCreate.length, 0)
-    //this.progressBars[ALL_TEAMS].update(0, { description: 'Overall progress'.padEnd(DESC_MAX_LTH, ' ') })
-    
-    for (let teamNo = 0; teamNo < reposToCreate.length; ++teamNo) {
-      const repoToCreate = reposToCreate[teamNo]
-      //this.progressBars[teamNo+1] = this.overallProgress.create(1, 0)
-      this.repoName = `${ repoToCreate.voyageName }-`
-        + `${ repoToCreate.tierName }-team-`
-        + `${ repoToCreate.teamNo }`
-      this.progressBars[teamNo+1].update(0, {description: this.repoName.padEnd(DESC_MAX_LTH, ' ')})
-    }
-  }
-
   sleep(secondsToSleep) {
     return new Promise(resolve => setTimeout(resolve, secondsToSleep*1000));
   }
 
   async cloneTemplate(reposToCreate, teamslist) {
     try {
-      //this.initializeProgressBars(reposToCreate)
+      const clonebarOptions = {
+        label: 'Cloning team repos'.padEnd(20),
+        total: teamslist.teams.length,
+        show: {
+          overwrite: true,
+          'only_at_completed_rows': false,
+          bar: {
+              completed: '\x1b[47m \x1b[0;37m',
+              incompleted: ' ',
+          }
+        }
+      }
+      const cloneBar = Bar(clonebarOptions)
+
       await this.createGqlClient()
       const templateData = await this.getTemplateRepo(this.GITHUB_ORG, this.GITHUB_TEMPLATE_REPO)
-      let areLabelsAndMilestonesCreated = false
-      let labelsInRepo = []
 
       for (let teamNo = 0; teamNo < reposToCreate.length; teamNo++) {
-        console.log(`Creating team #${ teamNo+1 }...`)
         // Reset variables for new team 
-        areLabelsAndMilestonesCreated = false
-        labelsInRepo = []
         this.milestones = []
 
         // Clone the template repo for a new team
         if (teamNo+1 >= this.RESTART) {
           try {
-            await this.sleep(10) // Sleep to avoid creating repos too fast for GraphQL
+            //await this.sleep(10) // Sleep to avoid creating repos too fast for GraphQL
             this.generateNames(reposToCreate[teamNo])
             const newRepoData = await this.createRepo(templateData.data.repository.owner.id, 
               templateData.data.repository.id,
               this.repoName, this.repoDescription)
-            await this.createTeam(this.GITHUB_ORG, this.repoName, this.teamDescription, teamslist)
-            if (areLabelsAndMilestonesCreated === false) {
-              labelsInRepo = await this.addLabelsToRepo(newRepoData.data.cloneTemplateRepository.repository.id, 
-                templateData.data.repository.labels.edges)
-              await this.addMilestonesToRepo(this.GITHUB_ORG, this.repoName, 
-                templateData.data.repository.milestones.edges)
-              areLabelsAndMilestonesCreated = true
-            }
-            await this.addIssuesToRepo(newRepoData.data.cloneTemplateRepository.repository.id,
-              templateData.data.repository.issues.edges, labelsInRepo)
           } catch (err) {
             console.error('\nError detected creating team repo: ', err)
             continue
           }
         }
-        //this.progressBars[teamNo+1].increment(1)
-        //this.progressBars[ALL_TEAMS].increment(1)
+        cloneBar.tick(1)
       }
-      //this.overallProgress.stop()
     }
     catch(err) {
       console.error('Error detected setting up teams: ', err)
     }
   }
 
+  async addIssuesToTeamRepos(reposToCreate, teamslist) {
+    try {
+      const addIssuesBarOptions = {
+        label: 'Adding issues to repos'.padEnd(20),
+        total: teamslist.teams.length,
+        show: {
+          overwrite: true,
+          'only_at_completed_rows': false,
+          bar: {
+              completed: '\x1b[47m \x1b[0;37m',
+              incompleted: ' ',
+          }
+        }
+      }
+      const addIssuesBar = Bar(addIssuesBarOptions)
+      await this.createGqlClient()
+      const templateData = await this.getTemplateRepo(this.GITHUB_ORG, this.GITHUB_TEMPLATE_REPO)
+      let areLabelsAndMilestonesCreated = false
+      let labelsInRepo = []
+
+      for (let teamNo = 0; teamNo < reposToCreate.length; teamNo++) {
+        // Reset variables for new team 
+        areLabelsAndMilestonesCreated = false
+        labelsInRepo = []
+        this.milestones = []
+
+        // Clone the issues in the template repo to the new voyage team repo
+        if (teamNo+1 >= this.RESTART) {
+          try {
+            //await this.sleep(10) // Sleep to avoid creating repos too fast for GraphQL
+            this.generateNames(reposToCreate[teamNo])
+            const teamRepo = await this.getRepo(this.GITHUB_ORG, this.repoName)
+            if (areLabelsAndMilestonesCreated === false) {
+                labelsInRepo = await this.addLabelsToRepo(teamRepo.data.repository.id, 
+                templateData.data.repository.labels.edges)
+              await this.addMilestonesToRepo(this.GITHUB_ORG, this.repoName, 
+                templateData.data.repository.milestones.edges)
+              areLabelsAndMilestonesCreated = true
+            }
+            await this.addIssuesToRepo(teamRepo.data.repository.id,
+              templateData.data.repository.issues.edges, labelsInRepo)
+            addIssuesBar.tick(1)
+          } catch (err) {
+            console.error('\nError detected adding issues to a team repo: ', err)
+            continue
+          }
+        }
+      }
+    }
+    catch(err) {
+      console.error('Error detected setting up teams: ', err)
+    }
+  }
+
+  async createAuthorizeTeams(reposToCreate, teamslist) {
+    try {
+      const authorizeBarOptions = {
+        label: 'Creating & authorizing teams'.padEnd(20),
+        total: teamslist.teams.length,
+        show: {
+          overwrite: true,
+          'only_at_completed_rows': false,
+          bar: {
+              completed: '\x1b[47m \x1b[0;37m',
+              incompleted: ' ',
+          }
+        }
+      }
+      const authorizeBar = Bar(authorizeBarOptions)
+
+      await this.createGqlClient()
+      const templateData = await this.getTemplateRepo(this.GITHUB_ORG, this.GITHUB_TEMPLATE_REPO)
+
+      for (let teamNo = 0; teamNo < reposToCreate.length; teamNo++) {
+        // Reset variables for new team 
+        this.milestones = []
+
+        // Clone the template repo for a new team
+        if (teamNo+1 >= this.RESTART) {
+          try {
+            //await this.sleep(10) // Sleep to avoid creating repos too fast for GraphQL
+            this.generateNames(reposToCreate[teamNo])
+            await this.createTeam(this.GITHUB_ORG, this.repoName, this.teamDescription, teamslist)
+          } catch (err) {
+            console.error('\nError detected creating team repo: ', err)
+            continue
+          }
+        }
+        authorizeBar.tick(1)
+      }
+    }
+    catch(err) {
+      console.error('Error detected setting up teams: ', err)
+    }
+  }
 }
 
 module.exports = GitHub
