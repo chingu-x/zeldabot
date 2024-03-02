@@ -1,0 +1,853 @@
+{
+  "voyage_number": "48",
+  "categories": [
+    "V48-tier1-01-🔥",
+    "V48-tier2-02-🔥",
+    "V48-tier3-03-🔥"
+  ],
+  "teams": [
+    {
+      "team": {
+        "category": "V48-tier1-01-🔥",
+        "name": "tier1-team-01",
+        "tier": "tier1",
+        "channel_type": "forum",
+        "discord_names": [
+          "615158387927285777",
+          "1032539588088037386",
+          "1191994744918782052",
+          "1158508172546416650",
+          "139615488295698432",
+          "798501893290328115"
+        ],
+        "github_names": [
+          "emerson47",
+          "KingNoran",
+          "paulcap510",
+          "sneha1401",
+          "cherylli",
+          "psmacabulos"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier1",
+          "\n**Your Team Name:** tier1-team-01",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: <@1158508172546416650>",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@615158387927285777> <@1032539588088037386> <@1191994744918782052> <@798501893290328115>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@139615488295698432>\n",
+          "\n**Your Team Project:**\n All Tier 1 teams will be building the **_Dinosaurs_** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier1-dinosaurs).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v48-tier1-team-01",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V48-tier1-01-🔥",
+        "name": "tier1-team-02",
+        "tier": "tier1",
+        "channel_type": "forum",
+        "discord_names": [
+          "1138773410038693888",
+          "350666806983393292",
+          "918233895474978877",
+          "599218443060903947",
+          "871556294908215347",
+          "746487301692981339"
+        ],
+        "github_names": [
+          "umer-khokhar",
+          "KseniiaRiabova",
+          "florinrosoga",
+          "FlorSmile",
+          "sharafcs50",
+          "Ahmed-Sohail2000"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier1",
+          "\n**Your Team Name:** tier1-team-02",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@1138773410038693888> <@918233895474978877> <@599218443060903947> <@871556294908215347>",
+          "\n* Data Scientists: <@746487301692981339>",
+          "\n* Voyage Guide: <@350666806983393292>\n",
+          "\n**Your Team Project:**\n All Tier 1 teams will be building the **_Dinosaurs_** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier1-dinosaurs).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v48-tier1-team-02",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V48-tier1-01-🔥",
+        "name": "tier1-team-03",
+        "tier": "tier1",
+        "channel_type": "forum",
+        "discord_names": [
+          "109236046633406464",
+          "152534720834568193",
+          "1172255309083975710",
+          "1187489721400692918",
+          "910550038499983392",
+          "835886333359816704",
+          "1207926257476698163"
+        ],
+        "github_names": [
+          "",
+          "simonC137",
+          "BastienWinant",
+          "sevic90",
+          "https://github.com/designbyistvan",
+          "lithakazi101",
+          "jerry2405"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier1",
+          "\n**Your Team Name:** tier1-team-03",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: <@109236046633406464> <@1207926257476698163>",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@1172255309083975710> <@1187489721400692918> <@910550038499983392> <@835886333359816704>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@152534720834568193>\n",
+          "\n**Your Team Project:**\n All Tier 1 teams will be building the **_Dinosaurs_** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier1-dinosaurs).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v48-tier1-team-03",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V48-tier1-01-🔥",
+        "name": "tier1-team-04",
+        "tier": "tier1",
+        "channel_type": "forum",
+        "discord_names": [
+          "140269029158813697",
+          "481576873470722068",
+          "689975991317037066",
+          "838784996659560448",
+          "1127437740007497830",
+          "833094096099868683",
+          "478953813286322191",
+          "1115627731514818573",
+          "834888444815474698",
+          "1126970847295455353"
+        ],
+        "github_names": [
+          "Mikelovin23",
+          "sebastiandlq",
+          "vanshika-99",
+          "Mnichols08",
+          "b-kicks-IT",
+          "joel-elyon-nwamba",
+          "JOSIK95",
+          "imadrig",
+          "vinccodes",
+          "Supatki"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier1",
+          "\n**Your Team Name:** tier1-team-04",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: <@140269029158813697>",
+          "\n* Scrum Masters: <@1126970847295455353>",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@481576873470722068> <@838784996659560448> <@1127437740007497830> <@833094096099868683> <@478953813286322191> <@834888444815474698>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@1115627731514818573>\n",
+          "\n**Your Team Project:**\n All Tier 1 teams will be building the **_Dinosaurs_** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier1-dinosaurs).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v48-tier1-team-04",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V48-tier1-01-🔥",
+        "name": "tier1-team-05",
+        "tier": "tier1",
+        "channel_type": "forum",
+        "discord_names": [
+          "771452474790903849",
+          "818987819426512906",
+          "763992642869657603",
+          "826463437906903053",
+          "471860647764819989",
+          "1150923099248791663",
+          "1177156294214430725"
+        ],
+        "github_names": [
+          "david-nyc-pm",
+          "jenny-alexander",
+          "kikang20",
+          "terrifricker",
+          "daehako",
+          "MatthewNeie",
+          "yusuken1121"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier1",
+          "\n**Your Team Name:** tier1-team-05",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@771452474790903849> <@763992642869657603> <@826463437906903053> <@471860647764819989> <@1150923099248791663> <@1177156294214430725>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@818987819426512906>\n",
+          "\n**Your Team Project:**\n All Tier 1 teams will be building the **_Dinosaurs_** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier1-dinosaurs).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v48-tier1-team-05",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V48-tier2-02-🔥",
+        "name": "tier2-team-10",
+        "tier": "tier2",
+        "channel_type": "forum",
+        "discord_names": [
+          "1059440241536147556",
+          "597467205017403392",
+          "1005411909786423407",
+          "886535247456509953",
+          "1178416534461358110",
+          "733210918036439112",
+          "482740224749993999",
+          "851013325449199626"
+        ],
+        "github_names": [
+          "andreimaier",
+          "prosealogy",
+          "johncarlolipa",
+          "JimTK16",
+          "shvinjas",
+          "jessabc",
+          "Cakinn1",
+          "allenmathews"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-10",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@1059440241536147556> <@886535247456509953> <@1178416534461358110> <@733210918036439112> <@482740224749993999> <@851013325449199626>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@1005411909786423407>\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **_Dinosaurs_** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-dinosaurs).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v48-tier2-team-10",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V48-tier2-02-🔥",
+        "name": "tier2-team-11",
+        "tier": "tier2",
+        "channel_type": "forum",
+        "discord_names": [
+          "498122766705229824",
+          "926397928073998396",
+          "1122446561662730253",
+          "1084729753212309624",
+          "1170418059522080879",
+          "800975358102208522"
+        ],
+        "github_names": [
+          "Yazh0001",
+          "saswat10",
+          "prabh-sharan",
+          "itzmidinesh",
+          "Zarrar Hussain abid",
+          "keerthikmr"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-11",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@498122766705229824> <@926397928073998396> <@1122446561662730253> <@1084729753212309624> <@1170418059522080879> <@800975358102208522>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **_Dinosaurs_** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-dinosaurs).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v48-tier2-team-11",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V48-tier2-02-🔥",
+        "name": "tier2-team-12",
+        "tier": "tier2",
+        "channel_type": "forum",
+        "discord_names": [
+          "852206497223147581",
+          "619638017627390003",
+          "1177198979956604960",
+          "508642611377209344",
+          "709940978894635128",
+          "1125393662940020817",
+          "190559094594207756",
+          "1117780618479149118"
+        ],
+        "github_names": [
+          "Morais-C",
+          "HargiAmina",
+          "cris-valente",
+          "dawooddilawar",
+          "karlthetall",
+          "Hudamabkhoot",
+          "bulascoskun",
+          "adhamElhabashy"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-12",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@852206497223147581> <@1177198979956604960> <@508642611377209344> <@1125393662940020817> <@190559094594207756>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@1117780618479149118>\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **_Dinosaurs_** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-dinosaurs).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v48-tier2-team-12",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V48-tier2-02-🔥",
+        "name": "tier2-team-13",
+        "tier": "tier2",
+        "channel_type": "forum",
+        "discord_names": [
+          "1169582832541237302",
+          "1121127670680399883",
+          "979492921176891472",
+          "938096824072425542",
+          "1130834434300579921",
+          "700269022939185195",
+          "469468462373404682"
+        ],
+        "github_names": [
+          "andram11",
+          "shineaubergine",
+          "Chukuli12",
+          "dev-enthusias",
+          "stefanbrkic1",
+          "andreiolteanu555",
+          "Petre4488"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-13",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: <@979492921176891472>",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@1169582832541237302> <@938096824072425542> <@1130834434300579921> <@700269022939185195>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@469468462373404682>\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **_Dinosaurs_** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-dinosaurs).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v48-tier2-team-13",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V48-tier2-02-🔥",
+        "name": "tier2-team-14",
+        "tier": "tier2",
+        "channel_type": "forum",
+        "discord_names": [
+          "175634898369904641",
+          "152534720834568193",
+          "1131548553160962180",
+          "355433713921949697",
+          "1191456535763746836",
+          "984795552942272552"
+        ],
+        "github_names": [
+          "Joshf225",
+          "simonC137",
+          "jonahunuafe",
+          "rjmills87",
+          "farzaneh-falakrou",
+          "franeCode"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-14",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@175634898369904641> <@152534720834568193> <@1131548553160962180> <@355433713921949697>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@984795552942272552>\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **_Dinosaurs_** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-dinosaurs).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v48-tier2-team-14",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V48-tier2-02-🔥",
+        "name": "tier2-team-15",
+        "tier": "tier2",
+        "channel_type": "forum",
+        "discord_names": [
+          "564150201040764929",
+          "832455553556938752",
+          "1171965488700608622",
+          "768509768183840770",
+          "887290201196621904",
+          "1201851055638597642",
+          "328345724859187200",
+          "953802435258884216"
+        ],
+        "github_names": [
+          "UnionPAC ",
+          "Alex-1980",
+          "olegklyufinskyy",
+          "mkg1",
+          "jayanti-neu",
+          "koenarnold",
+          "parradaniela",
+          "MeMeD10"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-15",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: <@953802435258884216>",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@564150201040764929> <@832455553556938752> <@1171965488700608622> <@768509768183840770> <@887290201196621904> <@1201851055638597642>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@328345724859187200>\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **_Dinosaurs_** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-dinosaurs).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v48-tier2-team-15",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V48-tier2-02-🔥",
+        "name": "tier2-team-16",
+        "tier": "tier2",
+        "channel_type": "forum",
+        "discord_names": [
+          "832413534980931636",
+          "244657929196666891",
+          "261683600989093890",
+          "931240490156851251",
+          "530686497808973836",
+          "729451068655927339",
+          "211233566246305792"
+        ],
+        "github_names": [
+          "PongRVA",
+          "hectorgarcia07",
+          "frosty8104",
+          "n/a",
+          "Kaz-Smino",
+          "chonger878",
+          "Valeriusdev"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-16",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@832413534980931636> <@244657929196666891> <@261683600989093890> <@530686497808973836> <@729451068655927339> <@211233566246305792>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **_Dinosaurs_** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-dinosaurs).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v48-tier2-team-16",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V48-tier3-03-🔥",
+        "name": "tier3-team-20",
+        "tier": "tier3",
+        "channel_type": "forum",
+        "discord_names": [
+          "821039637497118740",
+          "490454837570437142",
+          "264984804024516619",
+          "659326403153494016",
+          "983992908019564554"
+        ],
+        "github_names": [
+          "jdx-code",
+          "jeisaRaja",
+          "bk7312",
+          "Ejemy",
+          "devavaz"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-20",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@821039637497118740> <@490454837570437142> <@264984804024516619> <@659326403153494016> <@983992908019564554>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **__Dinosaurs_** app from the [specifications we provide](https://github.com/chingu-voyages/voyage-project-tier3-dinosaurs) or another app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v48-tier3-team-20",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V48-tier3-03-🔥",
+        "name": "tier3-team-21",
+        "tier": "tier3",
+        "channel_type": "forum",
+        "discord_names": [
+          "1013708181454721104",
+          "969468073700646912",
+          "951790373448077312",
+          "698381720822480946",
+          "1095407861229686965",
+          "934732125226299392"
+        ],
+        "github_names": [
+          "Jaweki",
+          "shantdashjian",
+          "Ajen07",
+          "singhtanisha16",
+          "bitscurrent",
+          "shivam24161"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-21",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@1013708181454721104> <@969468073700646912> <@951790373448077312> <@1095407861229686965> <@934732125226299392>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **__Dinosaurs_** app from the [specifications we provide](https://github.com/chingu-voyages/voyage-project-tier3-dinosaurs) or another app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v48-tier3-team-21",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V48-tier3-03-🔥",
+        "name": "tier3-team-22",
+        "tier": "tier3",
+        "channel_type": "forum",
+        "discord_names": [
+          "258270304944652288",
+          "535771578294599690",
+          "615615823767404576",
+          "1178671310293970966",
+          "1042780463019851806",
+          "859525335691689995",
+          "702497068366692413"
+        ],
+        "github_names": [
+          "WarrenHawker",
+          "NishaVijai",
+          "Ibinola",
+          "EmperorA ",
+          "teodora-kocic",
+          "vukas86",
+          ""
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-22",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: <@702497068366692413>",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@535771578294599690> <@615615823767404576> <@1178671310293970966> <@1042780463019851806> <@859525335691689995>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@258270304944652288>\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **__Dinosaurs_** app from the [specifications we provide](https://github.com/chingu-voyages/voyage-project-tier3-dinosaurs) or another app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v48-tier3-team-22",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V48-tier3-03-🔥",
+        "name": "tier3-team-23",
+        "tier": "tier3",
+        "channel_type": "forum",
+        "discord_names": [
+          "206855250991120384",
+          "937857851689406486",
+          "447054406647676958",
+          "842337218818473994",
+          "805175086768324608",
+          "263300042104766465",
+          "615091861287337985"
+        ],
+        "github_names": [
+          "benhurst1",
+          "ScopeTee",
+          "fmtabbara",
+          "PadoSensei",
+          "vrutishah",
+          "eliassebastian",
+          "Eutrius"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-23",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: <@937857851689406486>",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@206855250991120384> <@447054406647676958> <@842337218818473994> <@263300042104766465> <@615091861287337985>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **__Dinosaurs_** app from the [specifications we provide](https://github.com/chingu-voyages/voyage-project-tier3-dinosaurs) or another app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v48-tier3-team-23",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V48-tier3-03-🔥",
+        "name": "tier3-team-24",
+        "tier": "tier3",
+        "channel_type": "forum",
+        "discord_names": [
+          "362837852507209730",
+          "1097496144118034473",
+          "259193350375079936",
+          "954909517508923513",
+          "1187146788503830710",
+          "698025467911077939",
+          "526808843213209631",
+          "1007417725469085847",
+          "234741232625123338"
+        ],
+        "github_names": [
+          "ArturoDucasse",
+          "MoriahSWalker",
+          "mpark4656",
+          "alcb1310",
+          "Jtaylo98 ",
+          "codergirl01",
+          "Briantam0422",
+          "AmyVier",
+          "ialej001"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-24",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: <@1187146788503830710>",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@362837852507209730> <@259193350375079936> <@698025467911077939> <@526808843213209631> <@1007417725469085847> <@234741232625123338>",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: <@954909517508923513>\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **__Dinosaurs_** app from the [specifications we provide](https://github.com/chingu-voyages/voyage-project-tier3-dinosaurs) or another app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v48-tier3-team-24",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V48-tier3-03-🔥",
+        "name": "tier3-team-25",
+        "tier": "tier3",
+        "channel_type": "forum",
+        "discord_names": [
+          "877359881445847070",
+          "926525337939083295",
+          "1156324804392140922",
+          "842451540270645278"
+        ],
+        "github_names": [
+          "jonahberlyne",
+          "trisDeveloper",
+          "aasmal97",
+          "Sushmita-Ghosh"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-25",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: <@926525337939083295> <@1156324804392140922> <@842451540270645278>",
+          "\n* Data Scientists: <@877359881445847070>",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **__Dinosaurs_** app from the [specifications we provide](https://github.com/chingu-voyages/voyage-project-tier3-dinosaurs) or another app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v48-tier3-team-25",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [When2Meet](https://www.when2meet.com/)"
+        ]
+      }
+    }
+  ],
+  "team_greeting1": [
+    ":rocket: **_Congratulations Voyagers!_** You found your team chat! Read carefully below so you don't miss out on getting a good start.\n\n",
+    "**__Your First Steps__** \n",
+    "1. Say \"hi\" to your team-mates! Come in excited and help welcome your teammates! I will list everyone on the team after this message so you can know exactly who is on your team. Note: @jim_medlock, Chingu-X bot, & the other Admins are not your teammates. :slight_smile:\n",
+    "2. Copy/paste the intro you added in https://discord.com/channels/330284646283608064/553103063649353738 into this team channel to let your teammates get to know you!\n",
+    "3. Follow the steps in the [Voyage Guide](https://github.com/chingu-voyages/Handbook/blob/main/docs/guides/voyage/voyage.md#voyage-guide) we emailed last week to set a solid foundation for your project. The most important step to concentrate on is scheduling your Team Kickoff meeting as soon as possible.\n\n",
+    "**__In your first Sprint you should concentrate on completing these tasks:__**\n",
+    "1. Meet your team & schedule kickoff meeting\n",
+    "2. Conduct kickoff meeting\n",
+    "3. Choose a project & create a Vision Statement (Tier 3 only)\n",
+    "4. Define & prioritize MVP features\n\n",
+    "**__How can we communicate & collaborate with one another?__**\n",
+    "- We've created a simple and easy way to create a voice/video channel for team meetings, one-on-one discussions, & troubleshooting sessions whenever you need them! Check out the `How do I make a voice channel for my team?` section in the Voyage Guide.\n",
+    "- You can find out more about each of these in the [Voyage Guide](https://github.com/chingu-voyages/Handbook/blob/main/docs/guides/voyage/voyage.md#voyage-guide).\n\n",
+    "**__How can I get the attention of my teammates?__**\n",
+    "You can use <#&1104544072347160578> to send a message to all teammates. It's best to avoid using `@everyone`.\n\n"
+  ],
+  "team_greeting2": [
+    "**__Finally__**\n",
+    "Stay committed to your Voyage goal and active with your team! Remember that the #1 factor to success isn't technology - it's **_daily_** communication & collaboration with your teammates.\n\n"
+  ],
+  "tier_project": [
+    {
+      "tier": "tier1",
+      "greeting": [
+        "\n**Your Team Project:**\n",
+        "All Tier 1 teams will be building the **_Dinosaurs_** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier1-dinosaurs)."
+      ]
+    },
+    {
+      "tier": "tier2",
+      "greeting": [
+        "\n**Your Team Project:**\n",
+        "All Tier 2 teams will be building the **_Dinosaurs_** app to help your users manage and organize their daily work as a checklist. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-dinosaurs)."
+      ]
+    },
+    {
+      "tier": "tier3",
+      "greeting": [
+        "\n**Your Team Project:**\n",
+        "As a Tier 3 team your team has the choice of building the **__Dinosaurs_** app from the [specifications we provide](https://github.com/chingu-voyages/voyage-project-tier3-dinosaurs) or another app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it."
+      ]
+    }
+  ],
+  "forum_tags": [
+    "General Info",
+    "Meetings",
+    "Daily Standups",
+    "Sprint Planning",
+    "Discussion",
+    "Help & Advice",
+    "Celebrate",
+    "Issues",
+    "Blockers"
+  ]
+}
