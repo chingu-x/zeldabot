@@ -3,7 +3,7 @@ const program = new Command();
 const { isDebugOn } = require('./src/Environment')
 const Environment = require('./src/Environment')
 const GitHub = require('./src/GitHub')
-const teamslist = require('./config/v48_teams_users.json')
+const teamslist = require('./config/v50_teams_users.json')
 
 const environment = new Environment()
 environment.initDotEnv('./')
