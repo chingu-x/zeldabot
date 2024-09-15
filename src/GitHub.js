@@ -7,6 +7,8 @@ const { Octokit } = require("@octokit/rest")
 
 const { getRepo, getTemplateRepo } = require('./graphql/queries')
 const { addLabelToRepo, cloneTemplateRepository, createIssue, createRepo } = require('./graphql/mutations')
+const { FgRed, FgWhite  } = require('./util/constants.js')
+
 class GitHub {
   constructor(environment) {
     this.environment = environment
@@ -255,15 +257,10 @@ class GitHub {
     }
   }
 
-  async getOrgMembers() {
+  async getUser(userName) {
     try {
-      const nextPattern = /(?<=<)([\S]*)(?=>; rel="Next")/i
-      let pagesRemaining = true
-      let data = []
-      let url = `GET /orgs/${process.env.GITHUB_ORG}/members`
-
-      while (pagesRemaining) {
-        const response = await this.octokit.request(url, {
+        const response = await this.octokit.request('GET /users/{username}', {
+          username: userName,
           accept: 'application/vnd.github+json',
           per_page: 100,
           headers: {
@@ -271,19 +268,10 @@ class GitHub {
             'authorization': `token ${process.env.GITHUB_TOKEN}`
           }
         })
-
-        // Add the returned data to the aggregated array of results and get the next page
-        data = [...data, ...response.data];
-        const linkHeader = response.headers.link
-        pagesRemaining = linkHeader && linkHeader.includes(`rel=\"next\"`)
-        if (pagesRemaining) {
-          url = linkHeader.match(nextPattern)[0]
-        }
-      }
-      return data
+      return response.data
     }
     catch (error) {
-      console.log(`GitHub - getOrgMembers - error:${ error }`)
+      console.log(`${ FgRed }GitHub - getOrgMembers - error:${ error }`)
     }
   }
 

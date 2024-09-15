@@ -213,11 +213,10 @@ program
   const github = new GitHub(environment) 
 
   // Validate the GitHub user names in each Voyage team in the config file
-  const orgMembers = await github.getOrgMembers()
   for (team of teamslist.teams) {
     for (let index = 0; index < team.team.github_names.length; index++) {
-      let orgMember = orgMembers.find((orgMember) => orgMember.login === team.team.github_names[index]) 
-      const isValidGithubName = orgMember !== undefined ? true : false
+      const githubUser = await github.getUser(team.team.github_names[index])
+      const isValidGithubName = githubUser !== undefined ? true : false
       isDebug && console.log(`${ isValidGithubName ? FgWhite : FgRed }validate - team:${ team.team.name } githubName:${ team.team.github_names[index].padEnd(20, ' ') } valid:${ isValidGithubName }`)
     }
   }
