@@ -255,18 +255,17 @@ class GitHub {
     }
   }
 
-  async getUser(userName) {
+  async getOrgMembers(userName) {
     try {
-      const response = await this.octokit.request('GET /users/{userName}', {
-        owner: process.env.GITHUB_ORG,
-        username: userName,
+      const response = await this.octokit.request('GET /orgs/{org}/members', {
+        org: process.env.GITHUB_ORG,
         accept: 'application/vnd.github+json',
         headers: {
           'X-GitHub-Api-Version': '2022-11-28',
           'authorization': `token ${process.env.GITHUB_TOKEN}`
         }
       })
-      return response.status
+      return response
     }
     catch (error) {
       console.log(`GitHub - getUser - error:${ error.status }`)

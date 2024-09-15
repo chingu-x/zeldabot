@@ -211,9 +211,10 @@ program
   const github = new GitHub(environment) 
 
   // Validate the GitHub user names in each Voyage team in the config file
+  const orgMembers = await github.getOrgMembers()
+  console.log(`orgMembers:`, orgMembers)
   for (team of teamslist.teams) {
     for (let index = 0; index < team.team.github_names.length; index++) {
-      const validationResponse = await github.getUser(team.team.github_names[index])
       isDebug && console.log(`validate - team:${ team.team.name} githubName:${ team.team.github_names[index] } status:${ validationResponse }`)
     }
   }
