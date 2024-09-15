@@ -255,6 +255,24 @@ class GitHub {
     }
   }
 
+  async getUser(userName) {
+    try {
+      const response = await this.octokit.request('GET /users/{userName}', {
+        owner: process.env.GITHUB_ORG,
+        username: userName,
+        accept: 'application/vnd.github+json',
+        headers: {
+          'X-GitHub-Api-Version': '2022-11-28',
+          'authorization': `token ${process.env.GITHUB_TOKEN}`
+        }
+      })
+      return response.status
+    }
+    catch (error) {
+      console.log(`GitHub - getUser - error:${ error.status }`)
+    }
+  }
+
   generateNames(repoToCreate) {
     this.repoName = `${ repoToCreate.voyageName }-`
       + `${ repoToCreate.tierName }-team-`
