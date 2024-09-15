@@ -3,6 +3,8 @@ const program = new Command();
 const { isDebugOn } = require('./src/Environment')
 const Environment = require('./src/Environment')
 const GitHub = require('./src/GitHub')
+const { FgRed, FgWhite  } = require('./src/util/constants.js')
+
 const teamslist = require('./config/v51_teams_users.json')
 
 const environment = new Environment()
@@ -212,10 +214,11 @@ program
 
   // Validate the GitHub user names in each Voyage team in the config file
   const orgMembers = await github.getOrgMembers()
-  console.log(`orgMembers:`, orgMembers)
   for (team of teamslist.teams) {
     for (let index = 0; index < team.team.github_names.length; index++) {
-      isDebug && console.log(`validate - team:${ team.team.name} githubName:${ team.team.github_names[index] } status:${ validationResponse }`)
+      let orgMember = orgMembers.find((orgMember) => orgMember.login === team.team.github_names[index]) 
+      const isValidGithubName = orgMember !== undefined ? true : false
+      isDebug && console.log(`${ isValidGithubName ? FgWhite : FgRed }validate - team:${ team.team.name } githubName:${ team.team.github_names[index].padEnd(20, ' ') } valid:${ isValidGithubName }`)
     }
   }
 })

@@ -255,20 +255,35 @@ class GitHub {
     }
   }
 
-  async getOrgMembers(userName) {
+  async getOrgMembers() {
     try {
-      const response = await this.octokit.request('GET /orgs/{org}/members', {
-        org: process.env.GITHUB_ORG,
-        accept: 'application/vnd.github+json',
-        headers: {
-          'X-GitHub-Api-Version': '2022-11-28',
-          'authorization': `token ${process.env.GITHUB_TOKEN}`
+      const nextPattern = /(?<=<)([\S]*)(?=>; rel="Next")/i
+      let pagesRemaining = true
+      let data = []
+      let url = `GET /orgs/${process.env.GITHUB_ORG}/members`
+
+      while (pagesRemaining) {
+        const response = await this.octokit.request(url, {
+          accept: 'application/vnd.github+json',
+          per_page: 100,
+          headers: {
+            'X-GitHub-Api-Version': '2022-11-28',
+            'authorization': `token ${process.env.GITHUB_TOKEN}`
+          }
+        })
+
+        // Add the returned data to the aggregated array of results and get the next page
+        data = [...data, ...response.data];
+        const linkHeader = response.headers.link
+        pagesRemaining = linkHeader && linkHeader.includes(`rel=\"next\"`)
+        if (pagesRemaining) {
+          url = linkHeader.match(nextPattern)[0]
         }
-      })
-      return response
+      }
+      return data
     }
     catch (error) {
-      console.log(`GitHub - getUser - error:${ error.status }`)
+      console.log(`GitHub - getOrgMembers - error:${ error }`)
     }
   }
 
