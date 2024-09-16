@@ -21,6 +21,7 @@
     "clone": "node zeldabot clone",
     "add_issues": "node zeldabot add_issues",
     "authorize": "node zeldabot authorize",
+    "validate": "node zeldabot validate",
     "start": "node ./zeldabot"
   },
   "dependencies": {
