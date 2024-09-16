@@ -7,6 +7,8 @@ const { Octokit } = require("@octokit/rest")
 
 const { getRepo, getTemplateRepo } = require('./graphql/queries')
 const { addLabelToRepo, cloneTemplateRepository, createIssue, createRepo } = require('./graphql/mutations')
+const { FgRed, FgWhite  } = require('./util/constants.js')
+
 class GitHub {
   constructor(environment) {
     this.environment = environment
@@ -252,6 +254,24 @@ class GitHub {
       console.log('getTemplateRepo - Error in getTemplateRepo - err: ', err)
       process.exitCode = 1
       return
+    }
+  }
+
+  async getUser(userName) {
+    try {
+        const response = await this.octokit.request('GET /users/{username}', {
+          username: userName,
+          accept: 'application/vnd.github+json',
+          per_page: 100,
+          headers: {
+            'X-GitHub-Api-Version': '2022-11-28',
+            'authorization': `token ${process.env.GITHUB_TOKEN}`
+          }
+        })
+      return response.data
+    }
+    catch (error) {
+      console.log(`${ FgRed }GitHub - getOrgMembers - error:${ error }`)
     }
   }
 

@@ -3,7 +3,9 @@ const program = new Command();
 const { isDebugOn } = require('./src/Environment')
 const Environment = require('./src/Environment')
 const GitHub = require('./src/GitHub')
-const teamslist = require('./config/v50_teams_users.json')
+const { FgRed, FgWhite  } = require('./src/util/constants.js')
+
+const teamslist = require('./config/v51_teams_users.json')
 
 const environment = new Environment()
 environment.initDotEnv('./')
@@ -181,6 +183,43 @@ program
   
   const github = new GitHub(environment) 
   await github.createAuthorizeTeams(reposToCreate,teamslist)
+})
+
+// Process a request to validate GitHub user names
+program 
+.command('validate')
+.description('Validate that GitHub user names for this Voyage are correct')
+.option('-d, --debug <debug>', 'Debug switch to add runtime info to console (YES/NO)')
+.option('-r, --restart <team-number>', 'Restart processing at the specified team number')
+.option('-v, --voyage <voyagename>', 'Voyage name (e.g. v99)')
+.option('-s, --github-token <ghtoken>', 'GitHub token used for authentication')
+.option('-o, --github-org <ghorg>', 'GitHub organization name')
+.action( async (options) => {
+  environment.setOperationalVars({
+    debug: options.debug,
+    restart: options.restart,
+    voyage: options.voyage,
+    githubToken: options.githubToken,
+    githubOrg: options.githubOrg,
+  })
+
+  isDebug = environment.isDebug()
+
+  isDebug && consoleLogOptions(options)
+  isDebug && console.log('\noperationalVars: ', environment.getOperationalVars())
+  environment.isDebug() && environment.logEnvVars()
+
+  const { VOYAGE } = environment.getOperationalVars()
+  const github = new GitHub(environment) 
+
+  // Validate the GitHub user names in each Voyage team in the config file
+  for (team of teamslist.teams) {
+    for (let index = 0; index < team.team.github_names.length; index++) {
+      const githubUser = await github.getUser(team.team.github_names[index])
+      const isValidGithubName = githubUser !== undefined ? true : false
+      isDebug && console.log(`${ isValidGithubName ? FgWhite : FgRed }validate - team:${ team.team.name } githubName:${ team.team.github_names[index].padEnd(20, ' ') } valid:${ isValidGithubName }`)
+    }
+  }
 })
 
 program.parse(process.argv)
