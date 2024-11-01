@@ -1,0 +1,1135 @@
+{
+  "voyage_number": "52",
+  "categories": [
+    "V52-tier1-01-🔥",
+    "V52-tier2-02-🔥",
+    "V52-tier3-03-🔥"
+  ],
+  "teams": [
+    {
+      "team": {
+        "category": "V52-tier1-01-🔥",
+        "name": "tier1-team-01",
+        "tier": "tier1",
+        "channel_type": "forum",
+        "discord_names": [
+          "731234687846187059",
+          "1150411117215101028",
+          "1288226568803455092"
+        ],
+        "github_names": [
+          "Soumyajit-siliguri",
+          "icimz8",
+          "Amanda774"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier1",
+          "\n**Your Team Name:** tier1-team-01",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: \n   * <@1288226568803455092> GMT+9 (Tokyo)",
+          "\n* Web Developers: \n   * <@731234687846187059> GMT+5 (New Dehli)\n   * <@1150411117215101028> GMT+9 (Tokyo)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n All Tier 1 teams will be building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier1-solar-panel-planner).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v52-tier1-team-01",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Schej](https://schej.it/home)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help you may open a support ticket in the <#1193342042080817323> channel and the first available Chingu Facilitator will reach out to help.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V52-tier1-01-🔥",
+        "name": "tier1-team-02",
+        "tier": "tier1",
+        "channel_type": "forum",
+        "discord_names": [
+          "499831353949421570",
+          "1240616227928412201",
+          "548905211180089345",
+          "1034907490317520947"
+        ],
+        "github_names": [
+          "Pauljd1",
+          "Pharmacode",
+          "Johnn78",
+          "HalaM5"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier1",
+          "\n**Your Team Name:** tier1-team-02",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: \n   * <@1240616227928412201> GMT+1 (Berlin)",
+          "\n* Web Developers: \n   * <@499831353949421570> GMT-0 (London)\n   * <@548905211180089345> GMT+2 (Bucharest)\n   * <@1034907490317520947> GMT+3 (Moscow)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n All Tier 1 teams will be building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier1-solar-panel-planner).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v52-tier1-team-02",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Schej](https://schej.it/home)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help you may open a support ticket in the <#1193342042080817323> channel and the first available Chingu Facilitator will reach out to help.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V52-tier1-01-🔥",
+        "name": "tier1-team-03",
+        "tier": "tier1",
+        "channel_type": "forum",
+        "discord_names": [
+          "206198068192870403",
+          "919316432054013952",
+          "1290057248869191751",
+          "1063570270964686979",
+          "750495430214680637",
+          "1281326681973461034"
+        ],
+        "github_names": [
+          "jsvolta",
+          "sokuenryan",
+          "markcoty",
+          "cvtqx ",
+          "BriannaD23",
+          ""
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier1",
+          "\n**Your Team Name:** tier1-team-03",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: \n   * <@1281326681973461034> GMT-6 (Chicago)",
+          "\n* Web Developers: \n   * <@206198068192870403> GMT-3 (Buenos Aires)\n   * <@919316432054013952> GMT-5 (New York)\n   * <@750495430214680637> GMT-5 (New York)",
+          "\n* Data Scientists: \n   * <@1290057248869191751> GMT-5 (New York)",
+          "\n* Voyage Guide: \n   * <@1063570270964686979> GMT-5 (New York)\n",
+          "\n**Your Team Project:**\n All Tier 1 teams will be building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier1-solar-panel-planner).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v52-tier1-team-03",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Schej](https://schej.it/home)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help you may open a support ticket in the <#1193342042080817323> channel and the first available Chingu Facilitator will reach out to help.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V52-tier1-01-🔥",
+        "name": "tier1-team-04",
+        "tier": "tier1",
+        "channel_type": "forum",
+        "discord_names": [
+          "1285673663114383501",
+          "1080998528823865344",
+          "778952713923723275",
+          "889334179341422645",
+          "954393887227654234"
+        ],
+        "github_names": [
+          "dcunivers",
+          "clydehenry3",
+          "nigama09",
+          "jclegg31",
+          "bbbb4tryon"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier1",
+          "\n**Your Team Name:** tier1-team-04",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: \n   * <@1080998528823865344> GMT-6 (Chicago)",
+          "\n* Web Developers: \n   * <@1285673663114383501> GMT-5 (New York)\n   * <@778952713923723275> GMT-6 (Chicago)\n   * <@889334179341422645> GMT-7 (Denver)\n   * <@954393887227654234> GMT-7 (Denver)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n All Tier 1 teams will be building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier1-solar-panel-planner).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v52-tier1-team-04",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Schej](https://schej.it/home)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help you may open a support ticket in the <#1193342042080817323> channel and the first available Chingu Facilitator will reach out to help.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V52-tier1-01-🔥",
+        "name": "tier1-team-05",
+        "tier": "tier1",
+        "channel_type": "forum",
+        "discord_names": [
+          "784484868984799242",
+          "1013854128843264020",
+          "1295519629321699389",
+          "907474918059429908"
+        ],
+        "github_names": [
+          "codercreative",
+          "guillermoguevara887",
+          "minorObsession",
+          "Mar1g0m3z"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier1",
+          "\n**Your Team Name:** tier1-team-05",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: \n   * <@784484868984799242> GMT-8 (Los Angeles)\n   * <@1013854128843264020> GMT-8 (Los Angeles)\n   * <@1295519629321699389> GMT-8 (Los Angeles)\n   * <@907474918059429908> GMT-8 (Los Angeles)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n All Tier 1 teams will be building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier1-solar-panel-planner).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v52-tier1-team-05",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Schej](https://schej.it/home)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help you may open a support ticket in the <#1193342042080817323> channel and the first available Chingu Facilitator will reach out to help.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V52-tier2-02-🔥",
+        "name": "tier2-team-20",
+        "tier": "tier2",
+        "channel_type": "forum",
+        "discord_names": [
+          "706038547139919973",
+          "818912683494998066",
+          "undefined",
+          "undefined",
+          "914972528563343420",
+          "1086590804782485625"
+        ],
+        "github_names": [
+          "azalyarahmatika",
+          "swlho",
+          "deruloxxx",
+          "xsymmetry9",
+          "Akashay-Anand",
+          "khb2me"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-20",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: \n   * <@1086590804782485625> GMT+12 (Christchurch)",
+          "\n* Web Developers: \n   * <@706038547139919973> GMT+7 (Hanoi)\n   * <@818912683494998066> GMT+8 (Hong Kong)\n   * <@undefined> GMT+8 (Hong Kong)\n   * <@undefined> GMT+8 (Hong Kong)\n   * <@914972528563343420> GMT+9 (Tokyo)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-solar-panel-planner).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v52-tier2-team-20",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Schej](https://schej.it/home)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help you may open a support ticket in the <#1193342042080817323> channel and the first available Chingu Facilitator will reach out to help.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V52-tier2-02-🔥",
+        "name": "tier2-team-21",
+        "tier": "tier2",
+        "channel_type": "forum",
+        "discord_names": [
+          "968608864780046436",
+          "742463509920612449",
+          "1035506530168086538",
+          "1259645850968133767",
+          "1170418059522080879",
+          "981529694618918942",
+          "440924916175339535"
+        ],
+        "github_names": [
+          "NatiG25",
+          "parykhan-jameel",
+          "akinyiliz",
+          "",
+          "Zarrarabid",
+          "Tush199",
+          "JakeMa4o"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-21",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: \n   * <@981529694618918942> (undefined) GMT+5 (New Dehli)",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: \n   * <@1259645850968133767> GMT+5 (New Dehli)",
+          "\n* Web Developers: \n   * <@968608864780046436> GMT+3 (Moscow)\n   * <@742463509920612449> GMT+3 (Moscow)\n   * <@1035506530168086538> GMT+3 (Moscow)\n   * <@1170418059522080879> GMT+5 (New Dehli)\n   * <@440924916175339535> GMT+5 (New Dehli)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-solar-panel-planner).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v52-tier2-team-21",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Schej](https://schej.it/home)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help you may open a support ticket in the <#1193342042080817323> channel and the first available Chingu Facilitator will reach out to help.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V52-tier2-02-🔥",
+        "name": "tier2-team-22",
+        "tier": "tier2",
+        "channel_type": "forum",
+        "discord_names": [
+          "732166817971306507",
+          "152534720834568193",
+          "892421121528442910",
+          "803690864848666656",
+          "1289712917352153185",
+          "900408419259940985",
+          "877315805849727046"
+        ],
+        "github_names": [
+          "AnitaBoakye",
+          "simonC137",
+          "Hileene",
+          "IkramMaizi",
+          "ayumi-ayumi",
+          "Predrag-Jandric",
+          "NooraHakim1"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-22",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: \n   * <@732166817971306507> (Primary) GMT-0 (London)\n   * <@877315805849727046> (Secondary) GMT+3 (Moscow)",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: \n   * <@892421121528442910> GMT+1 (Berlin)\n   * <@803690864848666656> GMT+1 (Berlin)\n   * <@1289712917352153185> GMT+1 (Berlin)\n   * <@900408419259940985> GMT+2 (Bucharest)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: \n   * <@152534720834568193> GMT-0 (London)\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-solar-panel-planner).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v52-tier2-team-22",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Schej](https://schej.it/home)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help you may open a support ticket in the <#1193342042080817323> channel and the first available Chingu Facilitator will reach out to help.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V52-tier2-02-🔥",
+        "name": "tier2-team-23",
+        "tier": "tier2",
+        "channel_type": "forum",
+        "discord_names": [
+          "1107954367140724736",
+          "749784962906980403",
+          "410499046285770775",
+          "813112074439622719",
+          "844628585297739867",
+          "1239574844140687453",
+          "355433713921949697",
+          "1190684943370694777",
+          "undefined"
+        ],
+        "github_names": [
+          "Ikeze",
+          "EslamAbdElhakem",
+          "kimmimonkey",
+          "yawcoder",
+          "mickeymic25",
+          "Dunsin0802",
+          "rjmills87",
+          "Anuoluwatobi",
+          "Jaybabaa"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-23",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: \n   * <@1107954367140724736> (Primary) GMT-0 (London)\n   * <@1190684943370694777> (Secondary) GMT+1 (Berlin)\n   * <@undefined> (Secondary) GMT+1 (Berlin)",
+          "\n* Scrum Masters: \n   * <@1239574844140687453> (Primary) GMT-0 (London)",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: \n   * <@749784962906980403> GMT-0 (London)\n   * <@410499046285770775> GMT-0 (London)\n   * <@844628585297739867> GMT-0 (London)\n   * <@355433713921949697> GMT-0 (London)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: \n   * <@813112074439622719> GMT-0 (London)\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-solar-panel-planner).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v52-tier2-team-23",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Schej](https://schej.it/home)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help you may open a support ticket in the <#1193342042080817323> channel and the first available Chingu Facilitator will reach out to help.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V52-tier2-02-🔥",
+        "name": "tier2-team-24",
+        "tier": "tier2",
+        "channel_type": "forum",
+        "discord_names": [
+          "1150786044598427729",
+          "1288171752572059706,1288171752572059706",
+          "954909517508923513",
+          "914488756889853972",
+          "1213136004555210793",
+          "1124875242356101230",
+          "694277228409782422"
+        ],
+        "github_names": [
+          "Lidiaileana ",
+          "pteyong577",
+          "alcb1310",
+          "bcsurf2822",
+          "lkallen ",
+          " jessanagilepmp",
+          "danajeon"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-24",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: \n   * <@1124875242356101230> (Primary) GMT-5 (New York)",
+          "\n* Scrum Masters: \n   * <@1150786044598427729> (Primary) GMT-5 (New York)\n   * <@1288171752572059706,1288171752572059706> (Secondary) GMT-5 (New York)",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: \n   * <@914488756889853972> GMT-5 (New York)\n   * <@1213136004555210793> GMT-5 (New York)\n   * <@694277228409782422> GMT-5 (New York)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: \n   * <@954909517508923513> GMT-5 (New York)\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-solar-panel-planner).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v52-tier2-team-24",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Schej](https://schej.it/home)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help you may open a support ticket in the <#1193342042080817323> channel and the first available Chingu Facilitator will reach out to help.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V52-tier2-02-🔥",
+        "name": "tier2-team-25",
+        "tier": "tier2",
+        "channel_type": "forum",
+        "discord_names": [
+          "undefined",
+          "917248946680758283",
+          "236271943538442240",
+          "986298909544550400",
+          "311702505165815818",
+          "760927494882066462"
+        ],
+        "github_names": [
+          "DeborahLyra",
+          "chyashp",
+          "tigeryash",
+          "dametorwobla",
+          "kirkblackjr",
+          "Troyzhenny"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-25",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: \n   * <@311702505165815818> (Primary) GMT-5 (New York)",
+          "\n* UI/UX Designer: \n   * <@986298909544550400> GMT-5 (New York)",
+          "\n* Web Developers: \n   * <@undefined> GMT-3 (Buenos Aires)\n   * <@917248946680758283> GMT-5 (New York)\n   * <@236271943538442240> GMT-5 (New York)\n   * <@760927494882066462> GMT-5 (New York)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-solar-panel-planner).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v52-tier2-team-25",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Schej](https://schej.it/home)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help you may open a support ticket in the <#1193342042080817323> channel and the first available Chingu Facilitator will reach out to help.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V52-tier2-02-🔥",
+        "name": "tier2-team-26",
+        "tier": "tier2",
+        "channel_type": "forum",
+        "discord_names": [
+          "1253355397339676715",
+          "1288566719396315197",
+          "1253098670270709901",
+          "1224975501232177264",
+          "1225912487220875454",
+          "729451068655927339",
+          "1150923099248791663",
+          "211233566246305792"
+        ],
+        "github_names": [
+          "patpate89",
+          "lrexroad",
+          "",
+          "hongtuyet91",
+          "jordanr2m",
+          "chonger878",
+          "MatthewNeie",
+          "Valeriusdev"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-26",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: \n   * <@1253355397339676715> (Primary) GMT-6 (Chicago)\n   * <@1224975501232177264> (Secondary) GMT-8 (Los Angeles)",
+          "\n* Scrum Masters: \n   * <@1288566719396315197> (Secondary) GMT-6 (Chicago)\n   * <@1253098670270709901> (Primary) GMT-6 (Chicago)",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: \n   * <@1225912487220875454> GMT-8 (Los Angeles)\n   * <@729451068655927339> GMT-8 (Los Angeles)\n   * <@1150923099248791663> GMT-8 (Los Angeles)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: \n   * <@211233566246305792> GMT-8 (Los Angeles)\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-solar-panel-planner).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v52-tier2-team-26",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Schej](https://schej.it/home)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help you may open a support ticket in the <#1193342042080817323> channel and the first available Chingu Facilitator will reach out to help.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V52-tier2-02-🔥",
+        "name": "tier2-team-27",
+        "tier": "tier2",
+        "channel_type": "forum",
+        "discord_names": [
+          "1229843688096661564",
+          "1010234744606298162",
+          "757641300316127282",
+          "1134778707890929724"
+        ],
+        "github_names": [
+          "Araba-bot",
+          "AfreenInnovates",
+          "Pandla-Vijay",
+          "iamnotmarvinperse"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-27",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: None",
+          "\n* Data Scientists: \n   * <@1229843688096661564> GMT-5 (New York)\n   * <@1010234744606298162> GMT+5 (New Dehli)\n   * <@757641300316127282> GMT+5 (New Dehli)\n   * <@1134778707890929724> GMT+10 (Sydney)",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-solar-panel-planner).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v52-tier2-team-27",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Schej](https://schej.it/home)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help you may open a support ticket in the <#1193342042080817323> channel and the first available Chingu Facilitator will reach out to help.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V52-tier3-03-🔥",
+        "name": "tier3-team-30",
+        "tier": "tier3",
+        "channel_type": "forum",
+        "discord_names": [
+          "490454837570437142",
+          "751409492368949348",
+          "483656576922681354",
+          "246239383743758336",
+          "798501893290328115"
+        ],
+        "github_names": [
+          "jeisaRaja",
+          "Gerwyn1",
+          "hua-lun",
+          "inovux",
+          "psmacabulos"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-30",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: \n   * <@490454837570437142> GMT+7 (Hanoi)\n   * <@751409492368949348> GMT+8 (Hong Kong)\n   * <@483656576922681354> GMT+8 (Hong Kong)\n   * <@246239383743758336> GMT+8 (Hong Kong)\n   * <@798501893290328115> GMT+10 (Sydney)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends **OR** creating an app of your own design. If you choose to implement Expense Splitter here are the [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier3-solar-panel-planner). \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v52-tier3-team-30",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Schej](https://schej.it/home)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help you may open a support ticket in the <#1193342042080817323> channel and the first available Chingu Facilitator will reach out to help.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V52-tier3-03-🔥",
+        "name": "tier3-team-31",
+        "tier": "tier3",
+        "channel_type": "forum",
+        "discord_names": [
+          "843775849953755146",
+          "595495667900743705",
+          "821039637497118740",
+          "542960974051934218",
+          "1007994270050951238"
+        ],
+        "github_names": [
+          "M-AminAlizadeh",
+          "ahsas-sharma",
+          "jdx-code",
+          "Misnad",
+          "mHasan1037"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-31",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: \n   * <@843775849953755146> GMT+4 (Tbilisi)\n   * <@595495667900743705> GMT+5 (New Dehli)\n   * <@542960974051934218> GMT+5 (New Dehli)\n   * <@1007994270050951238> GMT+6 (Colombo)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: \n   * <@821039637497118740> GMT+5 (New Dehli)\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends **OR** creating an app of your own design. If you choose to implement Expense Splitter here are the [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier3-solar-panel-planner). \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v52-tier3-team-31",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Schej](https://schej.it/home)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help you may open a support ticket in the <#1193342042080817323> channel and the first available Chingu Facilitator will reach out to help.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V52-tier3-03-🔥",
+        "name": "tier3-team-32",
+        "tier": "tier3",
+        "channel_type": "forum",
+        "discord_names": [
+          "615091861287337985",
+          "432767999511101440",
+          "546807836437512214",
+          "605694735147073545",
+          "1013708181454721104"
+        ],
+        "github_names": [
+          "Eutrius",
+          "Mikra011",
+          "dimitriost1",
+          "bhubavenski",
+          "Jaweki"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-32",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: \n   * <@615091861287337985> GMT+2 (Bucharest)\n   * <@432767999511101440> GMT+2 (Bucharest)\n   * <@546807836437512214> GMT+2 (Bucharest)\n   * <@605694735147073545> GMT+3 (Moscow)\n   * <@1013708181454721104> GMT+3 (Moscow)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends **OR** creating an app of your own design. If you choose to implement Expense Splitter here are the [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier3-solar-panel-planner). \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v52-tier3-team-32",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Schej](https://schej.it/home)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help you may open a support ticket in the <#1193342042080817323> channel and the first available Chingu Facilitator will reach out to help.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V52-tier3-03-🔥",
+        "name": "tier3-team-33",
+        "tier": "tier3",
+        "channel_type": "forum",
+        "discord_names": [
+          "368150575654633472",
+          "1108312093331050607",
+          "1258320033931726848",
+          "969490034774384670",
+          "455657670511296524",
+          "729946340578295819",
+          "525971380714340353"
+        ],
+        "github_names": [
+          "MohammedAliZaini",
+          "Maryamh12",
+          "yemiesho",
+          "traez",
+          "farhadham",
+          "eburza",
+          "charkaoui007"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-33",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: \n   * <@1258320033931726848> (Primary) GMT-0 (London)",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: \n   * <@368150575654633472> GMT-0 (London)\n   * <@1108312093331050607> GMT-0 (London)\n   * <@969490034774384670> GMT+1 (Berlin)\n   * <@729946340578295819> GMT+1 (Berlin)\n   * <@525971380714340353> GMT+1 (Berlin)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: \n   * <@455657670511296524> GMT+1 (Berlin)\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends **OR** creating an app of your own design. If you choose to implement Expense Splitter here are the [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier3-solar-panel-planner). \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v52-tier3-team-33",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Schej](https://schej.it/home)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help you may open a support ticket in the <#1193342042080817323> channel and the first available Chingu Facilitator will reach out to help.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V52-tier3-03-🔥",
+        "name": "tier3-team-34",
+        "tier": "tier3",
+        "channel_type": "forum",
+        "discord_names": [
+          "1293778312040288327",
+          "852206497223147581",
+          "397462547717947404",
+          "1253050938009063556",
+          "1177198979956604960",
+          "769493922878849075"
+        ],
+        "github_names": [
+          "Kofi916",
+          "Morais-C",
+          "XiaoQuark",
+          "dami-boy",
+          "cris-valente",
+          "Homvi"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-34",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: \n   * <@1253050938009063556> (Primary) GMT+1 (Berlin)",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: \n   * <@1293778312040288327> GMT-0 (London)\n   * <@852206497223147581> GMT-0 (London)\n   * <@397462547717947404> GMT-0 (London)\n   * <@1177198979956604960> GMT+1 (Berlin)\n   * <@769493922878849075> GMT+1 (Berlin)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends **OR** creating an app of your own design. If you choose to implement Expense Splitter here are the [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier3-solar-panel-planner). \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v52-tier3-team-34",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Schej](https://schej.it/home)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help you may open a support ticket in the <#1193342042080817323> channel and the first available Chingu Facilitator will reach out to help.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V52-tier3-03-🔥",
+        "name": "tier3-team-35",
+        "tier": "tier3",
+        "channel_type": "forum",
+        "discord_names": [
+          "598676073084878848",
+          "891404029052207166",
+          "926776016813297684",
+          "1229787506426380341",
+          "508760522523541514",
+          "1163037006700478625",
+          "447054406647676958"
+        ],
+        "github_names": [
+          "EslemOuederni",
+          "AnyaVeselova",
+          "samad13",
+          "MarianaFarcas",
+          "ngodi",
+          "Escargotte",
+          "fmtabbara"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-35",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: \n   * <@1163037006700478625> (Secondary) GMT-0 (London)",
+          "\n* Scrum Masters: \n   * <@1229787506426380341> (Primary) GMT-0 (London)",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: \n   * <@598676073084878848> GMT-0 (London)\n   * <@891404029052207166> GMT-0 (London)\n   * <@926776016813297684> GMT-0 (London)\n   * <@508760522523541514> GMT-0 (London)\n   * <@447054406647676958> GMT-0 (London)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends **OR** creating an app of your own design. If you choose to implement Expense Splitter here are the [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier3-solar-panel-planner). \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v52-tier3-team-35",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Schej](https://schej.it/home)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help you may open a support ticket in the <#1193342042080817323> channel and the first available Chingu Facilitator will reach out to help.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V52-tier3-03-🔥",
+        "name": "tier3-team-36",
+        "tier": "tier3",
+        "channel_type": "forum",
+        "discord_names": [
+          "1230248643211038794",
+          "1206736968172707881",
+          "552281465497583618",
+          "900375438034079796",
+          "874068941897621534",
+          "1224363053580156968",
+          "1038594237459079239",
+          "1014658810872352798",
+          "undefined"
+        ],
+        "github_names": [
+          "LootingMonk",
+          "rumenji",
+          "ctsang94",
+          "TishShaw",
+          "sittora",
+          "Sunny-Master",
+          "Hayvid",
+          "yi-lin-1234",
+          "johnsonval"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-36",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: \n   * <@1230248643211038794> (Primary) GMT-5 (New York)\n   * <@undefined> (Secondary) GMT-6 (Chicago)",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: \n   * <@1206736968172707881> GMT-5 (New York)\n   * <@552281465497583618> GMT-5 (New York)\n   * <@900375438034079796> GMT-5 (New York)\n   * <@874068941897621534> GMT-5 (New York)\n   * <@1224363053580156968> GMT-5 (New York)\n   * <@1014658810872352798> GMT-5 (New York)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: \n   * <@1038594237459079239> GMT-5 (New York)\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends **OR** creating an app of your own design. If you choose to implement Expense Splitter here are the [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier3-solar-panel-planner). \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v52-tier3-team-36",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Schej](https://schej.it/home)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help you may open a support ticket in the <#1193342042080817323> channel and the first available Chingu Facilitator will reach out to help.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V52-tier3-03-🔥",
+        "name": "tier3-team-37",
+        "tier": "tier3",
+        "channel_type": "forum",
+        "discord_names": [
+          "952681980036808746",
+          "639387123975454720",
+          "955033311808466954",
+          "304402166133817344",
+          "undefined",
+          "669934854737100800",
+          "635481276815507459"
+        ],
+        "github_names": [
+          "Frankdias92",
+          "n3ndor",
+          "varchodi",
+          "oldmcdonnell",
+          "supatki",
+          "Mahyar-98",
+          "davideastmond"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-37",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: \n   * <@undefined> (Primary) GMT-5 (New York)",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: \n   * <@952681980036808746> GMT-3 (Buenos Aires)\n   * <@639387123975454720> GMT-3 (Buenos Aires)\n   * <@955033311808466954> GMT-4 (Caracas)\n   * <@304402166133817344> GMT-5 (New York)\n   * <@669934854737100800> GMT-5 (New York)\n   * <@635481276815507459> GMT-5 (New York)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends **OR** creating an app of your own design. If you choose to implement Expense Splitter here are the [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier3-solar-panel-planner). \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v52-tier3-team-37",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Schej](https://schej.it/home)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help you may open a support ticket in the <#1193342042080817323> channel and the first available Chingu Facilitator will reach out to help.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V52-tier3-03-🔥",
+        "name": "tier3-team-38",
+        "tier": "tier3",
+        "channel_type": "forum",
+        "discord_names": [
+          "1258603821878345903",
+          "295961670357090315",
+          "969064673183944734",
+          "1153519723657560104",
+          "919336301495472190",
+          "277617890688237569",
+          "1187146788503830710",
+          "undefined"
+        ],
+        "github_names": [
+          "ramallam",
+          "garysmith1933",
+          "Tandid",
+          "Mari618",
+          "RossaMania",
+          "Mtduffey36",
+          "Jtaylo98 ",
+          "jindaznb"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-38",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: \n   * <@1187146788503830710> (Primary) GMT-6 (Chicago)",
+          "\n* Scrum Masters: \n   * <@1258603821878345903> (Primary) GMT-5 (New York)\n   * <@1153519723657560104> (Secondary) GMT-5 (New York)",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: \n   * <@295961670357090315> GMT-5 (New York)\n   * <@969064673183944734> GMT-5 (New York)\n   * <@919336301495472190> GMT-6 (Chicago)\n   * <@277617890688237569> GMT-6 (Chicago)\n   * <@undefined> GMT-7 (Denver)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends **OR** creating an app of your own design. If you choose to implement Expense Splitter here are the [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier3-solar-panel-planner). \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v52-tier3-team-38",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Schej](https://schej.it/home)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help you may open a support ticket in the <#1193342042080817323> channel and the first available Chingu Facilitator will reach out to help.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V52-tier3-03-🔥",
+        "name": "tier3-team-39",
+        "tier": "tier3",
+        "channel_type": "forum",
+        "discord_names": [
+          "749114889011986552",
+          "undefined",
+          "272224394716250112",
+          "944629963255087225",
+          "739002422621634580",
+          "693409519790719026",
+          "749673269963128904",
+          "711963127352393809",
+          "159757249143767042"
+        ],
+        "github_names": [
+          "dejmedus",
+          "zuweeali",
+          "jesslane94",
+          "tdkent",
+          "fmachus",
+          "j-abellera",
+          "adbshiau",
+          "kristi-h",
+          "DalySoftware"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-39",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: \n   * <@undefined> (Secondary) GMT-8 (Los Angeles)\n   * <@739002422621634580> (Primary) GMT-8 (Los Angeles)",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: \n   * <@272224394716250112> GMT-8 (Los Angeles)\n   * <@944629963255087225> GMT-8 (Los Angeles)\n   * <@693409519790719026> GMT-8 (Los Angeles)\n   * <@749673269963128904> GMT-8 (Los Angeles)\n   * <@711963127352393809> GMT-8 (Los Angeles)\n   * <@159757249143767042> GMT-8 (Los Angeles)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: \n   * <@749114889011986552> GMT-7 (Denver)\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends **OR** creating an app of your own design. If you choose to implement Expense Splitter here are the [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier3-solar-panel-planner). \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v52-tier3-team-39",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Schej](https://schej.it/home)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help you may open a support ticket in the <#1193342042080817323> channel and the first available Chingu Facilitator will reach out to help.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V52-tier3-03-🔥",
+        "name": "tier3-team-40",
+        "tier": "tier3",
+        "channel_type": "forum",
+        "discord_names": [
+          "1108414043540168797",
+          "938526016274583632",
+          "608825845179613212",
+          "936861549895761970",
+          "211233566246305792",
+          "383223048402370561"
+        ],
+        "github_names": [
+          "jucheng925",
+          "ss-deep",
+          "r1g023",
+          "Tayrika",
+          "Valeriusdev",
+          "PsYk3s"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-40",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: \n   * <@1108414043540168797> GMT-5 (New York)\n   * <@938526016274583632> GMT-6 (Chicago)\n   * <@608825845179613212> GMT-6 (Chicago)\n   * <@936861549895761970> GMT-8 (Los Angeles)\n   * <@211233566246305792> GMT-8 (Los Angeles)\n   * <@383223048402370561> GMT+2 (Bucharest)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends **OR** creating an app of your own design. If you choose to implement Expense Splitter here are the [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier3-solar-panel-planner). \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v52-tier3-team-40",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Schej](https://schej.it/home)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help you may open a support ticket in the <#1193342042080817323> channel and the first available Chingu Facilitator will reach out to help.\n\n"
+        ]
+      }
+    }
+  ],
+  "team_greeting1": [
+    ":rocket: **_Congratulations Voyagers!_** You found your team chat! Read carefully below so you don't miss out on getting a good start.\n\n",
+    "**__Your First Steps__** \n",
+    "1. Say \"hi\" to your team-mates! Come in excited and help welcome your teammates! You can find a list of who is in your team in the Team Info topic in this channel. :slight_smile:\n",
+    "2. **_Copy_** the intro you added in https://discord.com/channels/330284646283608064/553103063649353738 when you joined Chingu and **_paste it here_** to let your teammates get to know you!\n",
+    "3. Follow the steps in the [Voyage Guide](https://github.com/chingu-voyages/Handbook/blob/main/docs/guides/voyage/voyage.md#voyage-guide) we emailed last week to set a solid foundation for your project. The most important step to concentrate on is scheduling your Team Kickoff meeting as soon as possible.\n\n",
+    "**__In your first Sprint you should concentrate on completing these tasks:__**\n",
+    "1. Meet your team & schedule kickoff meeting\n",
+    "2. Conduct kickoff meeting\n",
+    "3. Choose a project (Tier 3 only)\n",
+    "4. create a Vision Statement  & define & prioritize MVP features\n\n",
+    "**__How can we communicate & collaborate with one another?__**\n",
+    "- We've created a simple and easy way to create a voice/video channel for team meetings, one-on-one discussions, & troubleshooting sessions whenever you need them! Check out the `How do I make a voice channel for my team?` section in the Voyage Guide.\n",
+    "- You can find out more about each of these in the [Voyage Guide](https://github.com/chingu-voyages/Handbook/blob/main/docs/guides/voyage/voyage.md#voyage-guide).\n\n",
+    "**__How can I get the attention of my teammates?__**\n",
+    "You should use <@&1104544072347160578> to send a message to all teammates instead of using `@everyone`.\n\n",
+    "**__What if I have questions or need help?__**\n",
+    "Please *do not* DM Chingu Facilitators directly if you have a question or need help. Instead, open a support ticket in the <#1193342042080817323> channel and the first available Facilitator will reach out to help.\n\n"
+  ],
+  "team_greeting2": [
+    "**__Finally__**\n",
+    "Stay committed to your Voyage goal and active with your team! Don't forget what you agreed to in the Commitment Form. Remember that the #1 factor to success isn't technology - it's **_daily_** communication & collaboration with your teammates.\n\n"
+  ],
+  "tier_project": [
+    {
+      "tier": "tier1",
+      "greeting": [
+        "\n**Your Team Project:**\n",
+        "All Tier 1 teams will be building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier1-solar-panel-planner)."
+      ]
+    },
+    {
+      "tier": "tier2",
+      "greeting": [
+        "\n**Your Team Project:**\n",
+        "All Tier 2 teams will be building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-solar-panel-planner)."
+      ]
+    },
+    {
+      "tier": "tier3",
+      "greeting": [
+        "\n**Your Team Project:**\n",
+        "As a Tier 3 team your team has the choice of building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends **OR** creating an app of your own design. If you choose to implement Expense Splitter here are the [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier3-solar-panel-planner). \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it."
+      ]
+    }
+  ],
+  "forum_tags": [
+    "General Info",
+    "Meetings",
+    "Daily Standups",
+    "Sprint Planning",
+    "Discussion",
+    "Help & Advice",
+    "Celebrate",
+    "Issues",
+    "Blockers"
+  ]
+}

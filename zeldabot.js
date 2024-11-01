@@ -5,7 +5,7 @@ const Environment = require('./src/Environment')
 const GitHub = require('./src/GitHub')
 const { FgRed, FgWhite  } = require('./src/util/constants.js')
 
-const teamslist = require('./config/v51_teams_users.json')
+const teamslist = require('./config/v52_teams_users.json')
 
 const environment = new Environment()
 environment.initDotEnv('./')
