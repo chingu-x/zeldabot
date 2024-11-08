@@ -5,8 +5,6 @@ const Environment = require('./src/Environment')
 const GitHub = require('./src/GitHub')
 const { FgRed, FgWhite  } = require('./src/util/constants.js')
 
-const teamslist = require('./config/v52_teams_users.json')
-
 const environment = new Environment()
 environment.initDotEnv('./')
 let isDebug = false
@@ -30,7 +28,26 @@ const consoleLogOptions = (options) => {
   }
 }
 
+// Use the Voyage team configuration file to build the list of repos to be
+// processed
 let reposToCreate = []
+const generateRepoList = (configPath) => {
+  console.log(`generateRepoList - configPath:${configPath}`)
+  let teamNo = 0
+  for (let teamCount = 0; teamCount < teams.length; teamCount++) {
+    if (teams[teamCount].count > 0) {
+      for (let currentTeamNo = 1; currentTeamNo <= teams[teamCount].count; currentTeamNo++) {
+        teamNo += 1
+        reposToCreate.push({ 
+          voyageName: `${ voyageName }`,
+          tierName: `${ teams[teamCount].name.toLowerCase() }`,
+          teamNo: `${ teamNo.toString().padStart(2, "0") }` 
+        })
+      }
+    }
+  }
+}
+/*
 const generateRepoList = (voyageName, teams) => {
   let teamNo = 0
   for (let teamCount = 0; teamCount < teams.length; teamCount++) {
@@ -46,6 +63,7 @@ const generateRepoList = (voyageName, teams) => {
     }
   }
 }
+*/
 
 // Process a request to clone the Voyage Template repo for each Voyage team
 program 
@@ -63,6 +81,7 @@ program
   .option('-n1, --t1-name <t1count>', 'Name of Tier 1 team used to create repo/team name')
   .option('-n2, --t2-name <t2count>', 'Name of Tier 2 team used to create repo/team name')
   .option('-n3, --t3-name <t3count>', 'Name of Tier 3 team used to create repo/team name')
+  .option('-c, --config-path <configpath>', 'Path to the Teams config file')
   .action( async (options) => {
     environment.setOperationalVars({
       debug: options.debug,
@@ -77,6 +96,7 @@ program
       t1Name: options.t1Name,
       t2Name: options.t2Name,
       t3Name: options.t3Name,
+      configFile: options.configPath,
     })
 
     isDebug = environment.isDebug()
@@ -85,16 +105,11 @@ program
     isDebug && console.log('\noperationalVars: ', environment.getOperationalVars())
     environment.isDebug() && environment.logEnvVars()
 
-    const { VOYAGE, NO_TIER1_TEAMS, NO_TIER2_TEAMS, NO_TIER3_TEAMS,
-      TIER1_NAME, TIER2_NAME, TIER3_NAME } = environment.getOperationalVars()
-    generateRepoList(VOYAGE, [
-      { name: TIER1_NAME, count: NO_TIER1_TEAMS },
-      { name: TIER2_NAME, count: NO_TIER2_TEAMS },
-      { name: TIER3_NAME, count: NO_TIER3_TEAMS }
-    ])
+    const { VOYAGE, TIER1_NAME, TIER2_NAME, TIER3_NAME, CONFIG_PATH } = environment.getOperationalVars()
+    generateRepoList(CONFIG_PATH)
     
-    const github = new GitHub(environment) 
-    await github.cloneTemplate(reposToCreate, teamslist)
+    //const github = new GitHub(environment) 
+    //await github.cloneTemplate(reposToCreate, teamslist)
   })
 
 // Process a request to clone the Voyage Template repo for each Voyage team

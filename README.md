@@ -114,6 +114,7 @@ in both the command line and the CLI `.env` file.
 | -s, --github-token | GITHUB_TOKEN | GitHub personal access token used for authentication |
 | -o, --github-org | GITHUB_ORG | GitHub organization name containing the template+new repos |
 | -t, --github-template | GITHUB_TEMPLATE_REPO | GitHub template repo name |
+| -c, --config | CONFIG | Path to the config file containing teams info |
 
 It's important to keep in mind that options you supply on the command line
 ALWAYS override the same option you specify in the `.env` file.
