@@ -2,6 +2,7 @@ const { Command } = require('commander');
 const program = new Command();
 const { isDebugOn } = require('./src/Environment')
 const Environment = require('./src/Environment')
+const FileOps = require('./src/FileOps.js')
 const GitHub = require('./src/GitHub')
 const { FgRed, FgWhite  } = require('./src/util/constants.js')
 
@@ -33,19 +34,15 @@ const consoleLogOptions = (options) => {
 let reposToCreate = []
 const generateRepoList = (configPath) => {
   console.log(`generateRepoList - configPath:${configPath}`)
-  let teamNo = 0
-  for (let teamCount = 0; teamCount < teams.length; teamCount++) {
-    if (teams[teamCount].count > 0) {
-      for (let currentTeamNo = 1; currentTeamNo <= teams[teamCount].count; currentTeamNo++) {
-        teamNo += 1
-        reposToCreate.push({ 
-          voyageName: `${ voyageName }`,
-          tierName: `${ teams[teamCount].name.toLowerCase() }`,
-          teamNo: `${ teamNo.toString().padStart(2, "0") }` 
-        })
-      }
-    }
-  }
+  const config = JSON.parse(FileOps.readFile(configPath))
+  console.log(`generateRepoList - config:`, config)
+  const voyageName = 'V'.concat(config.voyage_number)
+  for (let team of config.teams) {
+    reposToCreate.push({ 
+      voyageName: `${ voyageName }`,
+      tierName: `${ teams[teamCount].name.toLowerCase() }`,
+      teamNo: `${ teamNo.toString().padStart(2, "0") }` 
+    })
 }
 /*
 const generateRepoList = (voyageName, teams) => {
