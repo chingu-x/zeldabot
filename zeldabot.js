@@ -1,6 +1,5 @@
 const { Command } = require('commander');
 const program = new Command();
-const { isDebugOn } = require('./src/Environment')
 const Environment = require('./src/Environment')
 const FileOps = require('./src/FileOps.js')
 const GitHub = require('./src/GitHub')
@@ -37,13 +36,14 @@ const generateRepoList = (configPath) => {
   const voyageName = 'V'.concat(config.voyage_number)
   for (let team of config.teams) {
     console.log(`generateRepoList - team: `, team)
-    console.log(`...team.name:`, team.team.name)
+    console.log(`generateRepoList - team.name:`, team.team.name)
     reposToCreate.push({ 
       voyageName: `${ voyageName }`,
       tierName: `${ team.team.name.toLowerCase() }`,
       teamNo: `${ team.team.name.slice(-2).toString().padStart(2, "0") }` 
     })
   }
+  return config
 }
 
 // Process a request to clone the Voyage Template repo for each Voyage team
@@ -87,10 +87,10 @@ program
     environment.isDebug() && environment.logEnvVars()
 
     const { VOYAGE, TIER1_NAME, TIER2_NAME, TIER3_NAME, CONFIG_PATH } = environment.getOperationalVars()
-    generateRepoList(CONFIG_PATH)
+    const teamsConfig = generateRepoList(CONFIG_PATH)
     
-    //const github = new GitHub(environment) 
-    //await github.cloneTemplate(reposToCreate, teamslist)
+    const github = new GitHub(environment) 
+    await github.cloneTemplate(reposToCreate, teamsConfig)
   })
 
 // Process a request to clone the Voyage Template repo for each Voyage team
@@ -134,7 +134,7 @@ program
     ])
     
     const github = new GitHub(environment) 
-    await github.addIssuesToTeamRepos(reposToCreate,teamslist)
+    await github.addIssuesToTeamRepos(reposToCreate, teamsConfig)
   })
 
 // Process a request to create teams and authorize them to access the associated repo
@@ -178,7 +178,7 @@ program
     ])
     
     const github = new GitHub(environment) 
-    await github.createAuthorizeTeams(reposToCreate,teamslist)
+    await github.createAuthorizeTeams(reposToCreate,teamsConfig)
   })
 
 // Process a request to validate GitHub user names
@@ -209,7 +209,7 @@ program
     const github = new GitHub(environment) 
 
     // Validate the GitHub user names in each Voyage team in the config file
-    for (team of teamslist.teams) {
+    for (team of teamsConfig.teams) {
       for (let index = 0; index < team.team.github_names.length; index++) {
         const githubUser = await github.getUser(team.team.github_names[index])
         const isValidGithubName = githubUser !== undefined ? true : false
