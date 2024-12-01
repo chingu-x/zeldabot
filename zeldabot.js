@@ -35,11 +35,9 @@ const generateRepoList = (configPath) => {
   const config = JSON.parse(FileOps.readFile(configPath))
   const voyageName = 'V'.concat(config.voyage_number)
   for (let team of config.teams) {
-    console.log(`generateRepoList - team: `, team)
-    console.log(`generateRepoList - team.name:`, team.team.name)
     reposToCreate.push({ 
       voyageName: `${ voyageName }`,
-      tierName: `${ team.team.name.toLowerCase() }`,
+      tierName: `${ team.team.tier.toLowerCase() }`,
       teamNo: `${ team.team.name.slice(-2).toString().padStart(2, "0") }` 
     })
   }
