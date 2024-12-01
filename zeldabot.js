@@ -33,34 +33,18 @@ const consoleLogOptions = (options) => {
 // processed
 let reposToCreate = []
 const generateRepoList = (configPath) => {
-  console.log(`generateRepoList - configPath:${configPath}`)
   const config = JSON.parse(FileOps.readFile(configPath))
-  console.log(`generateRepoList - config:`, config)
   const voyageName = 'V'.concat(config.voyage_number)
   for (let team of config.teams) {
+    console.log(`generateRepoList - team: `, team)
+    console.log(`...team.name:`, team.team.name)
     reposToCreate.push({ 
       voyageName: `${ voyageName }`,
-      tierName: `${ teams[teamCount].name.toLowerCase() }`,
-      teamNo: `${ teamNo.toString().padStart(2, "0") }` 
+      tierName: `${ team.team.name.toLowerCase() }`,
+      teamNo: `${ team.team.name.slice(-2).toString().padStart(2, "0") }` 
     })
-}
-/*
-const generateRepoList = (voyageName, teams) => {
-  let teamNo = 0
-  for (let teamCount = 0; teamCount < teams.length; teamCount++) {
-    if (teams[teamCount].count > 0) {
-      for (let currentTeamNo = 1; currentTeamNo <= teams[teamCount].count; currentTeamNo++) {
-        teamNo += 1
-        reposToCreate.push({ 
-          voyageName: `${ voyageName }`,
-          tierName: `${ teams[teamCount].name.toLowerCase() }`,
-          teamNo: `${ teamNo.toString().padStart(2, "0") }` 
-        })
-      }
-    }
   }
 }
-*/
 
 // Process a request to clone the Voyage Template repo for each Voyage team
 program 
@@ -111,127 +95,127 @@ program
 
 // Process a request to clone the Voyage Template repo for each Voyage team
 program 
-.command('add_issues')
-.description('Clone issues from the template GitHub repo to the Chingu Voyage team Repos')
-.option('-d, --debug <debug>', 'Debug switch to add runtime info to console (YES/NO)')
-.option('-r, --restart <team-number>', 'Restart processing at the specified team number')
-.option('-v, --voyage <voyagename>', 'Voyage name (e.g. v99)')
-.option('-s, --github-token <ghtoken>', 'GitHub token used for authentication')
-.option('-o, --github-org <ghorg>', 'GitHub organization name')
-.option('-t, --github-template <ghtemplate>', 'GitHub template repo name')
-.option('-t1, --t1-count <t1count>', 'Number of Tier 1 team repos to create')
-.option('-t2, --t2-count <t2count>', 'Number of Tier 2 team repos to create')
-.option('-t3, --t3-count <t3count>', 'Number of Tier 3 team repos to create')
-.option('-n1, --t1-name <t1count>', 'Name of Tier 1 team used to create repo/team name')
-.option('-n2, --t2-name <t2count>', 'Name of Tier 2 team used to create repo/team name')
-.option('-n3, --t3-name <t3count>', 'Name of Tier 3 team used to create repo/team name')
-.action( async (options) => {
-  environment.setOperationalVars({
-    debug: options.debug,
-    restart: options.restart,
-    voyage: options.voyage,
-    githubToken: options.githubToken,
-    githubOrg: options.githubOrg,
-    githubTemplate: options.githubTemplate,
+  .command('add_issues')
+  .description('Clone issues from the template GitHub repo to the Chingu Voyage team Repos')
+  .option('-d, --debug <debug>', 'Debug switch to add runtime info to console (YES/NO)')
+  .option('-r, --restart <team-number>', 'Restart processing at the specified team number')
+  .option('-v, --voyage <voyagename>', 'Voyage name (e.g. v99)')
+  .option('-s, --github-token <ghtoken>', 'GitHub token used for authentication')
+  .option('-o, --github-org <ghorg>', 'GitHub organization name')
+  .option('-t, --github-template <ghtemplate>', 'GitHub template repo name')
+  .option('-t1, --t1-count <t1count>', 'Number of Tier 1 team repos to create')
+  .option('-t2, --t2-count <t2count>', 'Number of Tier 2 team repos to create')
+  .option('-t3, --t3-count <t3count>', 'Number of Tier 3 team repos to create')
+  .option('-n1, --t1-name <t1count>', 'Name of Tier 1 team used to create repo/team name')
+  .option('-n2, --t2-name <t2count>', 'Name of Tier 2 team used to create repo/team name')
+  .option('-n3, --t3-name <t3count>', 'Name of Tier 3 team used to create repo/team name')
+  .action( async (options) => {
+    environment.setOperationalVars({
+      debug: options.debug,
+      restart: options.restart,
+      voyage: options.voyage,
+      githubToken: options.githubToken,
+      githubOrg: options.githubOrg,
+      githubTemplate: options.githubTemplate,
+    })
+
+    isDebug = environment.isDebug()
+
+    isDebug && consoleLogOptions(options)
+    isDebug && console.log('\noperationalVars: ', environment.getOperationalVars())
+    environment.isDebug() && environment.logEnvVars()
+
+    const { VOYAGE, NO_TIER1_TEAMS, NO_TIER2_TEAMS, NO_TIER3_TEAMS,
+      TIER1_NAME, TIER2_NAME, TIER3_NAME } = environment.getOperationalVars()
+    generateRepoList(VOYAGE, [
+      { name: TIER1_NAME, count: NO_TIER1_TEAMS },
+      { name: TIER2_NAME, count: NO_TIER2_TEAMS },
+      { name: TIER3_NAME, count: NO_TIER3_TEAMS }
+    ])
+    
+    const github = new GitHub(environment) 
+    await github.addIssuesToTeamRepos(reposToCreate,teamslist)
   })
-
-  isDebug = environment.isDebug()
-
-  isDebug && consoleLogOptions(options)
-  isDebug && console.log('\noperationalVars: ', environment.getOperationalVars())
-  environment.isDebug() && environment.logEnvVars()
-
-  const { VOYAGE, NO_TIER1_TEAMS, NO_TIER2_TEAMS, NO_TIER3_TEAMS,
-    TIER1_NAME, TIER2_NAME, TIER3_NAME } = environment.getOperationalVars()
-  generateRepoList(VOYAGE, [
-    { name: TIER1_NAME, count: NO_TIER1_TEAMS },
-    { name: TIER2_NAME, count: NO_TIER2_TEAMS },
-    { name: TIER3_NAME, count: NO_TIER3_TEAMS }
-  ])
-  
-  const github = new GitHub(environment) 
-  await github.addIssuesToTeamRepos(reposToCreate,teamslist)
-})
 
 // Process a request to create teams and authorize them to access the associated repo
 program 
-.command('authorize')
-.description('Create teams and authorize them to access the associated team repo')
-.option('-d, --debug <debug>', 'Debug switch to add runtime info to console (YES/NO)')
-.option('-r, --restart <team-number>', 'Restart processing at the specified team number')
-.option('-v, --voyage <voyagename>', 'Voyage name (e.g. v99)')
-.option('-s, --github-token <ghtoken>', 'GitHub token used for authentication')
-.option('-o, --github-org <ghorg>', 'GitHub organization name')
-.option('-t, --github-template <ghtemplate>', 'GitHub template repo name')
-.option('-t1, --t1-count <t1count>', 'Number of Tier 1 team repos to create')
-.option('-t2, --t2-count <t2count>', 'Number of Tier 2 team repos to create')
-.option('-t3, --t3-count <t3count>', 'Number of Tier 3 team repos to create')
-.option('-n1, --t1-name <t1count>', 'Name of Tier 1 team used to create repo/team name')
-.option('-n2, --t2-name <t2count>', 'Name of Tier 2 team used to create repo/team name')
-.option('-n3, --t3-name <t3count>', 'Name of Tier 3 team used to create repo/team name')
-.action( async (options) => {
-  environment.setOperationalVars({
-    debug: options.debug,
-    restart: options.restart,
-    voyage: options.voyage,
-    githubToken: options.githubToken,
-    githubOrg: options.githubOrg,
-    githubTemplate: options.githubTemplate,
+  .command('authorize')
+  .description('Create teams and authorize them to access the associated team repo')
+  .option('-d, --debug <debug>', 'Debug switch to add runtime info to console (YES/NO)')
+  .option('-r, --restart <team-number>', 'Restart processing at the specified team number')
+  .option('-v, --voyage <voyagename>', 'Voyage name (e.g. v99)')
+  .option('-s, --github-token <ghtoken>', 'GitHub token used for authentication')
+  .option('-o, --github-org <ghorg>', 'GitHub organization name')
+  .option('-t, --github-template <ghtemplate>', 'GitHub template repo name')
+  .option('-t1, --t1-count <t1count>', 'Number of Tier 1 team repos to create')
+  .option('-t2, --t2-count <t2count>', 'Number of Tier 2 team repos to create')
+  .option('-t3, --t3-count <t3count>', 'Number of Tier 3 team repos to create')
+  .option('-n1, --t1-name <t1count>', 'Name of Tier 1 team used to create repo/team name')
+  .option('-n2, --t2-name <t2count>', 'Name of Tier 2 team used to create repo/team name')
+  .option('-n3, --t3-name <t3count>', 'Name of Tier 3 team used to create repo/team name')
+  .action( async (options) => {
+    environment.setOperationalVars({
+      debug: options.debug,
+      restart: options.restart,
+      voyage: options.voyage,
+      githubToken: options.githubToken,
+      githubOrg: options.githubOrg,
+      githubTemplate: options.githubTemplate,
+    })
+
+    isDebug = environment.isDebug()
+
+    isDebug && consoleLogOptions(options)
+    isDebug && console.log('\noperationalVars: ', environment.getOperationalVars())
+    environment.isDebug() && environment.logEnvVars()
+
+    const { VOYAGE, NO_TIER1_TEAMS, NO_TIER2_TEAMS, NO_TIER3_TEAMS,
+      TIER1_NAME, TIER2_NAME, TIER3_NAME } = environment.getOperationalVars()
+    generateRepoList(VOYAGE, [
+      { name: TIER1_NAME, count: NO_TIER1_TEAMS },
+      { name: TIER2_NAME, count: NO_TIER2_TEAMS },
+      { name: TIER3_NAME, count: NO_TIER3_TEAMS }
+    ])
+    
+    const github = new GitHub(environment) 
+    await github.createAuthorizeTeams(reposToCreate,teamslist)
   })
-
-  isDebug = environment.isDebug()
-
-  isDebug && consoleLogOptions(options)
-  isDebug && console.log('\noperationalVars: ', environment.getOperationalVars())
-  environment.isDebug() && environment.logEnvVars()
-
-  const { VOYAGE, NO_TIER1_TEAMS, NO_TIER2_TEAMS, NO_TIER3_TEAMS,
-    TIER1_NAME, TIER2_NAME, TIER3_NAME } = environment.getOperationalVars()
-  generateRepoList(VOYAGE, [
-    { name: TIER1_NAME, count: NO_TIER1_TEAMS },
-    { name: TIER2_NAME, count: NO_TIER2_TEAMS },
-    { name: TIER3_NAME, count: NO_TIER3_TEAMS }
-  ])
-  
-  const github = new GitHub(environment) 
-  await github.createAuthorizeTeams(reposToCreate,teamslist)
-})
 
 // Process a request to validate GitHub user names
 program 
-.command('validate')
-.description('Validate that GitHub user names for this Voyage are correct')
-.option('-d, --debug <debug>', 'Debug switch to add runtime info to console (YES/NO)')
-.option('-r, --restart <team-number>', 'Restart processing at the specified team number')
-.option('-v, --voyage <voyagename>', 'Voyage name (e.g. v99)')
-.option('-s, --github-token <ghtoken>', 'GitHub token used for authentication')
-.option('-o, --github-org <ghorg>', 'GitHub organization name')
-.action( async (options) => {
-  environment.setOperationalVars({
-    debug: options.debug,
-    restart: options.restart,
-    voyage: options.voyage,
-    githubToken: options.githubToken,
-    githubOrg: options.githubOrg,
-  })
+  .command('validate')
+  .description('Validate that GitHub user names for this Voyage are correct')
+  .option('-d, --debug <debug>', 'Debug switch to add runtime info to console (YES/NO)')
+  .option('-r, --restart <team-number>', 'Restart processing at the specified team number')
+  .option('-v, --voyage <voyagename>', 'Voyage name (e.g. v99)')
+  .option('-s, --github-token <ghtoken>', 'GitHub token used for authentication')
+  .option('-o, --github-org <ghorg>', 'GitHub organization name')
+  .action( async (options) => {
+    environment.setOperationalVars({
+      debug: options.debug,
+      restart: options.restart,
+      voyage: options.voyage,
+      githubToken: options.githubToken,
+      githubOrg: options.githubOrg,
+    })
 
-  isDebug = environment.isDebug()
+    isDebug = environment.isDebug()
 
-  isDebug && consoleLogOptions(options)
-  isDebug && console.log('\noperationalVars: ', environment.getOperationalVars())
-  environment.isDebug() && environment.logEnvVars()
+    isDebug && consoleLogOptions(options)
+    isDebug && console.log('\noperationalVars: ', environment.getOperationalVars())
+    environment.isDebug() && environment.logEnvVars()
 
-  const { VOYAGE } = environment.getOperationalVars()
-  const github = new GitHub(environment) 
+    const { VOYAGE } = environment.getOperationalVars()
+    const github = new GitHub(environment) 
 
-  // Validate the GitHub user names in each Voyage team in the config file
-  for (team of teamslist.teams) {
-    for (let index = 0; index < team.team.github_names.length; index++) {
-      const githubUser = await github.getUser(team.team.github_names[index])
-      const isValidGithubName = githubUser !== undefined ? true : false
-      isDebug && console.log(`${ isValidGithubName ? FgWhite : FgRed }validate - team:${ team.team.name } githubName:${ team.team.github_names[index].padEnd(20, ' ') } valid:${ isValidGithubName }`)
+    // Validate the GitHub user names in each Voyage team in the config file
+    for (team of teamslist.teams) {
+      for (let index = 0; index < team.team.github_names.length; index++) {
+        const githubUser = await github.getUser(team.team.github_names[index])
+        const isValidGithubName = githubUser !== undefined ? true : false
+        isDebug && console.log(`${ isValidGithubName ? FgWhite : FgRed }validate - team:${ team.team.name } githubName:${ team.team.github_names[index].padEnd(20, ' ') } valid:${ isValidGithubName }`)
+      }
     }
-  }
-})
+  })
 
 program.parse(process.argv)
