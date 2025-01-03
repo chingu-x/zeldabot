@@ -33,7 +33,7 @@
           "\n* Web Developers: \n   * <@299541649229348865> GMT-6 (Chicago)\n   * <@116322935739908097> GMT+1 (Berlin)\n   * <@139615488295698432> GMT+10 (Sydney)",
           "\n* Data Scientists: None",
           "\n* Voyage Guide: None\n",
-          "\n**Your Team Project:**\n All Tier 1 teams will be building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier1-solar-panel-planner).\n",
+          "\n**Your Team Project:**\n All Tier 1 teams will be building the Menu Scheduler, an app to help managers create and share weekly menus for staff workers. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier1-menu-scheduler).\n",
           "\n**Resources**:",
           "\n* GitHub Repo: https://github.com/chingu-voyages/v99-tier1-team-01",
           "\n**Tools**:",
@@ -71,7 +71,7 @@
           "\n* Web Developers: \n   * <@116322935739908097> GMT+1 (Berlin)\n   * <@139615488295698432> GMT+10 (Sydney)",
           "\n* Data Scientists: None",
           "\n* Voyage Guide: None\n",
-          "\n**Your Team Project:**\n All Tier 2 teams will be building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-solar-panel-planner).\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the Menu Scheduler, an app to help managers create and share weekly menus for staff workers. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-menu-scheduler).\n",
           "\n**Resources**:",
           "\n* GitHub Repo: https://github.com/chingu-voyages/v99-tier2-team-02",
           "\n**Tools**:",
@@ -107,7 +107,7 @@
           "\n* Web Developers: None",
           "\n* Data Scientists: None",
           "\n* Voyage Guide: None\n",
-          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends **OR** creating an app of your own design. If you choose to implement Expense Splitter here are the [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier3-solar-panel-planner). \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the Menu Scheduler, an app to help managers create and share weekly menus for staff workers **OR** creating an app of your own design. If you choose to implement the Menu Scheduler here are the [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier3-menu-scheduler). \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
           "\n**Resources**:",
           "\n* GitHub Repo: https://github.com/chingu-voyages/v99-tier3-team-03",
           "\n**Tools**:",
@@ -147,21 +147,21 @@
       "tier": "tier1",
       "greeting": [
         "\n**Your Team Project:**\n",
-        "All Tier 1 teams will be building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier1-solar-panel-planner)."
+        "All Tier 1 teams will be building the Menu Scheduler, an app to help managers create and share weekly menus for staff workers. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier1-menu-scheduler)."
       ]
     },
     {
       "tier": "tier2",
       "greeting": [
         "\n**Your Team Project:**\n",
-        "All Tier 2 teams will be building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-solar-panel-planner)."
+        "All Tier 2 teams will be building the Menu Scheduler, an app to help managers create and share weekly menus for staff workers. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-menu-scheduler)."
       ]
     },
     {
       "tier": "tier3",
       "greeting": [
         "\n**Your Team Project:**\n",
-        "As a Tier 3 team your team has the choice of building the **_Solar Panel Planner_** app to help you split expenses for events with family and friends **OR** creating an app of your own design. If you choose to implement Expense Splitter here are the [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier3-solar-panel-planner). \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it."
+        "As a Tier 3 team your team has the choice of building the Menu Scheduler, an app to help managers create and share weekly menus for staff workers **OR** creating an app of your own design. If you choose to implement the Menu Scheduler here are the [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier3-menu-scheduler). \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it."
       ]
     }
   ],
