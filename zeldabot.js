@@ -1,6 +1,5 @@
 const { Command } = require('commander');
 const program = new Command();
-const { isDebugOn } = require('./src/Environment')
 const Environment = require('./src/Environment')
 const FileOps = require('./src/FileOps.js')
 const GitHub = require('./src/GitHub')
@@ -20,12 +19,6 @@ const consoleLogOptions = (options) => {
     console.log('- github-token: ', options.githubToken)
     console.log('- github-org: ', options.githubOrg)
     console.log('- github-template: ', options.githubTemplate)
-    console.log('- t1-count: ', options.t1Count)
-    console.log('- t2-count: ', options.t2Count)
-    console.log('- t3-count: ', options.t3Count)
-    console.log('- t1-name: ', options.t1Name)
-    console.log('- t2-name: ', options.t2Name)
-    console.log('- t3-name: ', options.t3Name)
   }
 }
 
@@ -36,14 +29,13 @@ const generateRepoList = (configPath) => {
   const config = JSON.parse(FileOps.readFile(configPath))
   const voyageName = 'V'.concat(config.voyage_number)
   for (let team of config.teams) {
-    console.log(`generateRepoList - team: `, team)
-    console.log(`...team.name:`, team.team.name)
     reposToCreate.push({ 
       voyageName: `${ voyageName }`,
-      tierName: `${ team.team.name.toLowerCase() }`,
+      tierName: `${ team.team.tier.toLowerCase() }`,
       teamNo: `${ team.team.name.slice(-2).toString().padStart(2, "0") }` 
     })
   }
+  return config
 }
 
 // Process a request to clone the Voyage Template repo for each Voyage team
@@ -56,12 +48,6 @@ program
   .option('-s, --github-token <ghtoken>', 'GitHub token used for authentication')
   .option('-o, --github-org <ghorg>', 'GitHub organization name')
   .option('-t, --github-template <ghtemplate>', 'GitHub template repo name')
-  .option('-t1, --t1-count <t1count>', 'Number of Tier 1 team repos to create')
-  .option('-t2, --t2-count <t2count>', 'Number of Tier 2 team repos to create')
-  .option('-t3, --t3-count <t3count>', 'Number of Tier 3 team repos to create')
-  .option('-n1, --t1-name <t1count>', 'Name of Tier 1 team used to create repo/team name')
-  .option('-n2, --t2-name <t2count>', 'Name of Tier 2 team used to create repo/team name')
-  .option('-n3, --t3-name <t3count>', 'Name of Tier 3 team used to create repo/team name')
   .option('-c, --config-path <configpath>', 'Path to the Teams config file')
   .action( async (options) => {
     environment.setOperationalVars({
@@ -71,12 +57,6 @@ program
       githubToken: options.githubToken,
       githubOrg: options.githubOrg,
       githubTemplate: options.githubTemplate,
-      t1Count: options.t1Count,
-      t2Count: options.t2Count,
-      t3Count: options.t3Count,
-      t1Name: options.t1Name,
-      t2Name: options.t2Name,
-      t3Name: options.t3Name,
       configFile: options.configPath,
     })
 
@@ -86,11 +66,11 @@ program
     isDebug && console.log('\noperationalVars: ', environment.getOperationalVars())
     environment.isDebug() && environment.logEnvVars()
 
-    const { VOYAGE, TIER1_NAME, TIER2_NAME, TIER3_NAME, CONFIG_PATH } = environment.getOperationalVars()
-    generateRepoList(CONFIG_PATH)
+    const { CONFIG_PATH } = environment.getOperationalVars()
+    const teamsConfig = generateRepoList(CONFIG_PATH)
     
-    //const github = new GitHub(environment) 
-    //await github.cloneTemplate(reposToCreate, teamslist)
+    const github = new GitHub(environment) 
+    await github.cloneTemplate(reposToCreate, teamsConfig)
   })
 
 // Process a request to clone the Voyage Template repo for each Voyage team
@@ -103,12 +83,6 @@ program
   .option('-s, --github-token <ghtoken>', 'GitHub token used for authentication')
   .option('-o, --github-org <ghorg>', 'GitHub organization name')
   .option('-t, --github-template <ghtemplate>', 'GitHub template repo name')
-  .option('-t1, --t1-count <t1count>', 'Number of Tier 1 team repos to create')
-  .option('-t2, --t2-count <t2count>', 'Number of Tier 2 team repos to create')
-  .option('-t3, --t3-count <t3count>', 'Number of Tier 3 team repos to create')
-  .option('-n1, --t1-name <t1count>', 'Name of Tier 1 team used to create repo/team name')
-  .option('-n2, --t2-name <t2count>', 'Name of Tier 2 team used to create repo/team name')
-  .option('-n3, --t3-name <t3count>', 'Name of Tier 3 team used to create repo/team name')
   .action( async (options) => {
     environment.setOperationalVars({
       debug: options.debug,
@@ -125,16 +99,11 @@ program
     isDebug && console.log('\noperationalVars: ', environment.getOperationalVars())
     environment.isDebug() && environment.logEnvVars()
 
-    const { VOYAGE, NO_TIER1_TEAMS, NO_TIER2_TEAMS, NO_TIER3_TEAMS,
-      TIER1_NAME, TIER2_NAME, TIER3_NAME } = environment.getOperationalVars()
-    generateRepoList(VOYAGE, [
-      { name: TIER1_NAME, count: NO_TIER1_TEAMS },
-      { name: TIER2_NAME, count: NO_TIER2_TEAMS },
-      { name: TIER3_NAME, count: NO_TIER3_TEAMS }
-    ])
+    const { CONFIG_PATH } = environment.getOperationalVars()
+    const teamsConfig = generateRepoList(CONFIG_PATH)
     
     const github = new GitHub(environment) 
-    await github.addIssuesToTeamRepos(reposToCreate,teamslist)
+    await github.addIssuesToTeamRepos(reposToCreate, teamsConfig)
   })
 
 // Process a request to create teams and authorize them to access the associated repo
@@ -147,12 +116,6 @@ program
   .option('-s, --github-token <ghtoken>', 'GitHub token used for authentication')
   .option('-o, --github-org <ghorg>', 'GitHub organization name')
   .option('-t, --github-template <ghtemplate>', 'GitHub template repo name')
-  .option('-t1, --t1-count <t1count>', 'Number of Tier 1 team repos to create')
-  .option('-t2, --t2-count <t2count>', 'Number of Tier 2 team repos to create')
-  .option('-t3, --t3-count <t3count>', 'Number of Tier 3 team repos to create')
-  .option('-n1, --t1-name <t1count>', 'Name of Tier 1 team used to create repo/team name')
-  .option('-n2, --t2-name <t2count>', 'Name of Tier 2 team used to create repo/team name')
-  .option('-n3, --t3-name <t3count>', 'Name of Tier 3 team used to create repo/team name')
   .action( async (options) => {
     environment.setOperationalVars({
       debug: options.debug,
@@ -169,16 +132,11 @@ program
     isDebug && console.log('\noperationalVars: ', environment.getOperationalVars())
     environment.isDebug() && environment.logEnvVars()
 
-    const { VOYAGE, NO_TIER1_TEAMS, NO_TIER2_TEAMS, NO_TIER3_TEAMS,
-      TIER1_NAME, TIER2_NAME, TIER3_NAME } = environment.getOperationalVars()
-    generateRepoList(VOYAGE, [
-      { name: TIER1_NAME, count: NO_TIER1_TEAMS },
-      { name: TIER2_NAME, count: NO_TIER2_TEAMS },
-      { name: TIER3_NAME, count: NO_TIER3_TEAMS }
-    ])
+    const { CONFIG_PATH } = environment.getOperationalVars()
+    const teamsConfig = generateRepoList(CONFIG_PATH)
     
     const github = new GitHub(environment) 
-    await github.createAuthorizeTeams(reposToCreate,teamslist)
+    await github.createAuthorizeTeams(reposToCreate,teamsConfig)
   })
 
 // Process a request to validate GitHub user names
@@ -205,11 +163,12 @@ program
     isDebug && console.log('\noperationalVars: ', environment.getOperationalVars())
     environment.isDebug() && environment.logEnvVars()
 
-    const { VOYAGE } = environment.getOperationalVars()
+    const { CONFIG_PATH } = environment.getOperationalVars()
+    const teamsConfig = generateRepoList(CONFIG_PATH)
     const github = new GitHub(environment) 
 
     // Validate the GitHub user names in each Voyage team in the config file
-    for (team of teamslist.teams) {
+    for (team of teamsConfig.teams) {
       for (let index = 0; index < team.team.github_names.length; index++) {
         const githubUser = await github.getUser(team.team.github_names[index])
         const isValidGithubName = githubUser !== undefined ? true : false
