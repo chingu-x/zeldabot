@@ -1,0 +1,109 @@
+{
+  "voyage_number": "53",
+  "categories": [
+    "V53-tier1-01-🔥",
+    "V53-tier2-02-🔥",
+    "V53-tier3-03-🔥"
+  ],
+  "teams": [
+    {
+      "team": {
+        "category": "V53-tier2-02-🔥",
+        "name": "tier2-team-28",
+        "tier": "tier2",
+        "channel_type": "forum",
+        "discord_names": [
+          "261683600989093890",
+          "729451068655927339",
+          "338706479295102996",
+          "1295519629321699389",
+          "815800981908226068"
+        ],
+        "github_names": [
+          "frosty8104",
+          "chonger878",
+          "Equillibria",
+          "minorObsession",
+          "Tegsy"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-28",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: \n   * <@338706479295102996> (Shadow) GMT-8 (Los Angeles)\n   * <@815800981908226068> (Primary) GMT-8 (Los Angeles)",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: \n   * <@261683600989093890> GMT-7 (Denver)\n   * <@729451068655927339> GMT-8 (Los Angeles)\n   * <@1295519629321699389> GMT-8 (Los Angeles)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the Menu Scheduler, an app to help managers create and share weekly menus for staff workers. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-menu-scheduler).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v53-tier2-team-28",
+          "\n**Tools**:",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Schej](https://schej.it/home)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help you may open a support ticket in the <#1193342042080817323> channel and the first available Chingu Facilitator will reach out to help.\n\n"
+        ]
+      }
+    }
+  ],
+  "team_greeting1": [
+    ":rocket: **_Congratulations Voyagers!_** You found your team chat! Read carefully below so you don't miss out on getting a good start.\n\n",
+    "**__Your First Steps__** \n",
+    "1. Say \"hi\" to your team-mates! Come in excited and help welcome your teammates! You can find a list of who is in your team in the Team Info topic in this channel. :slight_smile:\n",
+    "2. **_Copy_** the intro you added in https://discord.com/channels/330284646283608064/553103063649353738 when you joined Chingu and **_paste it here_** to let your teammates get to know you!\n",
+    "3. Follow the steps in the [Voyage Guide](https://github.com/chingu-voyages/Handbook/blob/main/docs/guides/voyage/voyage.md#voyage-guide) we emailed last week to set a solid foundation for your project. The most important step to concentrate on is scheduling your Team Kickoff meeting as soon as possible.\n\n",
+    "**__In your first Sprint you should concentrate on completing these tasks:__**\n",
+    "1. Meet your team & schedule kickoff meeting\n",
+    "2. Conduct kickoff meeting\n",
+    "3. Choose a project (Tier 3 only)\n",
+    "4. create a Vision Statement  & define & prioritize MVP features\n\n",
+    "**__How can we communicate & collaborate with one another?__**\n",
+    "- We've created a simple and easy way to create a voice/video channel for team meetings, one-on-one discussions, & troubleshooting sessions whenever you need them! Check out the `How do I make a voice channel for my team?` section in the Voyage Guide.\n",
+    "- You can find out more about each of these in the [Voyage Guide](https://github.com/chingu-voyages/Handbook/blob/main/docs/guides/voyage/voyage.md#voyage-guide).\n\n",
+    "**__How can I get the attention of my teammates?__**\n",
+    "You should use <@&1104544072347160578> to send a message to all teammates instead of using `@everyone`.\n\n",
+    "**__What if I have questions or need help?__**\n",
+    "Please *do not* DM Chingu Facilitators directly if you have a question or need help. Instead, open a support ticket in the <#1193342042080817323> channel and the first available Facilitator will reach out to help.\n\n"
+  ],
+  "team_greeting2": [
+    "**__Finally__**\n",
+    "Stay committed to your Voyage goal and active with your team! Don't forget what you agreed to in the Commitment Form. Remember that the #1 factor to success isn't technology - it's **_daily_** communication & collaboration with your teammates.\n\n"
+  ],
+  "tier_project": [
+    {
+      "tier": "tier1",
+      "greeting": [
+        "\n**Your Team Project:**\n",
+        "All Tier 1 teams will be building the Menu Scheduler, an app to help managers create and share weekly menus for staff workers. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier1-menu-scheduler)."
+      ]
+    },
+    {
+      "tier": "tier2",
+      "greeting": [
+        "\n**Your Team Project:**\n",
+        "All Tier 2 teams will be building the Menu Scheduler, an app to help managers create and share weekly menus for staff workers. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-menu-scheduler)."
+      ]
+    },
+    {
+      "tier": "tier3",
+      "greeting": [
+        "\n**Your Team Project:**\n",
+        "As a Tier 3 team your team has the choice of building the Menu Scheduler, an app to help managers create and share weekly menus for staff workers **OR** creating an app of your own design. If you choose to implement the Menu Scheduler here are the [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier3-menu-scheduler). \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it."
+      ]
+    }
+  ],
+  "forum_tags": [
+    "General Info",
+    "Meetings",
+    "Daily Standups",
+    "Sprint Planning",
+    "Discussion",
+    "Help & Advice",
+    "Celebrate",
+    "Issues",
+    "Blockers"
+  ]
+}

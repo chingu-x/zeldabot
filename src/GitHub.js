@@ -354,8 +354,6 @@ class GitHub {
       let areLabelsAndMilestonesCreated = false
       let labelsInRepo = []
 
-      console.log(`addIssuesToTeamRepos - reposToCreate: `, reposToCreate)
-
       for (let teamNo = 0; teamNo < reposToCreate.length; teamNo++) {
         // Reset variables for new team 
         areLabelsAndMilestonesCreated = false
@@ -363,13 +361,10 @@ class GitHub {
         this.milestones = []
 
         // Clone the issues in the template repo to the new voyage team repo
-        console.log(`addIssuesToTeamRepos - teamNo: ${teamNo} this.RESTART: ${this.RESTART}`)
         if (reposToCreate[teamNo].teamNo >= this.RESTART) {
-          console.log(`addIssuesToTeamRepos - ...`)
           try {
             //await this.sleep(10) // Sleep to avoid creating repos too fast for GraphQL
             this.generateNames(reposToCreate[teamNo])
-            console.log(`addIssuesToTeamRepos - this.repoName: ${this.repoName}`)
             const teamRepo = await this.getRepo(this.GITHUB_ORG, this.repoName)
             if (areLabelsAndMilestonesCreated === false) {
                 labelsInRepo = await this.addLabelsToRepo(teamRepo.data.repository.id, 
