@@ -20,8 +20,8 @@
   "scripts": {
     "clone": "node zeldabot clone",
     "add_issues": "node zeldabot add_issues",
-    "authorize": "node zeldabot authorize",
-    "validate": "node zeldabot validate",
+    "authorize_github": "node zeldabot authorize",
+    "validate_github": "node zeldabot validate",
     "start": "node ./zeldabot"
   },
   "dependencies": {
