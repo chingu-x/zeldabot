@@ -227,6 +227,7 @@
           "1230507589029331086",
           "803690864848666656",
           "888002340320321536",
+          "416921411333128192",
           "1175340688758546492",
           "807958485961932852"
         ],
@@ -235,6 +236,7 @@
           "cmsavary",
           "IkramMaizi",
           "Mandla-tech",
+          "leonalkalai",
           "EliasNegasa",
           "TheaWin"
         ],
@@ -246,7 +248,7 @@
           "\n* Product Owners: None",
           "\n* Scrum Masters: \n   * <@869488314921652225> (Primary) GMT+1 (Berlin)",
           "\n* UI/UX Designer: \n   * <@1230507589029331086> GMT+1 (Berlin)",
-          "\n* Web Developers: \n   * <@803690864848666656> GMT+1 (Berlin)\n   * <@1175340688758546492> GMT+3 (Moscow)\n   * <@807958485961932852> GMT+4 (Tbilisi)",
+          "\n* Web Developers: \n   * <@803690864848666656> GMT+1 (Berlin)\n   * <@416921411333128192> GMT+2 (Bucharest)\n   * <@1175340688758546492> GMT+3 (Moscow)\n   * <@807958485961932852> GMT+4 (Tbilisi)",
           "\n* Data Scientists: None",
           "\n* Voyage Guide: \n   * <@888002340320321536> GMT+2 (Bucharest)\n",
           "\n**Your Team Project:**\n All Tier 2 teams will be building the **_Menu Scheduler_**, an app to help managers create and share weekly menus for staff workers. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-menu-scheduler).\n",
