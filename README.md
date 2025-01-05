@@ -54,7 +54,7 @@ subject to rate limit overruns.
 
 ### Authorize
 
-Once the team repos have been created the `authorize` command is used to grant
+Once the team repos have been created the `authorize_github` command is used to grant
 administrative access to the team repos.
 
 1. Github account names are mapped to teams in the `config/vnn_teams_users.json`
@@ -90,10 +90,10 @@ node zeldabot <command> <option flags>
 
 Where `<command>` is one of:
 
-- `validate`
+- `validate_github`
 - `clone`
 - `add_issues`
-- `authorize`
+- `authorize_github`
 
 ### Options
 
@@ -142,7 +142,7 @@ names that are unknown to GitHub. This can then be used to determine the
 correct user names.
 
 ```bash
-node zeldabot validate 
+node zeldabot validate_github 
 ```
 
 #### Example #1 - Clone
@@ -251,7 +251,7 @@ the command to run Zeldabot can be as simple as the following to add Chingus in
 the teams to to each of this Voyages organizational teams in GitHub.
 
 ```bash
-node zeldabot authorize -t1 3 -t2 2 -t3 4
+node zeldabot authorize_github -t1 3 -t2 2 -t3 4
 ```
 
 ## Release History
