@@ -361,7 +361,7 @@ class GitHub {
         this.milestones = []
 
         // Clone the issues in the template repo to the new voyage team repo
-        if (teamNo+1 >= this.RESTART) {
+        if (reposToCreate[teamNo].teamNo >= this.RESTART) {
           try {
             //await this.sleep(10) // Sleep to avoid creating repos too fast for GraphQL
             this.generateNames(reposToCreate[teamNo])
