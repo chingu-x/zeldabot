@@ -225,7 +225,6 @@
         "discord_names": [
           "869488314921652225",
           "1230507589029331086",
-          "803690864848666656",
           "888002340320321536",
           "416921411333128192",
           "1175340688758546492",
@@ -234,7 +233,6 @@
         "github_names": [
           "kenako1",
           "cmsavary",
-          "IkramMaizi",
           "Mandla-tech",
           "leonalkalai",
           "EliasNegasa",
@@ -248,7 +246,7 @@
           "\n* Product Owners: None",
           "\n* Scrum Masters: \n   * <@869488314921652225> (Primary) GMT+1 (Berlin)",
           "\n* UI/UX Designer: \n   * <@1230507589029331086> GMT+1 (Berlin)",
-          "\n* Web Developers: \n   * <@803690864848666656> GMT+1 (Berlin)\n   * <@416921411333128192> GMT+2 (Bucharest)\n   * <@1175340688758546492> GMT+3 (Moscow)\n   * <@807958485961932852> GMT+4 (Tbilisi)",
+          "\n* Web Developers: \n   * <@416921411333128192> GMT+2 (Bucharest)\n   * <@1175340688758546492> GMT+3 (Moscow)\n   * <@807958485961932852> GMT+4 (Tbilisi)",
           "\n* Data Scientists: None",
           "\n* Voyage Guide: \n   * <@888002340320321536> GMT+2 (Bucharest)\n",
           "\n**Your Team Project:**\n All Tier 2 teams will be building the **_Menu Scheduler_**, an app to help managers create and share weekly menus for staff workers. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-menu-scheduler).\n",
@@ -270,17 +268,17 @@
         "channel_type": "forum",
         "discord_names": [
           "516622343343439920",
-          "677267032713986052",
           "787712318845747201",
           "852206497223147581",
-          "1253050938009063556"
+          "1253050938009063556",
+          "803690864848666656"
         ],
         "github_names": [
           "TheDrakl",
-          "lawlawson",
           "JustinJoe",
           "Morais-C",
-          "dami-boy"
+          "dami-boy",
+          "IkramMaizi"
         ],
         "resource_msg": [
           "\n**__About your Team__**",
@@ -290,7 +288,7 @@
           "\n* Product Owners: None",
           "\n* Scrum Masters: \n   * <@1253050938009063556> (Primary) GMT+1 (Berlin)",
           "\n* UI/UX Designer: None",
-          "\n* Web Developers: \n   * <@516622343343439920> GMT-0 (London)\n   * <@677267032713986052> GMT-0 (London)\n   * <@787712318845747201> GMT-0 (London)",
+          "\n* Web Developers: \n   * <@516622343343439920> GMT-0 (London)\n   * <@787712318845747201> GMT-0 (London)\n   * <@803690864848666656> GMT+1 (Berlin)",
           "\n* Data Scientists: None",
           "\n* Voyage Guide: \n   * <@852206497223147581> GMT-0 (London)\n",
           "\n**Your Team Project:**\n All Tier 2 teams will be building the **_Menu Scheduler_**, an app to help managers create and share weekly menus for staff workers. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier2-menu-scheduler).\n",
@@ -690,7 +688,6 @@
         "channel_type": "forum",
         "discord_names": [
           "1149876988685864981",
-          "1023679986151985252",
           "1269682365576511488",
           "955033311808466954",
           "1015011354953916580",
@@ -698,7 +695,6 @@
         ],
         "github_names": [
           "ProgramStuff",
-          "allison-truhlar",
           "Sunny-Master",
           "varchodi",
           "joekotvas",
@@ -712,7 +708,7 @@
           "\n* Product Owners: None",
           "\n* Scrum Masters: \n   * <@1139016756619382878> (Primary) GMT-8 (Los Angeles)",
           "\n* UI/UX Designer: \n   * <@1015011354953916580> GMT-5 (New York)",
-          "\n* Web Developers: \n   * <@1149876988685864981> GMT-4 (Caracas)\n   * <@1023679986151985252> GMT-5 (New York)\n   * <@1269682365576511488> GMT-5 (New York)\n   * <@955033311808466954> GMT-5 (New York)",
+          "\n* Web Developers: \n   * <@1149876988685864981> GMT-4 (Caracas)\n   * <@1269682365576511488> GMT-5 (New York)\n   * <@955033311808466954> GMT-5 (New York)",
           "\n* Data Scientists: None",
           "\n* Voyage Guide: None\n",
           "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_Menu Scheduler_**, an app to help managers create and share weekly menus for staff workers **OR** creating an app of your own design. If you choose to implement the Menu Scheduler here are the [requirements & specifications](https://github.com/chingu-voyages/voyage-project-tier3-menu-scheduler). \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
