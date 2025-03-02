@@ -101,7 +101,7 @@
           "1163037006700478625",
           "1135889459179696158",
           "1203093885048590386",
-          "undefined",
+          "1255527389253865573",
           "830621614201634816",
           "152534720834568193",
           "1238564345705795614",
@@ -126,7 +126,7 @@
           "\n* Product Owners: \n   * <@1163037006700478625> (Primary) GMT-0 (London)",
           "\n* Scrum Masters: \n   * <@1203093885048590386> (Primary) GMT-0 (London)\n   * <@1238564345705795614> (Shadow) GMT+1 (Berlin)",
           "\n* UI/UX Designer: \n   * <@416720357723078666> GMT+2 (Bucharest)",
-          "\n* Web Developers: \n   * <@516622343343439920> GMT-0 (London)\n   * <@1135889459179696158> GMT-0 (London)\n   * <@undefined> GMT-0 (London)\n   * <@830621614201634816> GMT-0 (London)",
+          "\n* Web Developers: \n   * <@516622343343439920> GMT-0 (London)\n   * <@1135889459179696158> GMT-0 (London)\n   * <@1255527389253865573> GMT-0 (London)\n   * <@830621614201634816> GMT-0 (London)",
           "\n* Data Scientists: None",
           "\n* Voyage Guide: \n   * <@152534720834568193> GMT-0 (London)\n",
           "\n**Your Team Project:**\n All Tier 2 teams will be building the **_AI Helper_**, an app to help users build better AI prompts. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-aihelper).\n",
@@ -342,7 +342,7 @@
           "658277014997958657",
           "765517667473424385",
           "870753664980090900",
-          "undefined",
+          "1312006022654722080",
           "831571194955169822",
           "1005411909786423407"
         ],
@@ -362,7 +362,7 @@
           "\n* Product Owners: None",
           "\n* Scrum Masters: None",
           "\n* UI/UX Designer: \n   * <@1005411909786423407> GMT+8 (Hong Kong)",
-          "\n* Web Developers: \n   * <@658277014997958657> GMT+5 (New Dehli)\n   * <@765517667473424385> GMT+5 (New Dehli)\n   * <@870753664980090900> GMT+5 (New Dehli)\n   * <@undefined> GMT+5 (New Dehli)",
+          "\n* Web Developers: \n   * <@658277014997958657> GMT+5 (New Dehli)\n   * <@765517667473424385> GMT+5 (New Dehli)\n   * <@870753664980090900> GMT+5 (New Dehli)\n   * <@1312006022654722080> GMT+5 (New Dehli)",
           "\n* Data Scientists: None",
           "\n* Voyage Guide: \n   * <@831571194955169822> GMT+5 (New Dehli)\n",
           "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_AI Helper_**, an app to help build better AI prompts **OR** creating an app of your own design. If you choose to implement the AI Helper here are the [requirements & specifications](https://github.com/chingu-voyages/voyage-project-aihelper). \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
@@ -388,7 +388,8 @@
           "869488314921652225",
           "1300528881400414236",
           "1253050938009063556",
-          "900408419259940985"
+          "900408419259940985",
+          "191786485010137090"
         ],
         "github_names": [
           "N/A",
@@ -396,7 +397,8 @@
           "kenako1",
           "IsmailMarghich",
           "dami-boy",
-          "Predrag-Jandric"
+          "Predrag-Jandric",
+          "ARBUCHELI"
         ],
         "resource_msg": [
           "\n**__About your Team__**",
@@ -406,7 +408,7 @@
           "\n* Product Owners: \n   * <@1070116089721262191> (Shadow) GMT+1 (Berlin)\n   * <@869488314921652225> (Primary) GMT+1 (Berlin)",
           "\n* Scrum Masters: \n   * <@1253050938009063556> (Primary) GMT+1 (Berlin)",
           "\n* UI/UX Designer: None",
-          "\n* Web Developers: \n   * <@1333397093343035412> GMT+1 (Berlin)\n   * <@1300528881400414236> GMT+1 (Berlin)\n   * <@900408419259940985> GMT+1 (Berlin)",
+          "\n* Web Developers: \n   * <@1333397093343035412> GMT+1 (Berlin)\n   * <@1300528881400414236> GMT+1 (Berlin)\n   * <@900408419259940985> GMT+1 (Berlin)\n   * <@191786485010137090> GMT+3 (Moscow)",
           "\n* Data Scientists: None",
           "\n* Voyage Guide: None\n",
           "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_AI Helper_**, an app to help build better AI prompts **OR** creating an app of your own design. If you choose to implement the AI Helper here are the [requirements & specifications](https://github.com/chingu-voyages/voyage-project-aihelper). \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
@@ -430,7 +432,7 @@
           "732166817971306507",
           "926776016813297684",
           "598676073084878848",
-          "undefined",
+          "1003106989687181353",
           "1199723818353176673",
           "915681913681891408",
           "995684631603069010"
@@ -452,7 +454,7 @@
           "\n* Product Owners: \n   * <@995684631603069010> (Primary) GMT+2 (Bucharest)",
           "\n* Scrum Masters: \n   * <@732166817971306507> (Primary) GMT-0 (London)",
           "\n* UI/UX Designer: None",
-          "\n* Web Developers: \n   * <@926776016813297684> GMT-0 (London)\n   * <@undefined> GMT-0 (London)\n   * <@1199723818353176673> GMT-3 (Buenos Aires)\n   * <@915681913681891408> GMT+1 (Berlin)",
+          "\n* Web Developers: \n   * <@926776016813297684> GMT-0 (London)\n   * <@1003106989687181353> GMT-0 (London)\n   * <@1199723818353176673> GMT-3 (Buenos Aires)\n   * <@915681913681891408> GMT+1 (Berlin)",
           "\n* Data Scientists: None",
           "\n* Voyage Guide: \n   * <@598676073084878848> GMT-0 (London)\n",
           "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_AI Helper_**, an app to help build better AI prompts **OR** creating an app of your own design. If you choose to implement the AI Helper here are the [requirements & specifications](https://github.com/chingu-voyages/voyage-project-aihelper). \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
@@ -570,7 +572,7 @@
           "980340008470863872",
           "1026711632702881792",
           "1062553924013396029",
-          "undefined",
+          "363871352760827905",
           "1283505372795109458"
         ],
         "github_names": [
@@ -592,7 +594,7 @@
           "\n* Product Owners: \n   * <@1062553924013396029> (Primary) GMT-8 (Los Angeles)",
           "\n* Scrum Masters: \n   * <@799294825589243975> (Shadow) GMT-5 (New York)\n   * <@1026711632702881792> (Primary) GMT-8 (Los Angeles)",
           "\n* UI/UX Designer: \n   * <@1283505372795109458> GMT-8 (Los Angeles)",
-          "\n* Web Developers: \n   * <@1017769952347967518> GMT-4 (Caracas)\n   * <@398682088905375744> GMT-5 (New York)\n   * <@712274220993871872> GMT-5 (New York)\n   * <@980340008470863872> GMT-6 (Chicago)\n   * <@undefined> GMT-8 (Los Angeles)",
+          "\n* Web Developers: \n   * <@1017769952347967518> GMT-4 (Caracas)\n   * <@398682088905375744> GMT-5 (New York)\n   * <@712274220993871872> GMT-5 (New York)\n   * <@980340008470863872> GMT-6 (Chicago)\n   * <@363871352760827905> GMT-8 (Los Angeles)",
           "\n* Data Scientists: None",
           "\n* Voyage Guide: None\n",
           "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_AI Helper_**, an app to help build better AI prompts **OR** creating an app of your own design. If you choose to implement the AI Helper here are the [requirements & specifications](https://github.com/chingu-voyages/voyage-project-aihelper). \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
