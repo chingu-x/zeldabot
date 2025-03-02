@@ -90,10 +90,10 @@ node zeldabot <command> <option flags>
 
 Where `<command>` is one of:
 
-- `validate_github`
+- `validate-github`
 - `clone`
-- `add_issues`
-- `authorize_github`
+- `add-issues`
+- `authorize-github`
 
 ### Options
 
@@ -142,7 +142,7 @@ names that are unknown to GitHub. This can then be used to determine the
 correct user names.
 
 ```bash
-node zeldabot validate_github 
+node zeldabot validate-github 
 ```
 
 #### Example #1 - Clone
@@ -230,7 +230,7 @@ the command to run Zeldabot can be as simple as the following to add issues in
 the template repo to each of this Voyages team repositories.
 
 ```bash
-node zeldabot add_issues -t1 3 -t2 2 -t3 4
+node zeldabot add-issues -t1 3 -t2 2 -t3 4
 ```
 
 #### Example #5 - Authorize
@@ -251,7 +251,7 @@ the command to run Zeldabot can be as simple as the following to add Chingus in
 the teams to to each of this Voyages organizational teams in GitHub.
 
 ```bash
-node zeldabot authorize_github -t1 3 -t2 2 -t3 4
+node zeldabot authorize-github -t1 3 -t2 2 -t3 4
 ```
 
 ## Release History
