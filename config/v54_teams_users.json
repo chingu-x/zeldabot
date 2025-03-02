@@ -475,6 +475,7 @@
         "discord_names": [
           "710572719871230054",
           "1333808545929363547",
+          "616257782349561857",
           "1108312093331050607",
           "911611945302511668",
           "508760522523541514",
@@ -483,6 +484,7 @@
         "github_names": [
           "Djohn25",
           "ZaidHassan96 ",
+          "CaptOrb",
           "Maryamh12",
           "None",
           "ngodi",
@@ -496,7 +498,7 @@
           "\n* Product Owners: None",
           "\n* Scrum Masters: \n   * <@710572719871230054> (Primary) GMT-0 (London)\n   * <@911611945302511668> (Shadow) GMT+1 (Berlin)",
           "\n* UI/UX Designer: None",
-          "\n* Web Developers: \n   * <@1333808545929363547> GMT-0 (London)\n   * <@1108312093331050607> GMT-0 (London)\n   * <@508760522523541514> GMT+1 (Berlin)",
+          "\n* Web Developers: \n   * <@1333808545929363547> GMT-0 (London)\n   * <@616257782349561857> GMT-0 (London)\n   * <@1108312093331050607> GMT-0 (London)\n   * <@508760522523541514> GMT+1 (Berlin)",
           "\n* Data Scientists: \n   * <@746487301692981339> GMT+5 (New Dehli)",
           "\n* Voyage Guide: None\n",
           "\n**Your Team Project:**\n As a Tier 3 team your team has the choice of building the **_AI Helper_**, an app to help build better AI prompts **OR** creating an app of your own design. If you choose to implement the AI Helper here are the [requirements & specifications](https://github.com/chingu-voyages/voyage-project-aihelper). \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
