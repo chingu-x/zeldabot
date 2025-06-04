@@ -171,8 +171,9 @@ program
     for (team of teamsConfig.teams) {
       for (let index = 0; index < team.team.github_names.length; index++) {
         const githubUser = await github.getUser(team.team.github_names[index])
+        const discordUser = team.team.discord_names[index]
         const isValidGithubName = githubUser !== undefined ? true : false
-        isDebug && console.log(`${ isValidGithubName ? FgWhite : FgRed }validate - team:${ team.team.name } githubName:${ team.team.github_names[index].padEnd(20, ' ') } valid:${ isValidGithubName }`)
+        isDebug && console.log(`${ isValidGithubName ? FgWhite : FgRed }validate - team:${ team.team.name } discordID:${ team.team.discord_names[index].padEnd(12, ' ') } githubName:${ team.team.github_names[index].padEnd(20, ' ') } valid:${ isValidGithubName }`)
       }
     }
   })
