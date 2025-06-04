@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@octokit/rest": "^19.0.7",
+    "airtable": "^0.12.2",
     "apollo-boost": "^0.4.9",
     "apollo-link-context": "^1.0.20",
     "apollo-link-schema": "^1.2.5",
