@@ -20,12 +20,13 @@
   "scripts": {
     "clone": "node zeldabot clone",
     "add_issues": "node zeldabot add_issues",
-    "authorize_github": "node zeldabot authorize",
-    "validate_github": "node zeldabot validate",
+    "authorize-github": "node zeldabot authorize",
+    "validate-github": "node zeldabot validate",
     "start": "node ./zeldabot"
   },
   "dependencies": {
     "@octokit/rest": "^19.0.7",
+    "airtable": "^0.12.2",
     "apollo-boost": "^0.4.9",
     "apollo-link-context": "^1.0.20",
     "apollo-link-schema": "^1.2.5",

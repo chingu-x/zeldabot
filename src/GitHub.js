@@ -271,7 +271,7 @@ class GitHub {
       return response.data
     }
     catch (error) {
-      console.log(`${ FgRed }GitHub - getOrgMembers - error:${ error }`)
+      console.log(`${ FgRed }GitHub - getOrgMembers - error:${ error } - ${ userName }`)
     }
   }
 

@@ -3,6 +3,7 @@ const program = new Command();
 const Environment = require('./src/Environment')
 const FileOps = require('./src/FileOps.js')
 const GitHub = require('./src/GitHub')
+const { getVoyagerByGithubLogin } = require('./src/Airtable/VoyageTeamsort.js')
 const { FgRed, FgWhite  } = require('./src/util/constants.js')
 
 const environment = new Environment()
@@ -163,16 +164,26 @@ program
     isDebug && console.log('\noperationalVars: ', environment.getOperationalVars())
     environment.isDebug() && environment.logEnvVars()
 
-    const { CONFIG_PATH } = environment.getOperationalVars()
+    const { VOYAGE, CONFIG_PATH } = environment.getOperationalVars()
     const teamsConfig = generateRepoList(CONFIG_PATH)
     const github = new GitHub(environment) 
 
     // Validate the GitHub user names in each Voyage team in the config file
     for (team of teamsConfig.teams) {
       for (let index = 0; index < team.team.github_names.length; index++) {
-        const githubUser = await github.getUser(team.team.github_names[index])
+        const teamNo = team.team.name.slice(-2).toString().padStart(2, "0")
+        let githubUser = await github.getUser(team.team.github_names[index])
+        if (githubUser !== undefined) {
+          githubUser = githubUser.login
+        }
+        let discordName = await getVoyagerByGithubLogin(VOYAGE.toUpperCase(), teamNo, githubUser)
+        if (discordName === -1) {
+          discordName = 'Not Found'
+        } else {
+          discordName = discordName.discord_name
+        }
         const isValidGithubName = githubUser !== undefined ? true : false
-        isDebug && console.log(`${ isValidGithubName ? FgWhite : FgRed }validate - team:${ team.team.name } githubName:${ team.team.github_names[index].padEnd(20, ' ') } valid:${ isValidGithubName }`)
+        isDebug && console.log(`${ isValidGithubName ? FgWhite : FgRed }validate - team:${ team.team.name } discordName:${ discordName.padEnd(12, ' ') } githubName:${ team.team.github_names[index].padEnd(20, ' ') } valid:${ isValidGithubName }`)
       }
     }
   })
