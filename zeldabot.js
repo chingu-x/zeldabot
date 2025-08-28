@@ -174,16 +174,18 @@ program
         const teamNo = team.team.name.slice(-2).toString().padStart(2, "0")
         let githubUser = await github.getUser(team.team.github_names[index])
         if (githubUser !== undefined) {
-          githubUser = githubUser.login
+          githubUser = githubUser.login.trimEnd()
         }
         let discordName = await getVoyagerByGithubLogin(VOYAGE.toUpperCase(), teamNo, githubUser)
+        let isValidDiscordName = true
         if (discordName === -1) {
           discordName = 'Not Found'
+          isValidDiscordName = false
         } else {
           discordName = discordName.discord_name
         }
         const isValidGithubName = githubUser !== undefined ? true : false
-        isDebug && console.log(`${ isValidGithubName ? FgWhite : FgRed }validate - team:${ team.team.name } discordName:${ discordName.padEnd(12, ' ') } githubName:${ team.team.github_names[index].padEnd(20, ' ') } valid:${ isValidGithubName }`)
+        isDebug && console.log(`${ isValidGithubName ? FgWhite : FgRed }validate - team:${ team.team.name } discordName:${ isValidDiscordName ? FgWhite : FgRed }${ discordName.padEnd(12, ' ') } githubName:${ team.team.github_names[index].padEnd(20, ' ') } valid:${ isValidGithubName }`)
       }
     }
   })

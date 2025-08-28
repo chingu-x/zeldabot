@@ -1,0 +1,927 @@
+{
+  "voyage_number": "57",
+  "categories": [
+    "V57-Tier1-01-🔥",
+    "V57-Tier2-02-🔥",
+    "V57-Tier3-03-🔥"
+  ],
+  "teams": [
+    {
+      "team": {
+        "category": "V57-Tier1-01-🔥",
+        "name": "tier1-team-01",
+        "tier": "tier1",
+        "channel_type": "forum",
+        "discord_names": [
+          "1386390584926929027",
+          "992593813468094475",
+          "1019103130769694730"
+        ],
+        "github_names": [
+          "nahul100",
+          "debojit59",
+          "Jugrajsinghbali"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier1",
+          "\n**Your Team Name:** tier1-team-01",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: \n   * <@1386390584926929027> GMT+5 (New Dehli)\n   * <@992593813468094475> GMT+5 (New Dehli)\n   * <@1019103130769694730> GMT+5 (New Dehli)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n All Tier 1 teams will be building the **_GitHub PR Review Board_**, an app to provide you and your team with status about your Pull Requests. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-pr-status).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v57-tier1-team-01",
+          "\n**Tools**:",
+          "\n* [Discord Daily Standup Bot](https://github.com/chingu-voyages/Handbook/blob/main/docs/guides/voyage/topics/tips_standup_cmd.md)",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Timeful](https://timeful.app/)",
+          "\n* [Using git/Github in a team](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/gitgithub.md)",
+          "\n* [UI/UX Workflow](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/uiux.md)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help open a support ticket in the <#1193342042080817323> channel. Please do not DM Admins directly.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V57-Tier1-01-🔥",
+        "name": "tier1-team-02",
+        "tier": "tier1",
+        "channel_type": "forum",
+        "discord_names": [
+          "1367125694970073138",
+          "934433670209626123",
+          "727596846704230552"
+        ],
+        "github_names": [
+          "CamargoCode",
+          "anaselass",
+          "serleh"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier1",
+          "\n**Your Team Name:** tier1-team-02",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: \n   * <@1367125694970073138> GMT-0 (London)\n   * <@934433670209626123> GMT-0 (London)\n   * <@727596846704230552> GMT-0 (London)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n All Tier 1 teams will be building the **_GitHub PR Review Board_**, an app to provide you and your team with status about your Pull Requests. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-pr-status).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v57-tier1-team-02",
+          "\n**Tools**:",
+          "\n* [Discord Daily Standup Bot](https://github.com/chingu-voyages/Handbook/blob/main/docs/guides/voyage/topics/tips_standup_cmd.md)",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Timeful](https://timeful.app/)",
+          "\n* [Using git/Github in a team](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/gitgithub.md)",
+          "\n* [UI/UX Workflow](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/uiux.md)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help open a support ticket in the <#1193342042080817323> channel. Please do not DM Admins directly.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V57-Tier1-01-🔥",
+        "name": "tier1-team-03",
+        "tier": "tier1",
+        "channel_type": "forum",
+        "discord_names": [
+          "1159810775532175391",
+          "1195350173505814538",
+          "1073688774241960037"
+        ],
+        "github_names": [
+          "abbey-eleazer",
+          "Ahny678",
+          "n-kojevic"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier1",
+          "\n**Your Team Name:** tier1-team-03",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: \n   * <@1159810775532175391> GMT-0 (London)\n   * <@1195350173505814538> GMT+1 (Berlin)\n   * <@1073688774241960037> GMT+1 (Berlin)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n All Tier 1 teams will be building the **_GitHub PR Review Board_**, an app to provide you and your team with status about your Pull Requests. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-pr-status).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v57-tier1-team-03",
+          "\n**Tools**:",
+          "\n* [Discord Daily Standup Bot](https://github.com/chingu-voyages/Handbook/blob/main/docs/guides/voyage/topics/tips_standup_cmd.md)",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Timeful](https://timeful.app/)",
+          "\n* [Using git/Github in a team](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/gitgithub.md)",
+          "\n* [UI/UX Workflow](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/uiux.md)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help open a support ticket in the <#1193342042080817323> channel. Please do not DM Admins directly.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V57-Tier1-01-🔥",
+        "name": "tier1-team-04",
+        "tier": "tier1",
+        "channel_type": "forum",
+        "discord_names": [
+          "1393322262786080939",
+          "922679821312589864",
+          "1110547424549806181",
+          "1213136004555210793",
+          "1355005236216987709"
+        ],
+        "github_names": [
+          "NikooNasrpooya",
+          "CatYoung018",
+          "corduka",
+          "lkallen",
+          "Gursimranb127"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier1",
+          "\n**Your Team Name:** tier1-team-04",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: \n   * <@1393322262786080939> GMT-4 (Caracas)\n   * <@922679821312589864> GMT-5 (New York)\n   * <@1110547424549806181> GMT-5 (New York)\n   * <@1355005236216987709> GMT-5 (New York)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: \n   * <@1213136004555210793> GMT-5 (New York)\n",
+          "\n**Your Team Project:**\n All Tier 1 teams will be building the **_GitHub PR Review Board_**, an app to provide you and your team with status about your Pull Requests. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-pr-status).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v57-tier1-team-04",
+          "\n**Tools**:",
+          "\n* [Discord Daily Standup Bot](https://github.com/chingu-voyages/Handbook/blob/main/docs/guides/voyage/topics/tips_standup_cmd.md)",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Timeful](https://timeful.app/)",
+          "\n* [Using git/Github in a team](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/gitgithub.md)",
+          "\n* [UI/UX Workflow](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/uiux.md)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help open a support ticket in the <#1193342042080817323> channel. Please do not DM Admins directly.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V57-Tier2-02-🔥",
+        "name": "tier2-team-20",
+        "tier": "tier2",
+        "channel_type": "forum",
+        "discord_names": [
+          "1126338582290911372",
+          "706826472156954634",
+          "1189563173645320242",
+          "1303279845471686686",
+          "1121761916579233892"
+        ],
+        "github_names": [
+          "ouassimaelyakoubi",
+          "Hamza-EL07",
+          "dascomsoft ",
+          "Isaacjosh23 ",
+          "Alexander-NM"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-20",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: \n   * <@706826472156954634> GMT+1 (Berlin)",
+          "\n* Web Developers: \n   * <@1126338582290911372> GMT+1 (Berlin)\n   * <@1189563173645320242> GMT+1 (Berlin)\n   * <@1303279845471686686> GMT+1 (Berlin)\n   * <@1121761916579233892> GMT+3 (Moscow)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **_GitHub PR Review Board_**, an app to provide you and your team with status about your Pull Requests. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-pr-status).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v57-tier2-team-20",
+          "\n**Tools**:",
+          "\n* [Discord Daily Standup Bot](https://github.com/chingu-voyages/Handbook/blob/main/docs/guides/voyage/topics/tips_standup_cmd.md)",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Timeful](https://timeful.app/)",
+          "\n* [Using git/Github in a team](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/gitgithub.md)",
+          "\n* [UI/UX Workflow](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/uiux.md)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help open a support ticket in the <#1193342042080817323> channel. Please do not DM Admins directly.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V57-Tier2-02-🔥",
+        "name": "tier2-team-21",
+        "tier": "tier2",
+        "channel_type": "forum",
+        "discord_names": [
+          "1261987797238153328",
+          "599218443060903947"
+        ],
+        "github_names": [
+          "zofienora",
+          "NadiiaLashtun"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-21",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: \n   * <@1261987797238153328> GMT+1 (Berlin)\n   * <@599218443060903947> GMT+1 (Berlin)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **_GitHub PR Review Board_**, an app to provide you and your team with status about your Pull Requests. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-pr-status).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v57-tier2-team-21",
+          "\n**Tools**:",
+          "\n* [Discord Daily Standup Bot](https://github.com/chingu-voyages/Handbook/blob/main/docs/guides/voyage/topics/tips_standup_cmd.md)",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Timeful](https://timeful.app/)",
+          "\n* [Using git/Github in a team](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/gitgithub.md)",
+          "\n* [UI/UX Workflow](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/uiux.md)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help open a support ticket in the <#1193342042080817323> channel. Please do not DM Admins directly.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V57-Tier2-02-🔥",
+        "name": "tier2-team-22",
+        "tier": "tier2",
+        "channel_type": "forum",
+        "discord_names": [
+          "1059757443753721896",
+          "596847768711069696",
+          "689975991317037066",
+          "1333202618779959386",
+          "155858222945796096",
+          "1299776853825028186",
+          "729451068655927339"
+        ],
+        "github_names": [
+          "Malik-Haziq",
+          "CamiloTriana75",
+          "vanshika-99",
+          "twatson07017",
+          "KevinLlano",
+          "JD818",
+          "chonger878"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-22",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: \n   * <@1299776853825028186> (undefined) GMT-6 (Chicago)",
+          "\n* Scrum Masters: \n   * <@1333202618779959386> (Primary) GMT-5 (New York)",
+          "\n* UI/UX Designer: \n   * <@689975991317037066> GMT-5 (New York)",
+          "\n* Web Developers: \n   * <@1059757443753721896> GMT-5 (New York)\n   * <@596847768711069696> GMT-5 (New York)\n   * <@155858222945796096> GMT-6 (Chicago)\n   * <@729451068655927339> GMT-8 (Los Angeles)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **_GitHub PR Review Board_**, an app to provide you and your team with status about your Pull Requests. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-pr-status).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v57-tier2-team-22",
+          "\n**Tools**:",
+          "\n* [Discord Daily Standup Bot](https://github.com/chingu-voyages/Handbook/blob/main/docs/guides/voyage/topics/tips_standup_cmd.md)",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Timeful](https://timeful.app/)",
+          "\n* [Using git/Github in a team](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/gitgithub.md)",
+          "\n* [UI/UX Workflow](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/uiux.md)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help open a support ticket in the <#1193342042080817323> channel. Please do not DM Admins directly.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V57-Tier2-02-🔥",
+        "name": "tier2-team-23",
+        "tier": "tier2",
+        "channel_type": "forum",
+        "discord_names": [
+          "1397265057892667483",
+          "1063864190848209020",
+          "1150923099248791663",
+          "691297893453266984",
+          "1311491280374730793"
+        ],
+        "github_names": [
+          "thaisaya",
+          "",
+          "MatthewNeie",
+          "jazxbx",
+          "alyssiatavares"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-23",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: \n   * <@1063864190848209020> (Primary) GMT-5 (New York)",
+          "\n* Scrum Masters: \n   * <@1397265057892667483> (Shadow) GMT-3 (Buenos Aires)",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: \n   * <@1150923099248791663> GMT-8 (Los Angeles)\n   * <@691297893453266984> GMT-8 (Los Angeles)\n   * <@1311491280374730793> GMT-8 (Los Angeles)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **_GitHub PR Review Board_**, an app to provide you and your team with status about your Pull Requests. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-pr-status).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v57-tier2-team-23",
+          "\n**Tools**:",
+          "\n* [Discord Daily Standup Bot](https://github.com/chingu-voyages/Handbook/blob/main/docs/guides/voyage/topics/tips_standup_cmd.md)",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Timeful](https://timeful.app/)",
+          "\n* [Using git/Github in a team](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/gitgithub.md)",
+          "\n* [UI/UX Workflow](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/uiux.md)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help open a support ticket in the <#1193342042080817323> channel. Please do not DM Admins directly.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V57-Tier2-02-🔥",
+        "name": "tier2-team-24",
+        "tier": "tier2",
+        "channel_type": "forum",
+        "discord_names": [
+          "1296231907247521804",
+          "335265179996651520",
+          "919316432054013952",
+          "1399097158627627131",
+          "1155852420870578196",
+          "1075084314208907395"
+        ],
+        "github_names": [
+          "emadgfy",
+          "kobysysouvanh",
+          "sokuenryan",
+          "soprettypink",
+          "fcuevas6",
+          "Nandhini0123"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier2",
+          "\n**Your Team Name:** tier2-team-24",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: \n   * <@1296231907247521804> GMT-5 (New York)\n   * <@1399097158627627131> GMT-5 (New York)",
+          "\n* Web Developers: \n   * <@335265179996651520> GMT-5 (New York)\n   * <@919316432054013952> GMT-5 (New York)\n   * <@1155852420870578196> GMT-5 (New York)\n   * <@1075084314208907395> GMT-6 (Chicago)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n All Tier 2 teams will be building the **_GitHub PR Review Board_**, an app to provide you and your team with status about your Pull Requests. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-pr-status).\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v57-tier2-team-24",
+          "\n**Tools**:",
+          "\n* [Discord Daily Standup Bot](https://github.com/chingu-voyages/Handbook/blob/main/docs/guides/voyage/topics/tips_standup_cmd.md)",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Timeful](https://timeful.app/)",
+          "\n* [Using git/Github in a team](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/gitgithub.md)",
+          "\n* [UI/UX Workflow](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/uiux.md)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help open a support ticket in the <#1193342042080817323> channel. Please do not DM Admins directly.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V57-Tier3-03-🔥",
+        "name": "tier3-team-30",
+        "tier": "tier3",
+        "channel_type": "forum",
+        "discord_names": [
+          "598676073084878848",
+          "1357325501701558357",
+          "447054406647676958",
+          "1072872051234312202",
+          "1145067826655285359",
+          "109236046633406464"
+        ],
+        "github_names": [
+          "EslemOuederni",
+          "skellynb ",
+          "fmtabbara",
+          "Shaimaa01",
+          "Xondacc",
+          "707"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-30",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: \n   * <@1145067826655285359> (Primary) GMT+1 (Berlin)\n   * <@109236046633406464> (Shadow) GMT+1 (Berlin)",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: \n   * <@598676073084878848> GMT-0 (London)\n   * <@1357325501701558357> GMT-0 (London)\n   * <@447054406647676958> GMT-0 (London)\n   * <@1072872051234312202> GMT-2 (Mid-Atlantic)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n As a Tier 3 team you have the choice of building **_GitHub PR Review Board_**, an app to provide you and your team with status about your Pull Requests. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-pr-status). **OR** creating an app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v57-tier3-team-30",
+          "\n**Tools**:",
+          "\n* [Discord Daily Standup Bot](https://github.com/chingu-voyages/Handbook/blob/main/docs/guides/voyage/topics/tips_standup_cmd.md)",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Timeful](https://timeful.app/)",
+          "\n* [Using git/Github in a team](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/gitgithub.md)",
+          "\n* [UI/UX Workflow](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/uiux.md)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help open a support ticket in the <#1193342042080817323> channel. Please do not DM Admins directly.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V57-Tier3-03-🔥",
+        "name": "tier3-team-32",
+        "tier": "tier3",
+        "channel_type": "forum",
+        "discord_names": [
+          "1354320790778019910",
+          "895398727030812732",
+          "984836416133541890",
+          "1194728840652656652",
+          "1228100349659840555",
+          "1300528881400414236",
+          "1003106989687181353"
+        ],
+        "github_names": [
+          "LMgit91",
+          "devimalka",
+          "recklessbud",
+          "acto-acto",
+          "evaristoc",
+          "IsmailMarghich",
+          "snowbytes"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-32",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: \n   * <@1354320790778019910> GMT-0 (London)\n   * <@895398727030812732> GMT-0 (London)\n   * <@984836416133541890> GMT-0 (London)\n   * <@1194728840652656652> GMT+1 (Berlin)\n   * <@1300528881400414236> GMT+2 (Bucharest)\n   * <@1003106989687181353> GMT+2 (Bucharest)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: \n   * <@1228100349659840555> GMT+1 (Berlin)\n",
+          "\n**Your Team Project:**\n As a Tier 3 team you have the choice of building **_GitHub PR Review Board_**, an app to provide you and your team with status about your Pull Requests. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-pr-status). **OR** creating an app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v57-tier3-team-32",
+          "\n**Tools**:",
+          "\n* [Discord Daily Standup Bot](https://github.com/chingu-voyages/Handbook/blob/main/docs/guides/voyage/topics/tips_standup_cmd.md)",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Timeful](https://timeful.app/)",
+          "\n* [Using git/Github in a team](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/gitgithub.md)",
+          "\n* [UI/UX Workflow](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/uiux.md)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help open a support ticket in the <#1193342042080817323> channel. Please do not DM Admins directly.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V57-Tier3-03-🔥",
+        "name": "tier3-team-33",
+        "tier": "tier3",
+        "channel_type": "forum",
+        "discord_names": [
+          "692466940941303961",
+          "416720357723078666",
+          "689503334369067112",
+          "1175855737436655677",
+          "884062146890203196",
+          "679092796799451160"
+        ],
+        "github_names": [
+          "9-barristanselmy-9",
+          "yusufmohsiin",
+          "bantoklara",
+          "nazeeha-kb",
+          "AskTiba",
+          "henokkhm"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-33",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: \n   * <@416720357723078666> GMT+2 (Bucharest)",
+          "\n* Web Developers: \n   * <@692466940941303961> GMT+1 (Berlin)\n   * <@689503334369067112> GMT+2 (Bucharest)\n   * <@1175855737436655677> GMT+3 (Moscow)\n   * <@884062146890203196> GMT+3 (Moscow)\n   * <@679092796799451160> GMT+3 (Moscow)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n As a Tier 3 team you have the choice of building **_GitHub PR Review Board_**, an app to provide you and your team with status about your Pull Requests. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-pr-status). **OR** creating an app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v57-tier3-team-33",
+          "\n**Tools**:",
+          "\n* [Discord Daily Standup Bot](https://github.com/chingu-voyages/Handbook/blob/main/docs/guides/voyage/topics/tips_standup_cmd.md)",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Timeful](https://timeful.app/)",
+          "\n* [Using git/Github in a team](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/gitgithub.md)",
+          "\n* [UI/UX Workflow](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/uiux.md)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help open a support ticket in the <#1193342042080817323> channel. Please do not DM Admins directly.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V57-Tier3-03-🔥",
+        "name": "tier3-team-34",
+        "tier": "tier3",
+        "channel_type": "forum",
+        "discord_names": [
+          "873223872101617704",
+          "1010469578293387275",
+          "345612572315222028",
+          "1049260348840091669",
+          "825078676827013140",
+          "1058290597909241876"
+        ],
+        "github_names": [
+          "donkachii",
+          "azubogukosiso",
+          "HawkCoding",
+          "HassanAbbas10",
+          "Rusgyn",
+          "Dhemmyhardy"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-34",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: \n   * <@1058290597909241876> (undefined) GMT+4 (Tbilisi)",
+          "\n* Scrum Masters: \n   * <@345612572315222028> (Primary) GMT+2 (Bucharest)",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: \n   * <@873223872101617704> GMT+1 (Berlin)\n   * <@1010469578293387275> GMT+1 (Berlin)\n   * <@1049260348840091669> GMT+3 (Moscow)\n   * <@825078676827013140> GMT+4 (Tbilisi)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n As a Tier 3 team you have the choice of building **_GitHub PR Review Board_**, an app to provide you and your team with status about your Pull Requests. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-pr-status). **OR** creating an app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v57-tier3-team-34",
+          "\n**Tools**:",
+          "\n* [Discord Daily Standup Bot](https://github.com/chingu-voyages/Handbook/blob/main/docs/guides/voyage/topics/tips_standup_cmd.md)",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Timeful](https://timeful.app/)",
+          "\n* [Using git/Github in a team](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/gitgithub.md)",
+          "\n* [UI/UX Workflow](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/uiux.md)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help open a support ticket in the <#1193342042080817323> channel. Please do not DM Admins directly.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V57-Tier3-03-🔥",
+        "name": "tier3-team-35",
+        "tier": "tier3",
+        "channel_type": "forum",
+        "discord_names": [
+          "934732125226299392",
+          "658277014997958657",
+          "1005071053766270996",
+          "495141250668953620",
+          "872609248079663154"
+        ],
+        "github_names": [
+          "shivam24161",
+          "prakshh",
+          "rajvardhan222",
+          "deruloxxx",
+          "AkoKBIkeda"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-35",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: \n   * <@658277014997958657> (Primary) GMT+5 (New Dehli)",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: \n   * <@934732125226299392> GMT+5 (New Dehli)\n   * <@1005071053766270996> GMT+5 (New Dehli)\n   * <@495141250668953620> GMT+8 (Hong Kong)\n   * <@872609248079663154> GMT+12 (Christchurch)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n As a Tier 3 team you have the choice of building **_GitHub PR Review Board_**, an app to provide you and your team with status about your Pull Requests. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-pr-status). **OR** creating an app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v57-tier3-team-35",
+          "\n**Tools**:",
+          "\n* [Discord Daily Standup Bot](https://github.com/chingu-voyages/Handbook/blob/main/docs/guides/voyage/topics/tips_standup_cmd.md)",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Timeful](https://timeful.app/)",
+          "\n* [Using git/Github in a team](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/gitgithub.md)",
+          "\n* [UI/UX Workflow](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/uiux.md)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help open a support ticket in the <#1193342042080817323> channel. Please do not DM Admins directly.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V57-Tier3-03-🔥",
+        "name": "tier3-team-36",
+        "tier": "tier3",
+        "channel_type": "forum",
+        "discord_names": [
+          "180720272779771904",
+          "624016178309890058",
+          "635481276815507459",
+          "1281503757900713985",
+          "982390756587233401",
+          "340800121757237258"
+        ],
+        "github_names": [
+          "hynwkm",
+          "tascapeter514",
+          "davideastmond",
+          "SattyikKundu",
+          "VincentBui0",
+          "kripple"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-36",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: \n   * <@180720272779771904> GMT-4 (Caracas)\n   * <@624016178309890058> GMT-5 (New York)\n   * <@635481276815507459> GMT-5 (New York)\n   * <@1281503757900713985> GMT-5 (New York)\n   * <@982390756587233401> GMT-5 (New York)\n   * <@340800121757237258> GMT-5 (New York)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n As a Tier 3 team you have the choice of building **_GitHub PR Review Board_**, an app to provide you and your team with status about your Pull Requests. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-pr-status). **OR** creating an app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v57-tier3-team-36",
+          "\n**Tools**:",
+          "\n* [Discord Daily Standup Bot](https://github.com/chingu-voyages/Handbook/blob/main/docs/guides/voyage/topics/tips_standup_cmd.md)",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Timeful](https://timeful.app/)",
+          "\n* [Using git/Github in a team](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/gitgithub.md)",
+          "\n* [UI/UX Workflow](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/uiux.md)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help open a support ticket in the <#1193342042080817323> channel. Please do not DM Admins directly.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V57-Tier3-03-🔥",
+        "name": "tier3-team-37",
+        "tier": "tier3",
+        "channel_type": "forum",
+        "discord_names": [
+          "1233972856342450197",
+          "396470774736748554",
+          "720034826178134148"
+        ],
+        "github_names": [
+          "TheClaireLiu",
+          "Trevor-04",
+          "spandanmahat00"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-37",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: None",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: \n   * <@1233972856342450197> GMT-5 (New York)\n   * <@396470774736748554> GMT-6 (Chicago)\n   * <@720034826178134148> GMT-6 (Chicago)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n As a Tier 3 team you have the choice of building **_GitHub PR Review Board_**, an app to provide you and your team with status about your Pull Requests. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-pr-status). **OR** creating an app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v57-tier3-team-37",
+          "\n**Tools**:",
+          "\n* [Discord Daily Standup Bot](https://github.com/chingu-voyages/Handbook/blob/main/docs/guides/voyage/topics/tips_standup_cmd.md)",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Timeful](https://timeful.app/)",
+          "\n* [Using git/Github in a team](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/gitgithub.md)",
+          "\n* [UI/UX Workflow](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/uiux.md)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help open a support ticket in the <#1193342042080817323> channel. Please do not DM Admins directly.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V57-Tier3-03-🔥",
+        "name": "tier3-team-38",
+        "tier": "tier3",
+        "channel_type": "forum",
+        "discord_names": [
+          "391414822278922241",
+          "707017394463309955",
+          "1094295746288832533",
+          "554398573337378816",
+          "1354256590684946563",
+          "1400540341081215067"
+        ],
+        "github_names": [
+          "elsalvadordali ",
+          "oldmcdonnell",
+          "msrissaxox",
+          "cristiantorresf19191919",
+          "Adel-abio",
+          "carlos0424990"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-38",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: \n   * <@1354256590684946563> (Primary) GMT-6 (Chicago)",
+          "\n* UI/UX Designer: None",
+          "\n* Web Developers: \n   * <@707017394463309955> GMT-5 (New York)\n   * <@1094295746288832533> GMT-5 (New York)\n   * <@554398573337378816> GMT-5 (New York)\n   * <@1400540341081215067> GMT-6 (Chicago)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: \n   * <@391414822278922241> GMT-5 (New York)\n",
+          "\n**Your Team Project:**\n As a Tier 3 team you have the choice of building **_GitHub PR Review Board_**, an app to provide you and your team with status about your Pull Requests. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-pr-status). **OR** creating an app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v57-tier3-team-38",
+          "\n**Tools**:",
+          "\n* [Discord Daily Standup Bot](https://github.com/chingu-voyages/Handbook/blob/main/docs/guides/voyage/topics/tips_standup_cmd.md)",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Timeful](https://timeful.app/)",
+          "\n* [Using git/Github in a team](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/gitgithub.md)",
+          "\n* [UI/UX Workflow](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/uiux.md)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help open a support ticket in the <#1193342042080817323> channel. Please do not DM Admins directly.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V57-Tier3-03-🔥",
+        "name": "tier3-team-39",
+        "tier": "tier3",
+        "channel_type": "forum",
+        "discord_names": [
+          "724414445035585547",
+          "573293408073023501",
+          "1281326681973461034",
+          "995151277942132748",
+          "1026711632702881792",
+          "1091679003515048128"
+        ],
+        "github_names": [
+          "Dorene-StMarthe",
+          "Oscarsanchez13",
+          "mooglemoxie0018",
+          "vorleakyek",
+          "xochfa",
+          "kishi1997"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-39",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: \n   * <@1026711632702881792> (Primary) GMT-8 (Los Angeles)",
+          "\n* Scrum Masters: \n   * <@724414445035585547> (Primary) GMT-5 (New York)",
+          "\n* UI/UX Designer: \n   * <@1281326681973461034> GMT-6 (Chicago)",
+          "\n* Web Developers: \n   * <@573293408073023501> GMT-6 (Chicago)\n   * <@995151277942132748> GMT-8 (Los Angeles)\n   * <@1091679003515048128> GMT-8 (Los Angeles)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n As a Tier 3 team you have the choice of building **_GitHub PR Review Board_**, an app to provide you and your team with status about your Pull Requests. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-pr-status). **OR** creating an app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v57-tier3-team-39",
+          "\n**Tools**:",
+          "\n* [Discord Daily Standup Bot](https://github.com/chingu-voyages/Handbook/blob/main/docs/guides/voyage/topics/tips_standup_cmd.md)",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Timeful](https://timeful.app/)",
+          "\n* [Using git/Github in a team](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/gitgithub.md)",
+          "\n* [UI/UX Workflow](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/uiux.md)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help open a support ticket in the <#1193342042080817323> channel. Please do not DM Admins directly.\n\n"
+        ]
+      }
+    },
+    {
+      "team": {
+        "category": "V57-Tier3-03-🔥",
+        "name": "tier3-team-40",
+        "tier": "tier3",
+        "channel_type": "forum",
+        "discord_names": [
+          "1017769952347967518",
+          "608825845179613212",
+          "211233566246305792",
+          "1122277289917436086",
+          "1311491280374730793",
+          "695719192585830490",
+          "1043948031206228029",
+          "936861549895761970"
+        ],
+        "github_names": [
+          "aigul-ermak",
+          "r1g023",
+          "Valeriusdev",
+          "rubenaguilardev",
+          "alyssiatavares",
+          "mingshi0821",
+          "katiaku",
+          "Tayrika"
+        ],
+        "resource_msg": [
+          "\n**__About your Team__**",
+          "\n**Your Tier:** Tier3",
+          "\n**Your Team Name:** tier3-team-40",
+          "\n**Your Teammates:**",
+          "\n* Product Owners: None",
+          "\n* Scrum Masters: \n   * <@211233566246305792> (undefined) GMT-8 (Los Angeles)",
+          "\n* UI/UX Designer: \n   * <@695719192585830490> GMT-8 (Los Angeles)",
+          "\n* Web Developers: \n   * <@1017769952347967518> GMT-3 (Buenos Aires)\n   * <@608825845179613212> GMT-6 (Chicago)\n   * <@1122277289917436086> GMT-8 (Los Angeles)\n   * <@1311491280374730793> GMT-8 (Los Angeles)\n   * <@1043948031206228029> GMT+1 (Berlin)\n   * <@936861549895761970> GMT+9 (Tokyo)",
+          "\n* Data Scientists: None",
+          "\n* Voyage Guide: None\n",
+          "\n**Your Team Project:**\n As a Tier 3 team you have the choice of building **_GitHub PR Review Board_**, an app to provide you and your team with status about your Pull Requests. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-pr-status). **OR** creating an app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it.\n",
+          "\n**Resources**:",
+          "\n* GitHub Repo: https://github.com/chingu-voyages/v57-tier3-team-40",
+          "\n**Tools**:",
+          "\n* [Discord Daily Standup Bot](https://github.com/chingu-voyages/Handbook/blob/main/docs/guides/voyage/topics/tips_standup_cmd.md)",
+          "\n* [Hammertime](https://hammertime.cyou/)",
+          "\n* [Timeful](https://timeful.app/)",
+          "\n* [Using git/Github in a team](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/gitgithub.md)",
+          "\n* [UI/UX Workflow](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/uiux.md)",
+          "\n\n**__Admin Support__**\n",
+          "If you have a question or need help open a support ticket in the <#1193342042080817323> channel. Please do not DM Admins directly.\n\n"
+        ]
+      }
+    }
+  ],
+  "team_greeting1": [
+    ":rocket: **_Congratulations Voyagers!_** You found your team chat! Read carefully below so you don't miss out on getting a good start.\n\n",
+    "**__Your First Steps__** \n",
+    "1. Say \"hi\" to your team-mates! Come in excited and help welcome your teammates! You can find a list of who is in your team in the Team Info topic in this channel. :slight_smile:\n",
+    "2. **_Copy_** the intro you added in https://discord.com/channels/330284646283608064/553103063649353738 when you joined Chingu and **_paste it here_** to let your teammates get to know you!\n",
+    "3. Follow the steps in the [Voyage section of the Handbook](https://tinyurl.com/283d482e) we emailed last week to set a solid foundation for your project. The most important step to concentrate on is scheduling your Team Kickoff meeting as soon as possible.\n\n",
+    "**__In your first Sprint you should concentrate on completing these tasks:__**\n",
+    "1. Meet your team & schedule kickoff meeting\n",
+    "2. Conduct kickoff meeting\n",
+    "3. Choose a project (Tier 3 only)\n",
+    "4. create a Vision Statement  & define & prioritize MVP features\n\n",
+    "**__How can we communicate & collaborate with one another?__**\n",
+    "We've created a simple and easy way to create a voice/video channel for team meetings, one-on-one discussions, & troubleshooting sessions whenever you need them. Check out the [How do I make a voice channel for my team?](https://tinyurl.com/28ayudc5) topic in the Handbook.\n\n",
+    "**__How can I get the attention of my teammates?__**\n",
+    "You should use <@&1104544072347160578> to send a message to all teammates instead of using `@everyone`.\n\n",
+    "**__What if I have questions or need help?__**\n",
+    "Please *do not* DM Chingu Admins directly if you have a question or need help. Instead, open a support ticket in the <#1193342042080817323> channel and the first available Admin will reach out to help.\n\n"
+  ],
+  "team_greeting2": [
+    "**__Finally__**\n",
+    "Stay committed to your Voyage goal and active with your team! Don't forget what you agreed to in the Confirmation Form. Remember that the #1 factor to success isn't technology - it's **_daily_** communication & collaboration with your teammates.\n\n"
+  ],
+  "tier_project": [
+    {
+      "tier": "tier1",
+      "greeting": [
+        "\n**Your Team Project:**\n",
+        "All Tier 1 teams will be building the **_GitHub PR Review Board_**, an app to provide you and your team with status about your Pull Requests. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-pr-status)."
+      ]
+    },
+    {
+      "tier": "tier2",
+      "greeting": [
+        "\n**Your Team Project:**\n",
+        "All Tier 2 teams will be building the **_GitHub PR Review Board_**, an app to provide you and your team with status about your Pull Requests. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-pr-status)."
+      ]
+    },
+    {
+      "tier": "tier3",
+      "greeting": [
+        "\n**Your Team Project:**\n",
+        "As a Tier 3 team you have the choice of building **_GitHub PR Review Board_**, an app to provide you and your team with status about your Pull Requests. All teams are required to create this same application from these [requirements & specifications](https://github.com/chingu-voyages/voyage-project-pr-status). **OR** creating an app of your own design. \n\n If you choose to create your own you'll want to start by working together to choose a project theme, create a vision statement, and then build a prioritized list of user features.\n\nThis will give you what you need to build the Project Backlog you'll be following to design, build, test, & deploy it."
+      ]
+    }
+  ],
+  "forum_tags": [
+    "General Info",
+    "Meetings",
+    "Daily Standups",
+    "Sprint Planning",
+    "Discussion",
+    "Help & Advice",
+    "Celebrate",
+    "Issues",
+    "Blockers"
+  ]
+}
